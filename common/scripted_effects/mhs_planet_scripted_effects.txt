@@ -1,0 +1,160 @@
+
+
+# Use in Planet planet scope
+# Must have saved event target as target_country to know which countrys trait preference to follow.
+change_planet_to_not_preferred = { #effect planet
+    event_target:target_country = { # country
+        switch = {
+            trigger = has_trait
+
+            trait_pc_desert_preference = {
+                prev = { 
+                    change_pc_to_not_desert = yes
+                }
+            }
+            trait_pc_tropical_preference = {
+                prev = {
+                    change_pc_to_not_tropical = yes
+                }
+            }
+
+            trait_pc_continental_preference = {
+                prev = {
+                    change_pc_to_not_continental = yes
+                }
+            }
+            trait_pc_ocean_preference = {
+                prev = {
+                    change_pc_to_not_ocean = yes
+                }
+            }
+
+            trait_pc_arctic_preference = {
+                prev = {
+                    change_pc_to_not_arctic = yes
+                }
+            }
+
+            trait_pc_tundra_preference = {
+                prev = {
+                    change_pc_to_not_tundra = yes
+                }
+            }
+
+            trait_pc_arid_preference = {
+                prev = {
+                    change_pc_to_not_arid = yes
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+# █▀▀▀▀▀▀▀▀▀░░█░░░░░░░░█░░█▀▀▀▀▀▀▀▀█░░██▄░░░░░░█░░█▀▀▀▀▀▀▀▀█░░█░░██▄░░░░░░█░░█▀▀▀▀▀▀▀▀█
+# █░░░░░░░░░░░█░░░░░░░░█░░█░░░░░░░░█░░█░▀█▄░░░░█░░█░░░░░░░░░░░█░░█░▀█▄░░░░█░░█░░░░░░░░░
+# █░░░░░░░░░░░█▀▀▀▀▀▀▀▀█░░█▄▄▄▄▄▄▄▄█░░█░░░▀▄░░░█░░█░░░░░▄▄▄▄░░█░░█░░░▀▄░░░█░░█░░░░░▄▄▄▄
+# █░░░░░░░░░░░█░░░░░░░░█░░█░░░░░░░░█░░█░░░░▀█▄░█░░█░░░░░░░░█░░█░░█░░░░▀█▄░█░░█░░░░░░░░█
+# █▄▄▄▄▄▄▄▄▄░░█░░░░░░░░█░░█░░░░░░░░█░░█░░░░░░▀██░░█▄▄▄▄▄▄▄▄█░░█░░█░░░░░░▀██░░█▄▄▄▄▄▄▄▄█
+
+# █▀▀▀▀▀▀▀▀█░░█░░░░░░░░░░░█▀▀▀▀▀▀▀▀█░░██▄░░░░░░█░░█▀▀▀▀▀▀▀▀░░▀▀▀▀█▀▀▀▀░░░
+# █░░░░░░░░█░░█░░░░░░░░░░░█░░░░░░░░█░░█░▀█▄░░░░█░░█░░░░░░░░░░░░░░█░░░░░░░
+# █▄▄▄▄▄▄▄▄█░░█░░░░░░░░░░░█▄▄▄▄▄▄▄▄█░░█░░░▀▄░░░█░░█▀▀▀▀▀▀░░░░░░░░█░░░░░░░
+# █░░░░░░░░░░░█░░░░░░░░░░░█░░░░░░░░█░░█░░░░▀█▄░█░░█░░░░░░░░░░░░░░█░░░░░░░
+# █░░░░░░░░░░░█▄▄▄▄▄▄▄▄▄░░█░░░░░░░░█░░█░░░░░░▀██░░█▄▄▄▄▄▄▄▄░░░░░░█░░░░░░░
+#
+# █▀▀▀▀▀▀▀▀▀░░█░░░░░░░░░░░█▀▀▀▀▀▀▀▀█░░█▀▀▀▀▀▀▀▀█░░█▀▀▀▀▀▀▀▀█
+# █░░░░░░░░░░░█░░░░░░░░░░░█░░░░░░░░█░░█░░░░░░░░░░░█░░░░░░░░░
+# █░░░░░░░░░░░█░░░░░░░░░░░█▄▄▄▄▄▄▄▄█░░▀▀▀▀▀▀▀▀▀▄░░▀▀▀▀▀▀▀▀▀▄
+# █░░░░░░░░░░░█░░░░░░░░░░░█░░░░░░░░█░░░░░░░░░░░█░░░░░░░░░░░█
+# █▄▄▄▄▄▄▄▄▄░░█▄▄▄▄▄▄▄▄▄░░█░░░░░░░░█░░█▄▄▄▄▄▄▄▄▀░░█▄▄▄▄▄▄▄▄▀
+
+#Changes the planet class randomly to one that is not the one in the name
+
+change_pc_to_not_desert = { # effect planet
+    random_list = {
+        16 = { change_pc = pc_tropical }
+        16 = { change_pc = pc_continental }
+        16 = { change_pc = pc_ocean }
+        16 = { change_pc = pc_arctic }
+        16 = { change_pc = pc_tundra }
+        16 = { change_pc = pc_arid }
+    }
+}
+change_pc_to_not_tropical = {  # effect planet
+    random_list = {
+        16 = { change_pc = pc_desert }
+        16 = { change_pc = pc_continental }
+        16 = { change_pc = pc_ocean }
+        16 = { change_pc = pc_arctic }
+        16 = { change_pc = pc_tundra }
+        16 = { change_pc = pc_arid }
+    }
+}
+change_pc_to_not_continental = {  # effect planet
+    random_list = {
+        16 = { change_pc = pc_desert }
+        16 = { change_pc = pc_tropical }
+        16 = { change_pc = pc_ocean }
+        16 = { change_pc = pc_arctic }
+        16 = { change_pc = pc_tundra }
+        16 = { change_pc = pc_arid }
+    }
+}
+change_pc_to_not_ocean = {  # effect planet
+    random_list = {
+        16 = { change_pc = pc_desert }
+        16 = { change_pc = pc_tropical }
+        16 = { change_pc = pc_continental }
+        16 = { change_pc = pc_arctic }
+        16 = { change_pc = pc_tundra }
+        16 = { change_pc = pc_arid }
+    }
+}
+change_pc_to_not_arctic = {  # effect planet
+    random_list = {
+        16 = { change_pc = pc_desert }
+        16 = { change_pc = pc_tropical }
+        16 = { change_pc = pc_continental }
+        16 = { change_pc = pc_ocean }
+        16 = { change_pc = pc_tundra }
+        16 = { change_pc = pc_arid }
+    }
+}
+change_pc_to_not_tundra = {  # effect planet
+    random_list = {
+        16 = { change_pc = pc_desert }
+        16 = { change_pc = pc_tropical }
+        16 = { change_pc = pc_continental }
+        16 = { change_pc = pc_ocean }
+        16 = { change_pc = pc_arctic }
+        16 = { change_pc = pc_arid }
+    }
+}
+change_pc_to_not_arid = {  # effect planet
+    random_list = {
+        16 = { change_pc = pc_desert }
+        16 = { change_pc = pc_tropical }
+        16 = { change_pc = pc_continental }
+        16 = { change_pc = pc_ocean }
+        16 = { change_pc = pc_arctic }
+        16 = { change_pc = pc_tundra }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

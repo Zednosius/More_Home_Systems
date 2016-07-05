@@ -1,0 +1,124 @@
+# 4 rings
+solar_ring4 = {
+	entity = "solar_ring4_entity"
+	entity_scale = 1
+
+	atmosphere_color 		= hsv { 0.40 0.5 0.9 }		
+	atmosphere_intensity 	= 0.4
+	atmosphere_width 		= 0.5
+
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	
+	star = yes
+	chance_of_ring = 0
+	orbit_lines = no
+
+	
+	colonizable = no
+}
+# 4 ring habitable
+solar_ring5_hab = {
+	entity = "solar_ring5_entity"				# can use same entity, habitablility is not dependant on graphics
+	entity_scale = 1 							# planet size scales planets
+
+	picture = pc_tropical						# background tropical
+	tile_set = pc_tropical						# use tropical tiles
+
+	icon_frame = 1
+	enable_tilt = no
+
+	atmosphere_color 		= hsv { 0.40 0.5 0.9 }		
+	atmosphere_intensity 	= 0.4
+	atmosphere_width 		= 0.5
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	chance_of_ring = 0.0
+
+	
+	colonizable = yes							# gains a surface with tiles of tile_set
+	ideal = yes									# gaia world status
+	starting_planet = yes						# can be a starting planet 
+	orbit_lines = no							# hide orbit lines
+	star = yes									# star of system type is spawned at origin
+}
+planetary_ring = {
+	entity = "planetary_ring1_entity"			# this doesnt matter. Planets entities are declared in the system. Can use this class for all planetary rings
+	entity_scale = 1 							
+
+	picture = pc_tropical	
+	tile_set = pc_tropical
+
+	icon_frame = 1
+	enable_tilt = no
+
+	atmosphere_color 		= hsv { 0.40 0.5 0.9 }		
+	atmosphere_intensity 	= 0.5
+	atmosphere_width 		= 0.5
+
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	chance_of_ring = 0.0
+	planet_size = 25
+	
+	star = no 									# dont want to spawn a star here
+	colonizable = yes							# gains surface with tiles of tile_set
+	ideal = yes									# gaia world status
+	starting_planet = yes						# can be a starting planet 
+	orbit_lines = yes							# gives orbit lines
+}
+planetary_ring_nuked = {
+	entity = "planetary_ring1_nuked_entity"			# this doesnt matter. Planets entities are declared in the system. Can use this class for all planetary rings
+	entity_scale = 1 							
+
+	picture = pc_continental	
+	tile_set = pc_continental
+
+	icon_frame = 1
+	enable_tilt = yes
+
+	atmosphere_color 		= hsv { 0.40 0.5 0.9 }		
+	atmosphere_intensity 	= 0.5
+	atmosphere_width 		= 0.5
+
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	chance_of_ring = 0.0
+	planet_size = 25
+	
+	star = no 									# dont want to spawn a star here
+	colonizable = yes							# gains surface with tiles of tile_set
+	ideal = yes									# gaia world status
+	starting_planet = yes						# can be a starting planet 
+	orbit_lines = yes							# gives orbit lines
+}
+planetary_arc = {
+	entity = "planetary_arc1_entity"			# this doesnt matter. Planets entities are declared in the system. Can use this class for all planetary rings
+	entity_scale = 1 							
+
+	picture = pc_tropical	
+	tile_set = pc_tropical
+
+	icon_frame = 1
+	enable_tilt = no
+
+	atmosphere_color 		= hsv { 0.40 0.5 0.9 }		
+	atmosphere_intensity 	= 0.5
+	atmosphere_width 		= 0.5
+
+	spawn_odds = 0
+	extra_orbit_size = 0
+	extra_planet_count = 0
+	chance_of_ring = 0.0
+	planet_size = 25
+	
+	star = no 									# dont want to spawn a star here
+	colonizable = yes							# gains surface with tiles of tile_set
+	ideal = yes									# gaia world status
+	starting_planet = yes						# can be a starting planet 
+	orbit_lines = yes							# gives orbit lines
+}

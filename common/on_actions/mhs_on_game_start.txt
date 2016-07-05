@@ -1,0 +1,6 @@
+# Runs the modifiying event on game start
+on_game_start = {
+    events = {
+            mhs.1   
+    }
+}

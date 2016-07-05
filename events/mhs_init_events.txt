@@ -1,0 +1,296 @@
+#Added Zed
+namespace = mhs
+
+event = {
+    id = mhs.1
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+
+        every_planet = {
+            limit = {
+                has_planet_flag = not_ideal_planet
+            }
+            # Go to the system scope and get the space owner
+            # Since the planet is not directly owned we can't use owner = {}
+            solar_system = {
+                space_owner = {
+                    save_event_target_as = target_country
+                }
+            }
+            #Run the scripted effect
+            #change_planet_to_not_preferred = yes
+            planet_event = { id = mhs.2 }
+        }
+    }
+}
+planet_event = {
+    id = mhs.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        change_planet_to_not_preferred = yes
+		random_list = {
+			35 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_dangerous_wildlife"
+				}
+			}
+			30 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_mountain_range"
+				}
+			}
+			25 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_active_volcano"
+				}
+			}
+			10 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = none
+				}
+			}
+		}
+		random_list = {
+			35 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_dangerous_wildlife"
+				}
+			}
+			30 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_mountain_range"
+				}
+			}
+			25 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_active_volcano"
+				}
+			}
+			10 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = none
+				}
+			}
+		}
+		random_list = {
+			35 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_dangerous_wildlife"
+				}
+			}
+			30 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_mountain_range"
+				}
+			}
+			25 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_active_volcano"
+				}
+			}
+			10 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = none
+				}
+			}
+		}
+		random_list = {
+			35 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_dangerous_wildlife"
+				}
+			}
+			30 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_mountain_range"
+				}
+			}
+			25 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_active_volcano"
+				}
+			}
+			10 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = none
+				}
+			}
+		}
+		random_list = {
+			35 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_dangerous_wildlife"
+				}
+			}
+			30 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_mountain_range"
+				}
+			}
+			25 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_active_volcano"
+				}
+			}
+			10 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = none
+				}
+			}
+		}
+		random_list = {
+			35 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_dangerous_wildlife"
+				}
+			}
+			30 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_mountain_range"
+				}
+			}
+			25 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_active_volcano"
+				}
+			}
+			10 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = none
+				}
+			}
+		}
+		random_list = {
+			35 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_dangerous_wildlife"
+				}
+			}
+			30 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_mountain_range"
+				}
+			}
+			25 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_active_volcano"
+				}
+			}
+			10 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = none
+				}
+			}
+		}
+		random_list = {
+			35 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_dangerous_wildlife"
+				}
+			}
+			30 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_mountain_range"
+				}
+			}
+			25 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_active_volcano"
+				}
+			}
+			10 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = none
+				}
+			}
+		}
+		random_list = {
+			35 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_dangerous_wildlife"
+				}
+			}
+			30 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_mountain_range"
+				}
+			}
+			25 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_active_volcano"
+				}
+			}
+			10 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = none
+				}
+			}
+		}
+		random_list = {
+			35 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_dangerous_wildlife"
+				}
+			}
+			30 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_mountain_range"
+				}
+			}
+			25 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = "tb_active_volcano"
+				}
+			}
+			10 = {
+				random_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_blocker = none
+				}
+			}
+		}
+    }
+}
