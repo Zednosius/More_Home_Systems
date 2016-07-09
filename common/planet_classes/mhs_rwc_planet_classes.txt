@@ -40,7 +40,7 @@ solar_ring5_hab = {
 	
 	colonizable = yes							# gains a surface with tiles of tile_set
 	ideal = yes									# gaia world status
-	starting_planet = yes						# can be a starting planet 
+	starting_planet = no						# can be a starting planet 
 	orbit_lines = no							# hide orbit lines
 	star = yes									# star of system type is spawned at origin
 }
@@ -67,7 +67,7 @@ planetary_ring = {
 	star = no 									# dont want to spawn a star here
 	colonizable = yes							# gains surface with tiles of tile_set
 	ideal = yes									# gaia world status
-	starting_planet = yes						# can be a starting planet 
+	starting_planet = no						# can be a starting planet 
 	orbit_lines = yes							# gives orbit lines
 }
 planetary_ring_nuked = {
@@ -93,7 +93,7 @@ planetary_ring_nuked = {
 	star = no 									# dont want to spawn a star here
 	colonizable = yes							# gains surface with tiles of tile_set
 	ideal = yes									# gaia world status
-	starting_planet = yes						# can be a starting planet 
+	starting_planet = no						# can be a starting planet 
 	orbit_lines = yes							# gives orbit lines
 }
 planetary_arc = {
@@ -119,6 +119,6 @@ planetary_arc = {
 	star = no 									# dont want to spawn a star here
 	colonizable = yes							# gains surface with tiles of tile_set
 	ideal = yes									# gaia world status
-	starting_planet = yes						# can be a starting planet 
+	starting_planet = no						# can be a starting planet 
 	orbit_lines = yes							# gives orbit lines
 }

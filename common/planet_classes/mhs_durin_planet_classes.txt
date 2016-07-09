@@ -84,8 +84,8 @@ pc_mhs_durin_desert = {
 	
 	star = no 									# dont want to spawn a star here
 	colonizable = yes
+	ideal = yes
 	starting_planet = no
-	colonization_tech = { "tech_desert_colonization" }
 }
 
 pc_mhs_durin_tropical = {
@@ -117,8 +117,8 @@ pc_mhs_durin_tropical = {
 	
 	star = no 									# dont want to spawn a star here
 	colonizable = yes
+	ideal = yes
 	starting_planet = no
-	colonization_tech = { "tech_tropical_colonization" }
 }
 
 pc_mhs_durin_arid = {
@@ -150,8 +150,8 @@ pc_mhs_durin_arid = {
 	
 	star = no 									# dont want to spawn a star here
 	colonizable = yes
+	ideal = yes
 	starting_planet = no
-	colonization_tech = { "tech_arid_colonization" }
 }
 
 pc_mhs_durin_continental = {
@@ -184,8 +184,8 @@ pc_mhs_durin_continental = {
 	
 	star = no 									# dont want to spawn a star here
 	colonizable = yes
+	ideal = yes
 	starting_planet = no
-	colonization_tech = { "tech_continental_colonization" }
 }
 
 pc_mhs_durin_ocean = {
@@ -217,8 +217,8 @@ pc_mhs_durin_ocean = {
 	
 	star = no 									# dont want to spawn a star here
 	colonizable = yes
+	ideal = yes
 	starting_planet = no
-	colonization_tech = { "tech_ocean_colonization" }
 }
 
 pc_mhs_durin_tundra = {
@@ -250,8 +250,8 @@ pc_mhs_durin_tundra = {
 	
 	star = no 									# dont want to spawn a star here
 	colonizable = yes
+	ideal = yes
 	starting_planet = no
-	colonization_tech = { "tech_tundra_colonization" }
 }
 
 pc_mhs_durin_arctic = {
@@ -283,6 +283,6 @@ pc_mhs_durin_arctic = {
 	
 	star = no 									# dont want to spawn a star here
 	colonizable = yes
+	ideal = yes
 	starting_planet = no
-	colonization_tech = { "tech_arctic_colonization" }
 }
