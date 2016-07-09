@@ -72,6 +72,8 @@
  mhs_me_tikkun_system_DESC:0 "Homesystem of the Quarians of the Mass Effect universe.\n\nHomeworld - Size 16\n\n1 Sun, 1 Toxic World, 1 Gas Giant, 1 Barren World, 7 Asteroids\n\n$system_initializer_DESC$"
  mhs_me_parnitha_system_NAME:0 "Parnitha System"
  mhs_me_parnitha_system_DESC:0 "Homesystem of the Asari of the Mass Effect universe.\n\nHomeworld - Size 16\n\n1 Sun, 1 Toxic World, 3 Gas Giants, 1 Molten World, 4 Asteroids\n\n$system_initializer_DESC$"
+ mhs_me_aralakh_system_NAME:0 "Aralakh System"
+ mhs_me_aralakh_system_DESC:0 "Homesystem of the Krogan of the Mass Effect universe.\n\nHomeworld - Size 16\n\n1 Sun, 3 Molten World, 2 Gas Giants, 5 Asteroids\n\n$system_initializer_DESC$"
  
  #New Planet Classes
  planetary_ring_nuked:0 "Tomb World with Ring"
