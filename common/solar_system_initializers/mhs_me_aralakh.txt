@@ -1,0 +1,226 @@
+### More Home Systems - Aralakh,
+mhs_me_aralakh_system = {
+	name = "Aralakh"
+	class = "sc_m"
+	asteroids_distance = 150
+	usage = custom_empire
+	
+	planet = {
+		name = "Aralakh"
+		class = "pc_m_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 18
+		has_ring = no
+	}
+	planet = {
+		name = "Durak"
+		class = "pc_molten"
+		size = 8
+		orbit_distance = 35
+		orbit_angle = random
+		has_ring = no
+	}
+	planet = {
+		name = "Kanin"
+		class = "pc_molten"
+		size = 10
+		orbit_distance = 15
+		orbit_angle = random
+		has_ring = no
+	}
+	planet = {
+		name = "Kruban"
+		class = "pc_molten"
+		size = 15
+		orbit_distance = 30
+		orbit_angle = random
+		has_ring = no
+	}
+	planet = {
+		name = "Tuchanka"
+		class = ideal_planet_class
+		orbit_distance = 45
+		orbit_angle = random
+		size = 16
+		starting_planet = yes
+		has_ring = no
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+			change_pc = "pc_mhs_nuked"
+		}
+		init_effect = {
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_1"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}	
+				add_resource = {
+					resource = minerals
+					amount = 1
+				}					
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_mining_network_1"
+					add_resource = {
+						resource = minerals
+						amount = 1
+						replace = yes
+					}						
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_resource = {
+					resource = engineering_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_resource = {
+					resource = society_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_resource = {
+					resource = physics_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_resource = {
+					resource = energy
+					amount = 2
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}			
+		}
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 25
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		name = "Ruam"
+		class = "pc_gas_giant"
+		orbit_distance = 32
+		orbit_angle = random
+		size = 16
+		starting_planet = no
+		has_ring = no
+		entity = "gas_giant_02_entity"
+		modifiers = none
+	}
+	planet = {
+		name = "Vaul"
+		class = "pc_gas_giant"
+		orbit_distance = 35
+		orbit_angle = random
+		size = 19
+		starting_planet = no
+		has_ring = no
+		entity = "gas_giant_05_entity"
+		modifiers = none
+	}
+}
