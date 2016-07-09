@@ -45,7 +45,14 @@
  pc_mhs_ringworld_tech_damaged_desc:0 "Un aro inmenso que rodea el sol del sistema.\n\nEsta parte de la superestructura parece dañada irreparablemente."
  pc_mhs_ringworld_seam_damaged:0 "Mundo anillo"
  pc_mhs_ringworld_seam_damaged_desc:0 "Un aro inmenso que rodea el sol del sistema.\n\nEsta parte de la superestructura parece dañada irreparablemente."
-
+ 
+ pc_mhs_nuked:0 "Mundo tumba"
+ pc_mhs_nuked_desc:0 "Un mundo rocoso con una atmósfera de nitrógeno-oxígeno. En la actualidad sufre un invierno nuclear, con capas densas de partículas de hollín en la atmósfera. Gran radiación en la superficie."
+ pc_mhs_nuked_tile:0 "Terreno yermo"
+ pc_mhs_nuked_tile_desc:0 "Un terreno arrasado por la guerra. Nivel de radiación bastante bajo para albergar vida."
+ pc_mhs_nuked_by_asteroids_tile:0 "Terreno de tundra"
+ pc_mhs_nuked_by_asteroids_tile_desc:0 "Estepas frías y ventosas con vegetación escasa."
+ 
  #################################################################################
  # PASTE HERE - Here starts the purely english part of the Loc File - PASTE HERE #
  #################################################################################
@@ -69,6 +76,8 @@
  #New Planet Classes
  planetary_ring_nuked:0 "Tomb World with Ring"
  planetary_ring_nuked_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation and large cracks in the planetary crust spitting our fire and toxic gases that make life impossible. It is orbited by an ancient but highly advanced Ring World."
+ pc_mhs_nuked_by_asteroids:0 "Tomb World"
+ pc_mhs_nuked_by_asteroids_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing an impact winter, with dense layers of sooty aerosols in the atmosphere."
  pc_mhs_durin_nuked_nocolonize:0 "Tomb World with destroyed Ring"
  pc_mhs_durin_nuked_nocolonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation and large cracks in the planetary crust spitting our fire and toxic gases that make life impossible. It is orbited by an ancient destroyed Ring World."
  pc_mhs_durin_nuked_colonize:0 "Tomb World with destroyed Ring"
