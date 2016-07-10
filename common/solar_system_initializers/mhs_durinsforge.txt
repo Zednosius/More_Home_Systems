@@ -5,6 +5,8 @@ mhs_durinsforge_system = {
 	class = "sc_m"
 	asteroids_distance = 200
 	
+	flags = { mhs_durinsforge_system }
+	
 	usage = custom_empire
 	
 	planet = {
