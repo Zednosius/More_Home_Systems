@@ -44,12 +44,23 @@ ship_event = {
     picture = GFX_evt_ship_in_orbit
 
     is_triggered_only = yes
-    
+
     immediate = {
         owner = { 
             begin_event_chain = {
                 event_chain = "mhs_durins_hall"
                 target = THIS
+            }
+            random_system = {
+                limit = { has_star_flag = mhs_durins_hall_system }
+                save_event_target_as = durins_hall_system
+            }
+            create_point_of_interest = {
+                id = durins_hall.1
+                name = "Find Durin's Hall"
+                desc = "We must learn more about our origins."
+                event_chain = mhs_durins_hall
+                location = event_target:durins_hall_system
             }
         }
     }
@@ -65,8 +76,11 @@ ship_event = {
         FROM = { # system 
             has_star_flag = mhs_durins_hall_system
         }
-        FROMFROM = { # Country
+        owner = { # Country
             has_event_chain = mhs_durins_hall
+            NOT = {
+                has_country_flag = mhs_has_found_durins_hall
+            }
         }
     }
     
@@ -78,12 +92,16 @@ ship_event = {
             }
         }
         create_point_of_interest = {
-            id = durins_hall.1
+            id = durins_hall.2
             name = "Survey khazad dum"
             desc = "We must learn more about our origins."
             event_chain = mhs_durins_hall
             location = event_target:khazad_dum
         }   
+        owner = {
+            set_country_flag = mhs_has_found_durins_hall
+            remove_point_of_interest = durins_hall.1
+        }
     }
 }
 
@@ -99,9 +117,14 @@ ship_event = {
         FROM = { #planet
             has_planet_flag = mhs_durins_hall_khazad_dum
         }
+        owner = { # Country
+            has_event_chain = mhs_durins_hall
+        }
     }
     immediate = {
-        remove_point_of_interest = durins_hall.1
+        owner = {
+            remove_point_of_interest = durins_hall.2
+        }
     }
     option = {
         name = "Make it so."
