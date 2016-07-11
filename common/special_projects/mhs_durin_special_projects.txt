@@ -15,7 +15,7 @@ special_project = {
     }
     
     on_success = {
-        planet_event = { id = precursor.1056 }
+        planet_event = { id = mhs_durin.6 }
     }
     
     on_fail = {
