@@ -1,3 +1,14 @@
+# Planet Variables
+
+@planet_standard_scale = 11
+@habitable_planet_max_size = 25
+@habitable_planet_min_size = 12
+@habitable_moon_max_size = 12
+@habitable_moon_min_size = 8
+@habitable_min_distance = 60
+@habitable_max_distance = 120
+@habitable_spawn_odds = 2
+
 #planet class before doing the project
 pc_mhs_durin_nuked_nocolonize = {
 	entity = "nuked_planet"			# this doesnt matter. Planets entities are declared in the system. Can use this class for all planetary rings							
