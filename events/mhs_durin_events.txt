@@ -20,7 +20,11 @@ ship_event = {
     id = mhs_durin.2
     hide_window = yes
     is_triggered_only = yes
-
+    trigger = {
+        owner = {
+            has_country_flag = mhs_durinsforge_system
+        }
+    }
     immediate = {
         ship_event = { id = mhs_durin.3 }
     }
@@ -34,5 +38,57 @@ ship_event = {
     picture = GFX_evt_ship_in_orbit
 
     is_triggered_only = yes
+    
+    immediate = {
+        owner = { 
+            begin_event_chain = {
+                event_chain = "visit_durins_hall"
+                target = THIS
+            }
+        }
+    }
+}
 
+# Opens Popup when homesystem has been surveyed
+ship_event = {
+    id = mhs_durin.4
+    hide_window = yes
+    is_triggered_only = yes
+    trigger = {
+        FROM = { # system 
+            has_star_flag = mhs_durins_hall_system
+        }
+        FROMFROM = { # Country
+            has_event_chain = visit_durins_hall
+        }
+    }
+    
+    immediate = {
+        ship_event = {
+               id = mhs_durin.5
+        }   
+    }
+}
+
+ship_event = {
+    id = mhs_durin.5
+    title = "Found durins hall"
+    desc = "We have found durins hall. We must now survey our ancestral homeplanet khazad dum"
+    is_triggered_only = yes
+    hide_window = no 
+    immediate = {
+        FROM = { # system
+            random_system_planet = {
+                limit = { has_planet_flag = mhs_durins_hall_khazad_dum }
+                save_event_target_as = khazad_dum
+            }
+        }
+        create_point_of_interest = {
+            id = durins_hall.1
+            name = "Survey khazad dum"
+            desc = "We must learn more about our origins."
+            event_chain = visit_durins_hall
+            location = event_target:khazad_dum
+        }
+    }
 }
