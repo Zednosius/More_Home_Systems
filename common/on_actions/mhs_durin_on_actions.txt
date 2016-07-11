@@ -49,3 +49,34 @@ on_blocker_cleared = {
         mhs_durin.10
     }
 }
+
+# Triggers country_event for the attacker upon victory
+# This = country, leader attacker
+# From = country, planet owner
+# FromFrom = planet
+on_planet_attackers_win = {
+    events = {
+        mhs_durin.13
+        mhs_durin.16
+    }
+}
+
+# Triggers country_event for the defender upon victory
+# This = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
+on_planet_defenders_win = {
+    events = {
+        mhs_durin.15
+    }
+}
+
+# A planets controller becomes a country not the same as the owner.
+# Root = Planet
+# From = Planet Owner
+# FromFrom = Planet Controller (the one occupying)
+on_planet_occupied = {
+    events = {
+
+    }
+}

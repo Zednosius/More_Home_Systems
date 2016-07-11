@@ -373,3 +373,93 @@ planet_event = {
     }
 }
 
+#   ▄        ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄ ▄▄     ▄ ▄▄▄▄▄▄▄▄
+#   █        █      █ █      ▀ █ █▀▄    █ █      ▀
+#   █        █      █ █▄▄▄▄▄▄▄ █ █  ▀▄  █ █    ▄▄▄
+#   █        █      █ ▄      █ █ █    ▀▄█ █      █
+#   ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀ ▀     ▀▀ ▀▀▀▀▀▀▀▀
+
+# attack win
+# This = country, leader attacker
+# From = country, planet owner
+# FromFrom = planet
+country_event = {
+    id = mhs_durin.13
+    title = "mhs_durin.13.name"
+    desc = "mhs_durin.13.desc"
+    is_triggered_only = yes
+    trigger = {
+        fromfrom = { #planet
+            #Is the right planet
+            has_planet_flag = mhs_durins_hall_khazad_dum
+            #Owner of the planet has event chain
+            owner = { # Country
+                has_event_chain = mhs_durins_hall
+            }
+        }
+        #Attackers are horrors
+        is_same_value = event_target:underground_horrors
+    }
+    immediate = {
+        from = {
+            country_event = {
+                id = mhs_durin.14
+            }
+        }
+    }
+}
+country_event = {
+    id = mhs_durin.14
+    title = "mhs_durin.14.name"
+    desc = "mhs_durin.14.desc"
+    is_triggered_only = yes
+}
+#    ▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄     ▄ ▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄    
+#    █     ▀█ █       █       █       █▀▄    █ █     ▀█ █       █     ▀█   
+#    █      █ █▄▄▄▄▄  █▄▄▄▄▄  █▄▄▄▄▄  █  ▀▄  █ █      █ █▄▄▄▄▄  █      █   
+#    █     ▄█ █       █       █       █    ▀▄█ █     ▄█ █       █     ▄█   
+#    ▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀ ▀       ▀▀▀▀▀▀▀ ▀     ▀▀ ▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀    
+
+# defend win
+# This = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
+country_event = {
+    id = mhs_durin.15
+    title = "mhs_durin.15.name"
+    desc = "mhs_durin.15.desc"
+    is_triggered_only = yes
+    trigger = {
+        fromfrom = { #planet
+            has_planet_flag = mhs_durins_hall_khazad_dum
+            owner = { # Country
+                has_event_chain = mhs_durins_hall
+            }
+        }
+    }
+}
+
+# ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄     ▄▄ ▄▄▄▄▄▄▄
+# █      █ █           █     █      █ █    █   █      
+# █▄▄▄▄▄▄█ █▄▄▄▄▄      █     █▄▄▄▄▄▄█ █▄▄▄█    █▄▄▄▄▄ 
+# █    ▀▄  █           █     █      █ █   ▀█   █      
+# ▀     ▀▀ ▀▀▀▀▀▀▀     ▀     ▀      ▀ ▀     ▀▀ ▀▀▀▀▀▀▀
+
+# This = country, leader attacker
+# From = country, planet owner
+# FromFrom = planet
+country_event = {
+    id = mhs_durin.16
+    title = "mhs_durin.16.name"
+    desc = "mhs_durin.16.desc"
+    is_triggered_only = yes
+    trigger = {
+        fromfrom = { #planet
+            has_planet_flag = mhs_durins_hall_khazad_dum
+            owner = { # Country
+                has_event_chain = mhs_durins_hall
+                is_same_value = this
+            }
+        }
+    }
+}
