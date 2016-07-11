@@ -49,10 +49,11 @@ ship_event = {
     }
 }
 
-# Opens Popup when homesystem has been surveyed
+# Opens Popup when durins hall is visited
 ship_event = {
     id = mhs_durin.4
-    hide_window = yes
+    title = "Found durins hall"
+    desc = "We have found durins hall. We must now survey our ancestral homeplanet khazad dum"
     is_triggered_only = yes
     trigger = {
         FROM = { # system 
@@ -63,19 +64,6 @@ ship_event = {
         }
     }
     
-    immediate = {
-        ship_event = {
-               id = mhs_durin.5
-        }   
-    }
-}
-
-ship_event = {
-    id = mhs_durin.5
-    title = "Found durins hall"
-    desc = "We have found durins hall. We must now survey our ancestral homeplanet khazad dum"
-    is_triggered_only = yes
-    hide_window = no 
     immediate = {
         FROM = { # system
             random_system_planet = {
@@ -89,6 +77,6 @@ ship_event = {
             desc = "We must learn more about our origins."
             event_chain = visit_durins_hall
             location = event_target:khazad_dum
-        }
+        }   
     }
 }
