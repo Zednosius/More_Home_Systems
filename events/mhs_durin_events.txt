@@ -1,0 +1,38 @@
+namespace = mhs_durin
+
+# Sets country flag for empire starting in Durin´s Forge System
+event = {
+    id = mhs_durin.1
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
+        random_system = {
+            limit = { has_star_flag = mhs_durinsforge_system }
+            space_owner = {
+                set_country_flag = mhs_durinsforge_system
+            }
+        }
+    }
+}
+
+# Opens Popup when homesystem has been surveyed
+ship_event = {
+    id = mhs_durin.2
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+        ship_event = { id = mhs_durin.3 }
+    }
+}
+
+# Popup
+ship_event = {
+    id = mhs_durin.3
+    title = "mhs_durin.3.name"
+    desc = "mhs_durin.3.desc"
+    picture = GFX_evt_ship_in_orbit
+
+    is_triggered_only = yes
+
+}

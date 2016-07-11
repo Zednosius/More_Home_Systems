@@ -1,0 +1,16 @@
+# Runs the durin event on game start to set the flag to its owner
+on_game_start = {
+    events = {
+        mhs_durin.1
+    }
+}
+
+# Opens a Popup when the homesystem survey is finished in the durin event
+# A ship is done surveying the last unsurveyed planet in a system
+# Scope = ship
+# From = system
+on_system_survey = {
+    events = {
+        mhs_durin.2
+    }
+}
