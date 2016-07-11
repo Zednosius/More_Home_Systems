@@ -30,7 +30,7 @@ ship_event = {
     }
 }
 
-# Popup
+# Fired when 
 ship_event = {
     id = mhs_durin.3
     title = "mhs_durin.3.name"
@@ -49,7 +49,7 @@ ship_event = {
     }
 }
 
-# Opens Popup when durins hall is visited
+# Fired when durins hall is visited
 ship_event = {
     id = mhs_durin.4
     title = "Found durins hall"
@@ -75,8 +75,43 @@ ship_event = {
             id = durins_hall.1
             name = "Survey khazad dum"
             desc = "We must learn more about our origins."
-            event_chain = visit_durins_hall
+            event_chain = mhs_durins_hall
             location = event_target:khazad_dum
         }   
+    }
+}
+
+#Fired when khazad dum is surveyed
+ship_event = {
+    id = mhs_durin.5
+    title = "Survey"
+    desc = "We have surveyed Khazad Dum"
+    picture = GFX_evt_ship_in_orbit
+    is_triggered_only = yes
+    trigger = {
+        FROM = { #planet
+            has_planet_flag = mhs_durins_hall_khazad_dum
+        }
+    }
+    immediate = {
+        enable_special_project = {
+            name = "KHAZAD_DUM_EXPEDITION_PROJECT"
+            owner = root.owner
+            location = from
+        }
+    }
+}
+
+#Fired when the expedition is completed
+planet_event = {
+    id = mhs_durin.6
+    title = "Expedition Complete"
+    desc = "We have completed our Expedition on Khazad Dum"
+    picture = GFX_evt_archaeological_dig
+    location = THIS
+    is_triggered_only = yes
+
+    immediate = {
+        # Change the planet class
     }
 }
