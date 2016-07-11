@@ -46,7 +46,7 @@ ship_event = {
     is_triggered_only = yes
 
     immediate = {
-        owner = { 
+        owner = {
             begin_event_chain = {
                 event_chain = "mhs_durins_hall"
                 target = THIS
@@ -77,7 +77,7 @@ ship_event = {
     desc = "mhs_durin.4.desc"
     is_triggered_only = yes
     trigger = {
-        FROM = { # system 
+        FROM = { # system
             has_star_flag = mhs_durins_hall_system
         }
         owner = { # Country
@@ -282,5 +282,94 @@ planet_event = {
         owner = {
             remove_point_of_interest = durins_hall.4
         }
+        from = { #tile
+            set_building = "building_power_plant_1" # Replace with the right building
+        }
+
+        planet_event = {
+            id = mhs_durin.11
+            days = 4
+         }
     }
 }
+
+
+#   ▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄▄ ▄      ▄ ▄▄▄▄▄▄▄▄
+#   █     ▀█ █       █      █     █     █      █ █      ▀
+#   █      █ █▄▄▄▄▄  █▄▄▄▄▄▄█     █     █▄▄▄▄▄▄█ █▄▄▄▄▄▄▄
+#   █     ▄█ █       █            █     █      █ ▄      █
+#   ▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀ ▀            ▀     ▀      ▀ ▀▀▀▀▀▀▀▀
+
+planet_event = {
+    id = mhs_durin.11
+    title = "mhs_durin.11.name"
+    desc = "mhs_durin.11.desc"
+    is_triggered_only = yes
+    trigger = {
+        owner = { # Country
+            has_event_chain = mhs_durins_hall
+        }
+    }
+    immediate = {
+        enable_special_project = {
+            name = "KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT"
+            owner = root.owner
+            location = from
+        }
+    }
+}
+
+planet_event = {
+    id = mhs_durin.12
+    title = "mhs_durin.12.name"
+    desc = "mhs_durin.12.desc"
+    is_triggered_only = yes
+    trigger = {
+        owner = { # Country
+            has_event_chain = mhs_durins_hall
+        }
+    }
+    immediate = {
+        IF = {
+            limit = {
+                not = {
+                    exists = event_target:underground_horrors
+                }
+            }
+            create_country = {
+                name = "Underground Horrors"
+                type = faction
+                ethos = {
+                    ethic = "ethic_fanatic_xenophobe"
+                    ethic = "ethic_fanatic_militarist"
+                }
+                auto_delete = no
+                flag = {
+                    icon = {
+                        category = "zoological"
+                        file = "flag_zoological_10.dds"
+                    }
+                    background= {
+                        category = "backgrounds"
+                        file = "new_dawn.dds"
+                    }
+                    colors = {
+                        "red"
+                        "black"
+                        "null"
+                        "null"
+                    }
+                }
+            }
+            last_created_country = {
+                save_global_event_target_as = underground_horrors
+            }
+        }
+        create_army = {
+            name = "Underground Abominations"
+            owner = event_target:underground_horrors
+            type = "gene_warrior_army"
+         }
+    }
+}
+
