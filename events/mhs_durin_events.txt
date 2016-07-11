@@ -148,11 +148,12 @@ planet_event = {
 
     immediate = {
         # Change the planet class
-        change_pc = pc_arid
+        change_pc = pc_mhs_durin_nuked_colonize
 
         every_tile = {
             limit = { has_blocker = no has_building = no }
-            set_blocker = random
+            set_blocker = tb_city_ruins
+            random_resources = yes
         }
         random_tile = {
             remove_blocker = yes
