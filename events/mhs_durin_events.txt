@@ -24,6 +24,12 @@ ship_event = {
         owner = {
             has_country_flag = mhs_durinsforge_system
         }
+
+        solar_system = {
+            any_planet = {
+                is_same_value = owner.home_planet
+            }
+        }
     }
     immediate = {
         ship_event = { id = mhs_durin.3 }
