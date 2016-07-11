@@ -85,20 +85,26 @@ ship_event = {
 ship_event = {
     id = mhs_durin.5
     title = "Survey"
-    desc = "We have surveyed Khazad Dum"
+    desc = "We have surveyed Khazad Dum. We have found interesting ruins, we should investigate them further"
     picture = GFX_evt_ship_in_orbit
     is_triggered_only = yes
+    location = from
     trigger = {
         FROM = { #planet
             has_planet_flag = mhs_durins_hall_khazad_dum
         }
     }
     immediate = {
+        remove_point_of_interest = durins_hall.1
+    }
+    option = {
+        name = "Make it so."
         enable_special_project = {
             name = "KHAZAD_DUM_EXPEDITION_PROJECT"
             owner = root.owner
             location = from
         }
+
     }
 }
 
