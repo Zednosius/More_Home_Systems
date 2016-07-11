@@ -42,7 +42,7 @@ ship_event = {
     immediate = {
         owner = { 
             begin_event_chain = {
-                event_chain = "visit_durins_hall"
+                event_chain = "mhs_durins_hall"
                 target = THIS
             }
         }
@@ -60,7 +60,7 @@ ship_event = {
             has_star_flag = mhs_durins_hall_system
         }
         FROMFROM = { # Country
-            has_event_chain = visit_durins_hall
+            has_event_chain = mhs_durins_hall
         }
     }
     

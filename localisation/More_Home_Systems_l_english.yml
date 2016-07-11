@@ -90,5 +90,5 @@
  pc_mhs_durin_nuked_colonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation and large cracks in the planetary crust spitting our fire and toxic gases that make life impossible. It is orbited by an ancient destroyed Ring World."
  
  #Durins Hall
- visit_durins_hall_title:0 "Visit Durin's Hall"
- visit_durins_hall_desc:0 "We must find the our ancestral home, the Hall of Durin."
+ mhs_durins_hall_title:0 "Visit Durin's Hall"
+ mhs_durins_hall_desc:0 "We must find the our ancestral home, the Hall of Durin."
