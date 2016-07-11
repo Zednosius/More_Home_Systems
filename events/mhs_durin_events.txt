@@ -91,16 +91,18 @@ ship_event = {
                 save_event_target_as = khazad_dum
             }
         }
-        create_point_of_interest = {
-            id = durins_hall.2
-            name = "Survey khazad dum"
-            desc = "We must learn more about our origins."
-            event_chain = mhs_durins_hall
-            location = event_target:khazad_dum
-        }   
+
         owner = {
             set_country_flag = mhs_has_found_durins_hall
             remove_point_of_interest = durins_hall.1
+
+            create_point_of_interest = {
+                id = durins_hall.2
+                name = "Survey khazad dum"
+                desc = "We must learn more about our origins."
+                event_chain = mhs_durins_hall
+                location = event_target:khazad_dum
+            }
         }
     }
 }
@@ -138,7 +140,7 @@ ship_event = {
 }
 
 #Fired when the expedition is completed
-planet_event = {
+ship_event = {
     id = mhs_durin.6
     title = "Expedition Complete"
     desc = "We have completed our Expedition on Khazad Dum"
@@ -147,7 +149,25 @@ planet_event = {
     is_triggered_only = yes
 
     immediate = {
-        # Change the planet class
+        # FromFromFrom is the planet
+        FromFromFrom = { # planet
+            save_event_target_as = khazad_dum
+            planet_event = {
+                id = mhs_durin.7
+             }
+        }
+        owner = {
+            remove_point_of_interest = durins_hall.2
+            country_event = { id = mhs_durin.8 days = 2 }
+        }
+
+    }
+}
+planet_event = {
+    id = mhs_durin.7
+    hide_window = yes
+    is_triggered_only = yes
+    immediate = {
         change_pc = pc_mhs_durin_nuked_colonize
 
         every_tile = {
@@ -157,6 +177,31 @@ planet_event = {
         }
         random_tile = {
             remove_blocker = yes
+        }
+    }
+}
+
+country_event = {
+    id = mhs_durin.8
+    title = "Colonizing Khazad Dum"
+    desc = "We must colonize our ancestral home Khazad Dum to find out more about it."
+    is_triggered_only = yes
+    immediate = {
+        create_point_of_interest = {
+            id = durins_hall.3
+            name = "Colonize khazad dum"
+            desc = "We must learn more about our origins."
+            event_chain = mhs_durins_hall
+            location = event_target:khazad_dum
+        }
+        create_fleet = {}
+        last_created_fleet = {
+            set_owner = ROOT
+            create_ship = {
+                name = random
+                random_existing_design = "colonizer"
+             }
+             set_location = event_target:khazad_dum
         }
     }
 }
