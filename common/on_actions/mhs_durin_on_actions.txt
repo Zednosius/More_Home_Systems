@@ -12,5 +12,11 @@ on_game_start = {
 on_system_survey = {
     events = {
         mhs_durin.2
+
+    }
+}
+on_entering_system = {
+    events = {
+        mhs_durin.4
     }
 }
