@@ -119,5 +119,14 @@ planet_event = {
 
     immediate = {
         # Change the planet class
+        change_pc = pc_arid
+
+        every_tile = {
+            limit = { has_blocker = no has_building = no }
+            set_blocker = random
+        }
+        random_tile = {
+            remove_blocker = yes
+        }
     }
 }
