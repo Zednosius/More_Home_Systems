@@ -73,8 +73,8 @@ ship_event = {
 # Fired when durins hall is visited
 ship_event = {
     id = mhs_durin.4
-    title = "Found durins hall"
-    desc = "We have found durins hall. We must now survey our ancestral homeplanet khazad dum"
+    title = "mhs_durin.4.name"
+    desc = "mhs_durin.4.desc"
     is_triggered_only = yes
     trigger = {
         FROM = { # system 
@@ -120,8 +120,8 @@ ship_event = {
 #Fired when khazad dum is surveyed
 ship_event = {
     id = mhs_durin.5
-    title = "Survey"
-    desc = "We have surveyed Khazad Dum. We have found interesting ruins, we should investigate them further"
+    title = "mhs_durin.5.name"
+    desc = "mhs_durin.5.desc"
     picture = GFX_evt_ship_in_orbit
     is_triggered_only = yes
     location = from
@@ -159,8 +159,8 @@ ship_event = {
 #Fired when the expedition is completed
 ship_event = {
     id = mhs_durin.6
-    title = "Expedition Complete"
-    desc = "We have completed our Expedition on Khazad Dum"
+    title = "mhs_durin.6.name"
+    desc = "mhs_durin.6.desc"
     picture = GFX_evt_archaeological_dig
     location = THIS
     is_triggered_only = yes
@@ -206,8 +206,8 @@ planet_event = {
 
 country_event = {
     id = mhs_durin.8
-    title = "Colonizing Khazad Dum"
-    desc = "We must colonize our ancestral home Khazad Dum to find out more about it."
+    title = "mhs_durin.8.name"
+    desc = "mhs_durin.8.desc"
     is_triggered_only = yes
     immediate = {
         create_point_of_interest = {
@@ -238,8 +238,8 @@ country_event = {
 #Planet is colonized by player
 planet_event = {
     id = mhs_durin.9
-    title = "Colonization complete"
-    desc = "We have colonized Khazad Dum, now we have the long and ardous work of clearing the old ruins."
+    title = "mhs_durin.9.name"
+    desc = "mhs_durin.9.desc"
     is_triggered_only = yes
     trigger = {
         owner = { # Country
@@ -262,8 +262,8 @@ planet_event = {
 
 planet_event = {
     id = mhs_durin.10
-    title = "Ruins Cleared"
-    desc = "We have successfully cleared the surface of all old ruins."
+    title = "mhs_durin.10.name"
+    desc = "mhs_durin.10.desc"
     is_triggered_only = yes
     trigger = {
         owner = { # Country
