@@ -281,7 +281,7 @@ durinsforge_system_neighbor_t1 = {
 	name = "Durin´s Hall"
 	class = sc_g
 	asteroids_distance = 200
-	
+	flags = { mhs_durins_hall_system }
 	planet = {
 		count = 1
 		name = "Durin's Hall"
@@ -299,7 +299,7 @@ durinsforge_system_neighbor_t1 = {
 		orbit_angle = 1
 		size = 16
 		has_ring = no
-		
+		flags = { mhs_durins_hall_khazad_dum }
 		init_effect = {
 			create_ambient_object = {
 				type = "mhs_durin_destroyed_ring_01_object"
