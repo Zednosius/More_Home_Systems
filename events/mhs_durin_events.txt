@@ -228,3 +228,59 @@ country_event = {
         }
     }
 }
+
+# ▄▄▄▄▄▄▄▄▄ ▄ ▄        ▄▄▄▄▄▄▄   ▄▄▄▄▄▄▄ ▄        ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄     ▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄
+#     █     █ █        █         █     █ █        █      █ █        █    █   █       █      █ █      ▀
+#     █     █ █        █▄▄▄▄▄    █▀▀▀▀▀█ █        █      █ █        █▄▄▄█    █▄▄▄▄▄  █▄▄▄▄▄▄█ █▄▄▄▄▄▄▄
+#     █     █ █        █         █     █ █        █      █ █        █   ▀█   █       █    ▀▄  ▄      █
+#     ▀     ▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀   ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀     ▀▀ ▀▀▀▀▀▀▀ ▀     ▀▀ ▀▀▀▀▀▀▀▀
+
+#Planet is colonized by player
+planet_event = {
+    id = mhs_durin.9
+    title = "Colonization complete"
+    desc = "We have colonized Khazad Dum, now we have the long and ardous work of clearing the old ruins."
+    is_triggered_only = yes
+    trigger = {
+        owner = { # Country
+            has_event_chain = mhs_durins_hall
+        }
+    }
+    immediate = {
+        owner = {
+            create_point_of_interest = {
+                id = durins_hall.4
+                name = "Clear Ruins on Khazad Dum"
+                desc = "We must learn more about our origins."
+                event_chain = mhs_durins_hall
+                location = ROOT
+            }
+            remove_point_of_interest = durins_hall.3
+        }
+    }
+}
+
+planet_event = {
+    id = mhs_durin.10
+    title = "Ruins Cleared"
+    desc = "We have successfully cleared the surface of all old ruins."
+    is_triggered_only = yes
+    trigger = {
+        owner = { # Country
+            has_event_chain = mhs_durins_hall
+        }
+        not = {
+            any_tile = {
+                has_blocker = yes
+                not = {
+                    is_same_value = from
+                }
+            }
+        }
+    }
+    immediate = {
+        owner = {
+            remove_point_of_interest = durins_hall.4
+        }
+    }
+}

@@ -33,3 +33,19 @@ on_entering_system = {
         mhs_durin.4
     }
 }
+
+# A planet has been colonized.
+# Scope = Planet
+on_colonized = {
+    events = {
+        mhs_durin.9
+    }
+}
+
+# From = Tile
+# This = Planet
+on_blocker_cleared = {
+    events = {
+        mhs_durin.10
+    }
+}
