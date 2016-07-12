@@ -114,12 +114,12 @@
  mhs_durin.6.desc:0 "Our scientists came up with plans how to counter the threats our expedition will be faced with. Though it will not be very pleasant our personnel will have to wear heavy protective gear at all time when beeing outside their shielded habitat modules. All these protection measures will also increase production times ans costs for any building constructed. A suitable landing place where Radiation levels are within acceptable limits has been found as well."
 
  #We should build a colony, starts colony mission
- mhs_durin.8.name:0 "Retake what is Ours"
- mhs_durin.8.desc:0 "We should establish a colony on [event_target:khazad_dum.GetName] so that we can devote significant effort towards learning more about or ancestors."
+ mhs_durin.8.name:0 "Reclaim what is Ours"
+ mhs_durin.8.desc:0 "It is time to establish an expeditionary outpost on [event_target:khazad_dum.GetName]. We still do not know what happened to our ancestors. What might have destroyed their world, laid their cities to ruins and brought their civilisation to collapse?"
 
  #Clear the planet of all tile blockers (ruins)
- mhs_durin.9.name:0 "Colony Established"
- mhs_durin.9.desc:0 "With our colony established, it is time to roll up our sleeves and get cracking with clearing the old ruins."
+ mhs_durin.9.name:0 "Outpost Established"
+ mhs_durin.9.desc:0 "With our outpost established, it is time to begin the planned expeditions into the old ruins."
 
  #All blockers have been cleared.
  mhs_durin.10.name:0 "Ruins Cleared"
