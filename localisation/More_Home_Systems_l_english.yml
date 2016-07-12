@@ -85,13 +85,13 @@
  pc_mhs_nuked_by_asteroids:0 "Tomb World"
  pc_mhs_nuked_by_asteroids_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing an impact winter, with dense layers of sooty aerosols in the atmosphere."
  pc_mhs_durin_nuked_nocolonize:0 "Tomb World with destroyed Ring"
- pc_mhs_durin_nuked_nocolonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation and large cracks in the planetary crust spitting our fire and toxic gases that make life impossible. It is orbited by an ancient destroyed Ring World."
+ pc_mhs_durin_nuked_nocolonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation make life impossible. It is orbited by an ancient destroyed Ring World."
  pc_mhs_durin_nuked_colonize:0 "Tomb World with destroyed Ring"
- pc_mhs_durin_nuked_colonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation and large cracks in the planetary crust spitting our fire and toxic gases that make life impossible. It is orbited by an ancient destroyed Ring World."
+ pc_mhs_durin_nuked_colonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation make life impossible. It is orbited by an ancient destroyed Ring World."
  
  #Durins Hall
  mhs_durins_hall_title:0 "Visit Durin's Hall"
- mhs_durins_hall_desc:0 "For a long time have the stars been a central part of our legends and what would be a more fitting start of our journey into the unknown than Durin's Folk visiting the most important star of our legends, the Hall of Durin."
+ mhs_durins_hall_desc:0 "For a long time have the stars been a central part of our legends and what would be a more fitting start of our journey into the unknown than Durin's Folk visiting the most important star of our legends, the 'Hall of Durin'."
 
  #Upon completing home system survey, starts event chain
  mhs_durin.3.name:0 "Durin's Legacy"
@@ -102,8 +102,8 @@
  mhs_durin.4.desc:0 "We have reached the legendary 'Hall of Durin'. Our Scientists did not expect to find anything special there. But when first system scans reached them they were struck speechless. There is one planet orbiting its sun inside the habitable zone./n/nAnd there is more! It seems to be orbited by some kind of mega structure. We should investigate it as soon as possible."
 
  #Khazad Dum has been surveyed, starts surface expedition project.
- mhs_durin.5.name:0 "Survey Complete"
- mhs_durin.5.desc:0 "Our initial scans indicate a significant amount of ruins of the surface, we need to make a more thorough investigation."
+ mhs_durin.5.name:0 "Dwarven Origins"
+ mhs_durin.5.desc:0 "A heavily damaged gigantic ring orbits a planet covered in dense clouds. High radiation values are measured by our probes. Our scientists already supected what became a certainty when our scienceship found a small object orbiting the planet. It turned out to be an ancient lifepod - in it the remains of its unfortunate passenger - a dwarf./n/n In ancient times Durin lead our people away from their home when a great disaster struck it. It was a long exodus beneath the stars until they found their new home. Though we always believed this ancient home to be somewhere on Erebor, lost to the ages, this must be Khazad Dum our ancient home."
 
  #Expedition is completed
  mhs_durin.6.name:0 "Expedition Complete"
