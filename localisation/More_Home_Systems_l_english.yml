@@ -95,11 +95,11 @@
 
  #Upon completing home system survey, starts event chain
  mhs_durin.3.name:0 "Durin's Legacy"
- mhs_durin.3.desc:0 "Since ancient times our legends tell the story of Durin our progenitor and King beneath the Stars. There are even stars in the sky that bear his name in his honor. One of them is Durin's Forge - the biggest of our three suns. Another one is Durin's Hall. Though it is neither the brightest star in the sky nor part of any important constellation. But is a place of legends and a worthy exploration target for our starting journey to the stars."
+ mhs_durin.3.desc:0 "Since ancient times our legends tell the story of Durin, our progenitor and King beneath the Stars. There are even stars in the sky that bear that name in his honor. One of them is Durin's Forge - the biggest of our three suns. Another one is Durin's Hall. Though it is neither the brightest star in the sky nor part of any important constellation. But is a place of legends and a worthy exploration target for our starting journey to the stars."
 
  #Durin's halls system is visited, starts survey khazad dum
- mhs_durin.4.name:0 "Durin's Hall"
- mhs_durin.4.desc:0 "We have found the system of our ancestors, our scanners have found a tomb world. We should investigate it."
+ mhs_durin.4.name:0 "The Hall of Durin"
+ mhs_durin.4.desc:0 "We have reached the legendary 'Hall of Durin'. Our Scientists did not expect to find anything special there. But when first system scans reached them they were struck speechless. There is one planet orbiting its sun inside the habitable zone./n/nAnd there is more! It seems to be orbited by some kind of mega structure. We should investigate it as soon as possible."
 
  #Khazad Dum has been surveyed, starts surface expedition project.
  mhs_durin.5.name:0 "Survey Complete"
