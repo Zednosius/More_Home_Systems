@@ -403,7 +403,7 @@ country_event = {
     immediate = {
         fromfrom = { # planet
             planet_event = {
-                id = mhs_durin.17
+                id = mhs_durin.17 #Start the rolling purge
                 days = 14
             }
         }
@@ -449,7 +449,7 @@ planet_event = {
                 purge = yes
             }
             planet_event = {
-                id = mhs_durin.17
+                id = mhs_durin.17 #Re fire this event in a month
                 days = 30
              }
 
@@ -517,6 +517,7 @@ country_event = {
         }
     }
     immediate = {
+        #Stop the purging which is in progress
         every_owned_pop = {
             purge = no
         }
