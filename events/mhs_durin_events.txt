@@ -36,7 +36,7 @@ ship_event = {
     }
 }
 
-# Fired when 
+# Fired when home system is surveyed
 ship_event = {
     id = mhs_durin.3
     title = "mhs_durin.3.name"
@@ -504,8 +504,8 @@ country_event = {
 country_event = {
     id = mhs_durin.16
     hide_window = no
-    title = "mhs_durin.15.name"
-    desc = "mhs_durin.15.desc"
+    title = "mhs_durin.16.name"
+    desc = "mhs_durin.16.desc"
     is_triggered_only = yes
     trigger = {
         fromfrom = { #planet

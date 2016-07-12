@@ -92,3 +92,60 @@
  #Durins Hall
  mhs_durins_hall_title:0 "Visit Durin's Hall"
  mhs_durins_hall_desc:0 "We must find the our ancestral home, the Hall of Durin."
+
+ #Upon completing home system survey, starts event chain
+ mhs_durin.3.name:0 "Ancestral home"
+ mhs_durin.3.desc:0 "We have found signs of where our ancestral home could be, we should find it."
+
+ #Durin's halls system is visited, starts survey khazad dum
+ mhs_durin.4.name:0 "Durin's Hall"
+ mhs_durin.4.desc:0 "We have found the system of our ancestors, our scanners have found a tomb world. We should investigate it."
+
+ #Khazad Dum has been surveyed, starts surface expedition project.
+ mhs_durin.5.name:0 "Survey Complete"
+ mhs_durin.5.desc:0 "Our initial scans indicate a significant amount of ruins of the surface, we need to make a more thorough investigation."
+
+ #Expedition is completed
+ mhs_durin.6.name:0 "Expedition Complete"
+ mhs_durin.6.desc:0 "Our ground teams have confirmed that this is the homeworld of our ancestors. The buildings are in tatters but could still hold valuable information."
+
+ #We should build a colony, starts colony mission
+ mhs_durin.8.name:0 "In It for the Long Haul"
+ mhs_durin.8.desc:0 "We should establish a colony on [event_target:khazad_dum.GetName] so that we can devote significant effort towards learning more about or ancestors."
+
+ #Clear the planet of all tile blockers (ruins)
+ mhs_durin.9.name:0 "Colony Established"
+ mhs_durin.9.desc:0 "With our colony established, it is time to roll up our sleeves and get cracking with clearing the old ruins."
+
+ #All blockers have been cleared.
+ mhs_durin.10.name:0 "Ruins Cleared"
+ mhs_durin.10.desc:0 "We have cleared all the ruins. Now we can start restoring this planet to its former glory."
+
+ #Starts Khazad Dum's Depths expedition
+ mhs_durin.11.name:0 "The Mines of Durin"
+ mhs_durin.11.desc:0 "In our efforts we have discovered what appears to be an ancient mine, we should see what lies inside."
+
+ #Discovers underground horrors who attacks
+ mhs_durin.12.name:0 "The Horrors Below"
+ mhs_durin.12.desc:0 "Our expedition of the mine has gone horribly awry, a number of undescribable horrors seem to have awakened and made short work of our expedition team. They have now begun pouring out of the opening and are launching a viscious full scale assault"
+
+ #We lost the battle agains the horrors
+ mhs_durin.13.name:0 "Tragedy"
+ mhs_durin.13.desc:0 "Our numbers were too few too withstand the onslaught, now it is every man for himself."
+
+ #The horrors have begun rampaging throughout the planet killing off our population there.
+ mhs_durin.14.name:0 "Rampaging"
+ mhs_durin.14.desc:0 "With the loss of control we are unable to defend our citizens, they are helpless against the hordes."
+
+ #We succesfully defended the planet against the horrors initial attack.
+ mhs_durin.15.name:0 "Victory"
+ mhs_durin.15.desc:0 "The abominations did not foresee our might, the ones who are still alive have scurried back to the depths from which they came."
+
+ # We have successfully reconquered the planet.
+ mhs_durin.16.name:0 "Reconquest"
+ mhs_durin.16.desc:0 "We have successfully reclaimed our rightful heritage from the abominations, the citizens who have managed to survived are back under our protection once again."
+
+ #A small group of citizens have barricaded themselves.
+ mhs_durin.18.name:0 "Isolated"
+ mhs_durin.18.desc:0 "The assaults of the horrors have claimed many lives, a small group of citizens have barricaded themselves in an area where they can't seem to be reached."
+ 
