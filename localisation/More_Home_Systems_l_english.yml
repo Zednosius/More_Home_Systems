@@ -94,8 +94,8 @@
  mhs_durins_hall_desc:0 "We must find the our ancestral home, the Hall of Durin."
 
  #Upon completing home system survey, starts event chain
- mhs_durin.3.name:0 "Ancestral home"
- mhs_durin.3.desc:0 "We have found signs of where our ancestral home could be, we should find it."
+ mhs_durin.3.name:0 "Durin's Legacy"
+ mhs_durin.3.desc:0 "Since ancient times our legends tell the story of Durin our progenitor and King beneath the Stars. There are even stars in the sky that bear his name in his honor. One of them is Durin's Forge - the biggest of our three suns. Another one is Durin's Hall. Though it is neither the brightest star in the sky nor part of any important constellation. But is a place of legends and a worthy exploration target for our starting journey to the stars."
 
  #Durin's halls system is visited, starts survey khazad dum
  mhs_durin.4.name:0 "Durin's Hall"
