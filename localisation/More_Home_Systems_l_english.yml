@@ -88,29 +88,33 @@
  pc_mhs_durin_nuked_nocolonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation make life impossible. It is orbited by an ancient destroyed Ring World."
  pc_mhs_durin_nuked_colonize:0 "Tomb World with destroyed Ring"
  pc_mhs_durin_nuked_colonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation make life impossible. It is orbited by an ancient destroyed Ring World."
- 
- #Durins Hall
- mhs_durins_hall_title:0 "Visit Durin's Hall"
- mhs_durins_hall_desc:0 "For a long time have the stars been a central part of our legends and what would be a more fitting start of our journey into the unknown than Durin's Folk visiting the most important star of our legends, the 'Hall of Durin'."
 
  #Upon completing home system survey, starts event chain
  mhs_durin.3.name:0 "Durin's Legacy"
  mhs_durin.3.desc:0 "Since ancient times our legends tell the story of Durin, our progenitor and King beneath the Stars. There are even stars in the sky that bear that name in his honor. One of them is Durin's Forge - the biggest of our three suns. Another one is Durin's Hall. Though it is neither the brightest star in the sky nor part of any important constellation. But is a place of legends and a worthy exploration target for our starting journey to the stars."
 
+ #Durins Hall Event Chain
+ mhs_durins_hall_title:0 "A Journey to the Stars"
+ mhs_durins_hall_desc:0 "For a long time have the stars been a central part of our legends and what would be a more fitting start of our journey into the unknown than Durin's Folk visiting the most important star of our legends, the 'Hall of Durin'."
+ 
  #Durin's halls system is visited, starts survey khazad dum
  mhs_durin.4.name:0 "The Hall of Durin"
  mhs_durin.4.desc:0 "We have reached the legendary 'Hall of Durin'. Our Scientists did not expect to find anything special there. But when first system scans reached them they were struck speechless. There is one planet orbiting its sun inside the habitable zone./n/nAnd there is more! It seems to be orbited by some kind of mega structure. We should investigate it as soon as possible."
 
- #Khazad Dum has been surveyed, starts surface expedition project.
+ #Khazad Dum has been surveyed, starts surface expedition research project.
  mhs_durin.5.name:0 "Dwarven Origins"
  mhs_durin.5.desc:0 "A heavily damaged gigantic ring orbits a planet covered in dense clouds. High radiation values are measured by our probes. Our scientists already supected what became a certainty when our scienceship found a small object orbiting the planet. It turned out to be an ancient lifepod - in it the remains of its unfortunate passenger - a dwarf./n/n In ancient times Durin lead our people away from their home when a great disaster struck it. It was a long exodus beneath the stars until they found their new home. Though we always believed this ancient home to be somewhere on Erebor, lost to the ages, this must be Khazad Dum our ancient home."
 
- #Expedition is completed
- mhs_durin.6.name:0 "Expedition Complete"
- mhs_durin.6.desc:0 "Our ground teams have confirmed that this is the homeworld of our ancestors. The buildings are in tatters but could still hold valuable information."
+ #Khazad Dum Surface Expedition Research
+ KHAZAD_DUM_EXPEDITION_PROJECT:0 "Heritage of the Ancients"
+ KHAZAD_DUM_EXPEDITION_PROJECT_DESC:0 "In order to find out more about our distant past we have to find a way to establish a stable outpost on Khazad Dum. We will have to remove many obstacles to make this possible. The harsh environment and possibly deadly radiation are just two of them."
+
+ #Expedition Research is completed
+ mhs_durin.6.name:0 "Progress of Preparations"
+ mhs_durin.6.desc:0 "Our scientists came up with plans how to counter the threats our expedition will be faced with. Though it will not be very pleasant our personnel will have to wear heavy protective gear at all time when beeing outside their shielded habitat modules. All these protection measures will also increase production times ans costs for any building constructed. A suitable landing place where Radiation levels are within acceptable limits has been found as well."
 
  #We should build a colony, starts colony mission
- mhs_durin.8.name:0 "In It for the Long Haul"
+ mhs_durin.8.name:0 "Retake what is Ours"
  mhs_durin.8.desc:0 "We should establish a colony on [event_target:khazad_dum.GetName] so that we can devote significant effort towards learning more about or ancestors."
 
  #Clear the planet of all tile blockers (ruins)
