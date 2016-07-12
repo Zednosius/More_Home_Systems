@@ -373,11 +373,11 @@ planet_event = {
     }
 }
 
-#   ▄        ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄ ▄▄     ▄ ▄▄▄▄▄▄▄▄
-#   █        █      █ █      ▀ █ █▀▄    █ █      ▀
-#   █        █      █ █▄▄▄▄▄▄▄ █ █  ▀▄  █ █    ▄▄▄
-#   █        █      █ ▄      █ █ █    ▀▄█ █      █
-#   ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀ ▀     ▀▀ ▀▀▀▀▀▀▀▀
+#   ▄        ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄ ▄▄     ▄ ▄▄▄▄▄▄▄▄
+#   █        █      █ █      ▀   █   █▀▄    █ █      ▀
+#   █        █      █ █▄▄▄▄▄▄▄   █   █  ▀▄  █ █    ▄▄▄
+#   █        █      █ ▄      █   █   █    ▀▄█ █      █
+#   ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀▀ ▀▀▀▀▀▀▀▀
 
 # attack win
 # This = country, leader attacker
@@ -401,19 +401,72 @@ country_event = {
         is_same_value = event_target:underground_horrors
     }
     immediate = {
-        from = {
+        fromfrom = { # planet
+            planet_event = {
+                id = mhs_durin.17
+                days = 14
+            }
+        }
+        from = { # country
             country_event = {
-                id = mhs_durin.14
+                id = mhs_durin.14 # Inform player about what will happen when the horrors are controlling the planet
+                days = 14
             }
         }
     }
 }
-country_event = {
-    id = mhs_durin.14
-    title = "mhs_durin.14.name"
-    desc = "mhs_durin.14.desc"
+
+
+
+#   ▄▄▄▄▄▄▄▄ ▄      ▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄
+#   █      █ █      █ █      █ █      ▀ █      
+#   █▄▄▄▄▄▄█ █      █ █▄▄▄▄▄▄█ █    ▄▄▄ █▄▄▄▄▄ 
+#   █        █      █ █    ▀▄  █      █ █      
+#   ▀        ▀▀▀▀▀▀▀▀ ▀     ▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀
+
+# Every month start purging one more pop until there is only one left
+# Then give an event to the owner telling them about the pop fortifying their position.
+planet_event = {
+    id = mhs_durin.17
+    hide_window = yes
     is_triggered_only = yes
+    trigger = {
+        has_planet_flag = mhs_durins_hall_khazad_dum
+        controller = {
+            is_same_value = event_target:underground_horrors
+        }
+    }
+    immediate = {
+        IF = {
+            limit = { 
+                count_pops = {
+                    count > 1
+                    limit = { is_being_purged = no }
+                } 
+            }
+            random_pop = {
+                limit = { is_being_purged = no }
+                purge = yes
+            }
+            planet_event = {
+                id = mhs_durin.17
+                days = 30
+             }
+
+        else = {
+            owner = {
+                country_event = { id = mhs_durin.18 } # The last pop has fortified their position.
+                }
+            }
+        }
+    }
 }
+
+
+
+
+
+
 #    ▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄     ▄ ▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄    
 #    █     ▀█ █       █       █       █▀▄    █ █     ▀█ █       █     ▀█   
 #    █      █ █▄▄▄▄▄  █▄▄▄▄▄  █▄▄▄▄▄  █  ▀▄  █ █      █ █▄▄▄▄▄  █      █   
@@ -450,16 +503,45 @@ country_event = {
 # FromFrom = planet
 country_event = {
     id = mhs_durin.16
-    title = "mhs_durin.16.name"
-    desc = "mhs_durin.16.desc"
+    hide_window = no
+    title = "mhs_durin.15.name"
+    desc = "mhs_durin.15.desc"
     is_triggered_only = yes
     trigger = {
         fromfrom = { #planet
             has_planet_flag = mhs_durins_hall_khazad_dum
             owner = { # Country
                 has_event_chain = mhs_durins_hall
-                is_same_value = this
+                is_same_value = root
             }
         }
     }
+    immediate = {
+        every_owned_pop = {
+            purge = no
+        }
+    }
+}
+
+# ▄▄▄▄▄ ▄▄     ▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄     ▄▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄     ▄
+#   █   █▀▄    █ █       █      █ █      █ █▀▄   ▄▀█ █      █     █       █   █      █ █▀▄    █
+#   █   █  ▀▄  █ █▄▄▄▄▄  █      █ █▄▄▄▄▄▄█ █  ▀▄▀  █ █▄▄▄▄▄▄█     █       █   █      █ █  ▀▄  █
+#   █   █    ▀▄█ █       █      █ █    ▀▄  █       █ █      █     █       █   █      █ █    ▀▄█
+# ▀▀▀▀▀ ▀     ▀▀ ▀       ▀▀▀▀▀▀▀▀ ▀     ▀▀ ▀       ▀ ▀      ▀     ▀     ▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀     ▀▀
+
+# Inform player about what will happen when the horrors are controlling the planet
+country_event = {
+    id = mhs_durin.14
+    title = "mhs_durin.14.name"
+    desc = "mhs_durin.14.desc"
+    is_triggered_only = yes
+}
+
+
+# The last pop has fortified their position.
+country_event = {
+    id = mhs_durin.18
+    title = "mhs_durin.18.name"
+    desc = "mhs_durin.18.desc"
+    is_triggered_only = yes
 }
