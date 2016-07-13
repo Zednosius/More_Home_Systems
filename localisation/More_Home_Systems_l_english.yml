@@ -50,6 +50,8 @@
  pc_mhs_nuked_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation."
  pc_mhs_nuked_tile:0 "Wasteland Terrain"
  pc_mhs_nuked_tile_desc:0 "Harsh, war-torn terrain. Radiation levels are low enough to support some life."
+ pc_mhs_durin_nuked_colonize_tile:0 "Wasteland Terrain"
+ pc_mhs_durin_nuked_colonize_tile_desc:0 "Harsh, war-torn terrain. Radiation levels are low enough to support some life."
  pc_mhs_nuked_by_asteroids_tile:0 "Tundra Terrain"
  pc_mhs_nuked_by_asteroids_tile_desc:0 "Cold and wind-swept steppes with sparse vegetation."
  
