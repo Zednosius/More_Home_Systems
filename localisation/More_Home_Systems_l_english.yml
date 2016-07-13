@@ -119,10 +119,10 @@
 
  #Clear the planet of all tile blockers (ruins)
  mhs_durin.9.name:0 "Outpost Established"
- mhs_durin.9.desc:0 "With our outpost established, it is time to begin the planned expeditions into the old ruins."
+ mhs_durin.9.desc:0 "With our outpost established, it is time to begin the planned expeditions into the old ruins. We´ll also have to clear any obstacles that prevent our teams' movement along the way."
 
  #All blockers have been cleared.
- mhs_durin.10.name:0 "Ruins Cleared"
+ mhs_durin.10.name:0 "The Great Gateway"
  mhs_durin.10.desc:0 "We have cleared all the ruins. Now we can start restoring this planet to its former glory."
 
  #Starts Khazad Dum's Depths expedition
