@@ -66,6 +66,8 @@
  mhs_reetii_system_DESC:0 "The Re´etii system, once center of an ancient empire lies in ruins. Their worlds have been burned and their biggest achievement - a giant ringworld - has been destroyed. Your species was once nothing more than pets in one of their zoos. You were lucky enough to outlive your former masters and now rule over the last habitable parts of your ringworld segment.\n\nHomeworld - Size 16\n\n$system_initializer_DESC$"
  mhs_reshtar_system_NAME:0 "Resh´Tar System"
  mhs_reshtar_system_DESC:0 "The Resh´Tar system with three habitable planets orbiting their sun on the same orbit though now long abandoned seems to have once been subject of an experiment of stellar scale.\n\nHomeworld - Size 16\n\n1 Sun, 2 Habitable Planets, 12 Asteroids\n\n$system_initializer_DESC$"
+ mhs_kholdan_system_NAME:0 "Kholdan System"
+ mhs_kholdan_system_DESC:0 "The Kholdan system is a trinary star system consisting of a small binary star system orbiting a red giant and his planets.\n\nHomeworld - Size 16\n\n3 Suns, 3 Molten Worlds, 1 Gas Giant, 2 Barren Worlds, 2 Toxic Worlds and  various Asteroids\n\n$system_initializer_DESC$"
  mhs_durinsforge_system_NAME:0 "Durin´s Forge"
  mhs_durinsforge_system_DESC:0 "Durin´s Forge - WORK IN PROGRESS - NO EVENTS IN YET"
  mhs_me_tikkun_system_NAME:0 "Tikkun System"
@@ -85,6 +87,10 @@
  pc_mhs_nuked_by_asteroids:0 "Tomb World"
  pc_mhs_nuked_by_asteroids_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing an impact winter, with dense layers of sooty aerosols in the atmosphere."
  pc_mhs_durin_nuked_nocolonize:0 "Tomb World with destroyed Ring"
- pc_mhs_durin_nuked_nocolonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation and large cracks in the planetary crust spitting our fire and toxic gases that make life impossible. It is orbited by an ancient destroyed Ring World."
+ pc_mhs_durin_nuked_nocolonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation make life impossible. It is orbited by an ancient destroyed Ring World."
  pc_mhs_durin_nuked_colonize:0 "Tomb World with destroyed Ring"
- pc_mhs_durin_nuked_colonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation and large cracks in the planetary crust spitting our fire and toxic gases that make life impossible. It is orbited by an ancient destroyed Ring World."
+ pc_mhs_durin_nuked_colonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation make life impossible. It is orbited by an ancient destroyed Ring World."
+
+ #New Tile Blocker
+ tb_mhs_asteroid_crater:0 "£blocker  Asteroid Crater"
+ tb_mhs_asteroid_crater_desc:0 "This reminder of a large scale impact event marks the surrounding landscape."
