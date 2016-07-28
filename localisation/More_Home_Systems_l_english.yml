@@ -52,8 +52,6 @@
  pc_mhs_nuked_tile_desc:0 "Harsh, war-torn terrain. Radiation levels are low enough to support some life."
  pc_mhs_nuked_by_asteroids_tile:0 "Tundra Terrain"
  pc_mhs_nuked_by_asteroids_tile_desc:0 "Cold and wind-swept steppes with sparse vegetation."
- pc_mhs_durin_nuked_colonize_tile:0 "Wasteland Terrain"
- pc_mhs_durin_nuked_colonize_tile_desc:0 "Harsh, war-torn terrain. Radiation levels are low enough to support some life."
  
  #################################################################################
  # PASTE HERE - Here starts the purely english part of the Loc File - PASTE HERE #
@@ -68,6 +66,8 @@
  mhs_reetii_system_DESC:0 "The Re´etii system, once center of an ancient empire lies in ruins. Their worlds have been burned and their biggest achievement - a giant ringworld - has been destroyed. Your species was once nothing more than pets in one of their zoos. You were lucky enough to outlive your former masters and now rule over the last habitable parts of your ringworld segment.\n\nHomeworld - Size 16\n\n$system_initializer_DESC$"
  mhs_reshtar_system_NAME:0 "Resh´Tar System"
  mhs_reshtar_system_DESC:0 "The Resh´Tar system with three habitable planets orbiting their sun on the same orbit though now long abandoned seems to have once been subject of an experiment of stellar scale.\n\nHomeworld - Size 16\n\n1 Sun, 2 Habitable Planets, 12 Asteroids\n\n$system_initializer_DESC$"
+ mhs_kholdan_system_NAME:0 "Kholdan System"
+ mhs_kholdan_system_DESC:0 "The Kholdan system is a trinary star system consisting of a small binary star system orbiting a red giant and his planets.\n\nHomeworld - Size 16\n\n3 Suns, 3 Molten Worlds, 1 Gas Giant, 2 Barren Worlds, 2 Toxic Worlds and  various Asteroids\n\n$system_initializer_DESC$"
  mhs_durinsforge_system_NAME:0 "Durin´s Forge"
  mhs_durinsforge_system_DESC:0 "Durin´s Forge - WORK IN PROGRESS - NO EVENTS IN YET"
  mhs_me_tikkun_system_NAME:0 "Tikkun System"
@@ -91,6 +91,14 @@
  pc_mhs_durin_nuked_colonize:0 "Tomb World with destroyed Ring"
  pc_mhs_durin_nuked_colonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation make life impossible. It is orbited by an ancient destroyed Ring World."
 
+ #New Tile Blocker
+ tb_mhs_asteroid_crater:0 "£blocker  Asteroid Crater"
+ tb_mhs_asteroid_crater_desc:0 "This reminder of a large scale impact event marks the surrounding landscape."
+ 
+ #########################
+ # Durins Forge Questline#
+ #########################
+ 
  #Upon completing home system survey, starts event chain
  mhs_durin.3.name:0 "Durin's Legacy"
  mhs_durin.3.desc:0 "Since ancient times our legends tell the story of Durin, our progenitor and King beneath the Stars. There are even stars in the sky that bear that name in his honor. One of them is Durin's Forge - the biggest of our three suns. Another one is Durin's Hall. Though it is neither the brightest star in the sky nor part of any important constellation. But is a place of legends and a worthy exploration target for our starting journey to the stars."
@@ -118,15 +126,15 @@
  #We should build a colony, starts colony mission
  mhs_durin.8.name:0 "Reclaim what is Ours"
  mhs_durin.8.desc:0 "It is time to establish an expeditionary outpost on [event_target:khazad_dum.GetName]. We still do not know what happened to our ancestors. What might have destroyed their world, laid their cities to ruins and brought their civilisation to collapse?"
-
+ 
  #Clear the planet of all tile blockers (ruins)
  mhs_durin.9.name:0 "Outpost Established"
  mhs_durin.9.desc:0 "With our outpost established, it is time to begin the planned expeditions into the old ruins. We´ll also have to clear any obstacles that prevent our teams' movement along the way."
-
+ 
  #All blockers have been cleared.
  mhs_durin.10.name:0 "The Great Gateway"
  mhs_durin.10.desc:0 "The last excavation area held an extraordinary secret. Our team has found a giant gateway to an underground network. At the moment we can only guess how far it stretches."
-
+ 
  #Starts Khazad Dum's Depths expedition
  KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT:0 "The Mines of Durin"
  KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT_DESC:0 "In our efforts we have discovered what appears to be an ancient mine, we should see what lies inside."
