@@ -6,12 +6,23 @@ mhs_daedalus_system = {
 	
 	usage = custom_empire
 	
+	change_orbit = 10
+	
 	planet = {
 		name = "Daedalus"
 		class = "pc_g_star"
 		orbit_distance = 0
-		orbit_angle = 1
+		orbit_angle = random
 		size = 20
+		has_ring = no
+	}
+	
+	planet = {
+		name = "Helios"
+		class = "pc_m_star"
+		orbit_distance = 0
+		orbit_angle = 180
+		size = 4
 		has_ring = no
 	}
 	
