@@ -1,0 +1,290 @@
+### More Home Systems - Kholdan,
+mhs_kholdan_system = {
+	name = "Kholdan"
+	class = "sc_m"
+	asteroids_distance = 105
+		
+	usage = custom_empire
+	
+	planet = {
+		name = "Kholdan"
+		class = "pc_m_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 65
+		has_ring = no
+	}
+		
+	planet = {
+		class = "pc_molten"
+		orbit_distance = 50
+		orbit_angle = random
+		size = 30
+		has_ring = no
+		
+		moon = {
+			class = "pc_molten"
+			size = 3
+			orbit_distance = 10
+			orbit_angle = random
+			has_ring = no
+			entity = "molten_planet_03_entity"
+		}
+		moon = {
+
+			class = "pc_molten"
+			size = 2
+			orbit_distance = 3
+			orbit_angle = random
+			has_ring = no
+			entity = "molten_planet_02_entity"
+		}
+	}
+
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 55
+		orbit_angle = 20
+		size = 6
+		has_ring = no
+		
+		moon = {
+		class = "pc_asteroid"
+		orbit_distance = 4
+		orbit_angle = random
+		size = 1
+		has_ring = no
+		}
+		moon = {
+		class = "pc_asteroid"
+		orbit_distance = 5
+		orbit_angle = random
+		size = 1
+		has_ring = no
+		}
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = -5
+		size = 3
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 8
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		name = "Klendathu"
+		class = ideal_planet_class
+		orbit_distance = 0
+		orbit_angle = 180
+		size = 16
+		starting_planet = yes
+		has_ring = no
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		
+		init_effect = {
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_1"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}	
+				add_resource = {
+					resource = minerals
+					amount = 1
+				}					
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_mining_network_1"
+					add_resource = {
+						resource = minerals
+						amount = 1
+						replace = yes
+					}						
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_mhs_asteroid_crater"
+				add_resource = {
+					resource = engineering_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_mhs_asteroid_crater"
+				add_resource = {
+					resource = society_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_mhs_asteroid_crater"
+				add_resource = {
+					resource = physics_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_mhs_asteroid_crater"
+				add_resource = {
+					resource = energy
+					amount = 2
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_mhs_asteroid_crater"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}
+		}
+		
+		moon = {
+			name = "Kaldar"
+			class = "pc_asteroid"
+			size = 2
+			orbit_distance = 8
+			orbit_angle = random
+			has_ring = no
+		}
+		moon = {
+			name = "Tanar"
+			class = "pc_asteroid"
+			size = 1
+			orbit_distance = 3
+			orbit_angle = random
+			has_ring = no
+		}
+	}
+	planet = {
+		class = "pc_gas_giant"
+		orbit_distance = 45
+		orbit_angle = random
+		size = 30
+		has_ring = no
+		entity = "gas_giant_05_entity"
+		
+		moon = {
+			class = "pc_toxic"
+			size = 6
+			orbit_distance = 19
+			orbit_angle = random
+			has_ring = no
+			entity = "toxic_planet_04_entity"
+		}
+		moon = {
+			class = "pc_barren_cold"
+			size = 3
+			orbit_distance = 6
+			orbit_angle = random
+			has_ring = no
+			entity = "cold_barren_planet_luna_entity"
+		}
+	}
+	
+	planet = {
+		name = "Kera"
+		class = "pc_m_star"
+		orbit_distance = 80
+		orbit_angle = random
+		size = 13
+		has_ring = no
+		
+		moon = {
+			name = "Ceras"
+			class = "pc_m_star"
+			size = 9
+			orbit_distance = 8
+			orbit_angle = random
+			has_ring = no
+		}
+		
+		moon = {
+			name = "Terona"
+			class = "pc_toxic"
+			size = 8
+			orbit_distance = 19
+			orbit_angle = random
+			has_ring = no
+			entity = "toxic_planet_03_entity"
+		
+		}
+		moon = {
+			name = "Tessana"
+			class = "pc_barren_cold"
+			size = 10
+			orbit_distance = 6
+			orbit_angle = random
+			has_ring = no
+			entity = "cold_barren_planet_03_entity"
+		}
+		
+	}
+	
+}

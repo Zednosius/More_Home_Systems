@@ -59,7 +59,7 @@
  mhs_qastliani_system_NAME:0 "Qastliani System"
  mhs_qastliani_system_DESC:0 "The Qastliani System, once home to an ancient long forgotten civilisation is now again cradle to a young species reaching for the stars.\n\nHomeworld - Size 16\n\n1 Sun, 1 Destroyed World, 2 Molten Worlds, 8 Asteroids, 1 Gas Giant and 2 Frozen Worlds\n\n$system_initializer_DESC$"
  mhs_daedalus_system_NAME:0 "Daedalus System"
- mhs_daedalus_system_DESC:0 "The Daedalus System features a very special world. Your Ancestor´s legends tell of a great cataclysm destroying your world and dooming your people to extinction. But then the gods climbed down from the heavens to lead your people to their new home in the sky.\n\nHomeworld - Size 16\n\n1 Sun, 2 Molten Worls, 2 Gas Giants, 1 Barren World, 4 Frozen Worlds\n\n$system_initializer_DESC$"
+ mhs_daedalus_system_DESC:0 "The Daedalus System features a very special world. Your Ancestor´s legends tell of a great cataclysm destroying your world and dooming your people to extinction. But then the gods climbed down from the heavens to lead your people to their new home in the sky.\n\nHomeworld - Size 16\n\n2 Suns, 2 Molten Worls, 2 Gas Giants, 1 Barren World, 4 Frozen Worlds\n\n$system_initializer_DESC$"
  mhs_ikor_system_NAME:0 "Ikor System"
  mhs_ikor_system_DESC:0 "Ikor - a binary star system - may be scarce in orbital ressources but it is teaming with life. Your civilisation is the first to reach for the stars. How will your presence influence the other species sharing this system with you?\n\nHomeworld - Size 16\n\n2 Suns, 2 Inhabited Planets, 1 Gas Giant and multiple Moons and Asteroids\n\n$system_initializer_DESC$"
  mhs_reetii_system_NAME:0 "Re´etii System"

@@ -1,0 +1,70 @@
+@primary = 0.80
+@secondary = 0.60
+@tertiary = 0.40
+
+trait_pc_mhs_durin_desert_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
+	modification = no
+	modifier = {
+	}
+}
+trait_pc_mhs_durin_tropical_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
+	modification = no
+	modifier = {
+	}
+}
+trait_pc_mhs_durin_continental_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
+	modification = no
+	modifier = {
+	}
+}
+trait_pc_mhs_durin_ocean_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
+	modification = no
+	modifier = {
+	}
+}
+trait_pc_mhs_durin_arctic_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
+	modification = no
+	modifier = {
+	}
+}
+trait_pc_mhs_durin_tundra_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
+	modification = no
+	modifier = {
+	}
+}
+trait_pc_mhs_durin_arid_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
+	modification = no
+	modifier = {
+	}
+}
+trait_pc_mhs_nuked_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
+	modification = no
+	modifier = {
+	}
+}
+trait_pc_mhs_nuked_by_asteroids_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
+	modification = no
+	modifier = {
+	}
+}
+trait_pc_mhs_durin_nuked_colonize_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
+	modification = no
+	modifier = {
+	}
+}
+trait_planetary_ring_nuked_preference = {
+	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
+	modification = no
+	modifier = {
+	}
+}
