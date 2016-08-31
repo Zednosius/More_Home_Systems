@@ -52,8 +52,6 @@ mhs_daedalus_system = {
     size = 16
     starting_planet = yes
     has_ring = no
-    change_entity = "planetary_ring1_nuked_entity"
-    change_entity_scale = 0.02
     tile_blockers = none
     modifiers = none
      

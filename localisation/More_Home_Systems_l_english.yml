@@ -138,8 +138,8 @@
  #Starts Khazad Dum's Depths expedition
  KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT:0 "The Mines of Durin"
  KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT_DESC:0 "In our efforts we have discovered what appears to be an ancient mine, we should see what lies inside."
- mhs_durin.11.name:0 ""
- mhs_durin.11.desc:0 ""
+ mhs_durin.11.name:0 "::"
+ mhs_durin.11.desc:0 "::"
 
  #Discovers underground horrors who attacks
  mhs_durin.12.name:0 "The Horrors Below"
