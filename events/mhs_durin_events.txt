@@ -6,50 +6,44 @@ event = {
     hide_window = yes
     is_triggered_only = yes
     immediate = {
-        random_system = {
-            limit = { has_star_flag = mhs_durinsforge_system }
-            space_owner = {
-                set_country_flag = mhs_durinsforge_system
-            }
-        }
-    }
-}
-
-# Opens Popup when homesystem has been surveyed
-ship_event = {
-    id = mhs_durin.2
-    hide_window = yes
-    is_triggered_only = yes
-    trigger = {
-        owner = {
-            has_country_flag = mhs_durinsforge_system
-        }
-
-        solar_system = {
-            any_planet = {
-                is_same_value = owner.home_planet
-            }
-        }
-    }
-    immediate = {
-        ship_event = { id = mhs_durin.3 }
+        every_country = {
+			limit = {
+				any_system_within_border = {
+					has_star_flag = mhs_durinsforge_system
+				}
+			}
+			set_country_flag = mhs_durinsforge_system
+		}
     }
 }
 
 # Fired when home system is surveyed
 ship_event = {
-    id = mhs_durin.3
-    title = "mhs_durin.3.name"
-    desc = "mhs_durin.3.desc"
+    id = mhs_durin.2	# was 3
+    title = "mhs_durin.2.name"
+    desc = "mhs_durin.2.desc"
     picture = GFX_evt_ship_in_orbit
-
+	target = THIS
+	
     is_triggered_only = yes
 
-    immediate = {
+	trigger = {
         owner = {
+            has_country_flag = mhs_durinsforge_system
+        }
+        solar_system = {
+            has_star_flag = mhs_durinsforge_system
+        }
+    }
+	
+    immediate = {
+		
+		solar_system = {
+			remove_star_flag = mhs_durinsforge_system
+		}
+		owner = {
             begin_event_chain = {
                 event_chain = "mhs_durins_hall"
-                target = THIS
             }
             random_system = {
                 limit = { has_star_flag = mhs_durins_hall_system }
@@ -57,14 +51,69 @@ ship_event = {
             }
             create_point_of_interest = {
                 id = durins_hall.1
-                name = "Find Durin's Hall"
-                desc = "We must learn more about our origins."
+                name = durins_hall.1.name # "Find Durin's Hall"
+                desc = durins_hall.1.desc # "We must learn more about our origins."
                 event_chain = mhs_durins_hall
                 location = event_target:durins_hall_system
             }
         }
     }
+	
+	option = {
+		name = "mhs_durin.2.a"
+	}
 }
+
+# Opens Popup when homesystem has been surveyed
+#ship_event = {
+#    id = mhs_durin.2
+#    hide_window = yes
+#    is_triggered_only = yes
+#    trigger = {
+#        owner = {
+#            has_country_flag = mhs_durinsforge_system
+#        }
+#
+#        solar_system = {
+#            any_planet = {
+#                is_same_value = owner.home_planet
+#            }
+#        }
+#    }
+#    immediate = {
+#        ship_event = { id = mhs_durin.3 }
+#    }
+#}
+#
+# Fired when home system is surveyed
+#ship_event = {
+#    id = mhs_durin.3
+#    title = "mhs_durin.3.name"
+#    desc = "mhs_durin.3.desc"
+#    picture = GFX_evt_ship_in_orbit
+#
+#    is_triggered_only = yes
+#
+#    immediate = {
+#        owner = {
+#            begin_event_chain = {
+#                event_chain = "mhs_durins_hall"
+#                target = THIS
+#            }
+#            random_system = {
+#                limit = { has_star_flag = mhs_durins_hall_system }
+#                save_event_target_as = durins_hall_system
+#            }
+#            create_point_of_interest = {
+#                id = durins_hall.1
+#                name = "Find Durin's Hall"
+#                desc = "We must learn more about our origins."
+#                event_chain = mhs_durins_hall
+#                location = event_target:durins_hall_system
+#            }
+#        }
+#    }
+#}
 #   ▄▄       ▄▄ ▄ ▄▄▄▄▄▄▄▄ ▄ ▄▄▄▄▄▄▄▄▄  
 #    ▀▄     ▄▀  █ █      ▀ █     █      
 #     ▀▄   ▄▀   █ █▄▄▄▄▄▄▄ █     █      
