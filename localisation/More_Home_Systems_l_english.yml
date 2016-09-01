@@ -100,20 +100,25 @@
  #########################
  
  #Upon completing home system survey, starts event chain
- mhs_durin.3.name:0 "Durin's Legacy"
- mhs_durin.3.desc:0 "Since ancient times our legends tell the story of Durin, our progenitor and King beneath the Stars. There are even stars in the sky that bear that name in his honor. One of them is Durin's Forge - the biggest of our three suns. Another one is Durin's Hall. Though it is neither the brightest star in the sky nor part of any important constellation. But is a place of legends and a worthy exploration target for our starting journey to the stars."
+ mhs_durin.2.name:0 "Durin's Legacy"
+ mhs_durin.2.desc:0 "Since ancient times our legends tell the story of Durin, our progenitor and King beneath the Stars. There are even stars in the sky that bear that name in his honor. One of them is Durin's Forge - the biggest of our three suns. Another one is Durin's Hall. Though it is neither the brightest star in the sky nor part of any important constellation. But is a place of legends and a worthy exploration target for our starting journey to the stars."
+ mhs_durin.2.a:0 "Indeed a fitting start."
 
  #Durins Hall Event Chain
  mhs_durins_hall_title:0 "A Journey to the Stars"
- mhs_durins_hall_desc:0 "For a long time have the stars been a central part of our legends and what would be a more fitting start of our journey into the unknown than Durin's Folk visiting the most important star of our legends, the 'Hall of Durin'."
+ mhs_durins_hall_desc:0 "For a long time have the stars been a central part of our legends and what would be a more fitting start of our journey into the unknown than Durin's Folk visiting the most important star of our legends, the "Hall of Durin"."
+ 
+ durins_hall.1.name:0 "Visit Durin's Hall"
+ durins_hall.1.desc:0 "Visit the legendary star "Durin's Hall"."
  
  #Durin's halls system is visited, starts survey khazad dum
- mhs_durin.4.name:0 "The Hall of Durin"
- mhs_durin.4.desc:0 "We have reached the legendary 'Hall of Durin'. Our Scientists did not expect to find anything special there. But when first system scans reached them they were struck speechless. There is one planet orbiting its sun inside the habitable zone.\n\nAnd there is more! It seems to be orbited by some kind of mega structure. We should investigate it as soon as possible."
+ mhs_durin.3.name:0 "The Hall of Durin"
+ mhs_durin.3.desc:0 "We have reached the legendary "Hall of Durin". Our Scientists did not expect to find anything special there. But when first system scans reached them they were struck speechless. There is one planet orbiting its sun inside the habitable zone.\n\nAnd there is more! It seems to be orbited by some kind of mega structure. We should investigate it as soon as possible."
+ mhs_durin.3.a:0 "Make it so."
 
  #Khazad Dum has been surveyed, starts surface expedition research project.
- mhs_durin.5.name:0 "Dwarven Origins"
- mhs_durin.5.desc:0 "A heavily damaged gigantic ring orbits a planet covered in dense clouds. High radiation values are measured by our probes. Our scientists already supected what became a certainty when our scienceship found a small object orbiting the planet. It turned out to be an ancient lifepod - in it the remains of its unfortunate passenger - a dwarf.\n\n In ancient times Durin lead our people away from their home when a great disaster struck it. It was a long exodus beneath the stars until they found their new home. Though we always believed this ancient home to be somewhere on Erebor, lost to the ages, this must be Khazad Dum our ancient home."
+ mhs_durin.4.name:0 "Dwarven Origins"
+ mhs_durin.4.desc:0 "A heavily damaged gigantic ring orbits a planet covered in dense clouds. High radiation values are measured by our probes. Our scientists already supected what became a certainty when our scienceship found a small object orbiting the planet. It turned out to be an ancient lifepod - in it the remains of its unfortunate passenger - a dwarf.\n\n In ancient times Durin lead our people away from their home when a great disaster struck it. It was a long exodus beneath the stars until they found their new home. Though we always believed this ancient home to be somewhere on Erebor, lost to the ages, this must be Khazad Dum our ancient home."
 
  #Khazad Dum Surface Expedition Research
  KHAZAD_DUM_EXPEDITION_PROJECT:0 "Heritage of the Ancients"

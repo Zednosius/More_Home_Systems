@@ -40,18 +40,33 @@ ship_event = {
 		
 		solar_system = {
 			remove_star_flag = mhs_durinsforge_system
+			set_star_flag = mhs_durinsforge_system_surveyed
 		}
 		owner = {
             begin_event_chain = {
                 event_chain = "mhs_durins_hall"
             }
-            random_system = {
-                limit = { has_star_flag = mhs_durins_hall_system }
+			closest_system = {
+				limit = { has_star_flag = mhs_durinsforge_system_surveyed }
+				spawn_system = {
+					min_distance = 20
+					max_distance = 70
+					initializer = "mhs_durinshall_system"
+				}
+			}
+            closest_system = {
+                limit = { 
+					has_star_flag = mhs_durins_hall_system
+					NOT = {
+						has_star_flag = mhs_durins_hall_system_used
+					}
+				}
                 save_event_target_as = durins_hall_system
+				set_star_flag = mhs_durins_hall_system_used
             }
             create_point_of_interest = {
                 id = durins_hall.1
-                name = durins_hall.1.name # "Find Durin's Hall"
+                name = durins_hall.1.name
                 desc = durins_hall.1.desc # "We must learn more about our origins."
                 event_chain = mhs_durins_hall
                 location = event_target:durins_hall_system
@@ -60,60 +75,10 @@ ship_event = {
     }
 	
 	option = {
-		name = "mhs_durin.2.a"
+		name = mhs_durin.2.a
 	}
 }
 
-# Opens Popup when homesystem has been surveyed
-#ship_event = {
-#    id = mhs_durin.2
-#    hide_window = yes
-#    is_triggered_only = yes
-#    trigger = {
-#        owner = {
-#            has_country_flag = mhs_durinsforge_system
-#        }
-#
-#        solar_system = {
-#            any_planet = {
-#                is_same_value = owner.home_planet
-#            }
-#        }
-#    }
-#    immediate = {
-#        ship_event = { id = mhs_durin.3 }
-#    }
-#}
-#
-# Fired when home system is surveyed
-#ship_event = {
-#    id = mhs_durin.3
-#    title = "mhs_durin.3.name"
-#    desc = "mhs_durin.3.desc"
-#    picture = GFX_evt_ship_in_orbit
-#
-#    is_triggered_only = yes
-#
-#    immediate = {
-#        owner = {
-#            begin_event_chain = {
-#                event_chain = "mhs_durins_hall"
-#                target = THIS
-#            }
-#            random_system = {
-#                limit = { has_star_flag = mhs_durins_hall_system }
-#                save_event_target_as = durins_hall_system
-#            }
-#            create_point_of_interest = {
-#                id = durins_hall.1
-#                name = "Find Durin's Hall"
-#                desc = "We must learn more about our origins."
-#                event_chain = mhs_durins_hall
-#                location = event_target:durins_hall_system
-#            }
-#        }
-#    }
-#}
 #   ▄▄       ▄▄ ▄ ▄▄▄▄▄▄▄▄ ▄ ▄▄▄▄▄▄▄▄▄  
 #    ▀▄     ▄▀  █ █      ▀ █     █      
 #     ▀▄   ▄▀   █ █▄▄▄▄▄▄▄ █     █      
@@ -121,10 +86,11 @@ ship_event = {
 #        ▀      ▀ ▀▀▀▀▀▀▀▀ ▀     ▀      
 # Fired when durins hall is visited
 ship_event = {
-    id = mhs_durin.4
-    title = "mhs_durin.4.name"
-    desc = "mhs_durin.4.desc"
-    is_triggered_only = yes
+    id = mhs_durin.3
+    title = "mhs_durin.3.name"
+    desc = "mhs_durin.3.desc"
+	is_triggered_only = yes    
+	
     trigger = {
         FROM = { # system
             has_star_flag = mhs_durins_hall_system
@@ -138,6 +104,9 @@ ship_event = {
     }
     
     immediate = {
+		owner = {
+			remove_country_flag = mhs_durins_hall_found
+		}
         FROM = { # system
             random_system_planet = {
                 limit = { has_planet_flag = mhs_durins_hall_khazad_dum }
@@ -158,6 +127,10 @@ ship_event = {
             }
         }
     }
+	
+	option = {
+		name = mhs_durin.3.a
+	}
 }
 
 #   ▄▄▄▄▄▄▄▄ ▄      ▄ ▄▄▄▄▄▄▄▄ ▄▄       ▄▄ ▄▄▄▄▄▄▄ ▄▄     ▄▄
@@ -168,9 +141,9 @@ ship_event = {
 
 #Fired when khazad dum is surveyed
 ship_event = {
-    id = mhs_durin.5
-    title = "mhs_durin.5.name"
-    desc = "mhs_durin.5.desc"
+    id = mhs_durin.4
+    title = "mhs_durin.4.name"
+    desc = "mhs_durin.4.desc"
     picture = GFX_evt_ship_in_orbit
     is_triggered_only = yes
     location = from

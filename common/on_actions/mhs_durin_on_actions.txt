@@ -30,7 +30,7 @@ on_survey = {
 # FromFrom = Country
 on_entering_system = {
     events = {
-        mhs_durin.4
+        mhs_durin.3
     }
 }
 

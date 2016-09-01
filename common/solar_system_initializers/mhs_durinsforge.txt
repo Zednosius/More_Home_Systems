@@ -1,7 +1,7 @@
-### More Home Systems - Durin´s Forge,
+### More Home Systems - Durin�s Forge,
 @distance = 30
 mhs_durinsforge_system = {
-	name = "Durin´s Forge"
+	name = "Durin�s Forge"
 	class = "sc_m"
 	asteroids_distance = 200
 	
@@ -10,7 +10,7 @@ mhs_durinsforge_system = {
 	usage = custom_empire
 	
 	planet = {
-		name = "Durin´s Forge"
+		name = "Durin's Forge"
 		class = "pc_m_star"
 		orbit_distance = 30
 		orbit_angle = 1
@@ -270,15 +270,11 @@ mhs_durinsforge_system = {
 			}			
 		}
 	}	
-	neighbor_system = {
-		distance = { min = 10 max = @distance }	
-		initializer = "durinsforge_system_neighbor_t1"
-	}
 }
 
-# Durin´s Forge Neighbor Tier 1
-durinsforge_system_neighbor_t1 = {
-	name = "Durin´s Hall"
+# Durin's Hall
+mhs_durinshall_system = {
+	name = "Durin's Hall"
 	class = sc_g
 	asteroids_distance = 200
 	flags = { mhs_durins_hall_system }
