@@ -67,7 +67,7 @@ ship_event = {
             create_point_of_interest = {
                 id = durins_hall.1
                 name = durins_hall.1.name
-                desc = durins_hall.1.desc # "We must learn more about our origins."
+                desc = durins_hall.1.desc
                 event_chain = mhs_durins_hall
                 location = event_target:durins_hall_system
             }
@@ -79,11 +79,6 @@ ship_event = {
 	}
 }
 
-#   ▄▄       ▄▄ ▄ ▄▄▄▄▄▄▄▄ ▄ ▄▄▄▄▄▄▄▄▄  
-#    ▀▄     ▄▀  █ █      ▀ █     █      
-#     ▀▄   ▄▀   █ █▄▄▄▄▄▄▄ █     █      
-#       █ █     █ ▄      █ █     █      
-#        ▀      ▀ ▀▀▀▀▀▀▀▀ ▀     ▀      
 # Fired when durins hall is visited
 ship_event = {
     id = mhs_durin.3
@@ -120,8 +115,8 @@ ship_event = {
 
             create_point_of_interest = {
                 id = durins_hall.2
-                name = "Survey khazad dum"
-                desc = "We must learn more about our origins."
+                name = durins_hall.2.name
+                desc = durins_hall.2.desc
                 event_chain = mhs_durins_hall
                 location = event_target:khazad_dum
             }
@@ -132,12 +127,6 @@ ship_event = {
 		name = mhs_durin.3.a
 	}
 }
-
-#   ▄▄▄▄▄▄▄▄ ▄      ▄ ▄▄▄▄▄▄▄▄ ▄▄       ▄▄ ▄▄▄▄▄▄▄ ▄▄     ▄▄
-#   █      ▀ █      █ █      █  ▀▄     ▄▀  █        ▀█   █▀ 
-#   █▄▄▄▄▄▄▄ █      █ █▄▄▄▄▄▄█   ▀▄   ▄▀   █▄▄▄▄▄     ▀▄▀   
-#   ▄      █ █      █ █    ▀▄      █ █     █           █    
-#   ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀     ▀▀      ▀      ▀▀▀▀▀▀▀     ▀    
 
 #Fired when khazad dum is surveyed
 ship_event = {
@@ -161,7 +150,7 @@ ship_event = {
         }
     }
     option = {
-        name = "Make it so."
+        name = mhs_durin.4.a
         enable_special_project = {
             name = "KHAZAD_DUM_EXPEDITION_PROJECT"
             owner = root.owner
@@ -171,109 +160,107 @@ ship_event = {
     }
 }
 
-
-#   ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄        ▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄▄   ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄     ▄▄ ▄▄▄▄▄▄▄▄ ▄        ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄  
-#   █      █ █      █ █      █        █ █       █            █       █        █      █ █▀▄   ▄▀█ █      █ █        █           █     █        
-#   █▄▄▄▄▄▄█ █▄▄▄▄▄▄█ █      █        █ █▄▄▄▄▄  █            █       █        █      █ █  ▀▄▀  █ █▄▄▄▄▄▄█ █        █▄▄▄▄▄      █     █▄▄▄▄▄   
-#   █        █    ▀▄  █      █ ▄      █ █       █            █       █        █      █ █       █ █        █        █           █     █        
-#   ▀        ▀     ▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀     ▀       ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀       ▀ ▀        ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀     ▀     ▀▀▀▀▀▀▀  
-
-#Fired when the expedition is completed
+#Fired when the expedition project is completed
 ship_event = {
-    id = mhs_durin.6
-    title = "mhs_durin.6.name"
-    desc = "mhs_durin.6.desc"
+    id = mhs_durin.5
+    title = "mhs_durin.5.name"
+    desc = "mhs_durin.5.desc"
     picture = GFX_evt_archaeological_dig
-    location = THIS
+    location = from
     is_triggered_only = yes
 
     immediate = {
         # FromFromFrom is the planet
         FromFromFrom = { # planet
             save_event_target_as = khazad_dum
-            planet_event = {
-                id = mhs_durin.7
-             }
+            change_pc = pc_mhs_durin_nuked_colonize
+
+			every_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = tb_city_ruins
+				random_resources = yes
+			}
+			random_tile = {
+				remove_blocker = yes
+			}
         }
         owner = {
+			create_point_of_interest = {
+				id = durins_hall.3
+				name = durins_hall.3.name
+				desc = durins_hall.3.desc
+				event_chain = mhs_durins_hall
+				location = event_target:khazad_dum
+			}
             remove_point_of_interest = durins_hall.2
-            country_event = { id = mhs_durin.8 days = 2 }
         }
-
+		create_fleet = {}
+		last_created_fleet = {
+			set_owner = root.owner
+			create_ship = {
+				name = random
+				random_existing_design = "colonizer"
+			}
+			set_location = event_target:khazad_dum
+		}
     }
+	
+	option = {
+		name = mhs_durin.5.a
+		hidden_effect = {
+			owner = {
+				abort_special_project = {
+					type = "KHAZAD_DUM_EXPEDITION_PROJECT"
+					location = event_target:khazad_dum
+				}
+			}
+		}
+	}
 }
-planet_event = {
-    id = mhs_durin.7
-    hide_window = yes
-    is_triggered_only = yes
-    immediate = {
-        change_pc = pc_mhs_durin_nuked_colonize
-
-        every_tile = {
-            limit = { has_blocker = no has_building = no }
-            set_blocker = tb_city_ruins
-            random_resources = yes
-        }
-        random_tile = {
-            remove_blocker = yes
-        }
-    }
-}
-
-#   ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄        ▄▄▄▄▄▄▄▄ ▄▄     ▄ ▄▄     ▄▄
-#   █        █      █ █        █      █ █▀▄    █  ▀█   █▀ 
-#   █        █      █ █        █      █ █  ▀▄  █    ▀▄▀   
-#   █        █      █ █        █      █ █    ▀▄█     █    
-#   ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀     ▀▀     ▀    
-
-country_event = {
-    id = mhs_durin.8
-    title = "mhs_durin.8.name"
-    desc = "mhs_durin.8.desc"
-    is_triggered_only = yes
-    immediate = {
-        create_point_of_interest = {
-            id = durins_hall.3
-            name = "Colonize khazad dum"
-            desc = "We must learn more about our origins."
-            event_chain = mhs_durins_hall
-            location = event_target:khazad_dum
-        }
-        create_fleet = {}
-        last_created_fleet = {
-            set_owner = ROOT
-            create_ship = {
-                name = random
-                random_existing_design = "colonizer"
-             }
-             set_location = event_target:khazad_dum
-        }
-    }
-}
-
-# ▄▄▄▄▄▄▄▄▄ ▄ ▄        ▄▄▄▄▄▄▄   ▄▄▄▄▄▄▄ ▄        ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄     ▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄
-#     █     █ █        █         █     █ █        █      █ █        █    █   █       █      █ █      ▀
-#     █     █ █        █▄▄▄▄▄    █▀▀▀▀▀█ █        █      █ █        █▄▄▄█    █▄▄▄▄▄  █▄▄▄▄▄▄█ █▄▄▄▄▄▄▄
-#     █     █ █        █         █     █ █        █      █ █        █   ▀█   █       █    ▀▄  ▄      █
-#     ▀     ▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀   ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀     ▀▀ ▀▀▀▀▀▀▀ ▀     ▀▀ ▀▀▀▀▀▀▀▀
 
 #Planet is colonized by player
+country_event = {
+	id = mhs_durin.6
+	hide_window = yes
+	
+	trigger = {
+		has_event_chain = mhs_durins_hall
+		NOT = {
+			has_country_flag = mhs_khazad_dum_colonized
+		}
+		any_owned_planet = {
+			has_planet_flag = mhs_durins_hall_khazad_dum
+		}
+	}
+	immediate = {
+		set_country_flag = mhs_khazad_dum_colonized
+		random_owned_planet = {
+			limit = {
+				has_planet_flag = mhs_durins_hall_khazad_dum
+			}
+			planet_event = {
+				id = mhs_durin.7
+			}
+		}
+	}
+}
+
 planet_event = {
-    id = mhs_durin.9
-    title = "mhs_durin.9.name"
-    desc = "mhs_durin.9.desc"
-    is_triggered_only = yes
+    id = mhs_durin.7
+    title = "mhs_durin.7.name"
+    desc = "mhs_durin.7.desc"
+	location = ROOT
+	is_triggered_only = yes
+
     trigger = {
-        owner = { # Country
-            has_event_chain = mhs_durins_hall
-        }
+		has_planet_flag = mhs_durins_hall_khazad_dum
     }
     immediate = {
         owner = {
             create_point_of_interest = {
                 id = durins_hall.4
-                name = "Clear Ruins on Khazad Dum"
-                desc = "We must learn more about our origins."
+                name = durins_hall.4.name
+                desc = durins_hall.4.desc
                 event_chain = mhs_durins_hall
                 location = ROOT
             }
@@ -282,15 +269,20 @@ planet_event = {
     }
 }
 
+#Last Tileblocker removed. Entrance to the Depth found
 planet_event = {
-    id = mhs_durin.10
-    title = "mhs_durin.10.name"
-    desc = "mhs_durin.10.desc"
+    id = mhs_durin.8
+    title = "mhs_durin.8.name"
+    desc = "mhs_durin.8.desc"
     is_triggered_only = yes
     trigger = {
         owner = { # Country
             has_event_chain = mhs_durins_hall
+			NOT = {
+				has_country_flag = mhs_durins_hall_khazad_dum_blocker
+			}
         }
+		has_planet_flag = mhs_durins_hall_khazad_dum
         not = {
             any_tile = {
                 has_blocker = yes
@@ -302,113 +294,98 @@ planet_event = {
     }
     immediate = {
         owner = {
+			set_country_flag = mhs_durins_hall_khazad_dum_blocker
             remove_point_of_interest = durins_hall.4
+			enable_special_project = {
+				name = "KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT"
+				owner = root.owner
+				location = ROOT
+			}
         }
         from = { #tile
             set_building = "building_power_plant_1" # Replace with the right building
         }
-
-        planet_event = {
-            id = mhs_durin.11
-            days = 4
-         }
     }
 }
 
-
-#   ▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄▄ ▄      ▄ ▄▄▄▄▄▄▄▄
-#   █     ▀█ █       █      █     █     █      █ █      ▀
-#   █      █ █▄▄▄▄▄  █▄▄▄▄▄▄█     █     █▄▄▄▄▄▄█ █▄▄▄▄▄▄▄
-#   █     ▄█ █       █            █     █      █ ▄      █
-#   ▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀ ▀            ▀     ▀      ▀ ▀▀▀▀▀▀▀▀
+# Expedition leads to Attack
 
 planet_event = {
-    id = mhs_durin.11
-    title = "mhs_durin.11.name"
-    desc = "mhs_durin.11.desc"
-    is_triggered_only = yes
-    trigger = {
+    id = mhs_durin.9
+    title = "mhs_durin.9.name"
+    desc = "mhs_durin.9.desc"
+    show_sound = event_air_raid_siren
+	location = ROOT
+	
+	is_triggered_only = yes
+    
+	trigger = {
         owner = { # Country
             has_event_chain = mhs_durins_hall
         }
     }
-    immediate = {
-        enable_special_project = {
-            name = "KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT"
-            owner = root.owner
-            location = from
+    
+	immediate = {
+        create_country = {
+            name = "Underground Horrors"
+            type = faction
+			effect = {
+				establish_communications_no_message = root.owner
+			}
+			flag = {
+                icon = {
+                    category = "pirate"
+                    file = "flag_pirate_10.dds"
+                }
+                background= {
+                    category = "backgrounds"
+                    file = "new_dawn.dds"
+                }
+                colors = {
+                    "red"
+                    "black"
+                    "null"
+                    "null"
+                }
+			}	
+		}
+		create_species = {
+			name = "Ancient Horrors"
+			class = random
+			portrait = random
+			traits = random
+		}
+		create_army = {
+			name = "Ancient Horrors"
+			owner = last_created
+			type = "mhs_ancient_horros"
+		}
+		create_army = {
+			name = "Ancient Horrors"
+			owner = last_created
+			type = "mhs_ancient_horros"
+		}
+		create_army = {
+			name = "Ancient Horrors"
+			owner = last_created
+			type = "mhs_ancient_horros"
+		}
+        last_created_country = {
+            save_global_event_target_as = underground_horrors
         }
     }
 }
 
-planet_event = {
-    id = mhs_durin.12
-    title = "mhs_durin.12.name"
-    desc = "mhs_durin.12.desc"
-    is_triggered_only = yes
-    trigger = {
-        owner = { # Country
-            has_event_chain = mhs_durins_hall
-        }
-    }
-    immediate = {
-        IF = {
-            limit = {
-                not = {
-                    exists = event_target:underground_horrors
-                }
-            }
-            create_country = {
-                name = "Underground Horrors"
-                type = faction
-                ethos = {
-                    ethic = "ethic_fanatic_xenophobe"
-                    ethic = "ethic_fanatic_militarist"
-                }
-                auto_delete = no
-                flag = {
-                    icon = {
-                        category = "zoological"
-                        file = "flag_zoological_10.dds"
-                    }
-                    background= {
-                        category = "backgrounds"
-                        file = "new_dawn.dds"
-                    }
-                    colors = {
-                        "red"
-                        "black"
-                        "null"
-                        "null"
-                    }
-                }
-            }
-            last_created_country = {
-                save_global_event_target_as = underground_horrors
-            }
-        }
-        create_army = {
-            name = "Underground Abominations"
-            owner = event_target:underground_horrors
-            type = "gene_warrior_army"
-         }
-    }
-}
-
-#   ▄        ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄ ▄▄     ▄ ▄▄▄▄▄▄▄▄
-#   █        █      █ █      ▀   █   █▀▄    █ █      ▀
-#   █        █      █ █▄▄▄▄▄▄▄   █   █  ▀▄  █ █    ▄▄▄
-#   █        █      █ ▄      █   █   █    ▀▄█ █      █
-#   ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀ ▀     ▀▀ ▀▀▀▀▀▀▀▀
+#Lost to Ancient Horrors
 
 # attack win
 # This = country, leader attacker
 # From = country, planet owner
 # FromFrom = planet
 country_event = {
-    id = mhs_durin.13
-    title = "mhs_durin.13.name"
-    desc = "mhs_durin.13.desc"
+    id = mhs_durin.10
+    title = "mhs_durin.10.name"
+    desc = "mhs_durin.10.desc"
     is_triggered_only = yes
     trigger = {
         fromfrom = { #planet
@@ -425,31 +402,109 @@ country_event = {
     immediate = {
         fromfrom = { # planet
             planet_event = {
-                id = mhs_durin.17 #Start the rolling purge
+                id = mhs_durin.14 #Start the rolling purge
                 days = 14
             }
         }
         from = { # country
             country_event = {
-                id = mhs_durin.14 # Inform player about what will happen when the horrors are controlling the planet
+                id = mhs_durin.11 # Inform player about what will happen when the horrors are controlling the planet
                 days = 14
             }
         }
     }
 }
 
+# Inform player about what will happen when the horrors are controlling the planet
+country_event = {
+    id = mhs_durin.11
+    title = "mhs_durin.11.name"
+    desc = "mhs_durin.11.desc"
+    is_triggered_only = yes
+}
 
+#Defended against Ancient Horrors
 
-#   ▄▄▄▄▄▄▄▄ ▄      ▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄
-#   █      █ █      █ █      █ █      ▀ █      
-#   █▄▄▄▄▄▄█ █      █ █▄▄▄▄▄▄█ █    ▄▄▄ █▄▄▄▄▄ 
-#   █        █      █ █    ▀▄  █      █ █      
-#   ▀        ▀▀▀▀▀▀▀▀ ▀     ▀▀ ▀▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀
+# defend win
+# This = country, planet owner
+# From = country, attack leader
+# FromFrom = planet
+country_event = {
+    id = mhs_durin.12
+    title = "mhs_durin.12.name"
+    desc = "mhs_durin.12.desc"
+    is_triggered_only = yes
+    trigger = {
+        fromfrom = { #planet
+            has_planet_flag = mhs_durins_hall_khazad_dum
+            owner = { # Country
+                has_event_chain = mhs_durins_hall
+				NOT = {
+					has_country_flag = KHAZAD_DUM_DEEPS_RETALIATION_PROJECT
+				}
+            }
+        }
+    }
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				has_planet_flag = mhs_durins_hall_khazad_dum
+			}
+			enable_special_project = {
+				name = "KHAZAD_DUM_DEEPS_RETALIATION_PROJECT"
+				owner = ROOT
+				location = THIS
+			}
+        }
+	}
+}
+
+#Reconquest against Horrors
+
+# This = country, leader attacker
+# From = country, planet owner
+# FromFrom = planet
+country_event = {
+    id = mhs_durin.13
+    title = "mhs_durin.13.name"
+    desc = "mhs_durin.13.desc"
+    is_triggered_only = yes
+    trigger = {
+        fromfrom = { #planet
+            has_planet_flag = mhs_durins_hall_khazad_dum
+            owner = { # Country
+                has_event_chain = mhs_durins_hall
+                is_same_value = root
+				NOT = {
+					has_country_flag = mhs_durins_hall_khazad_dum_retaliation
+				}
+            }
+        }
+    }
+    immediate = {
+        #Stop the purging which is in progress
+        every_owned_pop = {
+            purge = no
+        }
+		random_owned_planet = {
+			limit = {
+				has_planet_flag = mhs_durins_hall_khazad_dum
+			}
+			enable_special_project = {
+				name = "KHAZAD_DUM_DEEPS_RETALIATION_PROJECT"
+				owner = ROOT
+				location = THIS
+			}
+        }	
+    }
+}
+
+# Purgeing is initiated
 
 # Every month start purging one more pop until there is only one left
 # Then give an event to the owner telling them about the pop fortifying their position.
 planet_event = {
-    id = mhs_durin.17
+    id = mhs_durin.14
     hide_window = yes
     is_triggered_only = yes
     trigger = {
@@ -462,8 +517,11 @@ planet_event = {
         IF = {
             limit = { 
                 count_pops = {
-                    count > 1
-                    limit = { is_being_purged = no }
+                    limit = { 
+						is_being_purged = no
+						is_growing = no
+					}
+					count > 1
                 } 
             }
             random_pop = {
@@ -471,63 +529,122 @@ planet_event = {
                 purge = yes
             }
             planet_event = {
-                id = mhs_durin.17 #Re fire this event in a month
+                id = mhs_durin.14 #Re fire this event in a month
                 days = 30
              }
 
         else = {
             owner = {
-                country_event = { id = mhs_durin.18 } # The last pop has fortified their position.
+                country_event = { id = mhs_durin.15 } # The last pop has fortified their position.
                 }
             }
         }
     }
 }
 
+# The last pop has fortified their position.
+country_event = {
+    id = mhs_durin.15
+    title = "mhs_durin.15.name"
+    desc = "mhs_durin.15.desc"
+    is_triggered_only = yes
+}
 
+# Assault of the Underground
+planet_event = {
+    id = mhs_durin.16
+    title = "mhs_durin.16.name"
+    desc = "mhs_durin.16.desc"
+    show_sound = event_air_raid_siren
+	location = ROOT
+	
+	is_triggered_only = yes
+    
+	trigger = {
+        owner = { # Country
+            has_event_chain = mhs_durins_hall
+        }
+    }
+    
+	immediate = {
+		set_country_flag = mhs_durins_hall_khazad_dum_retaliation
+		create_army = {
+			name = "Ancient Horrors"
+			owner = underground_horrors
+			type = "mhs_ancient_horros"
+		}
+		create_army = {
+			name = "Ancient Horrors"
+			owner = underground_horrors
+			type = "mhs_ancient_horros"
+		}
+		create_army = {
+			name = "Ancient Horrors"
+			owner = underground_horrors
+			type = "mhs_ancient_horros"
+		}
+		create_army = {
+			name = "Ancient Horrors"
+			owner = underground_horrors
+			type = "mhs_ancient_horros"
+		}
+		create_army = {
+			name = "Ancient Horrors"
+			owner = underground_horrors
+			type = "mhs_ancient_horros"
+		}
+		create_army = {
+			name = "Ancient Horrors"
+			owner = underground_horrors
+			type = "mhs_ancient_horros"
+		}
+    }
+}
 
-
-
-
-#    ▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄     ▄ ▄▄▄▄▄▄▄  ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄    
-#    █     ▀█ █       █       █       █▀▄    █ █     ▀█ █       █     ▀█   
-#    █      █ █▄▄▄▄▄  █▄▄▄▄▄  █▄▄▄▄▄  █  ▀▄  █ █      █ █▄▄▄▄▄  █      █   
-#    █     ▄█ █       █       █       █    ▀▄█ █     ▄█ █       █     ▄█   
-#    ▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀ ▀       ▀▀▀▀▀▀▀ ▀     ▀▀ ▀▀▀▀▀▀▀  ▀▀▀▀▀▀▀ ▀▀▀▀▀▀▀    
+#Defended against Ancient Horrors
 
 # defend win
 # This = country, planet owner
 # From = country, attack leader
 # FromFrom = planet
 country_event = {
-    id = mhs_durin.15
-    title = "mhs_durin.15.name"
-    desc = "mhs_durin.15.desc"
+    id = mhs_durin.17
+    title = "mhs_durin.17.name"
+    desc = "mhs_durin.17.desc"
     is_triggered_only = yes
     trigger = {
         fromfrom = { #planet
             has_planet_flag = mhs_durins_hall_khazad_dum
             owner = { # Country
                 has_event_chain = mhs_durins_hall
+				has_country_flag = mhs_durins_hall_khazad_dum_retaliation
             }
         }
     }
+	option = {
+		name = mhs_durin.17.a
+		random_owned_planet = {
+			limit = {
+				has_planet_flag = mhs_durins_hall_khazad_dum
+			}
+			enable_special_project = {
+				name = "KHAZAD_DUM_RESTORATION_PROJECT"
+				owner = ROOT
+				location = THIS
+			}
+        }
+	}
 }
 
-# ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄     ▄▄ ▄▄▄▄▄▄▄
-# █      █ █           █     █      █ █    █   █      
-# █▄▄▄▄▄▄█ █▄▄▄▄▄      █     █▄▄▄▄▄▄█ █▄▄▄█    █▄▄▄▄▄ 
-# █    ▀▄  █           █     █      █ █   ▀█   █      
-# ▀     ▀▀ ▀▀▀▀▀▀▀     ▀     ▀      ▀ ▀     ▀▀ ▀▀▀▀▀▀▀
+#Reconquest against Horrors
 
 # This = country, leader attacker
 # From = country, planet owner
 # FromFrom = planet
 country_event = {
-    id = mhs_durin.16
-    hide_window = no
-    title = "mhs_durin.16.name"
-    desc = "mhs_durin.16.desc"
+    id = mhs_durin.18
+    title = "mhs_durin.17.name"
+    desc = "mhs_durin.17.desc"
     is_triggered_only = yes
     trigger = {
         fromfrom = { #planet
@@ -535,6 +652,7 @@ country_event = {
             owner = { # Country
                 has_event_chain = mhs_durins_hall
                 is_same_value = root
+				has_country_flag = mhs_durins_hall_khazad_dum_retaliation
             }
         }
     }
@@ -544,27 +662,97 @@ country_event = {
             purge = no
         }
     }
+	
+	option = {
+		name = mhs_durin.18.a
+		random_owned_planet = {
+			limit = {
+				has_planet_flag = mhs_durins_hall_khazad_dum
+			}
+			enable_special_project = {
+				name = "KHAZAD_DUM_RESTORATION_PROJECT"
+				owner = ROOT
+				location = THIS
+			}
+        }
+	}
 }
 
-# ▄▄▄▄▄ ▄▄     ▄ ▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄     ▄▄ ▄▄▄▄▄▄▄▄ ▄▄▄▄▄▄▄▄▄ ▄▄▄▄▄ ▄▄▄▄▄▄▄▄ ▄▄     ▄
-#   █   █▀▄    █ █       █      █ █      █ █▀▄   ▄▀█ █      █     █       █   █      █ █▀▄    █
-#   █   █  ▀▄  █ █▄▄▄▄▄  █      █ █▄▄▄▄▄▄█ █  ▀▄▀  █ █▄▄▄▄▄▄█     █       █   █      █ █  ▀▄  █
-#   █   █    ▀▄█ █       █      █ █    ▀▄  █       █ █      █     █       █   █      █ █    ▀▄█
-# ▀▀▀▀▀ ▀     ▀▀ ▀       ▀▀▀▀▀▀▀▀ ▀     ▀▀ ▀       ▀ ▀      ▀     ▀     ▀▀▀▀▀ ▀▀▀▀▀▀▀▀ ▀     ▀▀
-
-# Inform player about what will happen when the horrors are controlling the planet
-country_event = {
-    id = mhs_durin.14
-    title = "mhs_durin.14.name"
-    desc = "mhs_durin.14.desc"
-    is_triggered_only = yes
+# Atmospheric Renewer repaired
+planet_event = {
+    id = mhs_durin.19
+    title = "mhs_durin.19.name"
+    desc = "mhs_durin.19.desc"
+	location = ROOT
+	
+	is_triggered_only = yes
+    
+	trigger = {
+        owner = { # Country
+            has_event_chain = mhs_durins_hall
+        }
+    }
+	
+	option = {
+		name = mhs_durin.19.a
+		hidden_effect = {
+			planet_event = { id = mhs_durin.20 days = 5 random = 0 } # 1800 days (5 years) +- 60
+		}
+	}	
 }
 
+# Atmosphere Restored
+planet_event = {
+    id = mhs_durin.20
+    title = "mhs_durin.20.name"
+    desc = "mhs_durin.20.desc"
+	location = ROOT
+	
+	is_triggered_only = yes
+    
+	trigger = {
+        owner = { # Country
+            has_event_chain = mhs_durins_hall
+        }
+    }
+	
+	immediate = {
+		change_pc = ideal_planet_class
+		set_planet_flag = mhs_durins_hall_khazad_dum_restored
+	}
+}
 
-# The last pop has fortified their position.
-country_event = {
-    id = mhs_durin.18
-    title = "mhs_durin.18.name"
-    desc = "mhs_durin.18.desc"
-    is_triggered_only = yes
+# Plans to repair the planetary ringstructure presented
+planet_event = {
+    id = mhs_durin.21
+    title = "mhs_durin.21.name"
+    desc = "mhs_durin.21.desc"
+	location = ROOT
+	
+	is_triggered_only = yes
+    
+	trigger = {
+		has_planet_flag = mhs_durins_hall_khazad_dum_restored
+        owner = { # Country
+            has_event_chain = mhs_durins_hall
+        }
+    }
+	
+	mean_time_to_happen = {
+		days = 5	# should be 2000
+	}
+	
+	option = {
+		name = mhs_durin.21.a
+		random_owned_planet = {
+			limit = {
+				has_planet_flag = mhs_durins_hall_khazad_dum
+			}
+			enable_special_project = {
+				name = "KHAZAD_DUM_RING_RECONSTRUCTION_PROJECT"
+				owner = ROOT
+				location = THIS
+			}
+        }
+	}
 }

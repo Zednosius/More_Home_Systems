@@ -108,6 +108,7 @@
  mhs_durins_hall_title:0 "A Journey to the Stars"
  mhs_durins_hall_desc:0 "For a long time have the stars been a central part of our legends and what would be a more fitting start of our journey into the unknown than Durin's Folk visiting the most important star of our legends, the "Hall of Durin"."
  
+ # Point of interest Durins Hall System
  durins_hall.1.name:0 "Visit Durin's Hall"
  durins_hall.1.desc:0 "Visit the legendary star "Durin's Hall"."
  
@@ -115,58 +116,98 @@
  mhs_durin.3.name:0 "The Hall of Durin"
  mhs_durin.3.desc:0 "We have reached the legendary "Hall of Durin". Our Scientists did not expect to find anything special there. But when first system scans reached them they were struck speechless. There is one planet orbiting its sun inside the habitable zone.\n\nAnd there is more! It seems to be orbited by some kind of mega structure. We should investigate it as soon as possible."
  mhs_durin.3.a:0 "Make it so."
-
+ 
+ # Point of interest Khazad Dum
+ durins_hall.2.name:0 "Survey Khazad Dum"
+ durins_hall.2.desc:0 "What is this Place?"
+ 
  #Khazad Dum has been surveyed, starts surface expedition research project.
  mhs_durin.4.name:0 "Dwarven Origins"
  mhs_durin.4.desc:0 "A heavily damaged gigantic ring orbits a planet covered in dense clouds. High radiation values are measured by our probes. Our scientists already supected what became a certainty when our scienceship found a small object orbiting the planet. It turned out to be an ancient lifepod - in it the remains of its unfortunate passenger - a dwarf.\n\n In ancient times Durin lead our people away from their home when a great disaster struck it. It was a long exodus beneath the stars until they found their new home. Though we always believed this ancient home to be somewhere on Erebor, lost to the ages, this must be Khazad Dum our ancient home."
+ mhs_durin.4.a:0 "Make it so."
 
  #Khazad Dum Surface Expedition Research
  KHAZAD_DUM_EXPEDITION_PROJECT:0 "Heritage of the Ancients"
  KHAZAD_DUM_EXPEDITION_PROJECT_DESC:0 "In order to find out more about our distant past we have to find a way to establish a stable outpost on Khazad Dum. We will have to remove many obstacles to make this possible. The harsh environment and possibly deadly radiation are just two of them."
 
- #Expedition Research is completed
- mhs_durin.6.name:0 "Progress of Preparations"
- mhs_durin.6.desc:0 "Our scientists came up with plans how to counter the threats our expedition will be faced with. Though it will not be very pleasant our personnel will have to wear heavy protective gear at all time when beeing outside their shielded habitat modules. All these protection measures will also increase production times ans costs for any building constructed. A suitable landing place where Radiation levels are within acceptable limits has been found as well."
+ #Expedition Research is completed now colonize this planet
+ mhs_durin.5.name:0 "Reclaim what is Ours"
+ mhs_durin.5.desc:0 "Our scientists came up with plans how to counter the threats our expedition will be faced with. Though it will not be very pleasant our personnel will have to wear heavy protective gear at all time when beeing outside their shielded habitat modules. All these protection measures will also increase production times ans costs for any building constructed. A suitable landing place where Radiation levels are within acceptable limits has been found as well.\n\nIt is time to establish an expeditionary outpost on Khazad Dum. We still do not know what happened to our ancestors. What might have destroyed their world, laid their cities to ruins and brought their civilisation to collapse?"
 
- #We should build a colony, starts colony mission
- mhs_durin.8.name:0 "Reclaim what is Ours"
- mhs_durin.8.desc:0 "It is time to establish an expeditionary outpost on [event_target:khazad_dum.GetName]. We still do not know what happened to our ancestors. What might have destroyed their world, laid their cities to ruins and brought their civilisation to collapse?"
+ #Point of interest for colonizing Khazad Dum
+ durins_hall.3.name:0 "Colonize Khazad Dum"
+ durins_hall.3.desc:0 "Build an outpost on Khazad Dum to find out more about our Ancestors."
  
  #Clear the planet of all tile blockers (ruins)
- mhs_durin.9.name:0 "Outpost Established"
- mhs_durin.9.desc:0 "With our outpost established, it is time to begin the planned expeditions into the old ruins. We´ll also have to clear any obstacles that prevent our teams' movement along the way."
+ mhs_durin.7.name:0 "Outpost Established"
+ mhs_durin.7.desc:0 "With our outpost established, it is time to begin the planned expeditions into the old ruins. We´ll also have to clear any obstacles that prevent our teams' movement along the way."
+ 
+ #Point of interest on Khazad Dum for clearing tile blockers
+ durins_hall.4.name:0 "Clear Ruins on Khazad Dum"
+ durins_hall.4.desc:0 "We have to clear any obstacles that prevent our teams' movement."
  
  #All blockers have been cleared.
- mhs_durin.10.name:0 "The Great Gateway"
- mhs_durin.10.desc:0 "The last excavation area held an extraordinary secret. Our team has found a giant gateway to an underground network. At the moment we can only guess how far it stretches."
+ mhs_durin.8.name:0 "The Great Gateway"
+ mhs_durin.8.desc:0 "The last excavation area held an extraordinary secret. Our team has found a giant gateway to an underground network. At the moment we can only guess how far it stretches."
  
  #Starts Khazad Dum's Depths expedition
  KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT:0 "The Mines of Durin"
  KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT_DESC:0 "In our efforts we have discovered what appears to be an ancient mine, we should see what lies inside."
- mhs_durin.11.name:0 ""
- mhs_durin.11.desc:0 ""
 
- #Discovers underground horrors who attacks
- mhs_durin.12.name:0 "The Horrors Below"
- mhs_durin.12.desc:0 "Our expedition of the mine has gone horribly awry, a number of undescribable horrors seem to have awakened and made short work of our expedition team. They have now begun pouring out of the opening and are launching a viscious full scale assault"
+ #Discovers underground horrors who attack
+ mhs_durin.9.name:0 "The Horrors Below"
+ mhs_durin.9.desc:0 "Our expedition of the mine has gone horribly awry, a number of undescribable horrors seem to have awakened and made short work of our expedition team. They have now begun pouring out of the opening and are launching a viscious full scale assault"
+ 
+ #Ancient Robot Armies
+ mhs_ancient_horros:0 "Ancient Robotic Warmachines"
 
  #We lost the battle agains the horrors
- mhs_durin.13.name:0 "Tragedy"
- mhs_durin.13.desc:0 "Our numbers were too few too withstand the onslaught, now it is every man for himself."
+ mhs_durin.10.name:0 "Tragedy"
+ mhs_durin.10.desc:0 "Our numbers were too few too withstand the onslaught, now it is every man for himself."
 
  #The horrors have begun rampaging throughout the planet killing off our population there.
- mhs_durin.14.name:0 "Rampaging"
- mhs_durin.14.desc:0 "With the loss of control we are unable to defend our citizens, they are helpless against the hordes."
+ mhs_durin.11.name:0 "Rampaging"
+ mhs_durin.11.desc:0 "With the loss of control we are unable to defend our citizens, they are helpless against the hordes."
 
  #We succesfully defended the planet against the horrors initial attack.
- mhs_durin.15.name:0 "Victory"
- mhs_durin.15.desc:0 "The abominations did not foresee our might, the ones who are still alive have scurried back to the depths from which they came."
+ mhs_durin.12.name:0 "Victory"
+ mhs_durin.12.desc:0 "The abominations did not foresee our might, the ones who are still alive have scurried back to the depths from which they came."
 
  # We have successfully reconquered the planet.
- mhs_durin.16.name:0 "Reconquest"
- mhs_durin.16.desc:0 "We have successfully reclaimed our rightful heritage from the abominations, the citizens who have managed to survived are back under our protection once again."
+ mhs_durin.13.name:0 "Reconquest"
+ mhs_durin.13.desc:0 "We have successfully reclaimed our rightful heritage from the abominations, the citizens who have managed to survived are back under our protection once again."
 
  #A small group of citizens have barricaded themselves.
- mhs_durin.18.name:0 "Isolated"
- mhs_durin.18.desc:0 "The assaults of the horrors have claimed many lives, a small group of citizens have barricaded themselves in an area where they can't seem to be reached."
+ mhs_durin.15.name:0 "Isolated"
+ mhs_durin.15.desc:0 "The assaults of the horrors have claimed many lives, a small group of citizens were able to barricade themselves in an area where they are save for the time being."
  
+ KHAZAD_DUM_DEEPS_RETALIATION_PROJECT:0 "Reconquest of the Dephts"
+ KHAZAD_DUM_DEEPS_RETALIATION_PROJECT_DESC:0 "PLACEHOLDER We have to ensure the threat of these ancient machines is dealed with. A grand scale campaign into the underground system will require us to throw in every troop we have."
+ 
+ # The Attack on the underground starts
+ mhs_durin.16.name:0 "The Hour has Come"
+ mhs_durin.16.desc:0 "PLACEHOLDER Our preparations are complete, our troops in place. The time has come to retake our world has come."
+ 
+ # We have successfully conquered the underground.
+ mhs_durin.17.name:0 "Reconquest"
+ mhs_durin.17.desc:0 "PLACEHOLDER We have successfully reclaimed our rightful heritage from the abominations, the citizens who have managed to survived are back under our protection once again.\n\nIn the vast underground network our forces found an technological complex that our scientists deem to be an atmospheric cleaning system. With this facility repaired we might be able to restore this planet's atmosphere end return it to its native state."
+ 
+ # Planetary Restoration Project
+ KHAZAD_DUM_RESTORATION_PROJECT:0 "Planetary Restoration"
+ KHAZAD_DUM_RESTORATION_PROJECT_DESC:0 "PLACEHOLDER Our scientists and engineers are optimistic they will be able to repair and maintain this advanced machinery complex."
+ 
+ # Restoration Project complete Machinery begins to work
+ mhs_durin.19.name:0 "Atmospheric Renewer Repaired"
+ mhs_durin.19.desc:0 "PLACEHOLDER The atmospheric renewer has finally been activated. Our experts estimate a stabilization of Khazad Dum's atmosphere in approximately five years."
+ 
+ # Restoration of Atmosphere complete
+ mhs_durin.20.name:0 "Restoration Complete"
+ mhs_durin.20.desc:0 "PLACEHOLDER Khazad Dum is once again a habitable world and home to our people."
+ 
+ # Plans for Planetary Ring Reconstruction Found
+ mhs_durin.21.name:0 "A Strange Finding"
+ mhs_durin.21.desc:0 "PLACEHOLDER In the Depts of the underground network  we have found a storage of extraordinary material. At first it seemed to be some sort of metal alloy but it possess properties none of our scientists can explain. It somehow repairs damages to its structure by itself.\n\n Having acces to such a material may open up possibilities we did not even dare think about before. With it we might be able to reconstruct the destroyed planetary ring structure that orbits Khazad Dum. In fact it must have been a prerequisite for its initial construction."
+ 
+ # 
+ KHAZAD_DUM_RING_RECONSTRUCTION_PROJECT:0 ""
+ KHAZAD_DUM_RING_RECONSTRUCTION_PROJECT_DESC:0 ""
