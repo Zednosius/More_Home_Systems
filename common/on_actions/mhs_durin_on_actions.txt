@@ -57,6 +57,7 @@ on_planet_attackers_win = {
     events = {
         mhs_durin.10
         mhs_durin.13
+		mhs_durin.18
     }
 }
 
@@ -67,6 +68,7 @@ on_planet_attackers_win = {
 on_planet_defenders_win = {
     events = {
         mhs_durin.12
+		mhs_durin.17
     }
 }
 
