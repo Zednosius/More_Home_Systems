@@ -1,0 +1,24 @@
+building_mhs_durin_mines = {
+	base_buildtime = 360
+	planet_unique = yes
+	
+	cost = {
+	}
+	
+	required_resources = {
+	}
+	
+	produced_resources = {
+		minerals = 6
+		energy = 4
+	}
+	
+	planet_modifier = {
+		pop_happiness = 0.05
+	}
+	
+	upgrades = {
+	}
+	
+	ai_replace = no	
+}
