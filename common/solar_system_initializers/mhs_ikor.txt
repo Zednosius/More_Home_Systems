@@ -344,7 +344,7 @@ mhs_ikor_system = {
 		class = ideal_planet_class
 		orbit_distance = 25
 		orbit_angle = random
-		size = 16
+		size = { min = 16 max = 20 }
 		starting_planet = yes
 		has_ring = no
 		tile_blockers = none
