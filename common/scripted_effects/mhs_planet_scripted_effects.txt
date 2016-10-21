@@ -46,6 +46,16 @@ change_planet_to_not_preferred = { #effect planet
                     change_pc_to_not_arid = yes
                 }
             }
+			trait_pc_alpine_preference = {
+                prev = {
+                    change_pc_to_not_alpine = yes
+                }
+            }
+			trait_pc_savannah_preference = {
+                prev = {
+                    change_pc_to_not_savannah = yes
+                }
+            }
         }
     }
 }
@@ -76,75 +86,112 @@ change_planet_to_not_preferred = { #effect planet
 
 change_pc_to_not_desert = { # effect planet
     random_list = {
-        16 = { change_pc = pc_tropical }
-        16 = { change_pc = pc_continental }
-        16 = { change_pc = pc_ocean }
-        16 = { change_pc = pc_arctic }
-        16 = { change_pc = pc_tundra }
-        16 = { change_pc = pc_arid }
+        1 = { change_pc = pc_tropical }
+        1 = { change_pc = pc_continental }
+        1 = { change_pc = pc_ocean }
+        1 = { change_pc = pc_arctic }
+        1 = { change_pc = pc_tundra }
+        1 = { change_pc = pc_arid }
+		1 = { change_pc = pc_savannah }
+		1 = { change_pc = pc_alpine }
     }
 }
 change_pc_to_not_tropical = {  # effect planet
     random_list = {
-        16 = { change_pc = pc_desert }
-        16 = { change_pc = pc_continental }
-        16 = { change_pc = pc_ocean }
-        16 = { change_pc = pc_arctic }
-        16 = { change_pc = pc_tundra }
-        16 = { change_pc = pc_arid }
+        1 = { change_pc = pc_desert }
+        1 = { change_pc = pc_continental }
+        1 = { change_pc = pc_ocean }
+        1 = { change_pc = pc_arctic }
+        1 = { change_pc = pc_tundra }
+        1 = { change_pc = pc_arid }
+		1 = { change_pc = pc_savannah }
+		1 = { change_pc = pc_alpine }
     }
 }
 change_pc_to_not_continental = {  # effect planet
     random_list = {
-        16 = { change_pc = pc_desert }
-        16 = { change_pc = pc_tropical }
-        16 = { change_pc = pc_ocean }
-        16 = { change_pc = pc_arctic }
-        16 = { change_pc = pc_tundra }
-        16 = { change_pc = pc_arid }
+        1 = { change_pc = pc_desert }
+        1 = { change_pc = pc_tropical }
+        1 = { change_pc = pc_ocean }
+        1 = { change_pc = pc_arctic }
+        1 = { change_pc = pc_tundra }
+        1 = { change_pc = pc_arid }
+		1 = { change_pc = pc_savannah }
+		1 = { change_pc = pc_alpine }
     }
 }
 change_pc_to_not_ocean = {  # effect planet
     random_list = {
-        16 = { change_pc = pc_desert }
-        16 = { change_pc = pc_tropical }
-        16 = { change_pc = pc_continental }
-        16 = { change_pc = pc_arctic }
-        16 = { change_pc = pc_tundra }
-        16 = { change_pc = pc_arid }
+        1 = { change_pc = pc_desert }
+        1 = { change_pc = pc_tropical }
+        1 = { change_pc = pc_continental }
+        1 = { change_pc = pc_arctic }
+        1 = { change_pc = pc_tundra }
+        1 = { change_pc = pc_arid }
+		1 = { change_pc = pc_savannah }
+		1 = { change_pc = pc_alpine }
     }
 }
 change_pc_to_not_arctic = {  # effect planet
     random_list = {
-        16 = { change_pc = pc_desert }
-        16 = { change_pc = pc_tropical }
-        16 = { change_pc = pc_continental }
-        16 = { change_pc = pc_ocean }
-        16 = { change_pc = pc_tundra }
-        16 = { change_pc = pc_arid }
+        1 = { change_pc = pc_desert }
+        1 = { change_pc = pc_tropical }
+        1 = { change_pc = pc_continental }
+        1 = { change_pc = pc_ocean }
+        1 = { change_pc = pc_tundra }
+        1 = { change_pc = pc_arid }
+		1 = { change_pc = pc_savannah }
+		1 = { change_pc = pc_alpine }
     }
 }
 change_pc_to_not_tundra = {  # effect planet
     random_list = {
-        16 = { change_pc = pc_desert }
-        16 = { change_pc = pc_tropical }
-        16 = { change_pc = pc_continental }
-        16 = { change_pc = pc_ocean }
-        16 = { change_pc = pc_arctic }
-        16 = { change_pc = pc_arid }
+        1 = { change_pc = pc_desert }
+        1 = { change_pc = pc_tropical }
+        1 = { change_pc = pc_continental }
+        1 = { change_pc = pc_ocean }
+        1 = { change_pc = pc_arctic }
+        1 = { change_pc = pc_arid }
+		1 = { change_pc = pc_savannah }
+		1 = { change_pc = pc_alpine }
     }
 }
 change_pc_to_not_arid = {  # effect planet
     random_list = {
-        16 = { change_pc = pc_desert }
-        16 = { change_pc = pc_tropical }
-        16 = { change_pc = pc_continental }
-        16 = { change_pc = pc_ocean }
-        16 = { change_pc = pc_arctic }
-        16 = { change_pc = pc_tundra }
+        1 = { change_pc = pc_desert }
+        1 = { change_pc = pc_tropical }
+        1 = { change_pc = pc_continental }
+        1 = { change_pc = pc_ocean }
+        1 = { change_pc = pc_arctic }
+        1 = { change_pc = pc_tundra }
+		1 = { change_pc = pc_savannah }
+		1 = { change_pc = pc_alpine }
     }
 }
-
+change_pc_to_not_savannah = {  # effect planet
+    random_list = {
+        1 = { change_pc = pc_desert }
+        1 = { change_pc = pc_tropical }
+        1 = { change_pc = pc_continental }
+        1 = { change_pc = pc_ocean }
+        1 = { change_pc = pc_arctic }
+        1 = { change_pc = pc_tundra }
+		1 = { change_pc = pc_arid }
+		1 = { change_pc = pc_alpine }
+    }
+}
+change_pc_to_not_alpine = {  # effect planet
+    random_list = {
+        1 = { change_pc = pc_desert }
+        1 = { change_pc = pc_tropical }
+        1 = { change_pc = pc_continental }
+        1 = { change_pc = pc_ocean }
+        1 = { change_pc = pc_arctic }
+        1 = { change_pc = pc_tundra }
+		1 = { change_pc = pc_arid }
+		1 = { change_pc = pc_savannah }
+    }
+}
 
 
 

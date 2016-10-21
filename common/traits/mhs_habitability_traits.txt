@@ -1,6 +1,6 @@
 @primary = 0.80
 @secondary = 0.60
-@tertiary = 0.40
+@tertiary = 0.20
 
 trait_pc_mhs_durin_desert_preference = {
 	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"

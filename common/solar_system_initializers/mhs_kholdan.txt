@@ -90,6 +90,7 @@ mhs_kholdan_system = {
 		
 		init_effect = {
 			prevent_anomaly = yes
+			change_pc = "pc_mhs_nuked_by_asteroids"
 		}
 		
 		init_effect = {

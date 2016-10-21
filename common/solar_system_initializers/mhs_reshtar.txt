@@ -1,13 +1,13 @@
 ### More Home Systems - Resh´Tar,
 mhs_reshtar_system = {
-	name = "Resh´Tar"
+	name = "Resh'Tar"
 	class = "sc_k"
 	asteroids_distance = 150
 	usage = custom_empire
 	
 
 	planet = {
-		name = "Resh´Tar"
+		name = "Resh'Tar"
 		class = "pc_k_star"
 		orbit_distance = 0
 		orbit_angle = 1
@@ -15,7 +15,7 @@ mhs_reshtar_system = {
 		has_ring = no
 	}
 	planet = {
-		name = "Resheeta´Ar"
+		name = "Resheeta'Ar"
 		class = ideal_planet_class
 		orbit_distance = 95
 		orbit_angle = random

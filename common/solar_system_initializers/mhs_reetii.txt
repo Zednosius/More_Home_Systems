@@ -2,7 +2,7 @@
 @distance = 30 #Added zed
 
 mhs_reetii_system = {
-	name = "Re´etii"
+	name = "Re'etii"
 	class = "sc_black_hole"
 
 	flags = { children_of_ancients_system }
@@ -41,7 +41,7 @@ mhs_reetii_system = {
 		orbit_distance = 0
 	}
 	planet = {
-		name = "Re´iir"
+		name = "Re'iir"
 		class = "pc_ringworld_habitable"
 		orbit_angle = 30
 		orbit_distance = 0
