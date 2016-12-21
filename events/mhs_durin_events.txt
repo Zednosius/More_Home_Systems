@@ -184,7 +184,7 @@ ship_event = {
 			}
 			every_tile = {
 				limit = { has_blocker = no has_building = no }
-				set_blocker = tb_city_ruins
+				set_blocker = tb_failing_infrastructure
 				random_resources = yes
 			}
 			random_tile = {
