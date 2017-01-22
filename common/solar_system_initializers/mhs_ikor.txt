@@ -841,4 +841,14 @@ mhs_ikor_system = {
 		size = 2
 		has_ring = no
 	}
+	planet = {
+		name = "Katas"
+		class = "pc_frozen"
+		orbit_distance = 30
+		orbit_angle = random
+		size = 17
+		starting_planet = no
+		has_ring = no
+		modifiers = none
+	}
 }
