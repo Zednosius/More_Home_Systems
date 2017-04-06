@@ -1,14 +1,14 @@
 objectTypes = {
 
-	########################STARS################################
-	
-	pdxmesh = {
-		name = "rwc_star_mesh"
-		file = "gfx/models/planets/base_star.mesh" #standard star mesh, if you want different color change the system's star class
-		animation = { id = "idle"	type = "base_star_idle_animation" }
-		scale = 9 # increases size of star in the center
-		cull_distance = 99999999.0f
-	}
+#	########################STARS################################
+#	
+#	pdxmesh = {
+#		name = "rwc_star_mesh"
+#		file = "gfx/models/planets/base_star.mesh" #standard star mesh, if you want different color change the system's star class
+#		animation = { id = "idle"	type = "base_star_idle_animation" }
+#		scale = 9 # increases size of star in the center
+#		cull_distance = 99999999.0f
+#	}
 	
 	########################PLANETS################################
 

@@ -92,7 +92,11 @@ mhs_ikor_system = {
 			}
 			create_country = {
 				name = random
-				government = fragmented_nations
+				authority = random
+				civics = {
+					civic = civic_increasing_urbanization
+					civic = civic_atmospheric_pollution
+				}
 				species = last_created
 				ethos = random
 				flag = {
@@ -358,14 +362,19 @@ mhs_ikor_system = {
 				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
 				set_building = "building_capital_1"
 				add_resource = {
-					resource = food
+					resource = energy
 					amount = 1
 					replace = yes
-				}	
-				add_resource = {
-					resource = minerals
-					amount = 1
 				}					
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					add_resource = {
+						resource = food
+						amount = 2
+						replace = yes
+					}						
+				}
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no }
 					set_building = "building_hydroponics_farm_1"
@@ -373,16 +382,7 @@ mhs_ikor_system = {
 						resource = food
 						amount = 1
 						replace = yes
-					}						
-				}
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_power_plant_1"
-					add_resource = {
-						resource = energy
-						amount = 1
-						replace = yes
-					}						
+					}							
 				}
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no }
@@ -398,11 +398,47 @@ mhs_ikor_system = {
 					set_building = "building_mining_network_1"
 					add_resource = {
 						resource = minerals
-						amount = 1
+						amount = 2
 						replace = yes
 					}						
 				}				
 			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_basic_science_lab_1"
+				random_list = {
+					33 = { 
+						add_resource = {
+							resource = engineering_research
+							amount = 1
+							replace = yes
+						}						
+					}
+					33 = { 
+						add_resource = {
+							resource = physics_research
+							amount = 1
+							replace = yes
+						}						
+					}
+					33 = { 
+						add_resource = {
+							resource = society_research
+							amount = 1
+							replace = yes
+						}						
+					}					
+				}					
+			}	
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_mining_network_1"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}						
+			}			
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_failing_infrastructure"
@@ -444,7 +480,7 @@ mhs_ikor_system = {
 				set_blocker = "tb_decrepit_dwellings"
 				add_resource = {
 					resource = food
-					amount = 1
+					amount = 2
 					replace = yes
 				}					
 			}
@@ -452,16 +488,17 @@ mhs_ikor_system = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_decrepit_dwellings"
 				add_resource = {
-					resource = energy
+					resource = minerals
 					amount = 1
 					replace = yes
 				}				
 			}
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
+				set_building = "building_power_plant_1"
 				add_resource = {
-					resource = food
-					amount = 1
+					resource = energy
+					amount = 2
 					replace = yes
 				}				
 			}			
@@ -555,7 +592,11 @@ mhs_ikor_system = {
 				}
 				create_country = {
 					name = random
-					government = primitive_feudalism
+					authority = random
+					civics = {
+						civic = civic_landed_nobility
+						civic = civic_flat_world_theory
+					}
 					species = last_created
 					ethos = random
 					flag = {
