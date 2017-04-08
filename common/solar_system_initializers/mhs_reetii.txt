@@ -4,13 +4,18 @@
 mhs_reetii_system = {
 	name = "Re'etii"
 	class = "sc_black_hole"
-
-	flags = { children_of_ancients_system ring_world_built }
+	
+	# flags ring_world_built and ringworld_deposited should prevent events that put to much research in the main system on start
+	flags = { children_of_ancients_system ring_world_built ringworld_deposited }
 	usage = custom_empire
 
 	planet = {
 		class = star
 		orbit_distance = 0
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
 	}
 	
 	change_orbit = 45
@@ -22,6 +27,7 @@ mhs_reetii_system = {
 		orbit_distance = 0
 		
 		init_effect = {
+			set_planet_flag = ringworld_section_deposit
 			create_ambient_object = {
 				type = "large_debris_object"
 				location = THIS
@@ -33,12 +39,41 @@ mhs_reetii_system = {
 		name = "Ring Section B"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			set_planet_flag = ringworld_section_deposit
+		}
 	}
 	planet = {
 		class = "pc_ringworld_seam"
 		name = "Ring Section C"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			set_planet_flag = ringworld_section_deposit
+			random_list = {
+				25 = {
+					orbital_deposit_tile = {
+						clear_deposits = yes
+						add_deposit = d_rich_energy_deposit
+					}
+				}
+				25 = {
+					orbital_deposit_tile = {
+						clear_deposits = yes
+						add_deposit = d_vast_energy_deposit
+					}
+				}
+				25 = {
+					orbital_deposit_tile = {
+						clear_deposits = yes
+						add_deposit = d_immense_energy_deposit
+					}
+				}
+				25 = {}
+			}
+		}
 	}
 	planet = {
 		name = "Re'iir"
@@ -51,6 +86,7 @@ mhs_reetii_system = {
 		starting_planet = yes		
 		
 		init_effect = {
+			set_planet_flag = ringworld_section_deposit
 			prevent_anomaly = yes		
 			change_pc = "pc_ringworld_habitable"
 			random_tile = {
@@ -242,12 +278,41 @@ mhs_reetii_system = {
 		name = "Ring Section E"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			set_planet_flag = ringworld_section_deposit
+			random_list = {
+				25 = {
+					orbital_deposit_tile = {
+						clear_deposits = yes
+						add_deposit = d_rich_engineering_deposit
+					}
+				}
+				25 = {
+					orbital_deposit_tile = {
+						clear_deposits = yes
+						add_deposit = d_vast_engineering_deposit
+					}
+				}
+				25 = {
+					orbital_deposit_tile = {
+						clear_deposits = yes
+						add_deposit = d_immense_engineering_deposit
+					}
+				}
+				25 = {}
+			}
+		}
 	}
 	planet = {
 		class = "pc_ringworld_seam_damaged"
 		name = "Ring Section F"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			set_planet_flag = ringworld_section_deposit
+		}
 	}
 	planet = {
 		class = "pc_ringworld_habitable_damaged"
@@ -256,6 +321,7 @@ mhs_reetii_system = {
 		orbit_distance = 0
 		
 		init_effect = {
+			set_planet_flag = ringworld_section_deposit
 			create_ambient_object = {
 				type = "medium_debris_01_object"
 				location = THIS
@@ -267,6 +333,10 @@ mhs_reetii_system = {
 		name = "Ring Section H"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			set_planet_flag = ringworld_section_deposit
+		}
 	}
 	planet = {
 		class = "pc_ringworld_seam_damaged"
@@ -275,6 +345,7 @@ mhs_reetii_system = {
 		orbit_distance = 0
 		
 		init_effect = {
+			set_planet_flag = ringworld_section_deposit
 			create_ambient_object = {
 				type = "medium_debris_02_object"
 				location = THIS
@@ -286,6 +357,10 @@ mhs_reetii_system = {
 		name = "Agrarian District"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			set_planet_flag = ringworld_section_deposit
+		}
 	}
 	planet = {
 		class = "pc_ringworld_tech_damaged"
@@ -294,6 +369,7 @@ mhs_reetii_system = {
 		orbit_distance = 0
 		
 		init_effect = {
+			set_planet_flag = ringworld_section_deposit
 			create_ambient_object = {
 				type = "small_debris_object"
 				location = THIS
@@ -305,6 +381,10 @@ mhs_reetii_system = {
 		name = "Ring Section L"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			set_planet_flag = ringworld_section_deposit
+		}
 	}
 	
 	planet = {
