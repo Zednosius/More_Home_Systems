@@ -1,4 +1,4 @@
-### More Home Systems - Resh´Tar,
+### More Home Systems - Resh'Tar,
 mhs_reshtar_system = {
 	name = "Resh'Tar"
 	class = "sc_k"
