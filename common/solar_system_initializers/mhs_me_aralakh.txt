@@ -5,6 +5,8 @@ mhs_me_aralakh_system = {
 	asteroids_distance = 150
 	usage = custom_empire
 	
+	flags = { empire_home_system }
+	
 	planet = {
 		name = "Aralakh"
 		class = "pc_m_star"

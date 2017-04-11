@@ -5,6 +5,8 @@ mhs_me_parnitha_system = {
 	asteroids_distance = 125
 	usage = custom_empire
 	
+	flags = { empire_home_system }
+	
 	planet = {
 		name = "Parnitha"
 		class = "pc_g_star"

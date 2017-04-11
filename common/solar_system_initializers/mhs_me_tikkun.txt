@@ -5,6 +5,8 @@ mhs_me_tikkun_system = {
 	asteroids_distance = 75
 	usage = custom_empire
 	
+	flags = { empire_home_system }
+	
 	planet = {
 		name = "Tikkun"
 		class = "pc_m_star"

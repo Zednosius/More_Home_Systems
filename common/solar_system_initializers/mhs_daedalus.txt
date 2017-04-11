@@ -6,6 +6,8 @@ mhs_daedalus_system = {
 	
 	usage = custom_empire
 	
+	flags = { empire_home_system }
+	
 	change_orbit = 10
 	
 	planet = {

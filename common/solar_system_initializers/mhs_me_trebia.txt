@@ -5,6 +5,8 @@ mhs_me_trebia_system = {
 	asteroids_distance = 0
 	usage = custom_empire
 	
+	flags = { empire_home_system }
+	
 	planet = {
 		name = "Trebia"
 		class = "pc_f_star"

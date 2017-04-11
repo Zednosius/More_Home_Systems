@@ -5,6 +5,8 @@ mhs_me_pranas_system = {
 	asteroids_distance = 190
 	usage = custom_empire
 	
+	flags = { empire_home_system }
+	
 	planet = {
 		name = "Pranas"
 		class = "pc_g_star"

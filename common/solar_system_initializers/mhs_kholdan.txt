@@ -6,6 +6,8 @@ mhs_kholdan_system = {
 		
 	usage = custom_empire
 	
+	flags = { empire_home_system }
+	
 	planet = {
 		name = "Kholdan"
 		class = "pc_m_star"

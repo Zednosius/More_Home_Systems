@@ -6,6 +6,8 @@ mhs_qastliani_system = {
 		
 	usage = custom_empire
 	
+	flags = { empire_home_system }
+	
 	planet = {
 		name = "Qastliani"
 		class = "pc_m_star"

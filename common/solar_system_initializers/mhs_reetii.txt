@@ -5,7 +5,7 @@ mhs_reetii_system = {
 	class = "sc_black_hole"
 	
 	# flags ring_world_built and ringworld_deposited should prevent events that put to much research in the main system on start
-	flags = { children_of_ancients_system ring_world_built ringworld_deposited }
+	flags = { children_of_ancients_system ring_world_built ringworld_deposited empire_home_system }
 	usage = custom_empire
 
 	planet = {

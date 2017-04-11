@@ -5,6 +5,8 @@ mhs_ikor_system = {
 	asteroids_distance = 150
 	usage = custom_empire
 	
+	flags = { empire_home_system }
+	
 	change_orbit = 15
 	
 	planet = {
