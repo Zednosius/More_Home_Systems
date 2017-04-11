@@ -1,5 +1,4 @@
 ### Children of the ancients fixed and modified - original creator Belannaer
-@distance = 30 #Added zed
 
 mhs_reetii_system = {
 	name = "Re'etii"
@@ -420,8 +419,16 @@ mhs_reetii_system = {
 	}
 		
 	neighbor_system = {
-		distance = { min = 10 max = @distance }	
+		distance = { min = 10 max = 30 }	
 		initializer = "children_of_ancients_neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }	
+		initializer = "neighbor_t1_first_colony"
 	}
 }
 

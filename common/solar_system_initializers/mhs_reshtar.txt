@@ -289,4 +289,12 @@ mhs_reshtar_system = {
 		size = { min = 1 max = 4 }
 		has_ring = no
 	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }	
+		initializer = "neighbor_t1_first_colony"
+	}
 }

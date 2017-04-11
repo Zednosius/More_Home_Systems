@@ -892,4 +892,12 @@ mhs_ikor_system = {
 		has_ring = no
 		modifiers = none
 	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }	
+		initializer = "neighbor_t1_first_colony"
+	}
 }

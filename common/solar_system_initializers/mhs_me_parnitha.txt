@@ -251,4 +251,12 @@ mhs_me_parnitha_system = {
 		entity = "gas_giant_02_entity"
 		modifiers = none
 	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }	
+		initializer = "neighbor_t1_first_colony"
+	}
 }

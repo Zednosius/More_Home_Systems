@@ -1,5 +1,4 @@
-### More Home Systems - Durin's Forge,
-@distance = 30
+### More Home Systems - Durin's Forge
 mhs_durinsforge_system = {
 	name = "Durin's Forge"
 	class = "sc_m"
@@ -304,8 +303,16 @@ mhs_durinsforge_system = {
 		}
 	}	
 	neighbor_system = {
-		distance = { min = 10 max = @distance }	
+		distance = { min = 10 max = 30 }	
 		initializer = "durinsforge_system_neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }	
+		initializer = "neighbor_t1_first_colony"
 	}
 }
 
