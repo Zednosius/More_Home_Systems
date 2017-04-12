@@ -1,27 +1,32 @@
 ### Children of the ancients fixed and modified - original creator Belannaer
-@distance = 30 #Added zed
 
 mhs_reetii_system = {
-	name = "Re´etii"
+	name = "Re'etii"
 	class = "sc_black_hole"
-
-	flags = { children_of_ancients_system }
+	
+	# flags ring_world_built and ringworld_deposited should prevent events that put to much research in the main system on start
+	flags = { children_of_ancients_system ring_world_built ringworld_deposited empire_home_system }
 	usage = custom_empire
 
 	planet = {
 		class = star
 		orbit_distance = 0
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
 	}
 	
 	change_orbit = 45
 	
 	planet = {
-		class = "pc_mhs_ringworld_habitable_damaged"
+		class = "pc_ringworld_habitable_damaged"
 		name = "Home of the Ancients"
 		orbit_angle = 30
 		orbit_distance = 0
 		
 		init_effect = {
+			set_planet_flag = ringworld_section_deposit
 			create_ambient_object = {
 				type = "large_debris_object"
 				location = THIS
@@ -29,43 +34,77 @@ mhs_reetii_system = {
 		}
 	}
 	planet = {
-		class = "pc_mhs_ringworld_tech_damaged"
+		class = "pc_ringworld_tech_damaged"
 		name = "Ring Section B"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			set_planet_flag = ringworld_section_deposit
+		}
 	}
 	planet = {
-		class = "pc_mhs_ringworld_seam"
+		class = "pc_ringworld_seam"
 		name = "Ring Section C"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			set_planet_flag = ringworld_section_deposit
+			random_list = {
+				25 = {
+					orbital_deposit_tile = {
+						clear_deposits = yes
+						add_deposit = d_rich_energy_deposit
+					}
+				}
+				25 = {
+					orbital_deposit_tile = {
+						clear_deposits = yes
+						add_deposit = d_vast_energy_deposit
+					}
+				}
+				25 = {
+					orbital_deposit_tile = {
+						clear_deposits = yes
+						add_deposit = d_immense_energy_deposit
+					}
+				}
+				25 = {}
+			}
+		}
 	}
 	planet = {
-		name = "Re´iir"
+		name = "Re'iir"
 		class = "pc_ringworld_habitable"
 		orbit_angle = 30
 		orbit_distance = 0
-		size = 16
+		size = 25
 		tile_blockers = none
 		modifiers = none
 		starting_planet = yes		
 		
 		init_effect = {
-			prevent_anomaly = yes
-			set_owner = ROOT			
+			set_planet_flag = ringworld_section_deposit
+			prevent_anomaly = yes		
 			change_pc = "pc_ringworld_habitable"
 			random_tile = {
 				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
 				set_building = "building_capital_1"
 				add_resource = {
-					resource = food
+					resource = energy
 					amount = 1
 					replace = yes
-				}	
-				add_resource = {
-					resource = minerals
-					amount = 1
 				}					
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					add_resource = {
+						resource = food
+						amount = 2
+						replace = yes
+					}						
+				}
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no }
 					set_building = "building_hydroponics_farm_1"
@@ -73,16 +112,7 @@ mhs_reetii_system = {
 						resource = food
 						amount = 1
 						replace = yes
-					}						
-				}
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_power_plant_1"
-					add_resource = {
-						resource = energy
-						amount = 1
-						replace = yes
-					}						
+					}							
 				}
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no }
@@ -98,11 +128,47 @@ mhs_reetii_system = {
 					set_building = "building_mining_network_1"
 					add_resource = {
 						resource = minerals
-						amount = 1
+						amount = 2
 						replace = yes
 					}						
 				}				
 			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_basic_science_lab_1"
+				random_list = {
+					33 = { 
+						add_resource = {
+							resource = engineering_research
+							amount = 1
+							replace = yes
+						}						
+					}
+					33 = { 
+						add_resource = {
+							resource = physics_research
+							amount = 1
+							replace = yes
+						}						
+					}
+					33 = { 
+						add_resource = {
+							resource = society_research
+							amount = 1
+							replace = yes
+						}						
+					}					
+				}					
+			}	
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_mining_network_1"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}						
+			}	
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_failing_infrastructure"
@@ -164,7 +230,19 @@ mhs_reetii_system = {
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_failing_infrastructure"
-			}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+			}	
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+			}	
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_decrepit_dwellings"
@@ -195,24 +273,54 @@ mhs_reetii_system = {
 		}
 	}
 	planet = {
-		class = "pc_mhs_ringworld_tech"
+		class = "pc_ringworld_tech"
 		name = "Ring Section E"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			set_planet_flag = ringworld_section_deposit
+			random_list = {
+				25 = {
+					orbital_deposit_tile = {
+						clear_deposits = yes
+						add_deposit = d_rich_engineering_deposit
+					}
+				}
+				25 = {
+					orbital_deposit_tile = {
+						clear_deposits = yes
+						add_deposit = d_vast_engineering_deposit
+					}
+				}
+				25 = {
+					orbital_deposit_tile = {
+						clear_deposits = yes
+						add_deposit = d_immense_engineering_deposit
+					}
+				}
+				25 = {}
+			}
+		}
 	}
 	planet = {
-		class = "pc_mhs_ringworld_seam_damaged"
+		class = "pc_ringworld_seam_damaged"
 		name = "Ring Section F"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			set_planet_flag = ringworld_section_deposit
+		}
 	}
 	planet = {
-		class = "pc_mhs_ringworld_habitable_damaged"
+		class = "pc_ringworld_habitable_damaged"
 		name = "Industrial District"
 		orbit_angle = 30
 		orbit_distance = 0
 		
 		init_effect = {
+			set_planet_flag = ringworld_section_deposit
 			create_ambient_object = {
 				type = "medium_debris_01_object"
 				location = THIS
@@ -220,18 +328,23 @@ mhs_reetii_system = {
 		}
 	}
 	planet = {
-		class = "pc_mhs_ringworld_tech_damaged"
+		class = "pc_ringworld_tech_damaged"
 		name = "Ring Section H"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			set_planet_flag = ringworld_section_deposit
+		}
 	}
 	planet = {
-		class = "pc_mhs_ringworld_seam_damaged"
+		class = "pc_ringworld_seam_damaged"
 		name = "Ring Section I"
 		orbit_angle = 30
 		orbit_distance = 0
 		
 		init_effect = {
+			set_planet_flag = ringworld_section_deposit
 			create_ambient_object = {
 				type = "medium_debris_02_object"
 				location = THIS
@@ -239,18 +352,23 @@ mhs_reetii_system = {
 		}
 	}
 	planet = {
-		class = "pc_mhs_ringworld_habitable_damaged"
+		class = "pc_ringworld_habitable_damaged"
 		name = "Agrarian District"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			set_planet_flag = ringworld_section_deposit
+		}
 	}
 	planet = {
-		class = "pc_mhs_ringworld_tech_damaged"
+		class = "pc_ringworld_tech_damaged"
 		name = "Ring Section K"
 		orbit_angle = 30
 		orbit_distance = 0
 		
 		init_effect = {
+			set_planet_flag = ringworld_section_deposit
 			create_ambient_object = {
 				type = "small_debris_object"
 				location = THIS
@@ -258,10 +376,14 @@ mhs_reetii_system = {
 		}
 	}
 	planet = {
-		class = "pc_mhs_ringworld_seam_damaged"
+		class = "pc_ringworld_seam_damaged"
 		name = "Ring Section L"
 		orbit_angle = 30
 		orbit_distance = 0
+		
+		init_effect = {
+			set_planet_flag = ringworld_section_deposit
+		}
 	}
 	
 	planet = {
@@ -297,8 +419,16 @@ mhs_reetii_system = {
 	}
 		
 	neighbor_system = {
-		distance = { min = 10 max = @distance }	
+		distance = { min = 10 max = 30 }	
 		initializer = "children_of_ancients_neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }	
+		initializer = "neighbor_t1_first_colony"
 	}
 }
 

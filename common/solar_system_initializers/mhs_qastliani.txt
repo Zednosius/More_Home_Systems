@@ -6,6 +6,8 @@ mhs_qastliani_system = {
 		
 	usage = custom_empire
 	
+	flags = { empire_home_system }
+	
 	planet = {
 		name = "Qastliani"
 		class = "pc_m_star"
@@ -127,7 +129,7 @@ mhs_qastliani_system = {
 		class = ideal_planet_class
 		orbit_distance = 30
 		orbit_angle = random
-		size = 16
+		size = { min = 16 max = 20 }
 		starting_planet = yes
 		has_ring = yes
 		tile_blockers = none
@@ -142,14 +144,19 @@ mhs_qastliani_system = {
 				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
 				set_building = "building_capital_1"
 				add_resource = {
-					resource = food
+					resource = energy
 					amount = 1
 					replace = yes
-				}	
-				add_resource = {
-					resource = minerals
-					amount = 1
 				}					
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					add_resource = {
+						resource = food
+						amount = 2
+						replace = yes
+					}						
+				}
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no }
 					set_building = "building_hydroponics_farm_1"
@@ -157,16 +164,7 @@ mhs_qastliani_system = {
 						resource = food
 						amount = 1
 						replace = yes
-					}						
-				}
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_power_plant_1"
-					add_resource = {
-						resource = energy
-						amount = 1
-						replace = yes
-					}						
+					}							
 				}
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no }
@@ -182,11 +180,47 @@ mhs_qastliani_system = {
 					set_building = "building_mining_network_1"
 					add_resource = {
 						resource = minerals
-						amount = 1
+						amount = 2
 						replace = yes
 					}						
 				}				
 			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_basic_science_lab_1"
+				random_list = {
+					33 = { 
+						add_resource = {
+							resource = engineering_research
+							amount = 1
+							replace = yes
+						}						
+					}
+					33 = { 
+						add_resource = {
+							resource = physics_research
+							amount = 1
+							replace = yes
+						}						
+					}
+					33 = { 
+						add_resource = {
+							resource = society_research
+							amount = 1
+							replace = yes
+						}						
+					}					
+				}					
+			}	
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_mining_network_1"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}						
+			}	
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_failing_infrastructure"
@@ -276,4 +310,12 @@ mhs_qastliani_system = {
 			has_ring = no
 		}
 	}	
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }	
+		initializer = "neighbor_t1_first_colony"
+	}
 }

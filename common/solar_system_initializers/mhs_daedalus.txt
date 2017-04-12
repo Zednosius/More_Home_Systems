@@ -6,6 +6,8 @@ mhs_daedalus_system = {
 	
 	usage = custom_empire
 	
+	flags = { empire_home_system }
+	
 	change_orbit = 10
 	
 	planet = {
@@ -45,31 +47,36 @@ mhs_daedalus_system = {
 	}
 	
 	planet = {
-    name = "Hades"
-    class = "planetary_ring_nuked"        
-    orbit_distance = 55
-    orbit_angle = random
-    size = 16
-    starting_planet = yes
-    has_ring = no
-    tile_blockers = none
-    modifiers = none
+		name = "Hades"
+		class = "planetary_ring_nuked"        
+		orbit_distance = 55
+		orbit_angle = random
+		size = { min = 16 max = 20 }
+		starting_planet = yes
+		has_ring = no
+		tile_blockers = none
+		modifiers = none
      
-    init_effect = {
-        change_pc = "planetary_ring_nuked" 
-		prevent_anomaly = yes
-        	random_tile = {
+		init_effect = {
+			change_pc = "planetary_ring_nuked" 
+			prevent_anomaly = yes
+			random_tile = {
 				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
 				set_building = "building_capital_1"
 				add_resource = {
-					resource = food
+					resource = energy
 					amount = 1
 					replace = yes
-				}	
-				add_resource = {
-					resource = minerals
-					amount = 1
 				}					
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					add_resource = {
+						resource = food
+						amount = 2
+						replace = yes
+					}						
+				}
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no }
 					set_building = "building_hydroponics_farm_1"
@@ -77,16 +84,7 @@ mhs_daedalus_system = {
 						resource = food
 						amount = 1
 						replace = yes
-					}						
-				}
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_power_plant_1"
-					add_resource = {
-						resource = energy
-						amount = 1
-						replace = yes
-					}						
+					}							
 				}
 				random_neighboring_tile = {
 					limit = { has_blocker = no has_building = no }
@@ -102,11 +100,47 @@ mhs_daedalus_system = {
 					set_building = "building_mining_network_1"
 					add_resource = {
 						resource = minerals
-						amount = 1
+						amount = 2
 						replace = yes
 					}						
 				}				
 			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_basic_science_lab_1"
+				random_list = {
+					33 = { 
+						add_resource = {
+							resource = engineering_research
+							amount = 1
+							replace = yes
+						}						
+					}
+					33 = { 
+						add_resource = {
+							resource = physics_research
+							amount = 1
+							replace = yes
+						}						
+					}
+					33 = { 
+						add_resource = {
+							resource = society_research
+							amount = 1
+							replace = yes
+						}						
+					}					
+				}					
+			}	
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_mining_network_1"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}						
+			}			
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_failing_infrastructure"
@@ -148,7 +182,7 @@ mhs_daedalus_system = {
 				set_blocker = "tb_decrepit_dwellings"
 				add_resource = {
 					resource = food
-					amount = 1
+					amount = 2
 					replace = yes
 				}					
 			}
@@ -156,16 +190,17 @@ mhs_daedalus_system = {
 				limit = { has_blocker = no has_building = no }
 				set_blocker = "tb_decrepit_dwellings"
 				add_resource = {
-					resource = energy
+					resource = minerals
 					amount = 1
 					replace = yes
 				}				
 			}
 			random_tile = {
 				limit = { has_blocker = no has_building = no }
+				set_building = "building_power_plant_1"
 				add_resource = {
-					resource = food
-					amount = 1
+					resource = energy
+					amount = 2
 					replace = yes
 				}				
 			}			
@@ -230,5 +265,14 @@ mhs_daedalus_system = {
 			orbit_angle = random
 			has_ring = no
 		}
+	}
+	
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }	
+		initializer = "neighbor_t1_first_colony"
 	}
 }

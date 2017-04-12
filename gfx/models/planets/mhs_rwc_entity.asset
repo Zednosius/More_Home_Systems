@@ -32,11 +32,11 @@ entity = {
 	cull_radius = 500
 	pdxmesh = "ringworld_habitable_01_mesh"
 	
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
-		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" } }
-		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" } }
-	}
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+#		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" } }
+#		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" } }
+#	}
 	scale = 0.554
 
 }
@@ -69,8 +69,8 @@ entity = {
 	locator = { name = "loc112" position = { 216.5 0 -125 } rotation = { -240 0 0 }}
 	
 	
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" }
 
 	attach = { "loc101" = "ringworld_sphere_entity"}
 	attach = { "loc102" = "ringworld_sphere_entity"}
@@ -108,8 +108,8 @@ entity = {
 
 	
 	
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" }
 
 	attach = { "loc101" = "ringworld_sphere_entity"}
 	attach = { "loc102" = "ringworld_sphere_entity"}
@@ -140,131 +140,131 @@ entity = {
 
 ##################### Solar Rings #################
 # 1 ring w/ star mesh
-entity = {
-	name = "solar_ring1_entity"
-	pdxmesh = "rwc_star_mesh"
-	cull_radius = 500	
-
-	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
-
-	# idle animations, add to state if you want to add animations
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
-
-	#attach our ringworld pieces to the locations we just created
-	attach = { "loc1" = "solar_ring_entity"}
-	
-	scale = 1
-}
+#entity = {
+#	name = "solar_ring1_entity"
+#	pdxmesh = "rwc_star_mesh"
+#	cull_radius = 500	
+#
+#	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
+#
+#	# idle animations, add to state if you want to add animations
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" }
+#
+#	#attach our ringworld pieces to the locations we just created
+#	attach = { "loc1" = "solar_ring_entity"}
+#	
+#	scale = 1
+#}
 # 2 ring w/ star mesh
-entity = {
-	name = "solar_ring2_entity"
-	pdxmesh = "rwc_star_mesh"
-	cull_radius = 500	
-
-	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
-	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
-
-	# idle animations, add to state if you want to add animations
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
-
-	#attach our ringworld pieces to the locations we just created
-	attach = { "loc1" = "solar_ring_entity"}
-	attach = { "loc2" = "solar_ring_entity"}
-	
-	scale = 1
-}
+#entity = {
+#	name = "solar_ring2_entity"
+#	pdxmesh = "rwc_star_mesh"
+#	cull_radius = 500	
+#
+#	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
+#	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
+#
+#	# idle animations, add to state if you want to add animations
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" }
+#
+#	#attach our ringworld pieces to the locations we just created
+#	attach = { "loc1" = "solar_ring_entity"}
+#	attach = { "loc2" = "solar_ring_entity"}
+#	
+#	scale = 1
+#}
 # 3 ring w/ star mesh
-entity = {
-	name = "solar_ring3_entity"
-	pdxmesh = "rwc_star_mesh"
-	cull_radius = 500	
-
-	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
-	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
-	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 0 90 }}
-
-	# idle animations, add to state if you want to add animations
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
-
-	#attach our ringworld pieces to the locations we just created
-	attach = { "loc1" = "solar_ring_entity"}
-	attach = { "loc2" = "solar_ring_entity"}
-	attach = { "loc3" = "solar_ring_entity"}
-	scale = 1
-}
+#entity = {
+#	name = "solar_ring3_entity"
+#	pdxmesh = "rwc_star_mesh"
+#	cull_radius = 500	
+#
+#	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
+#	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
+#	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 0 90 }}
+#
+#	# idle animations, add to state if you want to add animations
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" }
+#
+#	#attach our ringworld pieces to the locations we just created
+#	attach = { "loc1" = "solar_ring_entity"}
+#	attach = { "loc2" = "solar_ring_entity"}
+#	attach = { "loc3" = "solar_ring_entity"}
+#	scale = 1
+#}
 # 4 ring w/ star mesh
-entity = {
-	name = "solar_ring4_entity"
-	pdxmesh = "rwc_star_mesh"
-	cull_radius = 500	
-
-	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
-	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
-
-	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 45 0 }}
-	locator = { name = "loc4" position = { 0 0 0 } rotation = { 0 -45 0 }}
-
-	# idle animations, add to state if you want to add animations
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
-
-	attach = { "loc1" = "solar_ring_entity"}
-	attach = { "loc2" = "solar_ring_entity"}
-	attach = { "loc3" = "solar_ring_entity"}
-	attach = { "loc4" = "solar_ring_entity"}
-	
-	scale = 1
-}
-entity = {
-	name = "solar_ring4grid_entity"
-	pdxmesh = "rwc_star_mesh"
-	cull_radius = 500	
-
-	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
-	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
-
-	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 0 45 }}
-	locator = { name = "loc4" position = { 0 0 0 } rotation = { 0 0 -45 }}
-
-	# idle animations, add to state if you want to add animations
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
-
-	attach = { "loc1" = "solar_ring_entity"}
-	attach = { "loc2" = "solar_ring_entity"}
-	attach = { "loc3" = "solar_ring_entity"}
-	attach = { "loc4" = "solar_ring_entity"}
-	
-	scale = 1
-}
-entity = {
-	name = "solar_ring5_entity"
-	pdxmesh = "rwc_star_mesh"
-	cull_radius = 500	
-
-	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
-	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
-
-	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 0 45 }}
-	locator = { name = "loc4" position = { 0 0 0 } rotation = { 0 0 -45 }}
-
-	locator = { name = "loc5" position = { 0 0 0 } rotation = { 0 0 90 }}
-	
-	# idle animations, add to state if you want to add animations
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
-
-	attach = { "loc1" = "solar_ring_entity"}
-	attach = { "loc2" = "solar_ring_entity"}
-	attach = { "loc3" = "solar_ring_entity"}
-	attach = { "loc4" = "solar_ring_entity"}
-	attach = { "loc5" = "solar_ring_entity"}
-	
-	scale = 1
-}
+#entity = {
+#	name = "solar_ring4_entity"
+#	pdxmesh = "rwc_star_mesh"
+#	cull_radius = 500	
+#
+#	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
+#	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
+#
+#	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 45 0 }}
+#	locator = { name = "loc4" position = { 0 0 0 } rotation = { 0 -45 0 }}
+#
+#	# idle animations, add to state if you want to add animations
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" }
+#
+#	attach = { "loc1" = "solar_ring_entity"}
+#	attach = { "loc2" = "solar_ring_entity"}
+#	attach = { "loc3" = "solar_ring_entity"}
+#	attach = { "loc4" = "solar_ring_entity"}
+#	
+#	scale = 1
+#}
+#entity = {
+#	name = "solar_ring4grid_entity"
+#	pdxmesh = "rwc_star_mesh"
+#	cull_radius = 500	
+#
+#	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
+#	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
+#
+#	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 0 45 }}
+#	locator = { name = "loc4" position = { 0 0 0 } rotation = { 0 0 -45 }}
+#
+#	# idle animations, add to state if you want to add animations
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" }
+#
+#	attach = { "loc1" = "solar_ring_entity"}
+#	attach = { "loc2" = "solar_ring_entity"}
+#	attach = { "loc3" = "solar_ring_entity"}
+#	attach = { "loc4" = "solar_ring_entity"}
+#	
+#	scale = 1
+#}
+#entity = {
+#	name = "solar_ring5_entity"
+#	pdxmesh = "rwc_star_mesh"
+#	cull_radius = 500	
+#
+#	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
+#	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
+#
+#	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 0 45 }}
+#	locator = { name = "loc4" position = { 0 0 0 } rotation = { 0 0 -45 }}
+#
+#	locator = { name = "loc5" position = { 0 0 0 } rotation = { 0 0 90 }}
+#	
+#	# idle animations, add to state if you want to add animations
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" }
+#
+#	attach = { "loc1" = "solar_ring_entity"}
+#	attach = { "loc2" = "solar_ring_entity"}
+#	attach = { "loc3" = "solar_ring_entity"}
+#	attach = { "loc4" = "solar_ring_entity"}
+#	attach = { "loc5" = "solar_ring_entity"}
+#	
+#	scale = 1
+#}
 
 ################# Planetary Arc ###################
 # Horizontal Planetary arc, no mesh
@@ -355,107 +355,107 @@ entity = {
 }
 
 # 2 Ring entity with planet mesh
-entity = {
-	name = "planetary_ring2_entity"
-	pdxmesh = "rwc_planet_mesh"	
-	cull_radius = 500		
-		
-	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
-	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }} #rotated 90 to orient the second ring 90
-	
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
-
-	attach = { "loc1" = "planetary_ring_entity"}
-	attach = { "loc2" = "planetary_ring_entity"}
-	
-	scale = 1 
-}
+#entity = {
+#	name = "planetary_ring2_entity"
+#	pdxmesh = "rwc_planet_mesh"	
+#	cull_radius = 500		
+#		
+#	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
+#	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }} #rotated 90 to orient the second ring 90
+#	
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" }
+#
+#	attach = { "loc1" = "planetary_ring_entity"}
+#	attach = { "loc2" = "planetary_ring_entity"}
+#	
+#	scale = 1 
+#}
 
 # 3 Ring w/ Planet
-entity = {
-	name = "planetary_ring3_entity"
-	pdxmesh = "rwc_planet_mesh"	
-	cull_radius = 500		
-		
-	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
-	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
-	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 0 90 }}
-	
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
-
-	attach = { "loc1" = "planetary_ring_entity"}
-	attach = { "loc2" = "planetary_ring_entity"}
-	attach = { "loc3" = "planetary_ring_entity"}
-	
-	scale = 1 
-}
+#entity = {
+#	name = "planetary_ring3_entity"
+#	pdxmesh = "rwc_planet_mesh"	
+#	cull_radius = 500		
+#		
+#	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
+#	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
+#	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 0 90 }}
+#	
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" }
+#
+#	attach = { "loc1" = "planetary_ring_entity"}
+#	attach = { "loc2" = "planetary_ring_entity"}
+#	attach = { "loc3" = "planetary_ring_entity"}
+#	
+#	scale = 1 
+#}
 
 # 4 ring entity w/ planet
-entity = {
-	name = "planetary_ring4_entity"
-	pdxmesh = "rwc_planet_mesh"	
-	cull_radius = 500
-			
-	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
-	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
-	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 45 0 }}  
-	locator = { name = "loc4" position = { 0 0 0 } rotation = { 0 -45 0 }} 
-
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
-
-	attach = { "loc1" = "planetary_ring_entity"}
-	attach = { "loc2" = "planetary_ring_entity"}
-	attach = { "loc3" = "planetary_ring_entity"}
-	attach = { "loc4" = "planetary_ring_entity"}
-	
-	scale = 1 
-}
+#entity = {
+#	name = "planetary_ring4_entity"
+#	pdxmesh = "rwc_planet_mesh"	
+#	cull_radius = 500
+#			
+#	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
+#	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
+#	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 45 0 }}  
+#	locator = { name = "loc4" position = { 0 0 0 } rotation = { 0 -45 0 }} 
+#
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" }
+#
+#	attach = { "loc1" = "planetary_ring_entity"}
+#	attach = { "loc2" = "planetary_ring_entity"}
+#	attach = { "loc3" = "planetary_ring_entity"}
+#	attach = { "loc4" = "planetary_ring_entity"}
+#	
+#	scale = 1 
+#}
 
 # 4 ring (grid) entity w/ planet
-entity = {
-	name = "planetary_ring4grid_entity"
-	pdxmesh = "rwc_planet_mesh"	
-	cull_radius = 500
-		
-	# planet plane ring	
-	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
-	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
-	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 0 45 }}  
-	locator = { name = "loc4" position = { 0 0 0 } rotation = { 0 0 -45 }} 
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
-
-	attach = { "loc1" = "planetary_ring_entity"}
-	attach = { "loc2" = "planetary_ring_entity"}
-	attach = { "loc3" = "planetary_ring_entity"}
-	attach = { "loc4" = "planetary_ring_entity"}
-	
-	scale = 1 
-}
+#entity = {
+#	name = "planetary_ring4grid_entity"
+#	pdxmesh = "rwc_planet_mesh"	
+#	cull_radius = 500
+#		
+#	# planet plane ring	
+#	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
+#	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
+#	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 0 45 }}  
+#	locator = { name = "loc4" position = { 0 0 0 } rotation = { 0 0 -45 }} 
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" }
+#
+#	attach = { "loc1" = "planetary_ring_entity"}
+#	attach = { "loc2" = "planetary_ring_entity"}
+#	attach = { "loc3" = "planetary_ring_entity"}
+#	attach = { "loc4" = "planetary_ring_entity"}
+#	
+#	scale = 1 
+#}
 
 # 5 ring (grid) entity w/ planet
-entity = {
-	name = "planetary_ring5_entity"
-	pdxmesh = "rwc_planet_mesh"	
-	cull_radius = 500
-		
-	# planet plane ring	
-	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
-	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
-	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 0 45 }}  
-	locator = { name = "loc4" position = { 0 0 0 } rotation = { 0 0 -45 }} 
-	locator = { name = "loc5" position = { 0 0 0 } rotation = { 0 0 90 }} 
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
-
-	attach = { "loc1" = "planetary_ring_entity"}
-	attach = { "loc2" = "planetary_ring_entity"}
-	attach = { "loc3" = "planetary_ring_entity"}
-	attach = { "loc4" = "planetary_ring_entity"}
-	attach = { "loc5" = "planetary_ring_entity"}
-
-	scale = 1 
-}
+#entity = {
+#	name = "planetary_ring5_entity"
+#	pdxmesh = "rwc_planet_mesh"	
+#	cull_radius = 500
+#		
+#	# planet plane ring	
+#	locator = { name = "loc1" position = { 0 0 0 } rotation = { 0 0 0 }}
+#	locator = { name = "loc2" position = { 0 0 0 } rotation = { 0 90 0 }}
+#	locator = { name = "loc3" position = { 0 0 0 } rotation = { 0 0 45 }}  
+#	locator = { name = "loc4" position = { 0 0 0 } rotation = { 0 0 -45 }} 
+#	locator = { name = "loc5" position = { 0 0 0 } rotation = { 0 0 90 }} 
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" }
+#
+#	attach = { "loc1" = "planetary_ring_entity"}
+#	attach = { "loc2" = "planetary_ring_entity"}
+#	attach = { "loc3" = "planetary_ring_entity"}
+#	attach = { "loc4" = "planetary_ring_entity"}
+#	attach = { "loc5" = "planetary_ring_entity"}
+#
+#	scale = 1 
+#}

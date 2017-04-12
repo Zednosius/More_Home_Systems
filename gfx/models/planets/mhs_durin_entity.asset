@@ -5,11 +5,11 @@ entity = {
 	cull_radius = 500
 	pdxmesh = "ringworld_habitable_damaged_01_mesh"
 	
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
-		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" } }
-		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" } }
-	}
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+#		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" } }
+#		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" } }
+#	}
 	scale = 0.554
 
 }
@@ -42,8 +42,8 @@ entity = {
 	locator = { name = "loc112" position = { 216.5 0 -125 } rotation = { -240 0 0 }}
 	
 	
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" }
 
 	attach = { "loc101" = "mhs_durin_ringworld_sphere_destroyed_entity"}
 	attach = { "loc102" = "mhs_durin_ringworld_sphere_destroyed_entity"}
@@ -82,11 +82,11 @@ entity = {
 	cull_radius = 500
 	pdxmesh = "ringworld_habitable_01_mesh"
 	
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
-		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" } }
-		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" } }
-	}
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" time_offset = { 0 100 }
+#		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_01" } }
+#		start_event = { trigger_once = yes sound = { soundeffect = "ringworld_hum_idle_02" } }
+#	}
 	scale = 0.554
 
 }
@@ -119,9 +119,9 @@ entity = {
 	locator = { name = "loc112" position = { 216.5 0 -125 } rotation = { -240 0 0 }}
 	
 	
-	default_state = "idle"
-	state = { name = "idle" animation = "idle" }
-
+#	default_state = "idle"
+#	state = { name = "idle" animation = "idle" }
+#
 	attach = { "loc101" = "mhs_durin_ringworld_sphere_entity"}
 	attach = { "loc102" = "mhs_durin_ringworld_sphere_entity"}
 	attach = { "loc103" = "mhs_durin_ringworld_sphere_entity"}
