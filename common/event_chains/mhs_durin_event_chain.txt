@@ -3,6 +3,16 @@ mhs_durins_hall = {
     picture = GFX_evt_star_chart    
 }
 
+mhs_khazad_dum = {
+    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+    picture = GFX_evt_star_chart    
+}
+
+mhs_khazad_dum_rebuilding = {
+    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+    picture = GFX_evt_star_chart    
+}
+
 #create_point_of_interest = {
 #    id = first_league.1
 #    name = "first_league_1_poi"

@@ -1,11 +1,11 @@
 # Surface exploration project
 special_project = {
     key = "KHAZAD_DUM_EXPEDITION_PROJECT"
-    event_chain = "mhs_durins_hall"
+    event_chain = "mhs_khazad_dum"
     cost = 0
     days_to_research = 4
     tech_department = engineering_technology
-    picture = GFX_evt_archaeological_dig
+    picture = GFX_evt_city_ruins
     icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
     
     event_scope = ship_event
@@ -25,11 +25,11 @@ special_project = {
 # Depths exploration project
 special_project = {
     key = "KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT"
-    event_chain = "mhs_durins_hall"
+    event_chain = "mhs_khazad_dum"
     cost = 0
     days_to_research = 4
     tech_department = engineering_technology
-    picture = GFX_evt_archaeological_dig
+    picture = GFX_evt_in_the_dark
     icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
 
     event_scope = planet_event
@@ -48,11 +48,11 @@ special_project = {
 # Depths Reconquest project
 special_project = {
     key = "KHAZAD_DUM_DEEPS_RETALIATION_PROJECT"
-    event_chain = "mhs_durins_hall"
+    event_chain = "mhs_khazad_dum"
     cost = 0
     days_to_research = 4
     tech_department = engineering_technology
-    picture = GFX_evt_archaeological_dig
+    picture = GFX_evt_ground_combat
     icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
 
     event_scope = planet_event
@@ -71,11 +71,11 @@ special_project = {
 # Planetary restoration project
 special_project = {
     key = "KHAZAD_DUM_RESTORATION_PROJECT"
-    event_chain = "mhs_durins_hall"
+    event_chain = "mhs_khazad_dum_rebuilding"
     cost = 0
     days_to_research = 4
     tech_department = engineering_technology
-    picture = GFX_evt_archaeological_dig
+    picture = GFX_evt_physics_research
     icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
 
     event_scope = planet_event
@@ -91,14 +91,14 @@ special_project = {
     }
 }
 
-# Planetary restoration project
+# Ring restoration project
 special_project = {
     key = "KHAZAD_DUM_RING_RECONSTRUCTION_PROJECT"
-    event_chain = "mhs_durins_hall"
+    event_chain = "mhs_khazad_dum_rebuilding"
     cost = 0
     days_to_research = 4
     tech_department = engineering_technology
-    picture = GFX_evt_archaeological_dig
+    picture = GFX_evt_ringworld
     icon = "gfx/interface/icons/situation_log/situation_log_precursor.dds"
 
     event_scope = planet_event

@@ -217,7 +217,6 @@ mhs_me_trebia_system = {
 		starting_planet = no
 		has_ring = no
 		entity = "gas_giant_05_entity"
-		modifiers = none
 	}
 	planet = {
 		name = "Datriux"
