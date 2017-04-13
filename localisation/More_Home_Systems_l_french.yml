@@ -42,6 +42,8 @@
  pc_mhs_durin_alpine_tile_desc:0 "Terrain accidenté, couvert de neige et de glace."
  pc_mhs_durin_gaia_tile:0 "Terrain Gaia"
  pc_mhs_durin_gaia_tile_desc:0 "Des terrains divers disposant de biomes particulièrement adaptés à la plupart des formes de vie."
+ pc_mhs_durin_nuked_colonize_tile:0 "Terrain en friche"
+ pc_mhs_durin_nuked_colonize_tile_desc:0 "Des terrains difficiles et sévèrement endommagés par la guerre. Les niveaux de radiation sont suffisamment bas pour supporter la plupart des formes de vie."
 
  planetary_ring_nuked_tile:0 "Terrain monde anneau"
  planetary_ring_nuked_tile_desc:0 "Un terrain immaculé, entretenu avec le plus grand soin par les systèmes internes du monde anneau."

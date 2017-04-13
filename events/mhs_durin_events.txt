@@ -475,6 +475,9 @@ country_event = {
 	trigger = {
 		fromfrom = { #planet
 			has_planet_flag = mhs_durins_hall_khazad_dum
+			controller = {
+				is_same_value = root
+			}
 		}
 		has_event_chain = mhs_khazad_dum
 		NOT = {
@@ -515,6 +518,9 @@ country_event = {
 	trigger = {
 		fromfrom = { #planet
 			has_planet_flag = mhs_durins_hall_khazad_dum
+			controller = {
+				is_same_value = root
+			}
 		}
 		has_event_chain = mhs_khazad_dum
 		NOT = {
@@ -706,6 +712,9 @@ country_event = {
 	trigger = {
 		fromfrom = { #planet
 			has_planet_flag = mhs_durins_hall_khazad_dum
+			controller = {
+				is_same_value = root
+			}
 		}
 		has_event_chain = mhs_khazad_dum
 		has_country_flag = mhs_durins_hall_khazad_dum_retaliation
@@ -741,7 +750,10 @@ country_event = {
 	
 	trigger = {
 		fromfrom = { #planet
-			has_planet_flag = mhs_durins_hall_khazad_dum   
+			has_planet_flag = mhs_durins_hall_khazad_dum
+			controller = {
+				is_same_value = root
+			}
 		}
 		has_event_chain = mhs_khazad_dum
 		has_country_flag = mhs_durins_hall_khazad_dum_retaliation

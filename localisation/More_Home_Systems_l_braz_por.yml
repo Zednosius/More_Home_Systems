@@ -42,7 +42,8 @@
  pc_mhs_durin_alpine_tile_desc:0 "Terreno elevado coberto em neve e gelo."
  pc_mhs_durin_gaia_tile:0 "Terreno Gaia"
  pc_mhs_durin_gaia_tile_desc:0 "Terreno diverso com biomas que são muito adequados à maioria das formas de vida."
- 
+ pc_mhs_durin_nuked_colonize_tile:0 "Terreno Devastado"
+ pc_mhs_durin_nuked_colonize_tile_desc:0 "Terreno cruel, destruído pela guerra. Os níveis de radiação são baixos o suficiente para suportar a maior parte das formas de vida."
 
  planetary_ring_nuked_tile:0 "Terreno de Mundo Anel"
  planetary_ring_nuked_tile_desc:0 "Terreno virgem cuidadosamente mantido pelos sistemas internos do Mundo Anel."

@@ -42,6 +42,8 @@
  pc_mhs_durin_alpine_tile_desc:0 "Teren wysokogórski, pokryty śniegiem i lodem."
  pc_mhs_durin_gaia_tile:0 "Teren gajański"
  pc_mhs_durin_gaia_tile_desc:0 "Zróżnicowany obszar z biomami odpowiadającymi większości organizmów żywych."
+ pc_mhs_durin_nuked_colonize_tile:0 "Pustkowie"
+ pc_mhs_durin_nuked_colonize_tile_desc:0 "Dziki obszar spustoszony przez wojnę. Natężenie promieniowania jest na tyle niskie, że większość organizmów żywych może przetrwać."
  
  planetary_ring_nuked_tile:0 "Teren świata pierścieniowego"
  planetary_ring_nuked_tile_desc:0 "Nieskazitelny teren pieczołowicie utrzymywany przez systemy wewnętrzne świata pierścieniowego."

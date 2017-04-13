@@ -42,7 +42,9 @@
  pc_mhs_durin_alpine_tile_desc:0 "Erhöhtes Gelände – mit Schnee und Eis bedeckt."
  pc_mhs_durin_gaia_tile:0 "Gaia-Gelände"
  pc_mhs_durin_gaia_tile_desc:0 "Diverses Gelände mit Biomen, die für die meisten Lebensformen ausgesprochen gut geeignet sind."
-
+ pc_mhs_durin_nuked_colonize_tile:0 "Ödland-Gelände"
+ pc_mhs_durin_nuked_colonize_tile_desc:0 "Raues, vom Krieg zerklüftetes Gelände. Die Strahlung ist niedrig genug, um die meisten Lebensformen zu unterstützen."
+ 
  planetary_ring_nuked_tile:0 "Ringwelt-Gelände"
  planetary_ring_nuked_tile_desc:0 "Makelloses Gelände, das von den internen Systemen der Ringwelt erhalten wird."
   

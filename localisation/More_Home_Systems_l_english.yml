@@ -42,6 +42,8 @@
  pc_mhs_durin_alpine_tile_desc:0 "Elevated terrain covered in snow and ice."
  pc_mhs_durin_gaia_tile:0 "Gaia Terrain"
  pc_mhs_durin_gaia_tile_desc:0 "Diverse terrain with biomes that are eminently suitable to most forms of life."
+ pc_mhs_durin_nuked_colonize_tile:0 "Wasteland Terrain"
+ pc_mhs_durin_nuked_colonize_tile_desc:0 "Harsh, war-torn terrain. Radiation levels are low enough to support some life."
  
  planetary_ring_nuked_tile:0 "Ring World Terrain"
  planetary_ring_nuked_tile_desc:0 "Pristine terrain carefully maintained by the Ring World's internal systems."
@@ -92,6 +94,8 @@
  pc_mhs_durin_nuked_nocolonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation make life impossible. It is orbited by an ancient destroyed Ring World."
  pc_mhs_durin_nuked_colonize:0 "Tomb World with destroyed Ring"
  pc_mhs_durin_nuked_colonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation make life impossible. It is orbited by an ancient destroyed Ring World."
+ 
+ 
 
  #New Tile Blocker
  tb_mhs_asteroid_crater:0 "£blocker  Asteroid Crater"

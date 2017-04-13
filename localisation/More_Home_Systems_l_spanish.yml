@@ -42,7 +42,9 @@
  pc_mhs_durin_alpine_tile_desc:0 "Terreno elevado cubierto de nieve y hielo."
  pc_mhs_durin_gaia_tile:0 "Terreno Gaia"
  pc_mhs_durin_gaia_tile_desc:0 "Un terreno diverso con biomas muy apropiados para casi toda forma de vida."
-
+ pc_mhs_durin_nuked_colonize_tile:0 "Terreno yermo"
+ pc_mhs_durin_nuked_colonize_tile_desc:0 "Un terreno arrasado por la guerra. Nivel de radiación bastante bajo para albergar vida."
+ 
  planetary_ring_nuked_tile:0 "Terreno de mundo anillo"
  planetary_ring_nuked_tile_desc:0 "Prístino terreno cuidadosamente mantenido por los sistemas internos del mundo anillo."
   
