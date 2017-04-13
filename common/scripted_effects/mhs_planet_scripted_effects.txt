@@ -200,8 +200,91 @@ change_pc_to_not_alpine = {  # effect planet
 
 
 
+random_resources = { #effect tile
+    random_list = {
+        # Single resource
+        30 = {
+            add_resource = {
+                resource = energy
+                amount = 1
+                replace = yes
+            }       
+        }
+        30 = {
+            add_resource = {
+                resource = minerals
+                amount = 1
+                replace = yes
+            }   
+        }
+        30 = {
+            add_resource = {
+                resource = food
+                amount = 1
+                replace = yes
+            }   
+        }
 
+        #Two resource
+        10 = {
+            add_resource = {
+                resource = energy
+                amount = 2
+                replace = yes
+            }       
+        }
+        10 = {
+            add_resource = {
+                resource = minerals
+                amount = 2
+                replace = yes
+            }   
+        }
+        10 = {
+            add_resource = {
+                resource = food
+                amount = 2
+                replace = yes
+            }   
+        }
+        #Three resource
+        5 = {
+            add_resource = {
+                resource = energy
+                amount = 3
+                replace = yes
+            }       
+        }
+        5 = {
+            add_resource = {
+                resource = minerals
+                amount = 3
+                replace = yes
+            }   
+        }
+        5 = {
+            add_resource = {
+                resource = food
+                amount = 3
+                replace = yes
+            }   
+        }
 
+        # Double
 
+        3 = {
+            add_resource = {
+                resource = minerals
+                amount = 3
+                replace = yes
+            }   
+            add_resource = {
+                resource = food
+                amount = 3
+                replace = yes
+            }   
+        }
 
-
+        15 = { }
+    }
+}

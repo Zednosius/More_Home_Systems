@@ -51,12 +51,7 @@ planet_event = {
 					set_blocker = "tb_active_volcano"
 				}
 			}
-			10 = {
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = none
-				}
-			}
+			10 = {}
 		}
 		random_list = {
 			35 = {
@@ -77,12 +72,7 @@ planet_event = {
 					set_blocker = "tb_active_volcano"
 				}
 			}
-			10 = {
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = none
-				}
-			}
+			10 = {}
 		}
 		random_list = {
 			35 = {
@@ -103,12 +93,7 @@ planet_event = {
 					set_blocker = "tb_active_volcano"
 				}
 			}
-			10 = {
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = none
-				}
-			}
+			10 = {}
 		}
 		random_list = {
 			35 = {
@@ -129,12 +114,7 @@ planet_event = {
 					set_blocker = "tb_active_volcano"
 				}
 			}
-			10 = {
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = none
-				}
-			}
+			10 = {}
 		}
 		random_list = {
 			35 = {
@@ -155,12 +135,7 @@ planet_event = {
 					set_blocker = "tb_active_volcano"
 				}
 			}
-			10 = {
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = none
-				}
-			}
+			10 = {}
 		}
 		random_list = {
 			35 = {
@@ -181,12 +156,7 @@ planet_event = {
 					set_blocker = "tb_active_volcano"
 				}
 			}
-			10 = {
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = none
-				}
-			}
+			10 = {}
 		}
 		random_list = {
 			35 = {
@@ -207,12 +177,7 @@ planet_event = {
 					set_blocker = "tb_active_volcano"
 				}
 			}
-			10 = {
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = none
-				}
-			}
+			10 = {}
 		}
 		random_list = {
 			35 = {
@@ -233,12 +198,7 @@ planet_event = {
 					set_blocker = "tb_active_volcano"
 				}
 			}
-			10 = {
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = none
-				}
-			}
+			10 = {}
 		}
 		random_list = {
 			35 = {
@@ -259,12 +219,7 @@ planet_event = {
 					set_blocker = "tb_active_volcano"
 				}
 			}
-			10 = {
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = none
-				}
-			}
+			10 = {}
 		}
 		random_list = {
 			35 = {
@@ -285,12 +240,7 @@ planet_event = {
 					set_blocker = "tb_active_volcano"
 				}
 			}
-			10 = {
-				random_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_blocker = none
-				}
-			}
+			10 = {}
 		}
     }
 }

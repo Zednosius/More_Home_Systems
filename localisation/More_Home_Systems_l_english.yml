@@ -15,6 +15,13 @@
  pc_mhs_durin_ocean_desc:0 "Rocky world with a nitrogen-oxygen atmosphere and a significant hydrosphere. Oceans cover more than §Y90%§! of the surface, with scattered islands making up the remaining percentage."
  pc_mhs_durin_arctic:0 "Arctic World"
  pc_mhs_durin_arctic_desc:0 "Frigid, rocky world with a nitrogen-oxygen atmosphere. The poles are big, and significant water deposits can be found permanently frozen as glacial ice. However, the planet experiences seasonal variations and the equatorial band is covered by vegetation."
+ pc_mhs_durin_alpine:0 "Alpine World"
+ pc_mhs_durin_alpine_desc:0 "Mountainous world with a nitrogen-oxygen atmosphere. Snow covers the mountaintops and frozen-over lakes dot the valleys. While the planet experiences minimal seasonal variations, the still-liquid water beneath the frozen surface of the lakes is enough to sustain some hardy vegetation."
+ pc_mhs_durin_savannah:0 "Savanna World"
+ pc_mhs_durin_savannah_desc:0 "Rocky world dominated by dry, arid plains covered by a nitrogen-oxygen atmosphere. The small hydrosphere allows for brief wet seasons, but aside from a few ubiquitous grasses vegetation is largely concentrated around shallow oases."
+ pc_mhs_durin_gaia:0 "Gaia World"
+ pc_mhs_durin_gaia_desc:0 "An ideal, temperate world with a nitrogen-oxygen atmosphere and a resilient ecosystem. Optimal conditions for all known higher forms of life at different latitudes."
+ 
  pc_mhs_durin_continental_tile:0 "Temperate Terrain"
  pc_mhs_durin_continental_tile_desc:0 "Diverse forested terrain with a mild climate."
  pc_mhs_durin_desert_tile:0 "Desert Terrain"
@@ -29,6 +36,12 @@
  pc_mhs_durin_ocean_tile_desc:0 "Isolated islands and archipelagos surrounded by ocean."
  pc_mhs_durin_arctic_tile:0 "Arctic Terrain"
  pc_mhs_durin_arctic_tile_desc:0 "Snow- and ice-covered terrain with no vegetation."
+ pc_mhs_durin_savannah_tile:0 "Savanna Terrain"
+ pc_mhs_durin_savannah_tile_desc:0 "Warm, dry terrain with widely spaced trees and shrubs."
+ pc_mhs_durin_alpine_tile:0 "Alpine Terrain"
+ pc_mhs_durin_alpine_tile_desc:0 "Elevated terrain covered in snow and ice."
+ pc_mhs_durin_gaia_tile:0 "Gaia Terrain"
+ pc_mhs_durin_gaia_tile_desc:0 "Diverse terrain with biomes that are eminently suitable to most forms of life."
  
  planetary_ring_nuked_tile:0 "Ring World Terrain"
  planetary_ring_nuked_tile_desc:0 "Pristine terrain carefully maintained by the Ring World's internal systems."
@@ -55,8 +68,10 @@
  mhs_reshtar_system_DESC:0 "The Resh'Tar system with three habitable planets orbiting their sun on the same orbit though now long abandoned seems to have once been subject of an experiment of stellar scale.\n\nHomeworld - Size 16-20\n\n1 Sun, 2 Habitable Planets, 12 Asteroids\n\n$system_initializer_DESC$"
  mhs_kholdan_system_NAME:0 "Kholdan System"
  mhs_kholdan_system_DESC:0 "The Kholdan system is a trinary star system consisting of a small binary star system orbiting a red giant and his planets.\n\nHomeworld - Size 16-20\n\n3 Suns, 3 Molten Worlds, 1 Gas Giant, 2 Barren Worlds, 2 Toxic Worlds and  various Asteroids\n\n$system_initializer_DESC$"
- mhs_durinsforge_system_NAME:0 "Durin's Forge"
- mhs_durinsforge_system_DESC:0 "Durin's Forge - WORK IN PROGRESS - NO EVENTS IN YET"
+ mhs_durinsforge_system_NAME:0 "Durin's Forge (+)"
+ mhs_durinsforge_system_DESC:0 "The Durin's Forge system is a trinary star system with a few planets and many asteroids.\n\nHomeworld - Size 16-20\n\n3 Suns, 1 Molten Worlds, 1 Gas Giant, 1 Frozen World, 12 Asteroids\n\nThis version has a quest."
+ mhs_durinsforge_no_quest_system_NAME:0 "Durin's Forge (-)"
+ mhs_durinsforge_no_quest_system_DESC:0 "The Durin's Forge system is a trinary star system with a few planets and many asteroids.\n\nHomeworld - Size 16-20\n\n3 Suns, 1 Molten Worlds, 1 Gas Giant, 1 Frozen World, 12 Asteroids\n\nThis version has no quest."
  mhs_me_tikkun_system_NAME:0 "Tikkun System"
  mhs_me_tikkun_system_DESC:0 "Homesystem of the Quarians of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Toxic World, 1 Gas Giant, 1 Barren World, 7 Asteroids\n\n$system_initializer_DESC$"
  mhs_me_parnitha_system_NAME:0 "Parnitha System"
@@ -87,68 +102,164 @@
  #########################
  
  #Upon completing home system survey, starts event chain
- mhs_durin.3.name:0 "Durin's Legacy"
- mhs_durin.3.desc:0 "Since ancient times our legends tell the story of Durin, our progenitor and King beneath the Stars. There are even stars in the sky that bear that name in his honor. One of them is Durin's Forge - the biggest of our three suns. Another one is Durin's Hall. Though it is neither the brightest star in the sky nor part of any important constellation. But is a place of legends and a worthy exploration target for our starting journey to the stars."
+ mhs_durin.2.name:0 "Durin's Legacy"
+ mhs_durin.2.desc:0 "Since ancient times our legends tell the story of Durin, our progenitor and King beneath the Stars. There are even stars in the sky that bear that name in his honor. One of them is Durin's Forge - the biggest of our three suns. Another one is Durin's Hall. Though it is neither the brightest star in the sky nor part of any important constellation. But it is a place of legends and a worthy exploration target for our starting journey to the stars."
+ mhs_durin.2.a:0 "Indeed a fitting start."
 
  #Durins Hall Event Chain
  mhs_durins_hall_title:0 "A Journey to the Stars"
- mhs_durins_hall_desc:0 "For a long time have the stars been a central part of our legends and what would be a more fitting start of our journey into the unknown than Durin's Folk visiting the most important star of our legends, the 'Hall of Durin'."
+ mhs_durins_hall_desc:0 "For a long time have the stars been a central part of our legends and what would be a more fitting start of our journey into the unknown than Durin's Folk visiting the most important star of our legends, the "Hall of Durin"."
+ 
+ # Point of interest Durins Hall System
+ durins_hall.1.name:0 "Visit Durin's Hall"
+ durins_hall.1.desc:0 "Visit the legendary star "Durin's Hall"."
  
  #Durin's halls system is visited, starts survey khazad dum
- mhs_durin.4.name:0 "The Hall of Durin"
- mhs_durin.4.desc:0 "We have reached the legendary 'Hall of Durin'. Our Scientists did not expect to find anything special there. But when first system scans reached them they were struck speechless. There is one planet orbiting its sun inside the habitable zone.\n\nAnd there is more! It seems to be orbited by some kind of mega structure. We should investigate it as soon as possible."
-
+ mhs_durin.3.name:0 "The Hall of Durin"
+ mhs_durin.3.desc:0 "We have reached the legendary "Hall of Durin". Our Scientists did not expect to find anything special there. But when first system scans reached them they were struck speechless. There is one planet orbiting its sun inside the habitable zone.\n\nAnd there is more! It seems to be orbited by some kind of mega structure. We should investigate it as soon as possible."
+ mhs_durin.3.a:0 "Make it so."
+ 
+ #Khazad Dum Mystery
+ mhs_khazad_dum_title:0 "A Mysterious Place"
+ mhs_khazad_dum_desc:0 "We have found a place more mysterious than we would have ever expected to find out there in space. We should invetigate it further."
+ 
+ # Point of interest Khazad Dum
+ durins_hall.2.name:0 "Survey Khazad Dum"
+ durins_hall.2.desc:0 "What is this Place?"
+ 
  #Khazad Dum has been surveyed, starts surface expedition research project.
- mhs_durin.5.name:0 "Dwarven Origins"
- mhs_durin.5.desc:0 "A heavily damaged gigantic ring orbits a planet covered in dense clouds. High radiation values are measured by our probes. Our scientists already supected what became a certainty when our scienceship found a small object orbiting the planet. It turned out to be an ancient lifepod - in it the remains of its unfortunate passenger - a dwarf.\n\n In ancient times Durin lead our people away from their home when a great disaster struck it. It was a long exodus beneath the stars until they found their new home. Though we always believed this ancient home to be somewhere on Erebor, lost to the ages, this must be Khazad Dum our ancient home."
+ mhs_durin.4.name:0 "[root.owner.species.GetAdj] Origins"
+ mhs_durin.4.desc:0 "A heavily damaged gigantic ring orbits a planet covered in dense clouds. High radiation values are measured by our probes. Our scientists already supected what became a certainty when our scienceship found a small object orbiting the planet. It turned out to be an ancient lifepod - in it the remains of its unfortunate passenger - apparently [root.owner.species.GetAdj].\n\n In ancient times Durin lead our people away from their home when a great disaster struck it. It was a long exodus beneath the stars until they found their new home. Though we always believed this ancient home to be somewhere on Erebor, lost to the ages, this must be Khazad Dum our ancient home."
+ mhs_durin.4.a:0 "We need to find out more."
 
  #Khazad Dum Surface Expedition Research
  KHAZAD_DUM_EXPEDITION_PROJECT:0 "Heritage of the Ancients"
  KHAZAD_DUM_EXPEDITION_PROJECT_DESC:0 "In order to find out more about our distant past we have to find a way to establish a stable outpost on Khazad Dum. We will have to remove many obstacles to make this possible. The harsh environment and possibly deadly radiation are just two of them."
 
- #Expedition Research is completed
- mhs_durin.6.name:0 "Progress of Preparations"
- mhs_durin.6.desc:0 "Our scientists came up with plans how to counter the threats our expedition will be faced with. Though it will not be very pleasant our personnel will have to wear heavy protective gear at all time when beeing outside their shielded habitat modules. All these protection measures will also increase production times ans costs for any building constructed. A suitable landing place where Radiation levels are within acceptable limits has been found as well."
+ #Expedition Research is completed now colonize this planet
+ mhs_durin.5.name:0 "Reclaim what is Ours"
+ mhs_durin.5.desc:0 "Our scientists came up with plans how to counter the threats our expedition will be faced with. Though it will not be very pleasant our personnel will have to wear heavy protective gear at all time when beeing outside their shielded habitat modules. All these protection measures will also increase production times and costs for any building constructed. A suitable landing place where Radiation levels are within acceptable limits has been found as well.\n\nIt is time to establish an expeditionary outpost on Khazad Dum. We still do not know what happened to our ancestors. What might have destroyed their world, laid their cities to ruins and brought their civilisation to collapse?"
+ mhs_durin.5.a:0 "Prepare a long-term expedition."
 
- #We should build a colony, starts colony mission
- mhs_durin.8.name:0 "Reclaim what is Ours"
- mhs_durin.8.desc:0 "It is time to establish an expeditionary outpost on [event_target:khazad_dum.GetName]. We still do not know what happened to our ancestors. What might have destroyed their world, laid their cities to ruins and brought their civilisation to collapse?"
+ #Point of interest for colonizing Khazad Dum
+ durins_hall.3.name:0 "Colonize Khazad Dum"
+ durins_hall.3.desc:0 "Build an outpost on Khazad Dum to find out more about our ancestors."
  
  #Clear the planet of all tile blockers (ruins)
- mhs_durin.9.name:0 "Outpost Established"
- mhs_durin.9.desc:0 "With our outpost established, it is time to begin the planned expeditions into the old ruins. We'll also have to clear any obstacles that prevent our teams' movement along the way."
+ mhs_durin.7.name:0 "Outpost Established"
+ mhs_durin.7.desc:0 "With our outpost established, it is time to begin the planned expeditions into the old ruins. We´ll also have to clear any obstacles that prevent our teams' movement along the way."
+ mhs_durin.7.a:0 "Proceed with the expedition."
+ 
+ #Point of interest on Khazad Dum for clearing tile blockers
+ durins_hall.4.name:0 "Clear Ruins on Khazad Dum"
+ durins_hall.4.desc:0 "We have to clear any obstacles that prevent our teams' movement."
  
  #All blockers have been cleared.
- mhs_durin.10.name:0 "The Great Gateway"
- mhs_durin.10.desc:0 "The last excavation area held an extraordinary secret. Our team has found a giant gateway to an underground network. At the moment we can only guess how far it stretches."
+ mhs_durin.8.name:0 "The Great Gateway"
+ mhs_durin.8.desc:0 "The last excavation area held an extraordinary secret. Our team has found a giant gateway to an underground network. At the moment we can only guess how far it stretches."
+ mhs_durin.8.a:0 "Prepare an expedition into the deeps."
+ 
+ #Mines of Durin Building
+ building_mhs_durin_mines:0 "Mines of Durin"
+ building_mhs_durin_mines_desc:0 "A vast and ancient network of underground vaults and production facilities stretching over the whole planet."
  
  #Starts Khazad Dum's Depths expedition
  KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT:0 "The Mines of Durin"
  KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT_DESC:0 "In our efforts we have discovered what appears to be an ancient mine, we should see what lies inside."
- mhs_durin.11.name:0 "::"
- mhs_durin.11.desc:0 "::"
 
- #Discovers underground horrors who attacks
- mhs_durin.12.name:0 "The Horrors Below"
- mhs_durin.12.desc:0 "Our expedition of the mine has gone horribly awry, a number of undescribable horrors seem to have awakened and made short work of our expedition team. They have now begun pouring out of the opening and are launching a viscious full scale assault"
+ #Discovers underground horrors who attack
+ mhs_durin.9.name:0 "The Horrors Below"
+ mhs_durin.9.desc:0 "Our expedition of the mine has gone horribly awry, a horde of undescribable horrors seem to have awakened and slaughtered our expedition team. They have now begun pouring out of the gateway and are preparing to launch a full scale assault on our outpost."
+ mhs_durin.9.a:0 "Send our forces to save them!"
+ 
+ #Ancient Robot Armies
+ mhs_ancient_horros:0 "Ancient Robotic Warmachines"
 
  #We lost the battle agains the horrors
- mhs_durin.13.name:0 "Tragedy"
- mhs_durin.13.desc:0 "Our numbers were too few too withstand the onslaught, now it is every man for himself."
+ mhs_durin.10.name:0 "Tragedy"
+ mhs_durin.10.desc:0 "Our numbers were too few to withstand the onslaught, our forces are scattered and in full retreat."
+ mhs_durin.10.a:0 "We have to retake the planet!"
 
  #The horrors have begun rampaging throughout the planet killing off our population there.
- mhs_durin.14.name:0 "Rampaging"
- mhs_durin.14.desc:0 "With the loss of control we are unable to defend our citizens, they are helpless against the hordes."
+ mhs_durin.11.name:0 "Rampaging"
+ mhs_durin.11.desc:0 "With the loss of control we are unable to defend our citizens, they are helpless against the hordes."
+ mhs_durin.11.a:0 "We have to send reinforcements immediatly!"
 
  #We succesfully defended the planet against the horrors initial attack.
- mhs_durin.15.name:0 "Victory"
- mhs_durin.15.desc:0 "The abominations did not foresee our might, the ones who are still alive have scurried back to the depths from which they came."
+ mhs_durin.12.name:0 "Victory"
+ mhs_durin.12.desc:0 "These abominations did not foresee our might, the ones who are still alive have scurried back to the depths from which they came."
+ mhs_durin.12.a:0 "For [root.Capital.GetName]!"
 
  # We have successfully reconquered the planet.
- mhs_durin.16.name:0 "Reconquest"
- mhs_durin.16.desc:0 "We have successfully reclaimed our rightful heritage from the abominations, the citizens who have managed to survived are back under our protection once again."
+ mhs_durin.13.name:0 "Reconquest"
+ mhs_durin.13.desc:0 "We have successfully reclaimed our rightful heritage from these abominations, the surviving colonists are back under our protection once again."
+ mhs_durin.13.a:0 "For [root.Capital.GetName]!"
 
  #A small group of citizens have barricaded themselves.
- mhs_durin.18.name:0 "Isolated"
- mhs_durin.18.desc:0 "The assaults of the horrors have claimed many lives, a small group of citizens have barricaded themselves in an area where they can't seem to be reached."
+ mhs_durin.15.name:0 "Isolated"
+ mhs_durin.15.desc:0 "The siege has claimed many lives. Only a small group of citizens were able to barricade themselves in an area where they are save for the time being."
+ mhs_durin.15.a:0 "We have to save them!"
  
+ KHAZAD_DUM_DEEPS_RETALIATION_PROJECT:0 "Reconquest of the Dephts"
+ KHAZAD_DUM_DEEPS_RETALIATION_PROJECT_DESC:0 "We have to ensure the threat of these ancient machines is dealed with once and for all. A grand scale campaign into the underground system will require us to throw in every ground force we have. We should only attempt this with a full army at our diposal."
+ 
+ # The Attack on the underground starts
+ mhs_durin.16.name:0 "The Hour has Come"
+ mhs_durin.16.desc:0 "Our preparations are complete, our troops are in place. The time has come to fully retake our world has come."
+ mhs_durin.16.a:0 "We will retake our world!"
+ 
+ # We have successfully conquered the underground.
+ mhs_durin.17.name:0 "Reconquest"
+ mhs_durin.17.desc:0 "We have successfully reclaimed our rightful heritage from these abominations.\n\nPeace has finally come to this war torn world -- our world. Our Scientists are eager to explore what lies beneath the ruined surface of [FromFrom.GetName]."
+ mhs_durin.17.a:0 "For [root.Capital.GetName]!"
+ 
+ #Restoration part starts
+ mhs_durin.181.name:0 "Deep Underground"
+ mhs_durin.181.desc:0 "In the vast underground network of [root.GetName] our scientists found a technological complex that they deem to be an atmospheric cleaning system. With this facility repaired we might be able to restore this planet's atmosphere end return it to its native state. They have already layed out a plan to get it into working order again."
+ mhs_durin.181.a:0 "Good work."
+ 
+ #Khazad Dum restoration
+ mhs_khazad_dum_rebuilding_title:0 "Restoration of our Homeworld"
+ mhs_khazad_dum_rebuilding_desc:0 "With our original home world being under our control again we should begin to restore it to its ancient glory."
+ 
+ # Planetary Restoration Project
+ KHAZAD_DUM_RESTORATION_PROJECT:0 "Planetary Restoration"
+ KHAZAD_DUM_RESTORATION_PROJECT_DESC:0 "Our scientists and engineers are optimistic they will be able to repair and maintain this advanced machinery complex given enough time to study it first."
+ 
+ # Restoration Project complete Machinery begins to work
+ mhs_durin.19.name:0 "Atmospheric Renewer Repaired"
+ mhs_durin.19.desc:0 "The atmospheric renewer has finally been activated. Our experts estimate a stabilization of Khazad Dum's atmosphere in approximately five years."
+ mhs_durin.19.a:0 "Congratulations to the team."
+ 
+ # Restoration of Atmosphere complete
+ mhs_durin.20.name:0 "Restoration Complete"
+ mhs_durin.20.desc:0 "[root.GetName] is once again a habitable world and worthy home to our people."
+ mhs_durin.20.a:0 "A worthy home for the [root.owner.species.GetAdj] people, indeed."
+ 
+ # Plans for Planetary Ring Reconstruction Found
+ mhs_durin.21.name:0 "A Strange Finding"
+ mhs_durin.21.desc:0 "In the Depts of the underground network of [root.GetName] we have found a storage of extraordinary material. At first it seemed to be some sort of metal alloy but it possess properties none of our scientists can explain. It somehow repairs damages to its structure by itself.\n\n Having access to such a material may open up possibilities we did not dare to think about before. With it we might even be able to reconstruct the destroyed planetary ring structure that orbits [root.GetName]. In fact it must have been a prerequisite for its construction in the first place."
+ mhs_durin.21.a:0 "A strange material."
+ 
+ # Ring Reconstruction Project
+ KHAZAD_DUM_RING_RECONSTRUCTION_PROJECT:0 "Ring Reconstruction"
+ KHAZAD_DUM_RING_RECONSTRUCTION_PROJECT_DESC:0 "With this "living metal" at our disposal and an enormous amount of minerals and energy the reconstruction of Khazad Dum's orbital ring should be possible.\n\nThough it will take several years and reduce [root.GetName]'s production output by 50% while the reconstruction is underway. Our experts estimate this process to take about 10 years."
+ 
+ # Project for Planetary Ring Reconstruction complete work starts
+ mhs_durin.22.name:0 "Preparations Complete"
+ mhs_durin.22.desc:0 "Our scientists have finished their study on the remains of the ringworld and the "Living metal" as they call it. Work on its restoration can now start."
+ mhs_durin.22.a:0 "We all eagerly await its finish."
+ 
+ #Ringworld restored
+ mhs_durin.23.name:0 "Ringworld Restored"
+ mhs_durin.23.desc:0 "The work is completed and [root.GetName] is now fully restored to its former Glory. It is a great they for the [root.owner.GetName]. Citizens are celebrating all over the empire. May we never loose [root.GetName] again."
+ mhs_durin.23.a:0 "It is ours now and forever!"
+ 
+ #modifiers
+ mhs_scared_population:0 "Panic among the Population"
+ mhs_scared_population_desc:0 "Our people live in fear of the horrible Automatons that came from the underground."
+ 
+ mhs_ringworld_reconstruction:0 "Ringworld Restoration in Progress"
+ mhs_ringworld_reconstruction_desc:0 "The whole populace is determined in restoring the ancient planetary ring world leading to a doubled unity output. On the other hand most ressources go into this project leading to a lowered overall output of the planet."
+ 
+ mhs_ringworld_reconstructed:0 "Restored our Ancestor's Homeworld"

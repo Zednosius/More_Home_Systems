@@ -1,4 +1,5 @@
-### More Home Systems - Durin's Forge
+### More Home Systems - Durin´s Forge,
+@distance = 30
 mhs_durinsforge_system = {
 	name = "Durin's Forge"
 	class = "sc_m"
@@ -15,6 +16,13 @@ mhs_durinsforge_system = {
 		orbit_angle = 1
 		size = 75
 		has_ring = no
+		
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_immense_energy_deposit
+			}
+		}
 	}
 	planet = {
 		name = "Mithras"
@@ -23,6 +31,13 @@ mhs_durinsforge_system = {
 		orbit_angle = 180
 		size = 30
 		has_ring = no
+		
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_vast_energy_deposit
+			}
+		}
 	}
 	planet = {
 		name = "Anvilas"
@@ -31,6 +46,13 @@ mhs_durinsforge_system = {
 		orbit_angle = random
 		size = 10
 		has_ring = no
+		
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_rich_energy_deposit
+			}
+		}
 	}
 	planet = {
 		class = "pc_asteroid"
@@ -301,10 +323,6 @@ mhs_durinsforge_system = {
 				}				
 			}			
 		}
-	}	
-	neighbor_system = {
-		distance = { min = 10 max = 30 }	
-		initializer = "durinsforge_system_neighbor_t1"
 	}
 	neighbor_system = {
 		distance = { min = 10 max = 50 }
@@ -316,12 +334,12 @@ mhs_durinsforge_system = {
 	}
 }
 
-# Durin's Forge Neighbor Tier 1
-durinsforge_system_neighbor_t1 = {
+# Durin's Hall
+mhs_durinshall_system = {
 	name = "Durin's Hall"
 	class = sc_g
 	asteroids_distance = 200
-	
+	flags = { mhs_durins_hall_system }
 	planet = {
 		count = 1
 		name = "Durin's Hall"
@@ -339,8 +357,9 @@ durinsforge_system_neighbor_t1 = {
 		orbit_angle = 1
 		size = 16
 		has_ring = no
-		
+		flags = { mhs_durins_hall_khazad_dum }
 		init_effect = {
+			set_planet_flag = irradiated_colony_flag
 			create_ambient_object = {
 				type = "mhs_durin_destroyed_ring_01_object"
 				location = FROM
@@ -409,5 +428,339 @@ durinsforge_system_neighbor_t1 = {
 		orbit_angle = random
 		size = 1
 		has_ring = no
+	}
+}
+
+mhs_durinsforge_no_quest_system = {
+	name = "Durin's Forge"
+	class = "sc_m"
+	asteroids_distance = 200
+	
+	flags = {  empire_home_system }
+	
+	usage = custom_empire
+	
+	planet = {
+		name = "Durin's Forge"
+		class = "pc_m_star"
+		orbit_distance = 30
+		orbit_angle = 1
+		size = 75
+		has_ring = no
+		
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_immense_energy_deposit
+			}
+		}
+	}
+	planet = {
+		name = "Mithras"
+		class = "pc_k_star"
+		orbit_distance = 0
+		orbit_angle = 180
+		size = 30
+		has_ring = no
+		
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_vast_energy_deposit
+			}
+		}
+	}
+	planet = {
+		name = "Anvilas"
+		class = "pc_m_star"
+		orbit_distance = 40
+		orbit_angle = random
+		size = 10
+		has_ring = no
+		
+		init_effect = {
+			orbital_deposit_tile = {
+				clear_deposits = yes
+				add_deposit = d_rich_energy_deposit
+			}
+		}
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 60
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 5
+		size = 3
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 4
+		size = 4
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 10
+		size = 6
+		has_ring = no
+		
+		moon = {
+			class = "pc_asteroid"
+			orbit_distance = 5
+			orbit_angle = random
+			size = 2
+			has_ring = no
+		}
+		moon = {
+			class = "pc_asteroid"
+			orbit_distance = 3
+			orbit_angle = random
+			size = 1
+			has_ring = no
+		}
+		moon = {
+			class = "pc_asteroid"
+			orbit_distance = 2
+			orbit_angle = random
+			size = 1
+			has_ring = no
+		}
+		moon = {
+			class = "pc_asteroid"
+			orbit_distance = 0
+			orbit_angle = random
+			size = 1
+			has_ring = no
+		}
+		moon = {
+			class = "pc_asteroid"
+			orbit_distance = 3
+			orbit_angle = random
+			size = 1
+			has_ring = no
+		}
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 6
+		size = 3
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 9
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = 12
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		name = "Vraccas"
+		class = "pc_molten"
+		orbit_distance = 40
+		orbit_angle = random
+		size = 14
+		has_ring = no
+	}
+	planet = {
+		name = "Caradhras"
+		class = "pc_gas_giant"
+		orbit_distance = 80
+		orbit_angle = random
+		size = 20
+		has_ring = yes
+		entity = "gas_giant_03_entity"
+		
+		moon = {
+			name = "Duras"
+			class = "pc_frozen"
+			size = 6
+			orbit_distance = 12
+			orbit_angle = 115
+			has_ring = no
+		}
+	}
+	planet = {
+		name = "Erebor"
+		class = ideal_planet_class        
+		orbit_distance = 25
+		orbit_angle = random
+		size = { min = 16 max = 20 }
+		starting_planet = yes
+		has_ring = no
+		tile_blockers = none
+		modifiers = none
+     
+		init_effect = {
+			prevent_anomaly = yes
+        	random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_1"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					add_resource = {
+						resource = food
+						amount = 2
+						replace = yes
+					}						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}							
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_mining_network_1"
+					add_resource = {
+						resource = minerals
+						amount = 2
+						replace = yes
+					}						
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_basic_science_lab_1"
+				random_list = {
+					33 = { 
+						add_resource = {
+							resource = engineering_research
+							amount = 1
+							replace = yes
+						}						
+					}
+					33 = { 
+						add_resource = {
+							resource = physics_research
+							amount = 1
+							replace = yes
+						}						
+					}
+					33 = { 
+						add_resource = {
+							resource = society_research
+							amount = 1
+							replace = yes
+						}						
+					}					
+				}					
+			}	
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_mining_network_1"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}						
+			}			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_resource = {
+					resource = engineering_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_resource = {
+					resource = society_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_resource = {
+					resource = physics_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_resource = {
+					resource = energy
+					amount = 2
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_resource = {
+					resource = food
+					amount = 2
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_power_plant_1"
+				add_resource = {
+					resource = energy
+					amount = 2
+					replace = yes
+				}				
+			}			
+		}
+	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }	
+		initializer = "neighbor_t1_first_colony"
 	}
 }

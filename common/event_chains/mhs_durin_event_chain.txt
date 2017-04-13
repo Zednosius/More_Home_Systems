@@ -1,0 +1,33 @@
+mhs_durins_hall = {
+    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+    picture = GFX_evt_star_chart    
+}
+
+mhs_khazad_dum = {
+    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+    picture = GFX_evt_star_chart    
+}
+
+mhs_khazad_dum_rebuilding = {
+    icon = "gfx/interface/icons/situation_log/situation_log_main_quest.dds"
+    picture = GFX_evt_star_chart    
+}
+
+#create_point_of_interest = {
+#    id = first_league.1
+#    name = "first_league_1_poi"
+#    desc = "first_league_1_poi_desc"
+#    event_chain = first_league_homeworld_chain
+#    location = event_target:fen_habbanis
+#}
+
+#add_event_chain_counter = { 
+#    event_chain = "first_league_chain" 
+#    counter = "first_league_artifacts" 
+#    amount = 1 
+#}
+
+#has_completed_event_chain_counter = {
+#    event_chain = old_gods_chain
+#    counter = shrines_searched
+#}
