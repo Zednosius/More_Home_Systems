@@ -1,0 +1,301 @@
+namespace = mhs_test
+
+country_event = {
+	id = mhs_test.1
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		# set flags for all the potential problematic planets
+		IF = {
+			limit = {
+				any_system = {
+					has_planet_class = planetary_ring_nuked
+				}
+			}
+			every_planet = {
+				limit = {
+					is_planet_class = planetary_ring_nuked
+				}
+				set_planet_flag = planetary_ring_nuked
+			}
+		}
+		IF = {
+			limit = {
+				any_system = {
+					has_planet_class = pc_mhs_nuked
+				}
+			}
+			every_planet = {
+				limit = {
+					is_planet_class = pc_mhs_nuked
+				}
+				set_planet_flag = pc_mhs_nuked
+			}
+		}
+		IF = {
+			limit = {
+				any_system = {
+					has_planet_class = pc_mhs_nuked_by_asteroids
+				}
+			}
+			every_planet = {
+				limit = {
+					is_planet_class = pc_mhs_nuked_by_asteroids
+				}
+				set_planet_flag = pc_mhs_nuked_by_asteroids
+			}
+		}
+		# set problematic planets to native type of country species
+		every_country = {
+			IF = {
+				limit = {
+					has_trait = trait_pc_desert_preference
+				}
+				home_planet = {
+					IF = {
+						limit = {
+							OR = {
+								is_planet_class = planetary_ring_nuked
+								is_planet_class = pc_mhs_nuked
+								is_planet_class = pc_mhs_nuked_by_asteroids
+							}
+						}
+						change_pc = pc_desert
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_trait = trait_pc_arid_preference
+				}
+				home_planet = {
+					IF = {
+						limit = {
+							OR = {
+								is_planet_class = planetary_ring_nuked
+								is_planet_class = pc_mhs_nuked
+								is_planet_class = pc_mhs_nuked_by_asteroids
+							}
+						}
+						change_pc = pc_arid
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_trait = trait_pc_savannah_preference
+				}
+				home_planet = {
+					IF = {
+						limit = {
+							OR = {
+								is_planet_class = planetary_ring_nuked
+								is_planet_class = pc_mhs_nuked
+								is_planet_class = pc_mhs_nuked_by_asteroids
+							}
+						}
+						change_pc = pc_savannah
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_trait = trait_pc_tropical_preference
+				}
+				home_planet = {
+					IF = {
+						limit = {
+							OR = {
+								is_planet_class = planetary_ring_nuked
+								is_planet_class = pc_mhs_nuked
+								is_planet_class = pc_mhs_nuked_by_asteroids
+							}
+						}
+						change_pc = pc_tropical
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_trait = trait_pc_continental_preference
+				}
+				home_planet = {
+					IF = {
+						limit = {
+							OR = {
+								is_planet_class = planetary_ring_nuked
+								is_planet_class = pc_mhs_nuked
+								is_planet_class = pc_mhs_nuked_by_asteroids
+							}
+						}
+						change_pc = pc_continental
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_trait = trait_pc_ocean_preference
+				}
+				home_planet = {
+					IF = {
+						limit = {
+							OR = {
+								is_planet_class = planetary_ring_nuked
+								is_planet_class = pc_mhs_nuked
+								is_planet_class = pc_mhs_nuked_by_asteroids
+							}
+						}
+						change_pc = pc_ocean
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_trait = trait_pc_arctic_preference
+				}
+				home_planet = {
+					IF = {
+						limit = {
+							OR = {
+								is_planet_class = planetary_ring_nuked
+								is_planet_class = pc_mhs_nuked
+								is_planet_class = pc_mhs_nuked_by_asteroids
+							}
+						}
+						change_pc = pc_arctic
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_trait = trait_pc_tundra_preference
+				}
+				home_planet = {
+					IF = {
+						limit = {
+							OR = {
+								is_planet_class = planetary_ring_nuked
+								is_planet_class = pc_mhs_nuked
+								is_planet_class = pc_mhs_nuked_by_asteroids
+							}
+						}
+						change_pc = pc_tundra
+					}
+				}
+			}
+			IF = {
+				limit = {
+					has_trait = trait_pc_alpine_preference
+				}
+				home_planet = {
+					IF = {
+						limit = {
+							OR = {
+								is_planet_class = planetary_ring_nuked
+								is_planet_class = pc_mhs_nuked
+								is_planet_class = pc_mhs_nuked_by_asteroids
+							}
+						}
+						change_pc = pc_alpine
+					}
+				}
+			}
+		}
+		# backup in case country does not exist anymore
+		IF = {
+			limit = {
+				any_system = {
+					has_planet_class = planetary_ring_nuked
+				}
+			}
+			every_planet = {
+				limit = {
+					is_planet_class = planetary_ring_nuked
+				}
+				change_pc = pc_continental
+			}
+		}
+		IF = {
+			limit = {
+				any_system = {
+					has_planet_class = pc_mhs_nuked
+				}
+			}
+			every_planet = {
+				limit = {
+					is_planet_class = pc_mhs_nuked
+				}
+				change_pc = pc_continental
+			}
+		}
+		IF = {
+			limit = {
+				any_system = {
+					has_planet_class = pc_mhs_nuked_by_asteroids
+				}
+			}
+			every_planet = {
+				limit = {
+					is_planet_class = pc_mhs_nuked_by_asteroids
+				}
+				change_pc = pc_continental
+			}
+		}
+	}
+}
+
+country_event = {
+	id = mhs_test.2
+	hide_window = yes
+	is_triggered_only = yes
+	
+	immediate = {
+		IF = {
+			limit = {
+				any_system = {
+					any_planet = {
+						has_planet_flag = planetary_ring_nuked
+					}
+				}
+			}
+			every_planet = {
+				limit = {
+					has_planet_flag = planetary_ring_nuked
+				}
+				change_pc = planetary_ring_nuked
+			}
+		}
+		IF = {
+			limit = {
+				any_system = {
+					any_planet = {
+						has_planet_flag = pc_mhs_nuked
+					}
+				}
+			}
+			every_planet = {
+				limit = {
+					has_planet_flag = pc_mhs_nuked
+				}
+				change_pc = pc_mhs_nuked
+			}
+		}
+		IF = {
+			limit = {
+				any_system = {
+					any_planet = {
+						has_planet_flag = pc_mhs_nuked_by_asteroids
+					}
+				}
+			}
+			every_planet = {
+				limit = {
+					has_planet_flag = pc_mhs_nuked_by_asteroids
+				}
+				change_pc = pc_mhs_nuked_by_asteroids
+			}
+		}
+	}
+}

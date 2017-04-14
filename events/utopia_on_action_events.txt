@@ -135,6 +135,7 @@ country_event = {
 	}
 
 	immediate = {
+		mhs_switch_homeworld_to_standard = yes
 		random_owned_planet = {
 			limit = {
 				any_owned_pop = {
@@ -201,40 +202,44 @@ country_event = {
 		name = utopia.200.a
 		custom_tooltip = utopia.200.a.tooltip
 		hidden_effect = {
-		random_owned_pop = {
-			limit = { is_same_species = event_target:target_species }
-			create_species = {
-				is_mod = yes
-				name = this
-				plural = this
-				class = this
-				portrait = this
-				traits = this
-				traits = {
-					trait = trait_latent_psionic
+			random_owned_pop = {
+				limit = { is_same_species = event_target:target_species }
+				create_species = {
+					is_mod = yes
+					name = this
+					plural = this
+					class = this
+					portrait = this
+					traits = this
+					traits = {
+						trait = trait_latent_psionic
+					}
+					homeworld = this
 				}
-				homeworld = this
 			}
-		}
-		every_owned_pop = {
-			limit = { is_same_species = event_target:target_species }
-			change_species = last_created
-		}
-		every_owned_leader = {
-			limit = { is_same_species = event_target:target_species }
-			change_species = last_created
-		}
-		every_pool_leader = {
-			limit = { is_same_species = event_target:target_species }
-			change_species = last_created
-		}
-		country_event = { id = utopia.203 days = 360 random = 50 }
-		set_country_flag = partially_awakened_species
+			every_owned_pop = {
+				limit = { is_same_species = event_target:target_species }
+				change_species = last_created
+			}
+			every_owned_leader = {
+				limit = { is_same_species = event_target:target_species }
+				change_species = last_created
+			}
+			every_pool_leader = {
+				limit = { is_same_species = event_target:target_species }
+				change_species = last_created
+			}
+			country_event = { id = utopia.203 days = 360 random = 50 }
+			set_country_flag = partially_awakened_species
+			mhs_switch_homeworld_back = yes
 		}
 	}
 	option = {
 		name = utopia.200.b
-		hidden_effect = { remove_country_flag = awakening_in_progress }
+		hidden_effect = { 
+			remove_country_flag = awakening_in_progress
+			mhs_switch_homeworld_back = yes
+		}
 	}
 }
 
@@ -283,6 +288,7 @@ country_event = {
 		name = "utopia.203.a"
 		custom_tooltip = utopia.203.a.tooltip
 		hidden_effect = {
+			mhs_switch_homeworld_to_standard = yes
 			set_country_flag = has_awakened_species
 			#Modify species in own empire
 			random_owned_pop = {
@@ -364,6 +370,7 @@ country_event = {
 				}
 				remove_country_flag = awakening_in_progress
 			}
+			mhs_switch_homeworld_back = yes
 		}
 	}
 	option = {
@@ -400,6 +407,7 @@ country_event = {
 	is_triggered_only = yes
 
 	immediate = {
+		mhs_switch_homeworld_to_standard = yes
 		random_owned_pop = {
 			limit = {
 				is_same_species = event_target:original_species
@@ -488,6 +496,7 @@ country_event = {
 			establish_communications_no_message = event_target:target_country
 		}
 		save_event_target_as = other_country
+		mhs_switch_homeworld_back = yes
 	}
 	option = {
 		name = INTERESTING
@@ -679,146 +688,14 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		IF = {
-			limit = {
-				has_trait = trait_pc_desert_preference
-			}
-			random_planet = {
-				limit = {
-					is_planet_class = pc_desert
-				}
-				THIS = {
-					save_event_target_as = mhs_planet
-				}
-			}
-		}
-		IF = {
-			limit = {
-				has_trait = trait_pc_arid_preference
-			}
-			random_planet = {
-				limit = {
-					is_planet_class = pc_arid
-				}
-				THIS = {
-					save_event_target_as = mhs_planet
-				}
-			}
-		}
-		IF = {
-			limit = {
-				has_trait = trait_pc_savannah_preference
-			}
-			random_planet = {
-				limit = {
-					is_planet_class = pc_savannah
-				}
-				THIS = {
-					save_event_target_as = mhs_planet
-				}
-			}
-		}
-		IF = {
-			limit = {
-				has_trait = trait_pc_tropical_preference
-			}
-			random_planet = {
-				limit = {
-					is_planet_class = pc_tropical
-				}
-				THIS = {
-					save_event_target_as = mhs_planet
-				}
-			}
-		}
-		IF = {
-			limit = {
-				has_trait = trait_pc_continental_preference
-			}
-			random_planet = {
-				limit = {
-					is_planet_class = pc_continental
-				}
-				THIS = {
-					save_event_target_as = mhs_planet
-				}
-			}
-		}
-		IF = {
-			limit = {
-				has_trait = trait_pc_ocean_preference
-			}
-			random_planet = {
-				limit = {
-					is_planet_class = pc_ocean
-				}
-				THIS = {
-					save_event_target_as = mhs_planet
-				}
-			}
-		}
-		IF = {
-			limit = {
-				has_trait = trait_pc_arctic_preference
-			}
-			random_planet = {
-				limit = {
-					is_planet_class = pc_arctic
-				}
-				THIS = {
-					save_event_target_as = mhs_planet
-				}
-			}
-		}
-		IF = {
-			limit = {
-				has_trait = trait_pc_tundra_preference
-			}
-			random_planet = {
-				limit = {
-					is_planet_class = pc_tundra
-				}
-				THIS = {
-					save_event_target_as = mhs_planet
-				}
-			}
-		}
-		IF = {
-			limit = {
-				has_trait = trait_pc_alpine_preference
-			}
-			random_planet = {
-				limit = {
-					is_planet_class = pc_alpine
-				}
-				THIS = {
-					save_event_target_as = mhs_planet
-				}
-			}
-		}
+		mhs_switch_homeworld_to_standard = yes
 		set_country_flag = flesh_weakened
-		IF = {
-			limit = {
-				home_planet = {
-					NOR = {
-						is_planet_class = pc_mhs_nuked
-						is_planet_class = pc_mhs_nuked_by_asteroids
-						is_planet_class = planetary_ring_nuked
-					}
-				}
-			}
-			random_owned_pop = {
-				limit = { is_same_species = root }
-				create_cybernetic_species_mod = yes
-			}
-			ELSE = {
-				random_owned_pop = {
-					limit = { is_same_species = root }
-					mhs_create_cybernetic_species_mod = yes
-				}
-			}
+		random_owned_pop = {
+			limit = { is_same_species = root }
+			create_cybernetic_species_mod = yes
 		}
 		change_dominant_species = last_created
+		
 		while = {
 			limit = {
 				any_owned_pop = {
@@ -841,124 +718,7 @@ country_event = {
 						}
 					}
 				}
-				IF = {
-					limit = {
-						has_trait = trait_pc_desert_preference
-					}
-					random_planet = {
-						limit = {
-							is_planet_class = pc_desert
-						}
-						THIS = {
-							save_event_target_as = mhs_planet
-						}
-					}
-				}
-				IF = {
-					limit = {
-						has_trait = trait_pc_arid_preference
-					}
-					random_planet = {
-						limit = {
-							is_planet_class = pc_arid
-						}
-						THIS = {
-							save_event_target_as = mhs_planet
-						}
-					}
-				}
-				IF = {
-					limit = {
-						has_trait = trait_pc_savannah_preference
-					}
-					random_planet = {
-						limit = {
-							is_planet_class = pc_savannah
-						}
-						THIS = {
-							save_event_target_as = mhs_planet
-						}
-					}
-				}
-				IF = {
-					limit = {
-						has_trait = trait_pc_tropical_preference
-					}
-					random_planet = {
-						limit = {
-							is_planet_class = pc_tropical
-						}
-						THIS = {
-							save_event_target_as = mhs_planet
-						}
-					}
-				}
-				IF = {
-					limit = {
-						has_trait = trait_pc_continental_preference
-					}
-					random_planet = {
-						limit = {
-							is_planet_class = pc_continental
-						}
-						THIS = {
-							save_event_target_as = mhs_planet
-						}
-					}
-				}
-				IF = {
-					limit = {
-						has_trait = trait_pc_ocean_preference
-					}
-					random_planet = {
-						limit = {
-							is_planet_class = pc_ocean
-						}
-						THIS = {
-							save_event_target_as = mhs_planet
-						}
-					}
-				}
-				IF = {
-					limit = {
-						has_trait = trait_pc_arctic_preference
-					}
-					random_planet = {
-						limit = {
-							is_planet_class = pc_arctic
-						}
-						THIS = {
-							save_event_target_as = mhs_planet
-						}
-					}
-				}
-				IF = {
-					limit = {
-						has_trait = trait_pc_tundra_preference
-					}
-					random_planet = {
-						limit = {
-							is_planet_class = pc_tundra
-						}
-						THIS = {
-							save_event_target_as = mhs_planet
-						}
-					}
-				}
-				IF = {
-					limit = {
-						has_trait = trait_pc_alpine_preference
-					}
-					random_planet = {
-						limit = {
-							is_planet_class = pc_alpine
-						}
-						THIS = {
-							save_event_target_as = mhs_planet
-						}
-					}
-				}
-				mhs_create_cybernetic_species_mod = yes
+				create_cybernetic_species_mod = yes
 			}
 		}
 		
@@ -1109,6 +869,7 @@ country_event = {
 			}
 			country_event = { id = utopia.2505 days = 5 }
 		}
+		mhs_switch_homeworld_back = yes
 	}
 	
 	option = {
