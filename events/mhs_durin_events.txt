@@ -215,16 +215,6 @@ ship_event = {
 			}
 			remove_point_of_interest = durins_hall.2
 		}
-		# TODO REMOVE BELOW just for faster testing
-		create_fleet = {}
-		last_created_fleet = {
-			set_owner = root.owner
-			create_ship = {
-				name = random
-				random_existing_design = "colonizer"
-			}
-			set_location = event_target:khazad_dum
-		}
 	}
 	
 	option = {
