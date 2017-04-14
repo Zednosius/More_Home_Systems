@@ -329,6 +329,32 @@ mhs_switch_homeworld_to_standard = {
 			set_planet_flag = pc_mhs_nuked_by_asteroids
 		}
 	}
+	IF = {
+		limit = {
+			any_system = {
+				has_planet_class = pc_ringworld_habitable
+			}
+		}
+		every_planet = {
+			limit = {
+				is_planet_class = pc_ringworld_habitable
+			}
+			set_planet_flag = pc_ringworld_habitable
+		}
+	}
+	IF = {
+		limit = {
+			any_system = {
+				has_planet_class = pc_gaia
+			}
+		}
+		every_planet = {
+			limit = {
+				is_planet_class = pc_gaia
+			}
+			set_planet_flag = pc_gaia
+		}
+	}
 	# set problematic planets to native type of country species
 	every_country = {
 		IF = {
@@ -342,6 +368,8 @@ mhs_switch_homeworld_to_standard = {
 							is_planet_class = planetary_ring_nuked
 							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
+							is_planet_class = pc_ringworld_habitable
+							is_planet_class = pc_gaia
 						}
 					}
 					change_pc = pc_desert
@@ -359,6 +387,8 @@ mhs_switch_homeworld_to_standard = {
 							is_planet_class = planetary_ring_nuked
 							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
+							is_planet_class = pc_ringworld_habitable
+							is_planet_class = pc_gaia
 						}
 					}
 					change_pc = pc_arid
@@ -376,6 +406,8 @@ mhs_switch_homeworld_to_standard = {
 							is_planet_class = planetary_ring_nuked
 							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
+							is_planet_class = pc_ringworld_habitable
+							is_planet_class = pc_gaia
 						}
 					}
 					change_pc = pc_savannah
@@ -393,6 +425,8 @@ mhs_switch_homeworld_to_standard = {
 							is_planet_class = planetary_ring_nuked
 							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
+							is_planet_class = pc_ringworld_habitable
+							is_planet_class = pc_gaia
 						}
 					}
 					change_pc = pc_tropical
@@ -410,6 +444,8 @@ mhs_switch_homeworld_to_standard = {
 							is_planet_class = planetary_ring_nuked
 							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
+							is_planet_class = pc_ringworld_habitable
+							is_planet_class = pc_gaia
 						}
 					}
 					change_pc = pc_continental
@@ -427,6 +463,8 @@ mhs_switch_homeworld_to_standard = {
 							is_planet_class = planetary_ring_nuked
 							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
+							is_planet_class = pc_ringworld_habitable
+							is_planet_class = pc_gaia
 						}
 					}
 					change_pc = pc_ocean
@@ -444,6 +482,8 @@ mhs_switch_homeworld_to_standard = {
 							is_planet_class = planetary_ring_nuked
 							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
+							is_planet_class = pc_ringworld_habitable
+							is_planet_class = pc_gaia
 						}
 					}
 					change_pc = pc_arctic
@@ -461,6 +501,8 @@ mhs_switch_homeworld_to_standard = {
 							is_planet_class = planetary_ring_nuked
 							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
+							is_planet_class = pc_ringworld_habitable
+							is_planet_class = pc_gaia
 						}
 					}
 					change_pc = pc_tundra
@@ -478,6 +520,8 @@ mhs_switch_homeworld_to_standard = {
 							is_planet_class = planetary_ring_nuked
 							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
+							is_planet_class = pc_ringworld_habitable
+							is_planet_class = pc_gaia
 						}
 					}
 					change_pc = pc_alpine
@@ -521,6 +565,32 @@ mhs_switch_homeworld_to_standard = {
 		every_planet = {
 			limit = {
 				is_planet_class = pc_mhs_nuked_by_asteroids
+			}
+			change_pc = pc_continental
+		}
+	}
+	IF = {
+		limit = {
+			any_system = {
+				has_planet_class = pc_ringworld_habitable
+			}
+		}
+		every_planet = {
+			limit = {
+				is_planet_class = pc_ringworld_habitable
+			}
+			change_pc = pc_continental
+		}
+	}
+	IF = {
+		limit = {
+			any_system = {
+				has_planet_class = pc_gaia
+			}
+		}
+		every_planet = {
+			limit = {
+				is_planet_class = pc_gaia
 			}
 			change_pc = pc_continental
 		}
@@ -574,6 +644,38 @@ mhs_switch_homeworld_back = {
 			}
 			change_pc = pc_mhs_nuked_by_asteroids
 			remove_planet_flag = pc_mhs_nuked_by_asteroids
+		}
+	}
+	IF = {
+		limit = {
+			any_system = {
+				any_planet = {
+					has_planet_flag = pc_ringworld_habitable
+				}
+			}
+		}
+		every_planet = {
+			limit = {
+				has_planet_flag = pc_ringworld_habitable
+			}
+			change_pc = pc_ringworld_habitable
+			remove_planet_flag = pc_ringworld_habitable
+		}
+	}
+	IF = {
+		limit = {
+			any_system = {
+				any_planet = {
+					has_planet_flag = pc_gaia
+				}
+			}
+		}
+		every_planet = {
+			limit = {
+				has_planet_flag = pc_gaia
+			}
+			change_pc = pc_gaia
+			remove_planet_flag = pc_gaia
 		}
 	}
 }
