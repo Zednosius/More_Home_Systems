@@ -12,7 +12,7 @@ mhs_me_aralakh_system = {
 		class = "pc_m_star"
 		orbit_distance = 0
 		orbit_angle = 1
-		size = 18
+		size = 22
 		has_ring = no
 	}
 	planet = {

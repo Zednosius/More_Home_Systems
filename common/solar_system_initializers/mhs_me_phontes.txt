@@ -1,0 +1,255 @@
+### More Home Systems - Phontes,
+mhs_me_phontes_system = {
+	name = "Phontes"
+	class = "sc_f"
+	asteroids_distance = 135
+	usage = custom_empire
+	
+	flags = { empire_home_system }
+	
+	planet = {
+		name = "Phontes"
+		class = "pc_f_star"
+		orbit_distance = 0
+		orbit_angle = 1
+		size = 22
+		has_ring = no
+	}
+	planet = {
+		name = "Lenuamund"
+		class = "pc_molten"
+		size = 23
+		orbit_distance = 35
+		orbit_angle = random
+		has_ring = no
+	}
+	planet = {
+		name = "Dekuuna"
+		class = ideal_planet_class
+		orbit_distance = 45
+		orbit_angle = random
+		size = { min = 16 max = 20 }
+		starting_planet = yes
+		has_ring = no
+		tile_blockers = none
+		modifiers = none
+		
+		init_effect = {
+			prevent_anomaly = yes
+		}
+		init_effect = {
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_1"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}					
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					add_resource = {
+						resource = food
+						amount = 2
+						replace = yes
+					}						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					add_resource = {
+						resource = food
+						amount = 1
+						replace = yes
+					}							
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					add_resource = {
+						resource = energy
+						amount = 1
+						replace = yes
+					}						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_mining_network_1"
+					add_resource = {
+						resource = minerals
+						amount = 2
+						replace = yes
+					}						
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_basic_science_lab_1"
+				random_list = {
+					33 = { 
+						add_resource = {
+							resource = engineering_research
+							amount = 1
+							replace = yes
+						}						
+					}
+					33 = { 
+						add_resource = {
+							resource = physics_research
+							amount = 1
+							replace = yes
+						}						
+					}
+					33 = { 
+						add_resource = {
+							resource = society_research
+							amount = 1
+							replace = yes
+						}						
+					}					
+				}					
+			}	
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_mining_network_1"
+				add_resource = {
+					resource = minerals
+					amount = 1
+					replace = yes
+				}						
+			}	
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_resource = {
+					resource = engineering_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_resource = {
+					resource = society_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				add_resource = {
+					resource = physics_research
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_resource = {
+					resource = energy
+					amount = 2
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				add_resource = {
+					resource = energy
+					amount = 1
+					replace = yes
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				add_resource = {
+					resource = food
+					amount = 1
+					replace = yes
+				}				
+			}			
+		}
+		moon = {
+			name = "Oltan"
+			class = "pc_barren"
+			size = 9
+			orbit_distance = 12
+			orbit_angle = random
+			has_ring = no
+		}
+	}
+	planet = {
+		name = "Telluune"
+		class = "pc_toxic"
+		orbit_distance = 35
+		orbit_angle = random
+		size = 23
+		has_ring = no
+		modifiers = none
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 20
+		orbit_angle = random
+		size = 3
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 2
+		has_ring = no
+	}
+	planet = {
+		class = "pc_asteroid"
+		orbit_distance = 0
+		orbit_angle = random
+		size = 1
+		has_ring = no
+	}
+	planet = {
+		name = "Sangel"
+		class = "pc_gas_giant"
+		size = 25
+		orbit_distance = 45
+		orbit_angle = random
+		has_ring = no
+	}
+		
+	neighbor_system = {
+		distance = { min = 10 max = 50 }
+		initializer = "neighbor_t1"
+	}
+	neighbor_system = {
+		distance = { min = 10 max = 50 }	
+		initializer = "neighbor_t1_first_colony"
+	}
+}

@@ -71,9 +71,9 @@
  mhs_kholdan_system_NAME:0 "Kholdan System"
  mhs_kholdan_system_DESC:0 "The Kholdan system is a trinary star system consisting of a small binary star system orbiting a red giant and his planets.\n\nHomeworld - Size 16-20\n\n3 Suns, 3 Molten Worlds, 1 Gas Giant, 2 Barren Worlds, 2 Toxic Worlds and  various Asteroids\n\n$system_initializer_DESC$"
  mhs_durinsforge_system_NAME:0 "Durin's Forge (+)"
- mhs_durinsforge_system_DESC:0 "The Durin's Forge system is a trinary star system with a few planets and many asteroids.\n\nHomeworld - Size 16-20\n\n3 Suns, 1 Molten Worlds, 1 Gas Giant, 1 Frozen World, 12 Asteroids\n\nThis version has a quest."
+ mhs_durinsforge_system_DESC:0 "The Durin's Forge system is a trinary star system with a few planets and many asteroids.\n\nHomeworld - Size 16-20\n\n3 Suns, 1 Molten Worlds, 1 Gas Giant, 1 Frozen World, 12 Asteroids\n\nThis version has a quest.\n\n$system_initializer_DESC$"
  mhs_durinsforge_no_quest_system_NAME:0 "Durin's Forge (-)"
- mhs_durinsforge_no_quest_system_DESC:0 "The Durin's Forge system is a trinary star system with a few planets and many asteroids.\n\nHomeworld - Size 16-20\n\n3 Suns, 1 Molten Worlds, 1 Gas Giant, 1 Frozen World, 12 Asteroids\n\nThis version has no quest."
+ mhs_durinsforge_no_quest_system_DESC:0 "The Durin's Forge system is a trinary star system with a few planets and many asteroids.\n\nHomeworld - Size 16-20\n\n3 Suns, 1 Molten Worlds, 1 Gas Giant, 1 Frozen World, 12 Asteroids\n\nThis version has no quest.\n\n$system_initializer_DESC$"
  mhs_me_tikkun_system_NAME:0 "Tikkun System"
  mhs_me_tikkun_system_DESC:0 "Homesystem of the Quarians of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Toxic World, 1 Gas Giant, 1 Barren World, 7 Asteroids\n\n$system_initializer_DESC$"
  mhs_me_parnitha_system_NAME:0 "Parnitha System"
@@ -84,6 +84,16 @@
  mhs_me_trebia_system_DESC:0 "Homesystem of the Turians of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 3 Molten World, 1 Gas Giant, 1 Barren Planet, 7 Asteroids\n\n$system_initializer_DESC$"
  mhs_me_pranas_system_NAME:0 "Pranas System"
  mhs_me_pranas_system_DESC:0 "Homesystem of the Salarians of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Molten World, 1 Barren Planet, 1 Gas Giant, 8 Asteroids\n\n$system_initializer_DESC$"
+ mhs_me_harsa_system_NAME:0 "Harsa System"
+ mhs_me_harsa_system_DESC:0 "Homesystem of the Batarians of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Molten World, 4 Barren Planets, 1 Gas Giant, 4 Asteroids\n\n$system_initializer_DESC$"
+ mhs_me_phontes_system_NAME:0 "Phontes System"
+ mhs_me_phontes_system_DESC:0 "Homesystem of the Elcor of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Molten World, 1 Barren Planet, 1 Toxic World, 1 Gas Giant, 5 Asteroids\n\n$system_initializer_DESC$"
+ mhs_me_aru_system_NAME:0 "Aru System"
+ mhs_me_aru_system_DESC:0 "Homesystem of the Volus of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Toxic World, 3 Gas Giants, 6 Asteroids\n\n$system_initializer_DESC$"
+ mhs_me_maskimxul_system_NAME:0 "Maskim Xul System"
+ mhs_me_maskimxul_system_DESC:0 "Homesystem of the Rachni of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Barren Planet, 1 Gas Giant, 8 Asteroids\n\n$system_initializer_DESC$"
+ mhs_me_kyzil_system_NAME:0 "Kyzil System"
+ mhs_me_kyzil_system_DESC:0 "Homesystem of the Vorcha of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 2 Barren Planets, 1 Gas Giant, 7 Asteroids\n\n$system_initializer_DESC$" 
  
  #New Planet Classes
  planetary_ring_nuked:0 "Tomb World with Ring"
@@ -94,6 +104,8 @@
  pc_mhs_durin_nuked_nocolonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation make life impossible. It is orbited by an ancient destroyed Ring World."
  pc_mhs_durin_nuked_colonize:0 "Tomb World with destroyed Ring"
  pc_mhs_durin_nuked_colonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation make life impossible. It is orbited by an ancient destroyed Ring World."
+ 
+ 
 
  #New Tile Blocker
  tb_mhs_asteroid_crater:0 "£blocker  Asteroid Crater"
