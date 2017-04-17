@@ -244,3 +244,1055 @@ planet_event = {
 		}
     }
 }
+
+event = {
+	id = mhs.3
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		every_country = {
+			if = {
+				limit = {
+					any_owned_planet = {
+						has_planet_flag = mhs_delete_this_planet
+					}
+				}
+				country_event = { id = mhs.4 }
+			}
+			
+		}
+	}
+}
+
+country_event = {
+	id = mhs.4
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		IF = {
+			limit = {
+				any_system_within_border  = {
+					any_planet = {
+						AND = {
+							has_planet_flag = mhs_reiir
+							has_planet_flag = mhs_starting_planet
+						}
+					}
+				}
+			}
+			random_owned_planet = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							has_planet_flag = mhs_starting_planet
+						}
+						THIS = {
+							save_event_target_as = mhs_starting_planet
+						}
+						create_colony = {
+							owner = ROOT
+						}
+						random_tile = {
+							limit = {
+								has_building = yes
+							}
+							remove_building = yes
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+							set_building = "building_capital_1"
+							add_resource = {
+								resource = energy
+								amount = 1
+								replace = yes
+							}					
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_hydroponics_farm_1"
+								add_resource = {
+									resource = food
+									amount = 2
+									replace = yes
+								}						
+							}
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_hydroponics_farm_1"
+								add_resource = {
+									resource = food
+									amount = 1
+									replace = yes
+								}							
+							}
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_power_plant_1"
+								add_resource = {
+									resource = energy
+									amount = 1
+									replace = yes
+								}						
+							}
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_mining_network_1"
+								add_resource = {
+									resource = minerals
+									amount = 2
+									replace = yes
+								}						
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_building = "building_basic_science_lab_1"
+							random_list = {
+								33 = { 
+									add_resource = {
+										resource = engineering_research
+										amount = 1
+										replace = yes
+									}						
+								}
+								33 = { 
+									add_resource = {
+										resource = physics_research
+										amount = 1
+										replace = yes
+									}						
+								}
+								33 = { 
+									add_resource = {
+										resource = society_research
+										amount = 1
+										replace = yes
+									}						
+								}					
+							}					
+						}	
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_building = "building_mining_network_1"
+							add_resource = {
+								resource = minerals
+								amount = 1
+								replace = yes
+							}						
+						}	
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_failing_infrastructure"
+							add_resource = {
+								resource = engineering_research
+								amount = 1
+								replace = yes
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_failing_infrastructure"
+							add_resource = {
+								resource = society_research
+								amount = 1
+								replace = yes
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_failing_infrastructure"
+							add_resource = {
+								resource = physics_research
+								amount = 1
+								replace = yes
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_decrepit_dwellings"
+							add_resource = {
+								resource = energy
+								amount = 2
+								replace = yes
+							}					
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_decrepit_dwellings"
+							add_resource = {
+								resource = food
+								amount = 0
+								replace = yes
+							}					
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_failing_infrastructure"
+							add_resource = {
+								resource = food
+								amount = 0
+								replace = yes
+							}	
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_failing_infrastructure"	
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_failing_infrastructure"
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_failing_infrastructure"
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_failing_infrastructure"
+						}	
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_failing_infrastructure"
+						}	
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_decrepit_dwellings"
+							add_resource = {
+								resource = food
+								amount = 1
+								replace = yes
+							}					
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_building = "building_power_plant_1"
+							add_resource = {
+								resource = energy
+								amount = 2
+								replace = yes
+							}
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_decrepit_dwellings"
+							add_resource = {
+								resource = energy
+								amount = 0
+									replace = yes
+							}				
+						}			
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_decrepit_dwellings"
+							add_resource = {
+								resource = energy
+								amount = 1
+								replace = yes
+							}				
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}									
+					}
+				}
+			}
+		}
+		IF = {
+			limit = {
+				any_system_within_border  = {
+					any_planet = {
+						AND = {
+							has_planet_flag = mhs_klendathu
+							has_planet_flag = mhs_starting_planet
+						}
+					}
+				}
+			}
+			random_owned_planet = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							AND = {
+								has_planet_flag = mhs_starting_planet
+							}
+						}
+						THIS = {
+							save_event_target_as = mhs_starting_planet
+						}
+						create_colony = {
+							owner = ROOT
+						}
+						random_tile = {
+							limit = {
+								has_building = yes
+							}
+							remove_building = yes
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+							set_building = "building_capital_1"
+							add_resource = {
+								resource = energy
+								amount = 1
+								replace = yes
+							}					
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_hydroponics_farm_1"
+								add_resource = {
+									resource = food
+									amount = 2
+									replace = yes
+								}						
+							}
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_hydroponics_farm_1"
+								add_resource = {
+									resource = food
+									amount = 1
+									replace = yes
+								}							
+							}
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_power_plant_1"
+								add_resource = {
+									resource = energy
+									amount = 1
+									replace = yes
+								}						
+							}
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_mining_network_1"
+								add_resource = {
+									resource = minerals
+									amount = 2
+									replace = yes
+								}						
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_building = "building_basic_science_lab_1"
+							random_list = {
+								33 = { 
+									add_resource = {
+										resource = engineering_research
+										amount = 1
+										replace = yes
+									}						
+								}
+								33 = { 
+									add_resource = {
+										resource = physics_research
+										amount = 1
+										replace = yes
+									}						
+								}
+								33 = { 
+									add_resource = {
+										resource = society_research
+										amount = 1
+										replace = yes
+									}						
+								}					
+							}					
+						}	
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_building = "building_mining_network_1"
+							add_resource = {
+								resource = minerals
+								amount = 1
+								replace = yes
+							}						
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_building = "building_power_plant_1"
+							add_resource = {
+								resource = energy
+								amount = 2
+								replace = yes
+							}
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_mhs_asteroid_crater"
+							add_resource = {
+								resource = engineering_research
+								amount = 1
+								replace = yes
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_mhs_asteroid_crater"
+							add_resource = {
+								resource = society_research
+								amount = 1
+								replace = yes
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_mhs_asteroid_crater"
+							add_resource = {
+								resource = physics_research
+								amount = 1
+								replace = yes
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_mhs_asteroid_crater"
+							add_resource = {
+								resource = energy
+								amount = 2
+								replace = yes
+							}					
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_mhs_asteroid_crater"
+							add_resource = {
+								resource = food
+								amount = 1
+								replace = yes
+							}					
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							add_resource = {
+								resource = energy
+								amount = 1
+								replace = yes
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							add_resource = {
+								resource = food
+								amount = 1
+								replace = yes
+							}				
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}									
+					}
+				}
+			}
+		}
+		IF = {
+			limit = {
+				any_system_within_border  = {
+					any_planet = {
+						AND = {
+							has_planet_flag = mhs_tuchanka
+							has_planet_flag = mhs_starting_planet
+						}
+					}
+				}
+			}
+			random_owned_planet = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							AND = {
+								has_planet_flag = mhs_starting_planet
+							}
+						}
+						THIS = {
+							save_event_target_as = mhs_starting_planet
+						}
+						create_colony = {
+							owner = ROOT
+						}
+						random_tile = {
+							limit = {
+								has_building = yes
+							}
+							remove_building = yes
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+							set_building = "building_capital_1"
+							add_resource = {
+								resource = energy
+								amount = 1
+								replace = yes
+							}					
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_hydroponics_farm_1"
+								add_resource = {
+									resource = food
+									amount = 2
+									replace = yes
+								}						
+							}
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_hydroponics_farm_1"
+								add_resource = {
+									resource = food
+									amount = 1
+									replace = yes
+								}							
+							}
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_power_plant_1"
+								add_resource = {
+									resource = energy
+									amount = 1
+									replace = yes
+								}						
+							}
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_mining_network_1"
+								add_resource = {
+									resource = minerals
+									amount = 2
+									replace = yes
+								}						
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_building = "building_basic_science_lab_1"
+							random_list = {
+								33 = { 
+									add_resource = {
+										resource = engineering_research
+										amount = 1
+										replace = yes
+									}						
+								}
+								33 = { 
+									add_resource = {
+										resource = physics_research
+										amount = 1
+										replace = yes
+									}						
+								}
+								33 = { 
+									add_resource = {
+										resource = society_research
+										amount = 1
+										replace = yes
+									}						
+								}					
+							}					
+						}	
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_building = "building_mining_network_1"
+							add_resource = {
+								resource = minerals
+								amount = 1
+								replace = yes
+							}						
+						}			
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_failing_infrastructure"
+							add_resource = {
+								resource = engineering_research
+								amount = 1
+								replace = yes
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_failing_infrastructure"
+							add_resource = {
+								resource = society_research
+								amount = 1
+								replace = yes
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_decrepit_dwellings"
+							add_resource = {
+								resource = energy
+								amount = 2
+								replace = yes
+							}					
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_decrepit_dwellings"
+							add_resource = {
+								resource = food
+								amount = 2
+								replace = yes
+							}					
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_decrepit_dwellings"
+							add_resource = {
+								resource = minerals
+								amount = 1
+								replace = yes
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_building = "building_power_plant_1"
+							add_resource = {
+								resource = energy
+								amount = 2
+								replace = yes
+							}
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_bombarded_land"
+							add_resource = {
+								resource = physics_research
+								amount = 1
+								replace = yes
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_bomb_crater"
+							add_resource = {
+								resource = energy
+								amount = 1
+								replace = yes
+							}				
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}									
+					}
+				}
+			}
+		}
+		IF = {
+			limit = {
+				any_system_within_border  = {
+					any_planet = {
+						AND = {
+							NOR = {
+								has_planet_flag = mhs_tuchanka
+								has_planet_flag = mhs_reiir
+								has_planet_flag = mhs_klendathu
+							}
+							has_planet_flag = mhs_starting_planet
+						}
+					}
+				}
+			}
+			random_owned_planet = {
+				solar_system = {
+					random_system_planet = {
+						limit = {
+							AND = {
+								has_planet_flag = mhs_starting_planet
+							}
+						}
+						THIS = {
+							save_event_target_as = mhs_starting_planet
+						}
+						create_colony = {
+							owner = ROOT
+						}
+						random_tile = {
+							limit = {
+								has_building = yes
+							}
+							remove_building = yes
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+							set_building = "building_capital_1"
+							add_resource = {
+								resource = energy
+								amount = 1
+								replace = yes
+							}					
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_hydroponics_farm_1"
+								add_resource = {
+									resource = food
+									amount = 2
+									replace = yes
+								}						
+							}
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_hydroponics_farm_1"
+								add_resource = {
+									resource = food
+									amount = 1
+									replace = yes
+								}							
+							}
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_power_plant_1"
+								add_resource = {
+									resource = energy
+									amount = 1
+									replace = yes
+								}						
+							}
+							random_neighboring_tile = {
+								limit = { has_blocker = no has_building = no }
+								set_building = "building_mining_network_1"
+								add_resource = {
+									resource = minerals
+									amount = 2
+									replace = yes
+								}						
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_building = "building_basic_science_lab_1"
+							random_list = {
+								33 = { 
+									add_resource = {
+										resource = engineering_research
+										amount = 1
+										replace = yes
+									}						
+								}
+								33 = { 
+									add_resource = {
+										resource = physics_research
+										amount = 1
+										replace = yes
+									}						
+								}
+								33 = { 
+									add_resource = {
+										resource = society_research
+										amount = 1
+										replace = yes
+									}						
+								}					
+							}					
+						}	
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_building = "building_mining_network_1"
+							add_resource = {
+								resource = minerals
+								amount = 1
+								replace = yes
+							}						
+						}			
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_failing_infrastructure"
+							add_resource = {
+								resource = engineering_research
+								amount = 1
+								replace = yes
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_failing_infrastructure"
+							add_resource = {
+								resource = society_research
+								amount = 1
+								replace = yes
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_failing_infrastructure"
+							add_resource = {
+								resource = physics_research
+								amount = 1
+								replace = yes
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_decrepit_dwellings"
+							add_resource = {
+								resource = energy
+								amount = 2
+								replace = yes
+							}					
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_decrepit_dwellings"
+							add_resource = {
+								resource = food
+								amount = 2
+								replace = yes
+							}					
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_blocker = "tb_decrepit_dwellings"
+							add_resource = {
+								resource = minerals
+								amount = 1
+								replace = yes
+							}				
+						}
+						random_tile = {
+							limit = { has_blocker = no has_building = no }
+							set_building = "building_power_plant_1"
+							add_resource = {
+								resource = energy
+								amount = 2
+								replace = yes
+							}				
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}
+						best_tile_for_pop = {
+							create_pop = {
+								species = owner_main_species
+								ethos = random
+							}
+						}	
+					}
+				}
+			}
+		}
+		every_owned_fleet = {
+			set_location = event_target:mhs_starting_planet
+		}
+		every_owned_planet = {
+			limit = {
+				has_planet_flag = mhs_delete_this_planet
+			}
+			destroy_fleet = spaceport 
+			remove_planet = yes
+		}
+		random_owned_planet = {
+			limit = {
+				has_planet_flag = mhs_starting_planet
+			}
+			IF = {
+				limit = {
+					root = {
+						has_technology = tech_lasers_1
+					}
+				}
+				create_spaceport = {
+					owner = root
+					initial_module = "laser_weapon"
+				}
+			}
+			IF = {
+				limit = {
+					root = {
+						has_technology = tech_mass_drivers_1
+					}
+				}
+				create_spaceport = {
+					owner = root
+					initial_module = "projectile_weapon"
+				}
+			}
+			IF = {
+				limit = {
+					root = {
+						has_technology = tech_missiles_1
+					}
+				}
+				create_spaceport = {
+					owner = root
+					initial_module = "missile_weapon"
+				}
+			}
+			IF = {
+				limit = {
+					has_planet_flag = mhs_hades
+				}
+				set_name = "Hades"
+			}
+			IF = {
+				limit = {
+					has_planet_flag = mhs_tuchanka
+				}
+				set_name = "Tuchanka"
+			}
+			IF = {
+				limit = {
+					has_planet_flag = mhs_reiir
+				}
+				set_name = "Re'iir"
+			}
+			IF = {
+				limit = {
+					has_planet_flag = mhs_klendathu
+				}
+				set_name = "Klendathu"
+			}
+		}
+	}
+}

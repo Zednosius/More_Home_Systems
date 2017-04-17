@@ -299,6 +299,7 @@ mhs_switch_homeworld_to_standard = {
 		every_planet = {
 			limit = {
 				is_planet_class = planetary_ring_nuked
+				is_homeworld = yes
 			}
 			set_planet_flag = planetary_ring_nuked
 		}
@@ -312,6 +313,7 @@ mhs_switch_homeworld_to_standard = {
 		every_planet = {
 			limit = {
 				is_planet_class = pc_mhs_nuked
+				is_homeworld = yes
 			}
 			set_planet_flag = pc_mhs_nuked
 		}
@@ -325,6 +327,7 @@ mhs_switch_homeworld_to_standard = {
 		every_planet = {
 			limit = {
 				is_planet_class = pc_mhs_nuked_by_asteroids
+				is_homeworld = yes
 			}
 			set_planet_flag = pc_mhs_nuked_by_asteroids
 		}
@@ -338,6 +341,7 @@ mhs_switch_homeworld_to_standard = {
 		every_planet = {
 			limit = {
 				is_planet_class = pc_ringworld_habitable
+				is_homeworld = yes
 			}
 			set_planet_flag = pc_ringworld_habitable
 		}
@@ -351,6 +355,7 @@ mhs_switch_homeworld_to_standard = {
 		every_planet = {
 			limit = {
 				is_planet_class = pc_gaia
+				is_homeworld = yes
 			}
 			set_planet_flag = pc_gaia
 		}
@@ -539,6 +544,7 @@ mhs_switch_homeworld_to_standard = {
 		every_planet = {
 			limit = {
 				is_planet_class = planetary_ring_nuked
+				is_homeworld = yes
 			}
 			change_pc = pc_continental
 		}
@@ -552,6 +558,7 @@ mhs_switch_homeworld_to_standard = {
 		every_planet = {
 			limit = {
 				is_planet_class = pc_mhs_nuked
+				is_homeworld = yes
 			}
 			change_pc = pc_continental
 		}
@@ -565,6 +572,7 @@ mhs_switch_homeworld_to_standard = {
 		every_planet = {
 			limit = {
 				is_planet_class = pc_mhs_nuked_by_asteroids
+				is_homeworld = yes
 			}
 			change_pc = pc_continental
 		}
@@ -578,6 +586,7 @@ mhs_switch_homeworld_to_standard = {
 		every_planet = {
 			limit = {
 				is_planet_class = pc_ringworld_habitable
+				is_homeworld = yes
 			}
 			change_pc = pc_continental
 		}
@@ -591,6 +600,7 @@ mhs_switch_homeworld_to_standard = {
 		every_planet = {
 			limit = {
 				is_planet_class = pc_gaia
+				is_homeworld = yes
 			}
 			change_pc = pc_continental
 		}

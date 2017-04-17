@@ -75,8 +75,8 @@ mhs_reetii_system = {
 		}
 	}
 	planet = {
-		name = "Re'iir"
-		class = "pc_ringworld_habitable"
+		name = "Gets deleted"
+		class = ideal_planet_class
 		orbit_angle = 30
 		orbit_distance = 0
 		size = 25
@@ -85,191 +85,24 @@ mhs_reetii_system = {
 		starting_planet = yes		
 		
 		init_effect = {
+			set_planet_flag = mhs_delete_this_planet
+		}
+	}
+	planet = {
+		name = "Re'iir"
+		class = "pc_ringworld_habitable"
+		orbit_angle = 0
+		orbit_distance = 0
+		size = 25
+		tile_blockers = none
+		modifiers = none
+		starting_planet = no		
+		
+		init_effect = {
 			set_planet_flag = ringworld_section_deposit
-			prevent_anomaly = yes		
-			change_pc = "pc_ringworld_habitable"
-			random_tile = {
-				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
-				set_building = "building_capital_1"
-				add_resource = {
-					resource = energy
-					amount = 1
-					replace = yes
-				}					
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_hydroponics_farm_1"
-					add_resource = {
-						resource = food
-						amount = 2
-						replace = yes
-					}						
-				}
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_hydroponics_farm_1"
-					add_resource = {
-						resource = food
-						amount = 1
-						replace = yes
-					}							
-				}
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_power_plant_1"
-					add_resource = {
-						resource = energy
-						amount = 1
-						replace = yes
-					}						
-				}
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_mining_network_1"
-					add_resource = {
-						resource = minerals
-						amount = 2
-						replace = yes
-					}						
-				}				
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_building = "building_basic_science_lab_1"
-				random_list = {
-					33 = { 
-						add_resource = {
-							resource = engineering_research
-							amount = 1
-							replace = yes
-						}						
-					}
-					33 = { 
-						add_resource = {
-							resource = physics_research
-							amount = 1
-							replace = yes
-						}						
-					}
-					33 = { 
-						add_resource = {
-							resource = society_research
-							amount = 1
-							replace = yes
-						}						
-					}					
-				}					
-			}	
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_building = "building_mining_network_1"
-				add_resource = {
-					resource = minerals
-					amount = 1
-					replace = yes
-				}						
-			}	
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-				add_resource = {
-					resource = engineering_research
-					amount = 1
-					replace = yes
-				}				
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-				add_resource = {
-					resource = society_research
-					amount = 1
-					replace = yes
-				}				
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-				add_resource = {
-					resource = physics_research
-					amount = 1
-					replace = yes
-				}				
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_decrepit_dwellings"
-				add_resource = {
-					resource = energy
-					amount = 2
-					replace = yes
-				}					
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_decrepit_dwellings"
-				add_resource = {
-					resource = food
-					amount = 0
-					replace = yes
-				}					
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-				add_resource = {
-					resource = food
-					amount = 0
-					replace = yes
-				}	
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"	
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-			}	
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-			}	
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_decrepit_dwellings"
-				add_resource = {
-					resource = food
-					amount = 1
-					replace = yes
-				}					
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_decrepit_dwellings"
-				add_resource = {
-					resource = energy
-					amount = 0
-						replace = yes
-				}				
-			}			
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_decrepit_dwellings"
-				add_resource = {
-					resource = energy
-					amount = 1
-					replace = yes
-				}				
-			}						
+			set_planet_flag = mhs_starting_planet
+			set_planet_flag = mhs_reiir
+			prevent_anomaly = yes									
 		}
 	}
 	planet = {
