@@ -492,48 +492,6 @@ country_event = {
 								amount = 1
 								replace = yes
 							}				
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
 						}									
 					}
 				}
@@ -720,48 +678,6 @@ country_event = {
 								amount = 1
 								replace = yes
 							}				
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
 						}									
 					}
 				}
@@ -950,48 +866,6 @@ country_event = {
 								amount = 1
 								replace = yes
 							}				
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
 						}									
 					}
 				}
@@ -1175,48 +1049,6 @@ country_event = {
 								amount = 2
 								replace = yes
 							}				
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
-						}
-						best_tile_for_pop = {
-							create_pop = {
-								species = owner_main_species
-								ethos = random
-							}
 						}	
 					}
 				}
@@ -1236,6 +1068,7 @@ country_event = {
 			limit = {
 				has_planet_flag = mhs_starting_planet
 			}
+			planet_event = { id = game_start.7 }
 			IF = {
 				limit = {
 					root = {
@@ -1293,6 +1126,35 @@ country_event = {
 				}
 				set_name = "Klendathu"
 			}
+		}
+		create_leader = {
+			type = scientist
+			sub_type = physics
+			name = random
+			species = owner_main_species
+		}
+		create_leader = {
+			type = scientist
+			sub_type = society
+			name = random
+			species = owner_main_species
+		}
+		create_leader = {
+			type = scientist
+			sub_type = engineering
+			name = random
+			species = owner_main_species
+		}
+		every_owned_leader = {
+			limit = {
+				leader_class = scientist
+				OR = {
+					is_researching_area = physics
+					is_researching_area = society
+					is_researching_area = engineering
+				}
+			}
+			kill_leader = yes
 		}
 	}
 }

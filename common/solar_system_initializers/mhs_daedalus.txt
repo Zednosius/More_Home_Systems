@@ -1,5 +1,5 @@
 ### More Home Systems - Daedalus,
-mhs_testsystem = {
+mhs_daedalus_system = {
 	name = "Daedalus"
 	class = "sc_m"
 	asteroids_distance = 0
