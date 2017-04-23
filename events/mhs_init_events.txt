@@ -1068,6 +1068,9 @@ country_event = {
 			limit = {
 				has_planet_flag = mhs_starting_planet
 			}
+			random_pop = {
+				kill_pop = yes
+			}
 			planet_event = { id = game_start.7 }
 			IF = {
 				limit = {
