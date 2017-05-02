@@ -244,8 +244,10 @@ planet_event = {
 	
 	trigger = {
 		has_planet_flag = mhs_durins_hall_khazad_dum
+		has_owner = yes
 		owner = {
 			has_country_flag = mhs_durinsforge
+			has_event_chain = mhs_khazad_dum
 		}
 		num_pops > 0
 	}
