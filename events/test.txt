@@ -307,7 +307,7 @@ planet_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		destroy_colony = yes
+		destroy_colony = { keep_buildings = no }
 	}
 }
 

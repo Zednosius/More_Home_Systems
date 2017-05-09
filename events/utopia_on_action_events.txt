@@ -5,8 +5,8 @@
 namespace = utopia
 
 @tier1unityreward = 6
-@tier1unitymin = 6
-@tier1unitymax = 6
+@tier1unitymin = 100
+@tier1unitymax = 500
 @tier2unityreward = 12
 @tier2unitymin = 150
 @tier2unitymax = 1000
@@ -37,7 +37,7 @@ pop_event = {
 		}
 		add_modifier = {
 			modifier = withdrawal_symptoms
-			days = 3600 # 10 years
+			days = 1800 # 5 years
 		}
 	}
 }
@@ -321,6 +321,7 @@ country_event = {
 			modify_species = {
 				species = last_created_species
 				remove_trait = trait_latent_psionic
+				change_scoped_species = no
 			}
 			every_owned_pop = {
 				limit = { is_same_species = event_target:target_species }
@@ -579,7 +580,7 @@ planet_event = {
 	
 	trigger = {
 		FROM = {
-			has_civic = civic_fanatic_purifiers
+			has_valid_civic = civic_fanatic_purifiers
 		}
 		FROMFROM = {
 			is_robot_pop = no
@@ -594,9 +595,40 @@ planet_event = {
 		FROM = {
 			add_monthly_resource_mult = {
 				resource = unity
-				value = @tier1unityreward
-				min = @tier1unitymin
-				max = @tier1unitymax
+				value = 1
+				min = 5
+				max = 50
+			}
+		}
+	}
+}
+
+#Purity government: purging pops yields unity
+planet_event = {
+	id = utopia.181
+	hide_window = yes
+	is_triggered_only = yes
+	
+	trigger = {
+		FROM = {
+			has_valid_civic = civic_hive_devouring_swarm
+		}
+		FROMFROM = {
+			is_robot_pop = no
+			NOT = {
+				is_same_species = owner_species
+			}
+		}
+		is_controlled_by = FROM
+	}
+	
+	immediate = {
+		FROM = {
+			add_monthly_resource_mult = {
+				resource = society_research
+				value = 0.5
+				min = 2
+				max = 6
 			}
 		}
 	}
@@ -704,6 +736,7 @@ country_event = {
 						NOR = {
 							has_trait = trait_cybernetic
 							has_trait = trait_mechanical
+							has_trait = leader_trait_curator
 						}
 					}
 				}
@@ -715,6 +748,7 @@ country_event = {
 						NOR = {
 							has_trait = trait_cybernetic
 							has_trait = trait_mechanical
+							has_trait = leader_trait_curator
 						}
 					}
 				}
@@ -729,6 +763,7 @@ country_event = {
 						NOR = {
 							has_trait = trait_cybernetic
 							has_trait = trait_mechanical
+							has_trait = leader_trait_curator
 						}
 					}
 				}
@@ -739,6 +774,7 @@ country_event = {
 						NOR = {
 							has_trait = trait_cybernetic
 							has_trait = trait_mechanical
+							has_trait = leader_trait_curator
 						}
 					}
 				}
@@ -795,7 +831,20 @@ country_event = {
 				create_cybernetic_species_mod = yes
 			}
 		}
-		
+
+		every_owned_ship = {
+			limit = {
+				is_ship_class = shipclass_colonizer
+				species = {
+					NOR = {
+						has_trait = trait_cybernetic
+						has_trait = trait_mechanical
+					}
+				}
+			}
+			create_cybernetic_species_mod = yes
+		}
+
 		every_owned_leader = {
 			limit = {
 				species = { has_trait = trait_cybernetic }
@@ -805,29 +854,35 @@ country_event = {
 					has_trait = leader_trait_governor_cyborg
 					has_trait = leader_trait_scientist_cyborg
 					has_trait = leader_trait_ruler_cyborg
+					has_trait = leader_trait_curator
 				}
 			}
 			if = {
 				limit = { leader_class = admiral }
 				add_trait = leader_trait_admiral_cyborg
+				add_ruler_trait = leader_trait_ruler_cyborg
 			}
 			if = {
 				limit = { leader_class = general }
 				add_trait = leader_trait_general_cyborg
+				add_ruler_trait = leader_trait_ruler_cyborg
 			}
 			if = {
 				limit = { leader_class = governor }
 				add_trait = leader_trait_governor_cyborg
+				add_ruler_trait = leader_trait_ruler_cyborg
 			}
 			if = {
 				limit = { leader_class = scientist }
 				add_trait = leader_trait_scientist_cyborg
+				add_ruler_trait = leader_trait_ruler_cyborg
 			}
 			if = {
 				limit = { leader_class = ruler }
 				add_trait = leader_trait_ruler_cyborg
 			}
 		}
+		
 		every_pool_leader = {
 			limit = {
 				species = { has_trait = trait_cybernetic }
@@ -842,18 +897,22 @@ country_event = {
 			if = {
 				limit = { leader_class = admiral }
 				add_trait = leader_trait_admiral_cyborg
+				add_ruler_trait = leader_trait_ruler_cyborg
 			}
 			if = {
 				limit = { leader_class = general }
 				add_trait = leader_trait_general_cyborg
+				add_ruler_trait = leader_trait_ruler_cyborg
 			}
 			if = {
 				limit = { leader_class = governor }
 				add_trait = leader_trait_governor_cyborg
+				add_ruler_trait = leader_trait_ruler_cyborg
 			}
 			if = {
 				limit = { leader_class = scientist }
 				add_trait = leader_trait_scientist_cyborg
+				add_ruler_trait = leader_trait_ruler_cyborg
 			}
 			if = {
 				limit = { leader_class = ruler }
@@ -941,26 +1000,31 @@ country_event = {
 			if = {
 				limit = { leader_class = admiral }
 				add_trait = leader_trait_admiral_cyborg
+				add_ruler_trait = leader_trait_ruler_cyborg
 				break = yes
 			}
 			if = {
 				limit = { leader_class = general }
 				add_trait = leader_trait_general_cyborg
+				add_ruler_trait = leader_trait_ruler_cyborg
 				break = yes
 			}
 			if = {
 				limit = { leader_class = governor }
 				add_trait = leader_trait_governor_cyborg
+				add_ruler_trait = leader_trait_ruler_cyborg
 				break = yes
 			}
 			if = {
 				limit = { leader_class = scientist }
 				add_trait = leader_trait_scientist_cyborg
+				add_ruler_trait = leader_trait_ruler_cyborg
 				break = yes
 			}
 			if = {
 				limit = { leader_class = ruler }
 				add_trait = leader_trait_ruler_cyborg
+				add_ruler_trait = leader_trait_ruler_cyborg
 				break = yes
 			}
 		}
@@ -1048,6 +1112,7 @@ country_event = {
 		create_species = {
 			is_mod = yes
 			name = this
+			namelist = this
 			plural = this
 			class = "ROBOT"
 			portrait = "robot3"
@@ -1082,7 +1147,12 @@ country_event = {
 		}
 		every_owned_pop = {
 			limit = {
-				species = { has_trait = trait_cybernetic }
+				species = {
+					OR = {
+						has_trait = trait_cybernetic 
+						has_trait = trait_mechanical
+					}
+				}
 			}
 			change_species = last_created
 			tile = {
@@ -1109,8 +1179,21 @@ country_event = {
 				if = {
 					limit = { has_building = building_hydroponics_farm_5 }
 					set_building = building_power_plant_5
-				}				
+				}
 			}
+		}
+
+		every_owned_ship = {
+			limit = {
+				is_ship_class = shipclass_colonizer
+				species = {
+					OR = {
+						has_trait = trait_mechanical
+						has_trait = trait_cybernetic
+					}
+				}
+			}
+			change_species = last_created
 		}
 
 		every_owned_army = {
@@ -1118,7 +1201,10 @@ country_event = {
 				exists = species
 				exists = planet
 				species = {
-					has_trait = trait_cybernetic
+					OR = {
+						has_trait = trait_mechanical
+						has_trait = trait_cybernetic
+					}
 				}
 			}
 			planet = {
@@ -1140,6 +1226,11 @@ country_event = {
 					has_trait = leader_trait_governor_cyborg
 					has_trait = leader_trait_scientist_cyborg
 					has_trait = leader_trait_ruler_cyborg
+					has_trait = leader_trait_admiral_synthetic
+					has_trait = leader_trait_ruler_synthetic
+					has_trait = leader_trait_general_synthetic
+					has_trait = leader_trait_governor_synthetic
+					has_trait = leader_trait_scientist_synthetic
 				}
 			}
 			change_species = last_created
@@ -1153,6 +1244,11 @@ country_event = {
 					has_trait = leader_trait_governor_cyborg
 					has_trait = leader_trait_scientist_cyborg
 					has_trait = leader_trait_ruler_cyborg
+					has_trait = leader_trait_admiral_synthetic
+					has_trait = leader_trait_ruler_synthetic
+					has_trait = leader_trait_general_synthetic
+					has_trait = leader_trait_governor_synthetic
+					has_trait = leader_trait_scientist_synthetic
 				}
 			}
 			change_species = last_created
