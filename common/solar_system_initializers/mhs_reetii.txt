@@ -11,42 +11,55 @@ mhs_reetii_system = {
 	planet = {
 		class = star
 		orbit_distance = 0
+		orbit_angle = 0
 		
 		init_effect = {
 			prevent_anomaly = yes
+			create_ambient_object = {
+				type = "medium_debris_01_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = { 
+				set_location = {
+					target = prev
+					distance = 45
+					angle = 90
+				}
+			}
+			create_ambient_object = {
+				type = "medium_debris_02_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = { 
+				set_location = {
+					target = prev
+					distance = 45
+					angle = 145
+				}
+			}
+			create_ambient_object = {
+				type = "small_debris_object"
+				entity_offset_height = { min = -0 max = -25 }
+				location = this
+			}
+			last_created_ambient_object = { 
+				set_location = {
+					target = prev
+					distance = 45
+					angle = 210
+				}
+			}
 		}
 	}
 	
 	change_orbit = 45
 	
 	planet = {
-		class = "pc_ringworld_habitable_damaged"
-		name = "Home of the Ancients"
-		orbit_angle = 30
-		orbit_distance = 0
-		
-		init_effect = {
-			set_planet_flag = ringworld_section_deposit
-			create_ambient_object = {
-				type = "large_debris_object"
-				location = THIS
-			}
-		}
-	}
-	planet = {
-		class = "pc_ringworld_tech_damaged"
-		name = "Ring Section B"
-		orbit_angle = 30
-		orbit_distance = 0
-		
-		init_effect = {
-			set_planet_flag = ringworld_section_deposit
-		}
-	}
-	planet = {
 		class = "pc_ringworld_seam"
 		name = "Ring Section C"
-		orbit_angle = 30
+		orbit_angle = -30
 		orbit_distance = 0
 		
 		init_effect = {
@@ -136,93 +149,32 @@ mhs_reetii_system = {
 			}
 		}
 	}
-	planet = {
-		class = "pc_ringworld_seam_damaged"
-		name = "Ring Section F"
-		orbit_angle = 30
-		orbit_distance = 0
-		
-		init_effect = {
-			set_planet_flag = ringworld_section_deposit
+	
+	init_effect = {
+		spawn_megastructure = {
+			type = "ring_world_ruined"
+			orbit_angle = 90
+			orbit_distance = 45
+			location = planet
 		}
-	}
-	planet = {
-		class = "pc_ringworld_habitable_damaged"
-		name = "Industrial District"
-		orbit_angle = 30
-		orbit_distance = 0
-		
-		init_effect = {
-			set_planet_flag = ringworld_section_deposit
-			create_ambient_object = {
-				type = "medium_debris_01_object"
-				location = THIS
-			}
+		spawn_megastructure = {
+			type = "ring_world_ruined"
+			orbit_angle = 180
+			orbit_distance = 45
+			location = planet
 		}
-	}
-	planet = {
-		class = "pc_ringworld_tech_damaged"
-		name = "Ring Section H"
-		orbit_angle = 30
-		orbit_distance = 0
-		
-		init_effect = {
-			set_planet_flag = ringworld_section_deposit
+		spawn_megastructure = {
+			type = "ring_world_ruined"
+			orbit_angle = 270
+			orbit_distance = 45
+			location = planet
 		}
-	}
-	planet = {
-		class = "pc_ringworld_seam_damaged"
-		name = "Ring Section I"
-		orbit_angle = 30
-		orbit_distance = 0
-		
-		init_effect = {
-			set_planet_flag = ringworld_section_deposit
-			create_ambient_object = {
-				type = "medium_debris_02_object"
-				location = THIS
-			}
-		}
-	}
-	planet = {
-		class = "pc_ringworld_habitable_damaged"
-		name = "Agrarian District"
-		orbit_angle = 30
-		orbit_distance = 0
-		
-		init_effect = {
-			set_planet_flag = ringworld_section_deposit
-		}
-	}
-	planet = {
-		class = "pc_ringworld_tech_damaged"
-		name = "Ring Section K"
-		orbit_angle = 30
-		orbit_distance = 0
-		
-		init_effect = {
-			set_planet_flag = ringworld_section_deposit
-			create_ambient_object = {
-				type = "small_debris_object"
-				location = THIS
-			}
-		}
-	}
-	planet = {
-		class = "pc_ringworld_seam_damaged"
-		name = "Ring Section L"
-		orbit_angle = 30
-		orbit_distance = 0
-		
-		init_effect = {
-			set_planet_flag = ringworld_section_deposit
-		}
-	}
+	}	
 	
 	planet = {
 		class = "pc_nuked"
 		orbit_distance = 20
-		orbit_angle = 120
+		orbit_angle = random
 		size = 10
 		has_ring = no		
 	}
@@ -230,7 +182,7 @@ mhs_reetii_system = {
 	planet = {
 		class = "pc_nuked"
 		orbit_distance = 20
-		orbit_angle = 120
+		orbit_angle = random
 		size = 24
 		has_ring = no		
 	}
@@ -238,7 +190,7 @@ mhs_reetii_system = {
 	planet = {
 		class = "pc_nuked"
 		orbit_distance = 25
-		orbit_angle = -195
+		orbit_angle = random
 		size = 12
 		has_ring = no		
 	}
@@ -246,7 +198,7 @@ mhs_reetii_system = {
 	planet = {
 		class = "pc_nuked"
 		orbit_distance = 15
-		orbit_angle = 170
+		orbit_angle = random
 		size = 14
 		has_ring = no		
 	}
