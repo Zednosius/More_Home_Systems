@@ -1160,5 +1160,44 @@ country_event = {
 			}
 			kill_leader = { show_notification = no }
 		}
+		random_owned_ship = {
+			limit = {
+				is_ship_class = shipclass_constructor
+			}
+			fleet = {
+				destroy_fleet = this
+			}
+		}
+		country_event = { id = mhs.5 days = 3 }
+	}
+}
+
+country_event = {
+	id = mhs.5
+	hide_window = yes
+	
+	is_triggered_only = yes
+	
+	immediate = {
+		create_fleet = {
+			name = "Constructor"
+			effect = {
+				set_owner = root
+
+				create_ship = {
+					name = random
+					random_existing_design = constructor
+				}
+
+				set_fleet_stance = evasive				
+				set_location = {
+					target = event_target:mhs_starting_planet
+				}
+					distance = 5
+					angle = random
+				}
+				set_event_locked = yes
+			}
+		}
 	}
 }
