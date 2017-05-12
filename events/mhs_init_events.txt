@@ -1192,11 +1192,9 @@ country_event = {
 				set_fleet_stance = evasive				
 				set_location = {
 					target = event_target:mhs_starting_planet
-				}
 					distance = 5
 					angle = random
 				}
-				set_event_locked = yes
 			}
 		}
 	}
