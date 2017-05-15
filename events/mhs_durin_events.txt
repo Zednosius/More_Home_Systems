@@ -374,6 +374,9 @@ planet_event = {
 		last_created_country = {
 			save_global_event_target_as = underground_horrors
 		}
+		owner = {
+			set_country_flag = mhs_durins_hall_khazad_dum_fight_1
+		}
 	}
 	
 	option = {
@@ -382,48 +385,45 @@ planet_event = {
 			modifier = "mhs_scared_population"
 			days = -1
 		}
+		hidden_effect = {
+			has_country_flag = mhs_durins_hall_khazad_dum_fight_1
+		}
 	}
 }
 
 #Lost to Ancient Horrors
 
-# attack win
-# This = country, leader attacker
-# From = country, planet owner
-# FromFrom = planet
-country_event = {
+planet_event = {
 	id = mhs_durin.10
 	title = "mhs_durin.10.name"
 	desc = "mhs_durin.10.desc"
-	location = FROMFROM
-	is_triggered_only = yes
+	location = root
 	show_sound = event_ground_battle
 	picture = GFX_evt_ground_combat
+	fire_only_once = yes
 
 	trigger = {
-		fromfrom = { #planet
-			#Is the right planet
-			has_planet_flag = mhs_durins_hall_khazad_dum
-			#Owner of the planet has event chain
-			owner = { # Country
-				has_event_chain = mhs_khazad_dum
-			}
+		has_planet_flag = mhs_durins_hall_khazad_dum
+		#Owner of the planet has event chain
+		owner = { # Country
+			has_event_chain = mhs_khazad_dum
 		}
+		is_occupied_flag = yes
 		#Attackers are horrors
-		is_same_value = event_target:underground_horrors
+		controller = {
+			is_same_value = event_target:underground_horrors
+		}
 	}
 	immediate = {
-		fromfrom = { # planet
-			if = {
-				limit = { has_spaceport = yes }
-				destroy_fleet = spaceport
-			}
-			planet_event = {
-				id = mhs_durin.14 #Start the rolling purge
-				days = 60
-			}
+		if = {
+			limit = { has_spaceport = yes }
+			destroy_fleet = spaceport
 		}
-		from = { # country
+		planet_event = {
+			id = mhs_durin.14 #Start the rolling purge
+			days = 60
+		}
+		owner = { # country
 			country_event = {
 				id = mhs_durin.11 # Inform player about what will happen when the horrors are controlling the planet
 				days = 60
@@ -467,16 +467,16 @@ country_event = {
 	trigger = {
 		fromfrom = { #planet
 			has_planet_flag = mhs_durins_hall_khazad_dum
-			controller = {
-				is_same_value = root
-			}
+			is_occupied_flag = no
 		}
+		has_country_flag = mhs_durins_hall_khazad_dum_fight_1
 		has_event_chain = mhs_khazad_dum
 		NOT = {
 			has_country_flag = mhs_durins_hall_khazad_dum_retaliation
 		}
 	}
 	immediate = {
+		remove_country_flag = mhs_durins_hall_khazad_dum_fight_1
 		random_owned_planet = {
 			limit = {
 				has_planet_flag = mhs_durins_hall_khazad_dum
@@ -495,40 +495,35 @@ country_event = {
 
 #Reconquest against Horrors
 
-# This = country, leader attacker
-# From = country, planet owner
-# FromFrom = planet
-country_event = {
+planet_event = {
 	id = mhs_durin.13
 	title = "mhs_durin.13.name"
 	desc = "mhs_durin.13.desc"
-	is_triggered_only = yes
-	location = FromFrom
+	location = root
 	show_sound = event_ground_battle
 	picture = GFX_evt_ground_combat
 
 	trigger = {
-		fromfrom = { #planet
-			has_planet_flag = mhs_durins_hall_khazad_dum
-			controller = {
-				is_same_value = root
+		has_owner = yes
+		has_planet_flag = mhs_durins_hall_khazad_dum
+		is_occupied_flag = no
+		has_ground_combat = no
+		owner = {
+			has_event_chain = mhs_khazad_dum
+			has_country_flag = mhs_durins_hall_khazad_dum_fight_1
+			NOT = {
+				has_country_flag = mhs_durins_hall_khazad_dum_retaliation
 			}
-		}
-		has_event_chain = mhs_khazad_dum
-		NOT = {
-			has_country_flag = mhs_durins_hall_khazad_dum_retaliation
 		}
 	}
 	immediate = {
-		random_owned_planet = {
-			limit = {
-				has_planet_flag = mhs_durins_hall_khazad_dum
-			}
-			enable_special_project = {
-				name = "KHAZAD_DUM_DEEPS_RETALIATION_PROJECT"
-				owner = ROOT
-				location = THIS
-			}
+		owner = {
+			remove_country_flag = mhs_durins_hall_khazad_dum_fight_1
+		}
+		enable_special_project = {
+			name = "KHAZAD_DUM_DEEPS_RETALIATION_PROJECT"
+			owner = ROOT.owner
+			location = root
 		}
 	}
 	option = {
@@ -544,8 +539,12 @@ planet_event = {
 	is_triggered_only = yes
 	trigger = {
 		has_planet_flag = mhs_durins_hall_khazad_dum
-		controller = {
-			is_same_value = event_target:underground_horrors
+		is_occupied_flag = yes
+		owner = {
+			OR = {
+				has_country_flag = mhs_durins_hall_khazad_dum_fight_1
+				has_country_flag = mhs_durins_hall_khazad_dum_retaliation
+			}
 		}
 	}
 	immediate = {
@@ -704,12 +703,13 @@ country_event = {
 	trigger = {
 		fromfrom = { #planet
 			has_planet_flag = mhs_durins_hall_khazad_dum
-			controller = {
-				is_same_value = root
-			}
+			is_occupied_flag = no
 		}
 		has_event_chain = mhs_khazad_dum
 		has_country_flag = mhs_durins_hall_khazad_dum_retaliation
+	}
+	immediate = {
+		remove_country_flag = mhs_durins_hall_khazad_dum_retaliation
 	}
 	option = {
 		name = mhs_durin.17.a
@@ -728,41 +728,39 @@ country_event = {
 
 #Reconquest against Horrors
 
-# This = country, leader attacker
-# From = country, planet owner
-# FromFrom = planet
-country_event = {
+planet_event = {
 	id = mhs_durin.18
 	title = "mhs_durin.17.name"
 	desc = "mhs_durin.17.desc"
-	is_triggered_only = yes
-	location = FROMFROM
+	location = root
 	show_sound = event_ground_battle
 	picture = GFX_evt_ground_combat
 	
 	trigger = {
-		fromfrom = { #planet
-			has_planet_flag = mhs_durins_hall_khazad_dum
-			controller = {
-				is_same_value = root
-			}
+		has_planet_flag = mhs_durins_hall_khazad_dum
+		is_occupied_flag = no
+		has_ground_combat = no
+		owner = {
+			has_event_chain = mhs_khazad_dum
+			has_country_flag = mhs_durins_hall_khazad_dum_retaliation
 		}
-		has_event_chain = mhs_khazad_dum
-		has_country_flag = mhs_durins_hall_khazad_dum_retaliation
 	}
-	
+	immediate = {
+		owner = {
+			remove_country_flag = mhs_durins_hall_khazad_dum_retaliation
+		}
+	}
 	option = {
 		name = mhs_durin.17.a
-		random_owned_planet = {
-			limit = {
-				has_planet_flag = mhs_durins_hall_khazad_dum
-			}
-			save_event_target_as = mhs_khazad_dum
-			remove_modifier = "mhs_scared_population"
+		save_event_target_as = mhs_khazad_dum
+		remove_modifier = "mhs_scared_population"
+		owner = {
+			end_event_chain = "mhs_khazad_dum"
 		}
-		end_event_chain = "mhs_khazad_dum"
 		hidden_effect = {
-			country_event = { id = mhs_durin.181 days = 1000 random = 500 }
+			owner = {
+				country_event = { id = mhs_durin.181 days = 1000 random = 500 }
+			}
 		}
 	}
 }

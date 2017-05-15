@@ -50,18 +50,6 @@ on_blocker_cleared = {
     }
 }
 
-# Triggers country_event for the attacker upon victory
-# This = country, leader attacker
-# From = country, planet owner
-# FromFrom = planet
-on_planet_attackers_win = {
-    events = {
-        mhs_durin.10
-        mhs_durin.13
-		mhs_durin.18
-    }
-}
-
 # Triggers country_event for the defender upon victory
 # This = country, planet owner
 # From = country, attack leader
