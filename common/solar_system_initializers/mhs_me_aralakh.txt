@@ -7,6 +7,15 @@ mhs_me_aralakh_system = {
 	
 	flags = { empire_home_system }
 	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+	
 	planet = {
 		name = "Aralakh"
 		class = "pc_m_star"

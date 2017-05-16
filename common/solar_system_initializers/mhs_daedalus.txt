@@ -8,6 +8,15 @@ mhs_daedalus_system = {
 	
 	flags = { empire_home_system }
 	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
+	
 	change_orbit = 10
 	
 	planet = {

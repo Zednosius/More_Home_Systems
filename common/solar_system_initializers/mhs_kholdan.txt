@@ -3,10 +3,19 @@ mhs_kholdan_system = {
 	name = "Kholdan"
 	class = "sc_m"
 	asteroids_distance = 105
-		
+	
 	usage = custom_empire
 	
 	flags = { empire_home_system }
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+	}
 	
 	planet = {
 		name = "Kholdan"

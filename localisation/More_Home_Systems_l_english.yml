@@ -93,7 +93,9 @@
  mhs_me_maskimxul_system_NAME:0 "Maskim Xul System"
  mhs_me_maskimxul_system_DESC:0 "Homesystem of the Rachni of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Barren Planet, 1 Gas Giant, 8 Asteroids\n\n$system_initializer_DESC$"
  mhs_me_kyzil_system_NAME:0 "Kyzil System"
- mhs_me_kyzil_system_DESC:0 "Homesystem of the Vorcha of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 2 Barren Planets, 1 Gas Giant, 7 Asteroids\n\n$system_initializer_DESC$" 
+ mhs_me_kyzil_system_DESC:0 "Homesystem of the Vorcha of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 2 Barren Planets, 1 Gas Giant, 7 Asteroids\n\n$system_initializer_DESC$"
+ mhs_wc_kilrah_system_NAME:0 "Kilrah System"
+ mhs_wc_kilrah_system_DESC:0 "Homesystem of the Kilrathi of the Wing Commander universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Toxic World, 3 Barren Planets, 2 Gas Giant, 8 Frozen Worlds\n\n$system_initializer_DESC$"
  
  #New Planet Classes
  planetary_ring_nuked:0 "Tomb World with Ring"

@@ -385,9 +385,6 @@ planet_event = {
 			modifier = "mhs_scared_population"
 			days = -1
 		}
-		hidden_effect = {
-			has_country_flag = mhs_durins_hall_khazad_dum_fight_1
-		}
 	}
 }
 

@@ -151,3 +151,7 @@ entity = {
 	
 	scale = 0.3 # reduced size to bring it closer to planet
 }
+
+entity = {
+    name = "mhs_dummy_01_entity"
+}
