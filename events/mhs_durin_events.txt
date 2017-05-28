@@ -734,6 +734,7 @@ planet_event = {
 	picture = GFX_evt_ground_combat
 	
 	trigger = {
+		has_owner = yes
 		has_planet_flag = mhs_durins_hall_khazad_dum
 		is_occupied_flag = no
 		has_ground_combat = no
