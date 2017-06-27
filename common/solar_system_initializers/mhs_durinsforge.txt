@@ -5,7 +5,7 @@ mhs_durinsforge_system = {
 	class = "sc_m"
 	asteroids_distance = 200
 	
-	flags = { mhs_durinsforge_system empire_home_system }
+	flags = { mhs_durinsforge_system empire_home_system durinsforge_system }
 	
 	init_effect = {
 		every_neighbor_system = {
@@ -445,7 +445,7 @@ mhs_durinsforge_no_quest_system = {
 	class = "sc_m"
 	asteroids_distance = 200
 	
-	flags = {  empire_home_system }
+	flags = {  empire_home_system durinsforge_system }
 	
 	usage = custom_empire
 	

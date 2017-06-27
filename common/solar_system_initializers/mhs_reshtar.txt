@@ -5,7 +5,7 @@ mhs_reshtar_system = {
 	asteroids_distance = 150
 	usage = custom_empire
 	
-	flags = { empire_home_system }
+	flags = { empire_home_system reshtar_system }
 	
 	init_effect = {
 		every_neighbor_system = {

@@ -6,7 +6,7 @@ mhs_kholdan_system = {
 	
 	usage = custom_empire
 	
-	flags = { empire_home_system }
+	flags = { empire_home_system kholdan_system }
 	
 	init_effect = {
 		every_neighbor_system = {
