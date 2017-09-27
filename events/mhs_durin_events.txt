@@ -413,10 +413,10 @@ planet_event = {
 		}
 	}
 	immediate = {
-		if = {
-			limit = { has_spaceport = yes }
-			destroy_fleet = spaceport
-		}
+		# if = {
+			# limit = { has_spaceport = yes }
+			# destroy_fleet = spaceport
+		# }
 		planet_event = {
 			id = mhs_durin.14 #Start the rolling purge
 			days = 60

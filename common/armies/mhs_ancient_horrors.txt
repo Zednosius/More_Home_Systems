@@ -1,8 +1,7 @@
 mhs_ancient_horros = {
-	robotic = yes
- 	damage = 1.7
+	defensive = yes
+	damage = 1.7
  	health = 1.6
- 	assault = no
  	maintenance = 1.0
  	icon_frame = 4
 	has_species = no

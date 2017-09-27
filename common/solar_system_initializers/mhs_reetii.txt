@@ -88,34 +88,133 @@ mhs_reetii_system = {
 		}
 	}
 	planet = {
-		name = "Gets deleted"
-		class = ideal_planet_class
+		name = "Re'iir"
+		class = pc_ringworld_habitable
 		orbit_angle = 30
 		orbit_distance = 0
+		home_planet = yes
 		size = 25
 		tile_blockers = none
-		modifiers = none
-		starting_planet = yes		
+		modifiers = none		
 		
 		init_effect = {
-			set_planet_flag = mhs_delete_this_planet
-		}
-	}
-	planet = {
-		name = "Re'iir"
-		class = "pc_ringworld_habitable"
-		orbit_angle = 0
-		orbit_distance = 0
-		size = 25
-		tile_blockers = none
-		modifiers = none
-		starting_planet = no		
-		
-		init_effect = {
-			set_planet_flag = ringworld_section_deposit
-			set_planet_flag = mhs_starting_planet
+			change_pc = pc_ringworld_habitable
 			set_planet_flag = mhs_reiir
-			prevent_anomaly = yes									
+			prevent_anomaly = yes	
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_1"
+				set_deposit = d_energy_deposit				
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					set_deposit = d_rich_farmland_deposit					
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					set_deposit = d_rich_farmland_deposit							
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					set_deposit = d_rich_energy_deposit						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_mining_network_1"
+					set_deposit = d_rich_mineral_deposit					
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_basic_science_lab_1"
+				random_list = {
+					33 = { 
+						set_deposit = d_engineering_deposit										
+					}
+					33 = { 
+						set_deposit = d_society_deposit											
+					}
+					33 = { 
+						set_deposit = d_physics_deposit											
+					}					
+				}
+			}	
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_mining_network_1"
+				set_deposit = d_mineral_deposit						
+			}	
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				set_deposit = d_engineering_deposit				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				set_deposit = d_society_deposit					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				set_deposit = d_physics_deposit				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				set_deposit = d_rich_energy_deposit						
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				set_deposit = d_rich_farmland_deposit					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				set_deposit = d_rich_mineral_deposit	
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_power_plant_1"
+				set_deposit = d_rich_energy_deposit			
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+			}	
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+			}	
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				set_deposit = d_rich_farmland_deposit					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+			}			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				set_deposit = d_rich_energy_deposit				
+			}
 		}
 	}
 	planet = {

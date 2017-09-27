@@ -90,38 +90,103 @@ mhs_kholdan_system = {
 	}
 	#this planet will be the fake homeplanet and will be deleted on game start
 	planet = {
-		name = "Gets deleted"
-		class = ideal_planet_class
-		orbit_distance = 0
-		orbit_angle = 180
-		size = { min = 16 max = 20 }
-		starting_planet = yes
-		has_ring = no
-		tile_blockers = none
-		modifiers = none
-		
-		init_effect = {
-			set_planet_flag = mhs_delete_this_planet
-		}
-	}
-	#this is the real capital planet
-	planet = {
 		name = "Klendathu"
 		class = "pc_mhs_nuked_by_asteroids"
 		orbit_distance = 0
-		orbit_angle = 0
+		orbit_angle = 180
 		size = { min = 16 max = 20 }
-		starting_planet = no
+		home_planet = yes
 		has_ring = no
 		tile_blockers = none
 		modifiers = none
 		
 		init_effect = {
+			change_pc = pc_mhs_nuked_by_asteroids
 			prevent_anomaly = yes
-			set_planet_flag = mhs_klendathu
-			set_planet_flag = mhs_starting_planet
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_1"
+				set_deposit = d_energy_deposit					
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					set_deposit = d_rich_farmland_deposit					
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					set_deposit = d_rich_farmland_deposit						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					set_deposit = d_rich_energy_deposit					
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_mining_network_1"
+					set_deposit = d_rich_mineral_deposit						
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_basic_science_lab_1"
+				random_list = {
+					33 = { 
+						set_deposit = d_engineering_deposit										
+					}
+					33 = { 
+						set_deposit = d_society_deposit											
+					}
+					33 = { 
+						set_deposit = d_physics_deposit											
+					}				
+				}					
+			}	
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_mining_network_1"
+				set_deposit = d_mineral_deposit					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_power_plant_1"
+				set_deposit = d_rich_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_mhs_asteroid_crater"
+				set_deposit = d_engineering_deposit					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_mhs_asteroid_crater"
+				set_deposit = d_society_deposit					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_mhs_asteroid_crater"
+				set_deposit = d_physics_deposit				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_mhs_asteroid_crater"
+				set_deposit = d_rich_energy_deposit					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_mhs_asteroid_crater"
+				set_deposit = d_rich_farmland_deposit					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_deposit = d_rich_energy_deposit				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_deposit = d_rich_farmland_deposit				
+			}
 		}
-
 		moon = {
 			name = "Kaldar"
 			class = "pc_asteroid"

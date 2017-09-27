@@ -48,38 +48,106 @@ mhs_me_aralakh_system = {
 		orbit_angle = random
 		has_ring = no
 	}
-	#this planet will be the fake homeplanet and will be deleted on game start
-	planet = {
-		name = "Gets deleted"
-		class = ideal_planet_class
-		orbit_distance = 45
-		orbit_angle = random
-		size = { min = 16 max = 20 }
-		starting_planet = yes
-		has_ring = no
-		tile_blockers = none
-		modifiers = none
-		
-		init_effect = {
-			set_planet_flag = mhs_delete_this_planet
-		}
-	}
-	#this is the real capital planet
 	planet = {
 		name = "Tuchanka"
 		class = "pc_mhs_nuked"
-		orbit_distance = 0
+		orbit_distance = 45
 		orbit_angle = 0
+		home_planet = yes
 		size = { min = 16 max = 20 }
-		starting_planet = no
 		has_ring = no
 		tile_blockers = none
 		modifiers = none
 		
 		init_effect = {
-			set_planet_flag = mhs_starting_planet
+			change_pc = pc_mhs_nuked
 			set_planet_flag = mhs_tuchanka
 			prevent_anomaly = yes
+			random_tile = {
+				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
+				set_building = "building_capital_1"
+				set_deposit = d_energy_deposit					
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					set_deposit = d_rich_farmland_deposit						
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_hydroponics_farm_1"
+					set_deposit = d_rich_farmland_deposit							
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_power_plant_1"
+					set_deposit = d_rich_energy_deposit							
+				}
+				random_neighboring_tile = {
+					limit = { has_blocker = no has_building = no }
+					set_building = "building_mining_network_1"
+					set_deposit = d_rich_mineral_deposit					
+				}				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_basic_science_lab_1"
+				random_list = {
+					33 = { 
+						set_deposit = d_engineering_deposit										
+					}
+					33 = { 
+						set_deposit = d_society_deposit											
+					}
+					33 = { 
+						set_deposit = d_physics_deposit											
+					}					
+				}					
+			}	
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_mining_network_1"
+				set_deposit = d_mineral_deposit						
+			}			
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				set_deposit = d_engineering_deposit					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_failing_infrastructure"
+				set_deposit = d_society_deposit				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				set_deposit = d_rich_energy_deposit						
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				set_deposit = d_rich_farmland_deposit					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_decrepit_dwellings"
+				set_deposit = d_rich_mineral_deposit					
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_building = "building_power_plant_1"
+				set_deposit = d_rich_energy_deposit
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_bombarded_land"
+				set_deposit = d_physics_deposit				
+			}
+			random_tile = {
+				limit = { has_blocker = no has_building = no }
+				set_blocker = "tb_bomb_crater"
+				set_deposit = d_rich_energy_deposit					
+			}
 		}
 	}
 	planet = {

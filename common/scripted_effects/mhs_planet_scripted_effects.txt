@@ -204,85 +204,40 @@ random_resources = { #effect tile
     random_list = {
         # Single resource
         30 = {
-            add_resource = {
-                resource = energy
-                amount = 1
-                replace = yes
-            }       
+            set_deposit = d_energy_deposit      
         }
         30 = {
-            add_resource = {
-                resource = minerals
-                amount = 1
-                replace = yes
-            }   
+            set_deposit = d_mineral_deposit  
         }
         30 = {
-            add_resource = {
-                resource = food
-                amount = 1
-                replace = yes
-            }   
+            set_deposit = d_farmland_deposit  
         }
 
         #Two resource
         10 = {
-            add_resource = {
-                resource = energy
-                amount = 2
-                replace = yes
-            }       
+            set_deposit = d_rich_energy_deposit	       
         }
         10 = {
-            add_resource = {
-                resource = minerals
-                amount = 2
-                replace = yes
-            }   
+            set_deposit = d_rich_mineral_deposit  
         }
         10 = {
-            add_resource = {
-                resource = food
-                amount = 2
-                replace = yes
-            }   
+            set_deposit = d_rich_farmland_deposit 
         }
         #Three resource
         5 = {
-            add_resource = {
-                resource = energy
-                amount = 3
-                replace = yes
-            }       
+            set_deposit = d_vast_energy_deposit	     
         }
         5 = {
-            add_resource = {
-                resource = minerals
-                amount = 3
-                replace = yes
-            }   
+			set_deposit = d_vast_mineral_deposit
         }
         5 = {
-            add_resource = {
-                resource = food
-                amount = 3
-                replace = yes
-            }   
+            set_deposit = d_vast_farmland_deposit 
         }
 
         # Double
 
         3 = {
-            add_resource = {
-                resource = minerals
-                amount = 3
-                replace = yes
-            }   
-            add_resource = {
-                resource = food
-                amount = 3
-                replace = yes
-            }   
+            set_deposit = d_rich_food_mineral_deposit  
         }
 
         15 = { }

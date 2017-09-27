@@ -54,38 +54,22 @@ mhs_daedalus_system = {
 			has_ring = no
 		}	
 	}
-	#this planet will be the fake homeplanet and will be deleted on game start
-	planet = {
-		name = "Gets deleted"
-		class = ideal_planet_class        
-		orbit_distance = 55
-		orbit_angle = random
-		size = { min = 16 max = 20 }
-		starting_planet = yes
-		has_ring = no
-		tile_blockers = none
-		modifiers = none
-		
-		init_effect = {
-			set_planet_flag = mhs_delete_this_planet
-		}
-	}
-	#this is the real capital planet
 	planet = {
 		name = "Hades"
 		class = "planetary_ring_nuked"       
-		orbit_distance = 0
-		orbit_angle = 0
+		orbit_distance = 55
+		orbit_angle = random
 		size = { min = 16 max = 20 }
-		starting_planet = no
+		home_planet = yes
 		has_ring = no
 		tile_blockers = none
 		modifiers = none
      
 		init_effect = {
-			set_planet_flag = mhs_starting_planet
+			change_pc = planetary_ring_nuked
 			set_planet_flag = mhs_hades
 			prevent_anomaly = yes
+			generate_start_buildings_and_blockers = yes
 		}
 	}
 	planet = {
