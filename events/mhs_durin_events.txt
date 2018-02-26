@@ -14,64 +14,64 @@ event = {
 			}
 			set_country_flag = mhs_durinsforge_system
 			set_country_flag = mhs_durinsforge
+			country_event = { id = mhs_durin.2 days = 5 }
 		}
 	}
 }
 
 # Fired when home system is surveyed
-ship_event = {
+country_event = {
 	id = mhs_durin.2
 	title = "mhs_durin.2.name"
 	desc = "mhs_durin.2.desc"
 	picture = GFX_evt_ship_in_orbit
-	location = THIS
 	show_sound = event_default
 	
 	is_triggered_only = yes
 
 	trigger = {
-		owner = {
-			has_country_flag = mhs_durinsforge_system
-		}
-		solar_system = {
-			has_star_flag = mhs_durinsforge_system
+		has_country_flag = mhs_durinsforge_system
+		capital_scope = {
+			solar_system = {
+				has_star_flag = mhs_durinsforge_system
+			}
 		}
 	}
 	
 	immediate = {
-		solar_system = {
-			remove_star_flag = mhs_durinsforge_system
-			set_star_flag = mhs_durinsforge_system_surveyed
+		capital_scope = {
+			solar_system = {
+				remove_star_flag = mhs_durinsforge_system
+				set_star_flag = mhs_durinsforge_system_surveyed
+			}
 		}
-		owner = {
-			begin_event_chain = {
-				event_chain = "mhs_durins_hall"
+		begin_event_chain = {
+			event_chain = "mhs_durins_hall"
+		}
+		closest_system = {
+			limit = { has_star_flag = mhs_durinsforge_system_surveyed }
+			spawn_system = {
+				min_distance = 20
+				max_distance = 60
+				initializer = "mhs_durinshall_system"
 			}
-			closest_system = {
-				limit = { has_star_flag = mhs_durinsforge_system_surveyed }
-				spawn_system = {
-					min_distance = 20
-					max_distance = 70
-					initializer = "mhs_durinshall_system"
+		}
+		closest_system = {
+			limit = { 
+				has_star_flag = mhs_durins_hall_system
+				NOT = {
+					has_star_flag = mhs_durins_hall_system_used
 				}
 			}
-			closest_system = {
-				limit = { 
-					has_star_flag = mhs_durins_hall_system
-					NOT = {
-						has_star_flag = mhs_durins_hall_system_used
-					}
-				}
-				save_event_target_as = durins_hall_system
-				set_star_flag = mhs_durins_hall_system_used
-			}
-			create_point_of_interest = {
-				id = durins_hall.1
-				name = durins_hall.1.name
-				desc = durins_hall.1.desc
-				event_chain = mhs_durins_hall
-				location = event_target:durins_hall_system
-			}
+			save_event_target_as = durins_hall_system
+			set_star_flag = mhs_durins_hall_system_used
+		}
+		create_point_of_interest = {
+			id = durins_hall.1
+			name = durins_hall.1.name
+			desc = durins_hall.1.desc
+			event_chain = mhs_durins_hall
+			location = event_target:durins_hall_system
 		}
 	}
 	
@@ -768,10 +768,19 @@ country_event = {
 	id = mhs_durin.181
 	title = "mhs_durin.181.name"
 	desc = "mhs_durin.181.desc"
-	location = event_target:khazad_dum
+	location = event_target:mhs_khazad_dum_planet
 	is_triggered_only = yes
 	show_sound = event_mystic_reveal
 	picture = GFX_evt_physics_research
+	
+	immediate = {
+		random_owned_planet = {
+			limit = {
+				has_planet_flag = mhs_durins_hall_khazad_dum
+			}
+			save_event_target_as = mhs_khazad_dum_planet
+		}
+	}
 	
 	option = {
 		name = mhs_durin.181.a
@@ -782,6 +791,7 @@ country_event = {
 			limit = {
 				has_planet_flag = mhs_durins_hall_khazad_dum
 			}
+			save_event_target_as = mhs_khazad_dum_planet
 			enable_special_project = {
 				name = "KHAZAD_DUM_RESTORATION_PROJECT"
 				owner = ROOT

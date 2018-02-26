@@ -14,6 +14,7 @@ mhs_me_maskimxul_system = {
 				set_star_flag = empire_cluster
 			}
 		}
+		generate_home_system_resources = yes
 	}
 	
 	planet = {

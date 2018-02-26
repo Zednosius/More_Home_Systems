@@ -14,6 +14,7 @@ mhs_durinsforge_system = {
 				set_star_flag = empire_cluster
 			}
 		}
+		generate_home_system_resources = yes
 	}
 	
 	usage = custom_empire
@@ -228,7 +229,9 @@ mhs_durinshall_system = {
 		has_ring = no
 		flags = { mhs_durins_hall_khazad_dum }
 		init_effect = {
+			prevent_anomaly = yes
 			set_planet_flag = irradiated_colony_flag
+			set_planet_flag = land_clearance_happened
 			create_ambient_object = {
 				type = "mhs_durin_destroyed_ring_01_object"
 				location = FROM
@@ -306,6 +309,16 @@ mhs_durinsforge_no_quest_system = {
 	asteroids_distance = 200
 	
 	flags = {  empire_home_system durinsforge_system }
+	
+	init_effect = {
+		every_neighbor_system = {
+			set_star_flag = empire_cluster
+			every_neighbor_system = {
+				set_star_flag = empire_cluster
+			}
+		}
+		generate_home_system_resources = yes
+	}
 	
 	usage = custom_empire
 	

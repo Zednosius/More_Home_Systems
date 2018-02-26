@@ -25,6 +25,7 @@ event = {
         }
     }
 }
+
 planet_event = {
     id = mhs.2
     hide_window = yes
@@ -243,4 +244,86 @@ planet_event = {
 			10 = {}
 		}
     }
+}
+
+event = {
+    id = mhs.3
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+
+        random_planet = {
+            limit = {
+                has_planet_flag = mhs_reiir
+            }
+			planet_event = { id = mhs.4 }
+        }
+    }
+}
+
+planet_event = {
+    id = mhs.4
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+		change_pc = pc_ringworld_habitable
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_pop = no }
+			set_blocker = "tb_failing_infrastructure"		
+		}
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_pop = no }
+			set_blocker = "tb_failing_infrastructure"			
+		}
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_pop = no }
+			set_blocker = "tb_failing_infrastructure"		
+		}
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_pop = no }
+			set_blocker = "tb_decrepit_dwellings"				
+		}
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_pop = no }
+			set_blocker = "tb_decrepit_dwellings"				
+		}
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_pop = no }
+			set_blocker = "tb_failing_infrastructure"
+		}
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_pop = no }
+			set_blocker = "tb_failing_infrastructure"
+		}
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_pop = no }
+			set_blocker = "tb_failing_infrastructure"
+		}
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_pop = no }
+			set_blocker = "tb_failing_infrastructure"
+		}	
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_pop = no }
+			set_blocker = "tb_failing_infrastructure"
+		}	
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_pop = no }
+			set_blocker = "tb_decrepit_dwellings"				
+		}
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_pop = no }
+			set_blocker = "tb_failing_infrastructure"
+		}
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_pop = no }
+			set_blocker = "tb_decrepit_dwellings"
+		}			
+		random_tile = {
+			limit = { has_blocker = no has_building = no has_pop = no }
+			set_blocker = "tb_decrepit_dwellings"		
+		}
+	}
 }

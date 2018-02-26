@@ -5,16 +5,6 @@ on_game_start = {
     }
 }
 
-# Opens a Popup when the homesystem survey is finished in the durin event
-# A ship is done surveying the last unsurveyed planet in a system
-# Scope = ship
-# From = system
-on_system_survey_ship = {
-    events = {
-        mhs_durin.2
-
-    }
-}
 # A ship has surveyed a planet.
 # Scope = Ship
 # From = Planet

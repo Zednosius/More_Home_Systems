@@ -14,6 +14,7 @@ mhs_me_aralakh_system = {
 				set_star_flag = empire_cluster
 			}
 		}
+		generate_home_system_resources = yes
 	}
 	
 	planet = {
@@ -50,7 +51,7 @@ mhs_me_aralakh_system = {
 	}
 	planet = {
 		name = "Tuchanka"
-		class = "pc_mhs_nuked"
+		class = ideal_planet_class
 		orbit_distance = 45
 		orbit_angle = 0
 		home_planet = yes
@@ -60,7 +61,6 @@ mhs_me_aralakh_system = {
 		modifiers = none
 		
 		init_effect = {
-			change_pc = pc_mhs_nuked
 			set_planet_flag = mhs_tuchanka
 			prevent_anomaly = yes
 			random_tile = {

@@ -15,6 +15,7 @@ mhs_kholdan_system = {
 				set_star_flag = empire_cluster
 			}
 		}
+		generate_home_system_resources = yes
 	}
 	
 	planet = {
@@ -91,7 +92,7 @@ mhs_kholdan_system = {
 	#this planet will be the fake homeplanet and will be deleted on game start
 	planet = {
 		name = "Klendathu"
-		class = "pc_mhs_nuked_by_asteroids"
+		class = ideal_planet_class
 		orbit_distance = 0
 		orbit_angle = 180
 		size = { min = 16 max = 20 }
@@ -101,7 +102,6 @@ mhs_kholdan_system = {
 		modifiers = none
 		
 		init_effect = {
-			change_pc = pc_mhs_nuked_by_asteroids
 			prevent_anomaly = yes
 			random_tile = {
 				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
