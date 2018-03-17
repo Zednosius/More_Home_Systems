@@ -7,6 +7,42 @@ event = {
     is_triggered_only = yes
 
     immediate = {
+		IF = {
+			limit = {
+				any_country = {
+					is_country_type = default
+					capital_scope = {
+						solar_system = {
+							has_star_flag = ikor_system
+						}
+					}
+				}
+			}
+			random_country = {
+				limit = {
+					is_country_type = default
+					capital_scope = {
+						solar_system = {
+							has_star_flag = ikor_system
+						}
+					}
+				}
+				save_event_target_as = mhs_ikor_owner
+			}
+			every_country = {
+				limit = {
+					NOT = {
+						is_country_type = default
+					}
+					capital_scope = {
+						solar_system = {
+							has_star_flag = ikor_system
+						}
+					}
+				}
+				establish_communications = event_target:mhs_ikor_owner
+			}
+		}
 
         every_planet = {
             limit = {
