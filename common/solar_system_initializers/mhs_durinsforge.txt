@@ -2,8 +2,11 @@
 @distance = 30
 mhs_durinsforge_system = {
 	name = "Durin's Forge"
-	class = "sc_m"
-	asteroids_distance = 200
+	class = mhs_sc_trinary_1
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 200
+	}
 	
 	flags = { mhs_durinsforge_system empire_home_system durinsforge_system }
 	
@@ -21,10 +24,10 @@ mhs_durinsforge_system = {
 	
 	planet = {
 		name = "Durin's Forge"
-		class = "pc_m_star"
+		class = "pc_m_giant_star"
 		orbit_distance = 30
 		orbit_angle = 1
-		size = 75
+		size = 25
 		has_ring = no
 		
 		init_effect = {
@@ -39,7 +42,7 @@ mhs_durinsforge_system = {
 		class = "pc_k_star"
 		orbit_distance = 0
 		orbit_angle = 180
-		size = 30
+		size = 20
 		has_ring = no
 		
 		init_effect = {
@@ -208,7 +211,10 @@ mhs_durinsforge_system = {
 mhs_durinshall_system = {
 	name = "Durin's Hall"
 	class = sc_g
-	asteroids_distance = 200
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 200
+	}
 	flags = { mhs_durins_hall_system }
 	planet = {
 		count = 1
@@ -305,8 +311,11 @@ mhs_durinshall_system = {
 
 mhs_durinsforge_no_quest_system = {
 	name = "Durin's Forge"
-	class = "sc_m"
-	asteroids_distance = 200
+	class = mhs_sc_trinary_1
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 200
+	}
 	
 	flags = {  empire_home_system durinsforge_system }
 	
@@ -324,10 +333,10 @@ mhs_durinsforge_no_quest_system = {
 	
 	planet = {
 		name = "Durin's Forge"
-		class = "pc_m_star"
+		class = "pc_m_giant_star"
 		orbit_distance = 30
 		orbit_angle = 1
-		size = 75
+		size = 25
 		has_ring = no
 		
 		init_effect = {
@@ -342,7 +351,7 @@ mhs_durinsforge_no_quest_system = {
 		class = "pc_k_star"
 		orbit_distance = 0
 		orbit_angle = 180
-		size = 30
+		size = 20
 		has_ring = no
 		
 		init_effect = {

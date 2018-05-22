@@ -2,7 +2,10 @@
 mhs_me_aru_system = {
 	name = "Aru"
 	class = "sc_g"
-	asteroids_distance = 75
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 75
+	}
 	usage = custom_empire
 	
 	flags = { empire_home_system }

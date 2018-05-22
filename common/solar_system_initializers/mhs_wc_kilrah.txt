@@ -2,8 +2,15 @@ mhs_wc_kilrah_system = {
 	name = "Kilrah"
 	
 	class = "sc_m"
-	asteroids_distance = 240
-	flags = { empire_home_system sol_system sol }
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 240
+	}
+	asteroid_belt = {
+		type = icy_asteroid_belt
+		radius = 350
+	}
+	flags = { empire_home_system }
 	
 	usage = custom_empire
 
@@ -102,7 +109,7 @@ mhs_wc_kilrah_system = {
 			name = "T'Mog"
 			class = "pc_frozen"
 			orbit_distance = 0
-			orbit_angle = 250
+			orbit_angle = 180
 			size = 17
 			has_ring = no
 		}
@@ -157,7 +164,7 @@ mhs_wc_kilrah_system = {
 	planet = {
 		name = "K'vr"
 		class = "pc_gas_giant"
-		orbit_distance = 65
+		orbit_distance = 70
 		orbit_angle = random
 		size = 20
 		has_ring = no

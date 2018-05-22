@@ -2,7 +2,10 @@
 mhs_me_parnitha_system = {
 	name = "Parnitha"
 	class = "sc_g"
-	asteroids_distance = 125
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 125
+	}
 	usage = custom_empire
 	
 	flags = { empire_home_system }

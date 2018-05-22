@@ -2,7 +2,10 @@
 mhs_me_pranas_system = {
 	name = "Pranas"
 	class = "sc_g"
-	asteroids_distance = 190
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 190
+	}
 	usage = custom_empire
 	
 	flags = { empire_home_system }

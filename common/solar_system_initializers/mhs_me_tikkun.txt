@@ -2,7 +2,10 @@
 mhs_me_tikkun_system = {
 	name = "Tikkun"
 	class = "sc_m"
-	asteroids_distance = 75
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 75
+	}
 	usage = custom_empire
 	
 	flags = { empire_home_system }

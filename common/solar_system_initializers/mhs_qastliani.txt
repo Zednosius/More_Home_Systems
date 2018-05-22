@@ -2,7 +2,10 @@
 mhs_qastliani_system = {
 	name = "Qastliani"
 	class = "sc_m"
-	asteroids_distance = 105
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 105
+	}
 		
 	usage = custom_empire
 	
@@ -20,10 +23,10 @@ mhs_qastliani_system = {
 	
 	planet = {
 		name = "Qastliani"
-		class = "pc_m_star"
+		class = "pc_m_giant_star"
 		orbit_distance = 0
 		orbit_angle = 1
-		size = 75
+		size = 25
 		has_ring = no
 	}
 		

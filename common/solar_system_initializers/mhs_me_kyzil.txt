@@ -2,7 +2,10 @@
 mhs_me_kyzil_system = {
 	name = "Kyzil"
 	class = "sc_m"
-	asteroids_distance = 145
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 145
+	}
 	usage = custom_empire
 	
 	flags = { empire_home_system }

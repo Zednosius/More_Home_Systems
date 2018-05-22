@@ -2,7 +2,10 @@
 mhs_me_aralakh_system = {
 	name = "Aralakh"
 	class = "sc_m"
-	asteroids_distance = 150
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
 	usage = custom_empire
 	
 	flags = { empire_home_system }

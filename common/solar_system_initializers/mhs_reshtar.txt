@@ -2,7 +2,10 @@
 mhs_reshtar_system = {
 	name = "Resh'Tar"
 	class = "sc_k"
-	asteroids_distance = 150
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
 	usage = custom_empire
 	
 	flags = { empire_home_system reshtar_system }

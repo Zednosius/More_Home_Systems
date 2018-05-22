@@ -2,7 +2,10 @@
 mhs_me_phontes_system = {
 	name = "Phontes"
 	class = "sc_f"
-	asteroids_distance = 135
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 135
+	}
 	usage = custom_empire
 	
 	flags = { empire_home_system }

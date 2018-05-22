@@ -2,7 +2,10 @@
 mhs_me_harsa_system = {
 	name = "Harsa"
 	class = "sc_g"
-	asteroids_distance = 115
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 115
+	}
 	usage = custom_empire
 	
 	flags = { empire_home_system }

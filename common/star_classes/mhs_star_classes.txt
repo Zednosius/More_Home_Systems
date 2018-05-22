@@ -1,0 +1,33 @@
+mhs_sc_trinary_1 = { # Trinary System Durins Forge
+    class             = m_star
+    icon              = a_trinary_star
+    planet            = {
+                        key = pc_m_giant_star
+                        class = m_star
+                    }
+    planet            = {
+                        key = pc_m_star
+                        class = k_star
+                    }
+    planet            = {
+                        key = pc_m_star
+                        class = m_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}
+
+mhs_sc_binary_1 = { # Binary System Ikor
+    class             = g_star
+    icon              = a_binary_star
+    planet            = {
+                        key = pc_g_star
+                        class = g_star
+                    }
+    planet            = {
+                        key = pc_m_star
+                        class = m_star
+                    }
+    spawn_odds         = 0
+    num_planets     = { min = 4 max = 10 }
+}

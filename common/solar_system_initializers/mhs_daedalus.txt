@@ -2,7 +2,6 @@
 mhs_daedalus_system = {
 	name = "Daedalus"
 	class = "sc_m"
-	asteroids_distance = 0
 	
 	usage = custom_empire
 	

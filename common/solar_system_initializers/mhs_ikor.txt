@@ -1,8 +1,11 @@
 ### More Home Systems - Ikor,
 mhs_ikor_system = {
 	name = "Ikor"
-	class = "sc_g"
-	asteroids_distance = 150
+	class = mhs_sc_binary_1
+	asteroid_belt = {
+		type = rocky_asteroid_belt
+		radius = 150
+	}
 	usage = custom_empire
 	
 	flags = { empire_home_system ikor_system }
