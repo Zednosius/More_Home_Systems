@@ -56,7 +56,7 @@ mhs_daedalus_system = {
 	}
 	planet = {
 		name = "Hades"
-		class = "planetary_ring_nuked"       
+		class = ideal_planet_class      
 		orbit_distance = 55
 		orbit_angle = random
 		size = { min = 16 max = 20 }

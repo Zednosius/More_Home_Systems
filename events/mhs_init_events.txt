@@ -363,3 +363,520 @@ planet_event = {
 		}
 	}
 }
+
+country_event = {
+    id = mhs.5
+    hide_window = yes
+    is_triggered_only = yes
+
+    immediate = {
+		random_planet = {
+			limit = {
+				has_planet_flag = mhs_hades
+			}
+			random_tile = {
+				limit = {
+					has_building = building_machine_capital_1
+					has_resource = {
+						type = minerals
+						amount = 0
+					}
+					has_resource = {
+						type = food
+						amount = 0
+					}
+					has_resource = {
+						type = energy
+						amount = 0
+					}
+					has_resource = {
+						type = society_research
+						amount = 0
+					}
+					has_resource = {
+						type = physics_research
+						amount = 0
+					}
+					has_resource = {
+						type = engineering_research
+						amount = 0
+					}
+				}
+				add_deposit = d_energy_deposit
+			}
+			random_tile = {
+				limit = {
+					has_building = building_hydroponics_farm_1
+					has_resource = {
+						type = minerals
+						amount = 0
+					}
+					has_resource = {
+						type = food
+						amount = 0
+					}
+					has_resource = {
+						type = energy
+						amount = 0
+					}
+					has_resource = {
+						type = society_research
+						amount = 0
+					}
+					has_resource = {
+						type = physics_research
+						amount = 0
+					}
+					has_resource = {
+						type = engineering_research
+						amount = 0
+					}
+				}
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				limit = {
+					has_building = building_hydroponics_farm_1
+					has_resource = {
+						type = minerals
+						amount = 0
+					}
+					has_resource = {
+						type = food
+						amount = 0
+					}
+					has_resource = {
+						type = energy
+						amount = 0
+					}
+					has_resource = {
+						type = society_research
+						amount = 0
+					}
+					has_resource = {
+						type = physics_research
+						amount = 0
+					}
+					has_resource = {
+						type = engineering_research
+						amount = 0
+					}
+				}
+				add_deposit = d_farmland_deposit
+			}
+			random_tile = {
+				limit = {
+					has_building = building_power_plant_1
+					has_resource = {
+						type = minerals
+						amount = 0
+					}
+					has_resource = {
+						type = food
+						amount = 0
+					}
+					has_resource = {
+						type = energy
+						amount = 0
+					}
+					has_resource = {
+						type = society_research
+						amount = 0
+					}
+					has_resource = {
+						type = physics_research
+						amount = 0
+					}
+					has_resource = {
+						type = engineering_research
+						amount = 0
+					}
+				}
+				add_deposit = d_rich_energy_deposit
+			}
+			random_tile = {
+				limit = {
+					has_building = building_mining_network_1
+					has_resource = {
+						type = minerals
+						amount = 0
+					}
+					has_resource = {
+						type = food
+						amount = 0
+					}
+					has_resource = {
+						type = energy
+						amount = 0
+					}
+					has_resource = {
+						type = society_research
+						amount = 0
+					}
+					has_resource = {
+						type = physics_research
+						amount = 0
+					}
+					has_resource = {
+						type = engineering_research
+						amount = 0
+					}
+				}
+				add_deposit = d_rich_mineral_deposit
+			}
+			random_tile = {
+				limit = {
+					has_building = building_basic_science_lab_1
+					has_resource = {
+						type = minerals
+						amount = 0
+					}
+					has_resource = {
+						type = food
+						amount = 0
+					}
+					has_resource = {
+						type = energy
+						amount = 0
+					}
+					has_resource = {
+						type = society_research
+						amount = 0
+					}
+					has_resource = {
+						type = physics_research
+						amount = 0
+					}
+					has_resource = {
+						type = engineering_research
+						amount = 0
+					}
+				}
+				random_list = {
+					33 = {
+						add_deposit = d_engineering_deposit										
+					}
+					33 = { 
+						add_deposit = d_society_deposit											
+					}
+					33 = { 
+						add_deposit = d_physics_deposit											
+					}					
+				}	
+			}
+			random_tile = {
+				limit = {
+					has_building = building_mining_network_1
+					has_resource = {
+						type = minerals
+						amount = 0
+					}
+					has_resource = {
+						type = food
+						amount = 0
+					}
+					has_resource = {
+						type = energy
+						amount = 0
+					}
+					has_resource = {
+						type = society_research
+						amount = 0
+					}
+					has_resource = {
+						type = physics_research
+						amount = 0
+					}
+					has_resource = {
+						type = engineering_research
+						amount = 0
+					}
+				}
+				add_deposit = d_mineral_deposit
+			}
+			random_tile = {
+				limit = {
+					has_building = building_power_plant_1
+					has_resource = {
+						type = minerals
+						amount = 0
+					}
+					has_resource = {
+						type = food
+						amount = 0
+					}
+					has_resource = {
+						type = energy
+						amount = 0
+					}
+					has_resource = {
+						type = society_research
+						amount = 0
+					}
+					has_resource = {
+						type = physics_research
+						amount = 0
+					}
+					has_resource = {
+						type = engineering_research
+						amount = 0
+					}
+				}
+				add_deposit = d_rich_energy_deposit
+			}
+			random_tile = {
+				limit = {
+					has_building = building_power_plant_1
+					has_resource = {
+						type = minerals
+						amount = 0
+					}
+					has_resource = {
+						type = food
+						amount = 0
+					}
+					has_resource = {
+						type = energy
+						amount = 0
+					}
+					has_resource = {
+						type = society_research
+						amount = 0
+					}
+					has_resource = {
+						type = physics_research
+						amount = 0
+					}
+					has_resource = {
+						type = engineering_research
+						amount = 0
+					}
+				}
+				add_deposit = d_rich_energy_deposit
+			}
+			random_tile = {
+				limit = {
+					has_blocker = tb_failing_infrastructure
+					has_resource = {
+						type = minerals
+						amount = 0
+					}
+					has_resource = {
+						type = food
+						amount = 0
+					}
+					has_resource = {
+						type = energy
+						amount = 0
+					}
+					has_resource = {
+						type = society_research
+						amount = 0
+					}
+					has_resource = {
+						type = physics_research
+						amount = 0
+					}
+					has_resource = {
+						type = engineering_research
+						amount = 0
+					}
+				}
+				add_deposit = d_engineering_deposit
+			}
+			random_tile = {
+				limit = {
+					has_blocker = tb_failing_infrastructure
+					has_resource = {
+						type = minerals
+						amount = 0
+					}
+					has_resource = {
+						type = food
+						amount = 0
+					}
+					has_resource = {
+						type = energy
+						amount = 0
+					}
+					has_resource = {
+						type = society_research
+						amount = 0
+					}
+					has_resource = {
+						type = physics_research
+						amount = 0
+					}
+					has_resource = {
+						type = engineering_research
+						amount = 0
+					}
+				}
+				add_deposit = d_society_deposit
+			}
+			random_tile = {
+				limit = {
+					has_blocker = tb_failing_infrastructure
+					has_resource = {
+						type = minerals
+						amount = 0
+					}
+					has_resource = {
+						type = food
+						amount = 0
+					}
+					has_resource = {
+						type = energy
+						amount = 0
+					}
+					has_resource = {
+						type = society_research
+						amount = 0
+					}
+					has_resource = {
+						type = physics_research
+						amount = 0
+					}
+					has_resource = {
+						type = engineering_research
+						amount = 0
+					}
+				}
+				add_deposit = d_physics_deposit
+			}
+			random_tile = {
+				limit = {
+					has_blocker = tb_decrepit_dwellings
+					has_resource = {
+						type = minerals
+						amount = 0
+					}
+					has_resource = {
+						type = food
+						amount = 0
+					}
+					has_resource = {
+						type = energy
+						amount = 0
+					}
+					has_resource = {
+						type = society_research
+						amount = 0
+					}
+					has_resource = {
+						type = physics_research
+						amount = 0
+					}
+					has_resource = {
+						type = engineering_research
+						amount = 0
+					}
+				}
+				add_deposit = d_rich_energy_deposit
+			}
+			random_tile = {
+				limit = {
+					has_blocker = tb_decrepit_dwellings
+					has_resource = {
+						type = minerals
+						amount = 0
+					}
+					has_resource = {
+						type = food
+						amount = 0
+					}
+					has_resource = {
+						type = energy
+						amount = 0
+					}
+					has_resource = {
+						type = society_research
+						amount = 0
+					}
+					has_resource = {
+						type = physics_research
+						amount = 0
+					}
+					has_resource = {
+						type = engineering_research
+						amount = 0
+					}
+				}
+				add_deposit = d_rich_farmland_deposit
+			}
+			random_tile = {
+				limit = {
+					has_blocker = tb_decrepit_dwellings
+					has_resource = {
+						type = minerals
+						amount = 0
+					}
+					has_resource = {
+						type = food
+						amount = 0
+					}
+					has_resource = {
+						type = energy
+						amount = 0
+					}
+					has_resource = {
+						type = society_research
+						amount = 0
+					}
+					has_resource = {
+						type = physics_research
+						amount = 0
+					}
+					has_resource = {
+						type = engineering_research
+						amount = 0
+					}
+				}
+				add_deposit = d_rich_mineral_deposit
+			}
+			while = {
+				count = 7
+				random_tile = {
+					limit = {
+						has_resource = {
+							type = minerals
+							amount = 0
+						}
+						has_resource = {
+							type = food
+							amount = 0
+						}
+						has_resource = {
+							type = energy
+							amount = 0
+						}
+						has_resource = {
+							type = society_research
+							amount = 0
+						}
+						has_resource = {
+							type = physics_research
+							amount = 0
+						}
+						has_resource = {
+							type = engineering_research
+							amount = 0
+						}
+					}
+					random_list = {
+						1 = { add_deposit = d_rich_energy_deposit }
+						2 = { add_deposit = d_energy_deposit }
+						1 = { add_deposit = d_rich_farmland_deposit }
+						1 = { add_deposit = d_farmland_deposit }
+						1 = { add_deposit = d_rich_mineral_deposit }
+						2 = { add_deposit = d_mineral_deposit }
+						1 = { add_deposit = d_society_deposit }
+						1 = { add_deposit = d_physics_deposit }
+						1 = { add_deposit = d_engineering_deposit }
+						4 = {}
+					}
+				}
+			}
+		}
+	}
+}
