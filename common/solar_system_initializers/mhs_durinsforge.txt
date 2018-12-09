@@ -1,5 +1,12 @@
-### More Home Systems - Durin´s Forge,
-@distance = 30
+### More Home Systems - Durinï¿½s Forge
+
+@distance = 50
+@planet_min_size = 10
+@planet_max_size = 25
+@base_moon_distance = 10
+@moon_min_size = 6
+@moon_max_size = 10
+
 mhs_durinsforge_system = {
 	name = "Durin's Forge"
 	class = mhs_sc_trinary_1
@@ -29,13 +36,6 @@ mhs_durinsforge_system = {
 		orbit_angle = 1
 		size = 25
 		has_ring = no
-		
-		init_effect = {
-			orbital_deposit_tile = {
-				clear_deposits = yes
-				add_deposit = d_immense_energy_deposit
-			}
-		}
 	}
 	planet = {
 		name = "Mithras"
@@ -44,13 +44,6 @@ mhs_durinsforge_system = {
 		orbit_angle = 180
 		size = 20
 		has_ring = no
-		
-		init_effect = {
-			orbital_deposit_tile = {
-				clear_deposits = yes
-				add_deposit = d_vast_energy_deposit
-			}
-		}
 	}
 	planet = {
 		name = "Anvilas"
@@ -59,13 +52,6 @@ mhs_durinsforge_system = {
 		orbit_angle = random
 		size = 10
 		has_ring = no
-		
-		init_effect = {
-			orbital_deposit_tile = {
-				clear_deposits = yes
-				add_deposit = d_rich_energy_deposit
-			}
-		}
 	}
 	planet = {
 		class = "pc_asteroid"
@@ -186,23 +172,17 @@ mhs_durinsforge_system = {
 		size = { min = 16 max = 20 }
 		home_planet = yes
 		has_ring = no
-		tile_blockers = none
+		deposit_blockers = none
 		modifiers = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			generate_start_buildings_and_blockers = yes		
-		}
 	}
 	neighbor_system = {
-		distance = { min = 10 max = 50 }
+		trigger = { num_guaranteed_colonies >= 2 }
+		distance = { min = 10 max = @distance }
 		initializer = "neighbor_t1"
 	}
 	neighbor_system = {
-		distance = { min = 10 max = 50 }	
+		trigger = { num_guaranteed_colonies >= 1 }
+		distance = { min = 10 max = @distance }	
 		initializer = "neighbor_t1_first_colony"
 	}
 }
@@ -228,16 +208,30 @@ mhs_durinshall_system = {
 	planet = {
 		count = 1
 		name = "Khazad Dum"
-		class = "pc_mhs_durin_nuked_nocolonize"
+		class = "pc_nuked"
 		orbit_distance = 150
 		orbit_angle = 1
 		size = 16
 		has_ring = no
+		modifiers = none
 		flags = { mhs_durins_hall_khazad_dum }
 		init_effect = {
 			prevent_anomaly = yes
 			set_planet_flag = irradiated_colony_flag
 			set_planet_flag = land_clearance_happened
+			add_deposit = d_city_ruins
+			add_deposit = d_city_ruins
+			add_deposit = d_city_ruins
+			add_deposit = d_city_ruins
+			add_deposit = d_city_ruins
+			add_modifier = {
+				modifier = "irradiated_planet"
+				days = -1
+			}
+			add_modifier = {
+				modifier = "wasteland_orbital_debris"
+				days = -1
+			}
 			create_ambient_object = {
 				type = "mhs_durin_destroyed_ring_01_object"
 				location = FROM
@@ -338,13 +332,6 @@ mhs_durinsforge_no_quest_system = {
 		orbit_angle = 1
 		size = 25
 		has_ring = no
-		
-		init_effect = {
-			orbital_deposit_tile = {
-				clear_deposits = yes
-				add_deposit = d_immense_energy_deposit
-			}
-		}
 	}
 	planet = {
 		name = "Mithras"
@@ -353,13 +340,6 @@ mhs_durinsforge_no_quest_system = {
 		orbit_angle = 180
 		size = 20
 		has_ring = no
-		
-		init_effect = {
-			orbital_deposit_tile = {
-				clear_deposits = yes
-				add_deposit = d_vast_energy_deposit
-			}
-		}
 	}
 	planet = {
 		name = "Anvilas"
@@ -368,13 +348,6 @@ mhs_durinsforge_no_quest_system = {
 		orbit_angle = random
 		size = 10
 		has_ring = no
-		
-		init_effect = {
-			orbital_deposit_tile = {
-				clear_deposits = yes
-				add_deposit = d_rich_energy_deposit
-			}
-		}
 	}
 	planet = {
 		class = "pc_asteroid"
@@ -495,20 +468,17 @@ mhs_durinsforge_no_quest_system = {
 		size = { min = 16 max = 20 }
 		home_planet = yes
 		has_ring = no
-		tile_blockers = none
+		deposit_blockers = none
 		modifiers = none
-     
-		init_effect = {
-			prevent_anomaly = yes
-        	generate_start_buildings_and_blockers = yes			
-		}
 	}
 	neighbor_system = {
-		distance = { min = 10 max = 50 }
+		trigger = { num_guaranteed_colonies >= 2 }
+		distance = { min = 10 max = @distance }
 		initializer = "neighbor_t1"
 	}
 	neighbor_system = {
-		distance = { min = 10 max = 50 }	
+		trigger = { num_guaranteed_colonies >= 1 }
+		distance = { min = 10 max = @distance }	
 		initializer = "neighbor_t1_first_colony"
 	}
 }

@@ -1,4 +1,12 @@
-### More Home Systems - Qastliani,
+### More Home Systems - Qastliani
+
+@distance = 50
+@planet_min_size = 10
+@planet_max_size = 25
+@base_moon_distance = 10
+@moon_min_size = 6
+@moon_max_size = 10
+
 mhs_qastliani_system = {
 	name = "Qastliani"
 	class = "sc_m"
@@ -32,12 +40,11 @@ mhs_qastliani_system = {
 		
 	planet = {
 		name = "Qastinar"
-		class = "pc_barren"
+		class = "pc_broken"
 		orbit_distance = 85
 		orbit_angle = random
 		size = 25
 		has_ring = no
-		entity = "barren_planet_01_destroyed_entity"
 		init_effect = {
 			create_ambient_object = {
 				type = "large_debris_object"
@@ -145,16 +152,8 @@ mhs_qastliani_system = {
 		size = { min = 16 max = 20 }
 		home_planet = yes
 		has_ring = yes
-		tile_blockers = none
+		deposit_blockers = none
 		modifiers = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			generate_start_buildings_and_blockers = yes			
-		}
 	}
 	planet = {
 		name = "Kaptaar"
@@ -239,11 +238,13 @@ mhs_qastliani_system = {
 		}
 	}
 	neighbor_system = {
-		distance = { min = 10 max = 50 }
+		trigger = { num_guaranteed_colonies >= 2 }
+		distance = { min = 10 max = @distance }
 		initializer = "neighbor_t1"
 	}
 	neighbor_system = {
-		distance = { min = 10 max = 50 }	
+		trigger = { num_guaranteed_colonies >= 1 }
+		distance = { min = 10 max = @distance }	
 		initializer = "neighbor_t1_first_colony"
 	}
 }

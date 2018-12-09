@@ -1,4 +1,12 @@
-### More Home Systems - Trebia,
+### More Home Systems - Trebia
+
+@distance = 50
+@planet_min_size = 10
+@planet_max_size = 25
+@base_moon_distance = 10
+@moon_min_size = 6
+@moon_max_size = 10
+
 mhs_me_trebia_system = {
 	name = "Trebia"
 	class = "sc_f"
@@ -48,7 +56,7 @@ mhs_me_trebia_system = {
 		size = { min = 16 max = 20 }
 		home_planet = yes
 		has_ring = no
-		tile_blockers = none
+		deposit_blockers = none
 		modifiers = none
 		
 		moon = {
@@ -58,13 +66,6 @@ mhs_me_trebia_system = {
 			orbit_distance = 9
 			orbit_angle = random
 			has_ring = no
-		}
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		init_effect = {
-			generate_start_buildings_and_blockers = yes		
 		}
 	}
 	planet = {
@@ -143,11 +144,13 @@ mhs_me_trebia_system = {
 		has_ring = no
 	}
 	neighbor_system = {
-		distance = { min = 10 max = 50 }
+		trigger = { num_guaranteed_colonies >= 2 }
+		distance = { min = 10 max = @distance }
 		initializer = "neighbor_t1"
 	}
 	neighbor_system = {
-		distance = { min = 10 max = 50 }	
+		trigger = { num_guaranteed_colonies >= 1 }
+		distance = { min = 10 max = @distance }	
 		initializer = "neighbor_t1_first_colony"
 	}
 }

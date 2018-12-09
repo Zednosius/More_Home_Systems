@@ -6,12 +6,8 @@ mhs_ancient_horros = {
 	collateral_damage = 1.0
 	war_exhaustion = 0.0
 	has_morale = no
- 	maintenance = 1.0
  	icon_frame = 4
 	has_species = no
-	cost = {
-
-	}
  	potential = {
  		always = no
  	}

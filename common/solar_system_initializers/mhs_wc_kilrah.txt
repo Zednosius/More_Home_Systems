@@ -1,3 +1,12 @@
+### More Home Systems - Kilrah
+
+@distance = 50
+@planet_min_size = 10
+@planet_max_size = 25
+@base_moon_distance = 10
+@moon_min_size = 6
+@moon_max_size = 10
+
 mhs_wc_kilrah_system = {
 	name = "Kilrah"
 	
@@ -45,22 +54,14 @@ mhs_wc_kilrah_system = {
 	
 	planet = {
 		name = "Kilrah Prime"
-		class = "pc_continental"
+		class = ideal_planet_class
 		orbit_distance = 20
 		orbit_angle = 150
 		size = { min = 16 max = 20 }
 		home_planet = yes
 		has_ring = no
-		tile_blockers = none
+		deposit_blockers = none
 		modifiers = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		
-		init_effect = {
-			generate_start_buildings_and_blockers = yes			
-		}
 		
 		moon = {
 			name = "Mrrshan"
@@ -92,9 +93,6 @@ mhs_wc_kilrah_system = {
 		
 		init_effect = {
 			prevent_anomaly = yes
-			orbital_deposit_tile = {
-				clear_deposits = yes
-			}
 		}
 		
 		moon = {
@@ -197,11 +195,13 @@ mhs_wc_kilrah_system = {
 	}
 	
 	neighbor_system = {
-		distance = { min = 10 max = 50 }
+		trigger = { num_guaranteed_colonies >= 2 }
+		distance = { min = 10 max = @distance }
 		initializer = "neighbor_t1"
 	}
 	neighbor_system = {
-		distance = { min = 10 max = 50 }	
+		trigger = { num_guaranteed_colonies >= 1 }
+		distance = { min = 10 max = @distance }	
 		initializer = "neighbor_t1_first_colony"
 	}
 }

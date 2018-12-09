@@ -32,7 +32,6 @@ on_colonized = {
 	}
 }
 
-# From = Tile
 # This = Planet
 on_blocker_cleared = {
     events = {

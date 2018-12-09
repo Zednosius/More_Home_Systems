@@ -187,23 +187,6 @@ ship_event = {
 		# FromFromFrom is the planet
 		FromFromFrom = { # planet
 			save_event_target_as = khazad_dum
-			change_pc = pc_mhs_durin_nuked_colonize
-			add_modifier = {
-				modifier = "irradiated_planet"
-				days = -1
-			}
-			add_modifier = {
-				modifier = "wasteland_orbital_debris"
-				days = -1
-			}
-			every_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = tb_failing_infrastructure
-				random_resources = yes
-			}
-			random_tile = {
-				remove_blocker = yes
-			}
 		}
 		owner = {
 			create_point_of_interest = {
@@ -219,6 +202,12 @@ ship_event = {
 	
 	option = {
 		name = mhs_durin.5.a
+		FromFromFrom = {
+			add_modifier = {
+				modifier = "mhs_expedition_preparation"
+				days = -1
+			}
+		}
 		hidden_effect = {
 			owner = {
 				abort_special_project = {
@@ -287,16 +276,15 @@ planet_event = {
 			has_planet_flag = mhs_durins_hall_khazad_dum_mines
 		}
 		NOT = {
-			any_tile = {
-				has_blocker = yes
-				not = {
-					is_same_value = from
-				}
-			}
+			has_deposit = d_city_ruins
 		}
 	}
 	immediate = {
 		set_planet_flag = mhs_durins_hall_khazad_dum_mines
+	}
+	option = {
+		name = mhs_durin.8.a
+		add_deposit = d_mhs_durins_mines
 		owner = {
 			remove_point_of_interest = durins_hall.4
 			enable_special_project = {
@@ -305,12 +293,6 @@ planet_event = {
 				location = ROOT
 			}
 		}
-		from = { #tile
-			set_building = "building_mhs_durin_mines"
-		}
-	}
-	option = {
-		name = mhs_durin.8.a
 	}
 }
 
@@ -475,6 +457,9 @@ country_event = {
 	}
 	immediate = {
 		remove_country_flag = mhs_durins_hall_khazad_dum_fight_1
+	}
+	option = {
+		name = mhs_durin.12.a
 		random_owned_planet = {
 			limit = {
 				has_planet_flag = mhs_durins_hall_khazad_dum
@@ -485,9 +470,6 @@ country_event = {
 				location = THIS
 			}
 		}
-	}
-	option = {
-		name = mhs_durin.12.a
 	}
 }
 
@@ -500,6 +482,7 @@ planet_event = {
 	location = root
 	show_sound = event_ground_battle
 	picture = GFX_evt_ground_combat
+	fire_only_once = yes
 
 	trigger = {
 		has_owner = yes
@@ -518,14 +501,14 @@ planet_event = {
 		owner = {
 			remove_country_flag = mhs_durins_hall_khazad_dum_fight_1
 		}
+	}
+	option = {
+		name = mhs_durin.13.a
 		enable_special_project = {
 			name = "KHAZAD_DUM_DEEPS_RETALIATION_PROJECT"
 			owner = ROOT.owner
 			location = root
 		}
-	}
-	option = {
-		name = mhs_durin.13.a
 	}
 }
 
@@ -547,29 +530,12 @@ planet_event = {
 	}
 	immediate = {
 		IF = {
-			limit = {
-				any_pop = {
-					is_growing = yes
-				}
-			}
-			random_pop = {
-				limit = {
-					is_growing = yes
-				}
-				kill_pop = yes
-			}
-		}
-		IF = {
 			limit = { 
 				count_pops = {
-					limit = {
-						is_growing = no
-					}
-					count > 1
+					count > 10
 				} 
 			}
 			random_pop = {
-				limit = { is_growing = no }
 				kill_pop = yes
 			}
 			planet_event = {
@@ -577,10 +543,10 @@ planet_event = {
 				days = 90
 				random = 15
 			}
-			else = {
-				owner = {
-					country_event = { id = mhs_durin.15 } # The last pop has fortified their position.
-				}
+		}
+		else = {
+			owner = {
+				country_event = { id = mhs_durin.15 } # The last pop has fortified their position.
 			}
 		}
 	}
@@ -716,6 +682,10 @@ country_event = {
 				has_planet_flag = mhs_durins_hall_khazad_dum
 			}
 			remove_modifier = "mhs_scared_population"
+			add_modifier = {
+				modifier = "mhs_underground_secured"
+				days = -1
+			}
 		}
 		end_event_chain = "mhs_khazad_dum"
 		hidden_effect = {
@@ -733,6 +703,7 @@ planet_event = {
 	location = root
 	show_sound = event_ground_battle
 	picture = GFX_evt_ground_combat
+	fire_only_once = yes
 	
 	trigger = {
 		has_owner = yes
@@ -964,6 +935,7 @@ planet_event = {
 					has_planet_flag = mhs_durins_hall_khazad_dum
 				}
 				remove_modifier = "irradiated_planet"
+				remove_modifier = "mhs_expedition_preparation"
 				set_planet_flag = mhs_durins_hall_khazad_dum_restored
 			}
 		}
@@ -1065,396 +1037,27 @@ planet_event = {
 	}
 	
 	immediate = {
-		change_planet_size = 9
-		if = {
-			limit = {
-				is_planet_class = pc_continental
-			}
-			change_pc = pc_mhs_durin_continental
-		}
-		if = {
-			limit = {
-				is_planet_class = pc_desert
-			}
-			change_pc = pc_mhs_durin_desert
-		}
-		if = {
-			limit = {
-				is_planet_class = pc_tropical
-			}
-			change_pc = pc_mhs_durin_tropical
-		}
-		if = {
-			limit = {
-				is_planet_class = pc_arid
-			}
-			change_pc = pc_mhs_durin_arid
-		}
-		if = {
-			limit = {
-				is_planet_class = pc_ocean
-			}
-			change_pc = pc_mhs_durin_ocean
-		}
-		if = {
-			limit = {
-				is_planet_class = pc_tundra
-			}
-			change_pc = pc_mhs_durin_tundra
-		}
-		if = {
-			limit = {
-				is_planet_class = pc_arctic
-			}
-			change_pc = pc_mhs_durin_arctic
-		}
-		if = {
-			limit = {
-				is_planet_class = pc_savannah
-			}
-			change_pc = pc_mhs_durin_savannah
-		}
-		if = {
-			limit = {
-				is_planet_class = pc_alpine
-			}
-			change_pc = pc_mhs_durin_alpine
-		}
-		if = {
-			limit = {
-				is_planet_class = pc_gaia
-			}
-			change_pc = pc_mhs_durin_gaia
-		}
-		random_tile = {
-			limit = {
-				AND = {
-					has_resource = {
-						type = minerals
-						amount = 0
-					}
-					has_resource = {
-						type = food
-						amount = 0
-					}
-					has_resource = {
-						type = energy
-						amount = 0
-					}
-					has_resource = {
-						type = society_research
-						amount = 0
-					}
-					has_resource = {
-						type = physics_research
-						amount = 0
-					}
-					has_resource = {
-						type = engineering_research
-						amount = 0
-					}
-				}
-			}
-			random_list = {
-				5 = { add_deposit = d_rich_mineral_deposit}
-				1 = { add_deposit = d_vast_mineral_deposit}
-			}
-		}
-		random_tile = {
-			limit = {
-				AND = {
-					has_resource = {
-						type = minerals
-						amount = 0
-					}
-					has_resource = {
-						type = food
-						amount = 0
-					}
-					has_resource = {
-						type = energy
-						amount = 0
-					}
-					has_resource = {
-						type = society_research
-						amount = 0
-					}
-					has_resource = {
-						type = physics_research
-						amount = 0
-					}
-					has_resource = {
-						type = engineering_research
-						amount = 0
-					}
-				}
-			}
-			random_list = {
-				5 = { add_deposit = d_rich_mineral_deposit}
-				1 = { add_deposit = d_vast_mineral_deposit}
-			}
-		}
-		random_tile = {
-			limit = {
-				AND = {
-					has_resource = {
-						type = minerals
-						amount = 0
-					}
-					has_resource = {
-						type = food
-						amount = 0
-					}
-					has_resource = {
-						type = energy
-						amount = 0
-					}
-					has_resource = {
-						type = society_research
-						amount = 0
-					}
-					has_resource = {
-						type = physics_research
-						amount = 0
-					}
-					has_resource = {
-						type = engineering_research
-						amount = 0
-					}
-				}
-			}
-			random_list = {
-				5 = { add_deposit = d_rich_society_deposit}
-				1 = { add_deposit = d_vast_society_deposit}
-				5 = { add_deposit = d_rich_physics_deposit}
-				1 = { add_deposit = d_vast_physics_deposit}
-				5 = { add_deposit = d_rich_engineering_deposit}
-				1 = { add_deposit = d_vast_engineering_deposit}
-			}
-		}
-		random_tile = {
-			limit = {
-				AND = {
-					has_resource = {
-						type = minerals
-						amount = 0
-					}
-					has_resource = {
-						type = food
-						amount = 0
-					}
-					has_resource = {
-						type = energy
-						amount = 0
-					}
-					has_resource = {
-						type = society_research
-						amount = 0
-					}
-					has_resource = {
-						type = physics_research
-						amount = 0
-					}
-					has_resource = {
-						type = engineering_research
-						amount = 0
-					}
-				}
-			}
-			random_list = {
-				5 = { add_deposit = d_rich_energy_deposit}
-				1 = { add_deposit = d_vast_energy_deposit}
-			}
-		}
-		random_tile = {
-			limit = {
-				AND = {
-					has_resource = {
-						type = minerals
-						amount = 0
-					}
-					has_resource = {
-						type = food
-						amount = 0
-					}
-					has_resource = {
-						type = energy
-						amount = 0
-					}
-					has_resource = {
-						type = society_research
-						amount = 0
-					}
-					has_resource = {
-						type = physics_research
-						amount = 0
-					}
-					has_resource = {
-						type = engineering_research
-						amount = 0
-					}
-				}
-			}
-			random_list = {
-				5 = { add_deposit = d_rich_energy_deposit}
-				1 = { add_deposit = d_vast_energy_deposit}
-			}
-		}
-		random_tile = {
-			limit = {
-				AND = {
-					has_resource = {
-						type = minerals
-						amount = 0
-					}
-					has_resource = {
-						type = food
-						amount = 0
-					}
-					has_resource = {
-						type = energy
-						amount = 0
-					}
-					has_resource = {
-						type = society_research
-						amount = 0
-					}
-					has_resource = {
-						type = physics_research
-						amount = 0
-					}
-					has_resource = {
-						type = engineering_research
-						amount = 0
-					}
-				}
-			}
-			random_list = {
-				5 = { add_deposit = d_rich_society_deposit}
-				1 = { add_deposit = d_vast_society_deposit}
-			}
-		}
-		random_tile = {
-			limit = {
-				AND = {
-					has_resource = {
-						type = minerals
-						amount = 0
-					}
-					has_resource = {
-						type = food
-						amount = 0
-					}
-					has_resource = {
-						type = energy
-						amount = 0
-					}
-					has_resource = {
-						type = society_research
-						amount = 0
-					}
-					has_resource = {
-						type = physics_research
-						amount = 0
-					}
-					has_resource = {
-						type = engineering_research
-						amount = 0
-					}
-				}
-			}
-			random_list = {
-				5 = { add_deposit = d_rich_physics_deposit}
-				1 = { add_deposit = d_vast_physics_deposit}
-			}
-		}
-		random_tile = {
-			limit = {
-				AND = {
-					has_resource = {
-						type = minerals
-						amount = 0
-					}
-					has_resource = {
-						type = food
-						amount = 0
-					}
-					has_resource = {
-						type = energy
-						amount = 0
-					}
-					has_resource = {
-						type = society_research
-						amount = 0
-					}
-					has_resource = {
-						type = physics_research
-						amount = 0
-					}
-					has_resource = {
-						type = engineering_research
-						amount = 0
-					}
-				}
-			}
-			random_list = {
-				5 = { add_deposit = d_rich_engineering_deposit}
-				1 = { add_deposit = d_vast_engineering_deposit}
-			}
-		}
-		random_tile = {
-			limit = {
-				AND = {
-					has_resource = {
-						type = minerals
-						amount = 0
-					}
-					has_resource = {
-						type = food
-						amount = 0
-					}
-					has_resource = {
-						type = energy
-						amount = 0
-					}
-					has_resource = {
-						type = society_research
-						amount = 0
-					}
-					has_resource = {
-						type = physics_research
-						amount = 0
-					}
-					has_resource = {
-						type = engineering_research
-						amount = 0
-					}
-				}
-			}
-			random_list = {
-				5 = { add_deposit = d_rich_society_deposit}
-				1 = { add_deposit = d_vast_society_deposit}
-				5 = { add_deposit = d_rich_physics_deposit}
-				1 = { add_deposit = d_vast_physics_deposit}
-				5 = { add_deposit = d_rich_engineering_deposit}
-				1 = { add_deposit = d_vast_engineering_deposit}
-			}
-		}
 	}
 	
 	option = {
 		name = mhs_durin.23.a
 		remove_modifier = "mhs_ringworld_reconstruction"
+		remove_modifier = "wasteland_orbital_debris"
 		solar_system = {
 			every_system_ambient_object = {
 				destroy_ambient_object = this
 			}
+		}
+		add_modifier = {
+			modifier = "mhs_ringworld_restored"
+			days = -1
 		}
 		owner = {
 			add_modifier = {
 				modifier = "mhs_ringworld_reconstructed"
 				days = 3600
 			}
+
 			random_owned_planet = {
 				limit = {
 					has_planet_flag = mhs_durins_hall_khazad_dum_ring_restoration
@@ -1473,6 +1076,5 @@ planet_event = {
 			}
 			end_event_chain = "mhs_khazad_dum_rebuilding"
 		}
-		remove_modifier = "wasteland_orbital_debris"
 	}
 }

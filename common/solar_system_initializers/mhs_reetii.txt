@@ -1,5 +1,12 @@
 ### Children of the ancients fixed and modified - original creator Belannaer
 
+@distance = 50
+@planet_min_size = 10
+@planet_max_size = 25
+@base_moon_distance = 10
+@moon_min_size = 6
+@moon_max_size = 10
+
 mhs_reetii_system = {
 	name = "Re'etii"
 	class = "sc_black_hole"
@@ -8,6 +15,10 @@ mhs_reetii_system = {
 	flags = { children_of_ancients_system ring_world_built ringworld_deposited empire_home_system }
 	
 	usage = custom_empire
+
+	init_effect = {
+		generate_home_system_resources = yes
+	}
 
 	planet = {
 		class = star
@@ -67,22 +78,13 @@ mhs_reetii_system = {
 			set_planet_flag = ringworld_section_deposit
 			random_list = {
 				25 = {
-					orbital_deposit_tile = {
-						clear_deposits = yes
-						add_deposit = d_rich_energy_deposit
-					}
+					add_deposit = d_energy_3
 				}
 				25 = {
-					orbital_deposit_tile = {
-						clear_deposits = yes
-						add_deposit = d_vast_energy_deposit
-					}
+					add_deposit = d_energy_4
 				}
 				25 = {
-					orbital_deposit_tile = {
-						clear_deposits = yes
-						add_deposit = d_immense_energy_deposit
-					}
+					add_deposit = d_energy_5
 				}
 				25 = {}
 			}
@@ -95,127 +97,14 @@ mhs_reetii_system = {
 		orbit_distance = 0
 		home_planet = yes
 		size = 25
-		tile_blockers = none
+		deposit_blockers = none
 		modifiers = none		
 		
 		init_effect = {
 			change_pc = pc_ringworld_habitable
 			set_planet_flag = mhs_reiir
 			prevent_anomaly = yes	
-			random_tile = {
-				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
-				set_building = "building_capital_1"
-				set_deposit = d_energy_deposit				
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_hydroponics_farm_1"
-					set_deposit = d_rich_farmland_deposit					
-				}
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_hydroponics_farm_1"
-					set_deposit = d_rich_farmland_deposit							
-				}
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_power_plant_1"
-					set_deposit = d_rich_energy_deposit						
-				}
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_mining_network_1"
-					set_deposit = d_rich_mineral_deposit					
-				}				
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_building = "building_basic_science_lab_1"
-				random_list = {
-					33 = { 
-						set_deposit = d_engineering_deposit										
-					}
-					33 = { 
-						set_deposit = d_society_deposit											
-					}
-					33 = { 
-						set_deposit = d_physics_deposit											
-					}					
-				}
-			}	
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_building = "building_mining_network_1"
-				set_deposit = d_mineral_deposit						
-			}	
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-				set_deposit = d_engineering_deposit				
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-				set_deposit = d_society_deposit					
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-				set_deposit = d_physics_deposit				
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_decrepit_dwellings"
-				set_deposit = d_rich_energy_deposit						
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_decrepit_dwellings"
-				set_deposit = d_rich_farmland_deposit					
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-				set_deposit = d_rich_mineral_deposit	
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_building = "building_power_plant_1"
-				set_deposit = d_rich_energy_deposit			
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-			}	
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-			}	
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_decrepit_dwellings"
-				set_deposit = d_rich_farmland_deposit					
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_failing_infrastructure"
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_decrepit_dwellings"
-			}			
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_decrepit_dwellings"
-				set_deposit = d_rich_energy_deposit				
-			}
+			
 		}
 	}
 	planet = {
@@ -228,22 +117,13 @@ mhs_reetii_system = {
 			set_planet_flag = ringworld_section_deposit
 			random_list = {
 				25 = {
-					orbital_deposit_tile = {
-						clear_deposits = yes
-						add_deposit = d_rich_engineering_deposit
-					}
+					add_deposit = d_engineering_3
 				}
 				25 = {
-					orbital_deposit_tile = {
-						clear_deposits = yes
-						add_deposit = d_vast_engineering_deposit
-					}
+					add_deposit = d_engineering_4
 				}
 				25 = {
-					orbital_deposit_tile = {
-						clear_deposits = yes
-						add_deposit = d_immense_engineering_deposit
-					}
+					add_deposit = d_engineering_5
 				}
 				25 = {}
 			}
@@ -257,7 +137,6 @@ mhs_reetii_system = {
 				set_star_flag = empire_cluster
 			}
 		}
-		generate_home_system_resources = yes
 		spawn_megastructure = {
 			type = "ring_world_ruined"
 			orbit_angle = 90
@@ -315,11 +194,13 @@ mhs_reetii_system = {
 		initializer = "children_of_ancients_neighbor_t1"
 	}
 	neighbor_system = {
-		distance = { min = 10 max = 50 }
+		trigger = { num_guaranteed_colonies >= 2 }
+		distance = { min = 10 max = @distance }
 		initializer = "neighbor_t1"
 	}
 	neighbor_system = {
-		distance = { min = 10 max = 50 }	
+		trigger = { num_guaranteed_colonies >= 1 }
+		distance = { min = 10 max = @distance }	
 		initializer = "neighbor_t1_first_colony"
 	}
 }

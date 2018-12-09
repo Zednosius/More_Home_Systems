@@ -92,6 +92,8 @@ planetary_ring_nuked = {
 	icon_frame = 17
 	enable_tilt = yes
 
+	climate = "wet"
+
 	atmosphere_color 		= hsv { 0.40 0.5 0.9 }		
 	atmosphere_intensity 	= 0.5
 	atmosphere_width 		= 0.5

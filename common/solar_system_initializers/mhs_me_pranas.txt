@@ -1,4 +1,12 @@
-### More Home Systems - Pranas,
+### More Home Systems - Pranas
+
+@distance = 50
+@planet_min_size = 10
+@planet_max_size = 25
+@base_moon_distance = 10
+@moon_min_size = 6
+@moon_max_size = 10
+
 mhs_me_pranas_system = {
 	name = "Pranas"
 	class = "sc_g"
@@ -44,15 +52,8 @@ mhs_me_pranas_system = {
 		size = { min = 16 max = 20 }
 		home_planet = yes
 		has_ring = no
-		tile_blockers = none
+		deposit_blockers = none
 		modifiers = none
-		
-		init_effect = {
-			prevent_anomaly = yes
-		}
-		init_effect = {
-			generate_start_buildings_and_blockers = yes		
-		}
 	}
 	planet = {
 		name = "Dragel"
@@ -131,11 +132,13 @@ mhs_me_pranas_system = {
 		has_ring = no
 	}
 	neighbor_system = {
-		distance = { min = 10 max = 50 }
+		trigger = { num_guaranteed_colonies >= 2 }
+		distance = { min = 10 max = @distance }
 		initializer = "neighbor_t1"
 	}
 	neighbor_system = {
-		distance = { min = 10 max = 50 }	
+		trigger = { num_guaranteed_colonies >= 1 }
+		distance = { min = 10 max = @distance }	
 		initializer = "neighbor_t1_first_colony"
 	}
 }

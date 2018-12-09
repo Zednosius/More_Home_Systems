@@ -1,4 +1,12 @@
-### More Home Systems - Kholdan,
+### More Home Systems - Kholdan
+
+@distance = 50
+@planet_min_size = 10
+@planet_max_size = 25
+@base_moon_distance = 10
+@moon_min_size = 6
+@moon_max_size = 10
+
 mhs_kholdan_system = {
 	name = "Kholdan"
 	class = "sc_m"
@@ -101,94 +109,12 @@ mhs_kholdan_system = {
 		size = { min = 16 max = 20 }
 		home_planet = yes
 		has_ring = no
-		tile_blockers = none
+		deposit_blockers = none
 		modifiers = none
 		
 		init_effect = {
 			prevent_anomaly = yes
-			random_tile = {
-				limit = { has_blocker = no has_building = no num_adjacent_tiles > 3 }
-				set_building = "building_capital_1"
-				set_deposit = d_energy_deposit					
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_hydroponics_farm_1"
-					set_deposit = d_rich_farmland_deposit					
-				}
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_hydroponics_farm_1"
-					set_deposit = d_rich_farmland_deposit						
-				}
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_power_plant_1"
-					set_deposit = d_rich_energy_deposit					
-				}
-				random_neighboring_tile = {
-					limit = { has_blocker = no has_building = no }
-					set_building = "building_mining_network_1"
-					set_deposit = d_rich_mineral_deposit						
-				}				
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_building = "building_basic_science_lab_1"
-				random_list = {
-					33 = { 
-						set_deposit = d_engineering_deposit										
-					}
-					33 = { 
-						set_deposit = d_society_deposit											
-					}
-					33 = { 
-						set_deposit = d_physics_deposit											
-					}				
-				}					
-			}	
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_building = "building_mining_network_1"
-				set_deposit = d_mineral_deposit					
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_building = "building_power_plant_1"
-				set_deposit = d_rich_energy_deposit
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_mhs_asteroid_crater"
-				set_deposit = d_engineering_deposit					
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_mhs_asteroid_crater"
-				set_deposit = d_society_deposit					
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_mhs_asteroid_crater"
-				set_deposit = d_physics_deposit				
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_mhs_asteroid_crater"
-				set_deposit = d_rich_energy_deposit					
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_blocker = "tb_mhs_asteroid_crater"
-				set_deposit = d_rich_farmland_deposit					
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_deposit = d_rich_energy_deposit				
-			}
-			random_tile = {
-				limit = { has_blocker = no has_building = no }
-				set_deposit = d_rich_farmland_deposit				
-			}
+			set_planet_flag = mhs_kholdan
 		}
 		moon = {
 			name = "Kaldar"
@@ -273,11 +199,13 @@ mhs_kholdan_system = {
 	}
 	
 	neighbor_system = {
-		distance = { min = 10 max = 50 }
+		trigger = { num_guaranteed_colonies >= 2 }
+		distance = { min = 10 max = @distance }
 		initializer = "neighbor_t1"
 	}
 	neighbor_system = {
-		distance = { min = 10 max = 50 }	
+		trigger = { num_guaranteed_colonies >= 1 }
+		distance = { min = 10 max = @distance }	
 		initializer = "neighbor_t1_first_colony"
 	}
 }

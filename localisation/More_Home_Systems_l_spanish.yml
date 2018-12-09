@@ -107,11 +107,9 @@
  pc_mhs_durin_nuked_colonize:0 "Tomb World with destroyed Ring"
  pc_mhs_durin_nuked_colonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation make life impossible. It is orbited by an ancient destroyed Ring World."
  
- 
-
- #New Tile Blocker
- tb_mhs_asteroid_crater:0 "£blocker  Asteroid Crater"
- tb_mhs_asteroid_crater_desc:0 "This reminder of a large scale impact event marks the surrounding landscape."
+ #New Blocker
+ d_mhs_asteroid_crater:0 "£blocker  Asteroid Crater"
+ d_mhs_asteroid_crater_desc:0 "This reminder of a large scale impact event marks the surrounding landscape."
  
  #########################
  # Durins Forge Questline#
@@ -174,10 +172,18 @@
  mhs_durin.8.name:0 "The Great Gateway"
  mhs_durin.8.desc:0 "The last excavation area held an extraordinary secret. Our team has found a giant gateway to an underground network. At the moment we can only guess how far it stretches."
  mhs_durin.8.a:0 "Prepare an expedition into the deeps."
+
+ #Modifiers
+ mhs_expedition_preparation:0 "Expedition Preparations"
+ mhs_expedition_preparation_desc:0 "In order to protect our personel from the hostile environment protective gear is mandatory at all times when leaving the shielded habitat modules."
+ mhs_ringworld_restored:0 "Planetary Ring"
+ mhs_ringworld_restored_desc:0 "A restored relic of a long forgotten time orbits the planet providing living space."
+ mhs_underground_secured:0 "Secured Underground Network"
+ mhs_underground_secured_desc:0 "The reclamation of the extensive underground network provides much space for further expansion."
  
- #Mines of Durin Building
- building_mhs_durin_mines:0 "Mines of Durin"
- building_mhs_durin_mines_desc:0 "A vast and ancient network of underground vaults and production facilities stretching over the whole planet."
+ #Mines of Durin Planetary Feature
+ d_mhs_durins_mines:0 "Mines of Durin"
+ d_mhs_durins_mines_desc:0 "A vast and ancient network of underground mines, vaults and production facilities stretching over the whole planet."
  
  #Starts Khazad Dum's Depths expedition
  KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT:0 "The Mines of Durin"
