@@ -24,19 +24,6 @@ country_event = {
 		IF = {
 			limit = {
 				any_system = {
-					has_planet_class = pc_mhs_nuked
-				}
-			}
-			every_planet = {
-				limit = {
-					is_planet_class = pc_mhs_nuked
-				}
-				set_planet_flag = pc_mhs_nuked
-			}
-		}
-		IF = {
-			limit = {
-				any_system = {
 					has_planet_class = pc_mhs_nuked_by_asteroids
 				}
 			}
@@ -58,7 +45,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked
 								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
@@ -75,7 +61,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked
 								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
@@ -92,7 +77,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked
 								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
@@ -109,7 +93,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked
 								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
@@ -126,7 +109,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked
 								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
@@ -143,7 +125,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked
 								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
@@ -160,7 +141,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked
 								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
@@ -177,7 +157,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked
 								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
@@ -194,7 +173,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked
 								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
@@ -213,19 +191,6 @@ country_event = {
 			every_planet = {
 				limit = {
 					is_planet_class = planetary_ring_nuked
-				}
-				change_pc = pc_continental
-			}
-		}
-		IF = {
-			limit = {
-				any_system = {
-					has_planet_class = pc_mhs_nuked
-				}
-			}
-			every_planet = {
-				limit = {
-					is_planet_class = pc_mhs_nuked
 				}
 				change_pc = pc_continental
 			}
@@ -265,21 +230,6 @@ country_event = {
 					has_planet_flag = planetary_ring_nuked
 				}
 				change_pc = planetary_ring_nuked
-			}
-		}
-		IF = {
-			limit = {
-				any_system = {
-					any_planet = {
-						has_planet_flag = pc_mhs_nuked
-					}
-				}
-			}
-			every_planet = {
-				limit = {
-					has_planet_flag = pc_mhs_nuked
-				}
-				change_pc = pc_mhs_nuked
 			}
 		}
 		IF = {

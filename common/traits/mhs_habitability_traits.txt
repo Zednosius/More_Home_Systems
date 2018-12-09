@@ -12,16 +12,6 @@ trait_pc_mhs_nuked_by_asteroids_preference = {
 		weight = 0
 	}
 }
-trait_pc_mhs_durin_nuked_colonize_preference = {
-	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
-	allowed_archetypes = { BIOLOGICAL PRESAPIENT }
-	modification = no
-	modifier = {
-	}
-	ai_weight = {
-		weight = 0
-	}
-}
 trait_planetary_ring_nuked_preference = {
 	icon = "gfx/interface/icons/traits/trait_pc_gaia_preference.dds"
 	allowed_archetypes = { BIOLOGICAL PRESAPIENT }

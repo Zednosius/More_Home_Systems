@@ -565,6 +565,35 @@ generate_start_deposits_and_blockers = {
 		add_deposit = d_failing_infrastructure
 		add_deposit = d_failing_infrastructure
 		add_deposit = d_failing_infrastructure
+		
+		# 3 + 3 energy		
+		add_deposit = d_hot_springs			
+		add_deposit = d_rushing_waterfalls
+		add_deposit = d_tempestous_mountain	
+		if = {
+			limit = { owner = { is_machine_empire = yes } }
+			add_deposit = d_rushing_waterfalls		
+		}
+		if = {
+			limit = { owner = { has_valid_civic = civic_machine_servitor } }
+			add_deposit = d_hot_springs
+		}
+		
+		# 3 + 3 mining
+		add_deposit = d_veiny_cliffs 		
+		add_deposit = d_prosperous_mesa
+		add_deposit = d_rich_mountain
+		add_deposit = d_prosperous_mesa
+		
+		# 4 + 3 farming
+		add_deposit = d_rugged_woods	
+		add_deposit = d_fertile_lands
+		add_deposit = d_fertile_lands
+		if = {
+			limit = { owner = { is_machine_empire = no } }
+			add_deposit = d_rugged_woods
+			add_deposit = d_black_soil	
+		}	
 	}
 	
 	if = {
@@ -729,20 +758,6 @@ mhs_switch_homeworld_to_standard = {
 	IF = {
 		limit = {
 			any_system = {
-				has_planet_class = pc_mhs_nuked
-			}
-		}
-		every_planet = {
-			limit = {
-				is_planet_class = pc_mhs_nuked
-				is_homeworld = yes
-			}
-			set_planet_flag = pc_mhs_nuked
-		}
-	}
-	IF = {
-		limit = {
-			any_system = {
 				has_planet_class = pc_mhs_nuked_by_asteroids
 			}
 		}
@@ -793,7 +808,6 @@ mhs_switch_homeworld_to_standard = {
 					limit = {
 						OR = {
 							is_planet_class = planetary_ring_nuked
-							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
 							is_planet_class = pc_ringworld_habitable
 							is_planet_class = pc_gaia
@@ -812,7 +826,6 @@ mhs_switch_homeworld_to_standard = {
 					limit = {
 						OR = {
 							is_planet_class = planetary_ring_nuked
-							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
 							is_planet_class = pc_ringworld_habitable
 							is_planet_class = pc_gaia
@@ -831,7 +844,6 @@ mhs_switch_homeworld_to_standard = {
 					limit = {
 						OR = {
 							is_planet_class = planetary_ring_nuked
-							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
 							is_planet_class = pc_ringworld_habitable
 							is_planet_class = pc_gaia
@@ -850,7 +862,6 @@ mhs_switch_homeworld_to_standard = {
 					limit = {
 						OR = {
 							is_planet_class = planetary_ring_nuked
-							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
 							is_planet_class = pc_ringworld_habitable
 							is_planet_class = pc_gaia
@@ -869,7 +880,6 @@ mhs_switch_homeworld_to_standard = {
 					limit = {
 						OR = {
 							is_planet_class = planetary_ring_nuked
-							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
 							is_planet_class = pc_ringworld_habitable
 							is_planet_class = pc_gaia
@@ -888,7 +898,6 @@ mhs_switch_homeworld_to_standard = {
 					limit = {
 						OR = {
 							is_planet_class = planetary_ring_nuked
-							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
 							is_planet_class = pc_ringworld_habitable
 							is_planet_class = pc_gaia
@@ -907,7 +916,6 @@ mhs_switch_homeworld_to_standard = {
 					limit = {
 						OR = {
 							is_planet_class = planetary_ring_nuked
-							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
 							is_planet_class = pc_ringworld_habitable
 							is_planet_class = pc_gaia
@@ -926,7 +934,6 @@ mhs_switch_homeworld_to_standard = {
 					limit = {
 						OR = {
 							is_planet_class = planetary_ring_nuked
-							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
 							is_planet_class = pc_ringworld_habitable
 							is_planet_class = pc_gaia
@@ -945,7 +952,6 @@ mhs_switch_homeworld_to_standard = {
 					limit = {
 						OR = {
 							is_planet_class = planetary_ring_nuked
-							is_planet_class = pc_mhs_nuked
 							is_planet_class = pc_mhs_nuked_by_asteroids
 							is_planet_class = pc_ringworld_habitable
 							is_planet_class = pc_gaia
@@ -966,20 +972,6 @@ mhs_switch_homeworld_to_standard = {
 		every_planet = {
 			limit = {
 				is_planet_class = planetary_ring_nuked
-				is_homeworld = yes
-			}
-			change_pc = pc_continental
-		}
-	}
-	IF = {
-		limit = {
-			any_system = {
-				has_planet_class = pc_mhs_nuked
-			}
-		}
-		every_planet = {
-			limit = {
-				is_planet_class = pc_mhs_nuked
 				is_homeworld = yes
 			}
 			change_pc = pc_continental
@@ -1044,22 +1036,6 @@ mhs_switch_homeworld_back = {
 			}
 			change_pc = planetary_ring_nuked
 			remove_planet_flag = planetary_ring_nuked
-		}
-	}
-	IF = {
-		limit = {
-			any_system = {
-				any_planet = {
-					has_planet_flag = pc_mhs_nuked
-				}
-			}
-		}
-		every_planet = {
-			limit = {
-				has_planet_flag = pc_mhs_nuked
-			}
-			change_pc = pc_mhs_nuked
-			remove_planet_flag = pc_mhs_nuked
 		}
 	}
 	IF = {

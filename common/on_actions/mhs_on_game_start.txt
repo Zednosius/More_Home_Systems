@@ -1,13 +1,6 @@
 # Runs the modifiying event on game start
 on_game_start = {
-    events = {
-		mhs.1  
-		mhs.3
-    }
-}
-
-on_press_begin = {
 	events = {
-		mhs.5
-    }
+		mhs.1
+	}
 }
