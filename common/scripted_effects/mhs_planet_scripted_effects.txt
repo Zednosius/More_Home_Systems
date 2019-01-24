@@ -605,7 +605,128 @@ generate_start_deposits_and_blockers = {
 	}
 }
 
+generate_home_planet_final_pass = {
+	# Adjust life-seeded colonies
+	if = {
+		limit = {
+			owner = {
+				has_civic = civic_life_seeded
+			}
+		}
+		
+		owner = {
+			# Nuke other colonies gained from advanced empire, etc
+			every_owned_planet = {
+				limit = { is_capital = no }
+				remove_all_buildings = yes
+				destroy_colony = yes
+			}
+			change_dominant_species = { species = last_created change_all = yes }		
+		}
+	}
 
+	#changing reeti start
+	IF = {
+		limit = {
+			has_planet_flag = mhs_reiir
+		}
+		remove_all_districts = yes
+		add_district = district_generator_uncapped
+		add_district = district_generator_uncapped
+		add_building = building_dimensional_fabricator
+	}
+	IF = {
+		limit = { 
+			owner = { 
+				is_regular_empire = yes
+			}
+			has_planet_flag = mhs_reiir
+		}
+		
+		add_district = district_city
+		
+		IF = {
+			limit = {
+				owner = { NOT = { has_valid_civic = civic_agrarian_idyll } }
+			}
+			add_district = district_city
+			add_district = district_city			
+		}	
+		ELSE = {
+			add_district = district_farming_uncapped
+		}
+				
+		add_district = district_farming_uncapped
+		add_district = district_farming_uncapped
+				
+		add_district = district_generator_uncapped
+		
+		IF = {
+			limit = { owner = { is_megacorp = no } }
+			add_district = district_generator_uncapped	
+		}		
+		
+		IF = {
+			limit = { owner = { is_megacorp = yes } }
+			add_district = district_city
+			add_building = building_commercial_zone	
+		}
+	}
+	IF = {
+		limit = {
+			owner = {
+				is_hive_empire = yes
+			}
+			has_planet_flag = mhs_reiir
+		}
+		
+		add_district = district_hive
+		add_district = district_hive
+		add_district = district_hive
+		
+		add_district = district_farming_uncapped
+		add_district = district_farming_uncapped
+				
+		add_district = district_generator_uncapped
+		add_district = district_generator_uncapped		
+	}
+	
+	# Replace capital building for machine empires
+	IF = {
+		limit = {
+			owner = {
+				is_machine_empire = yes
+			}
+			has_planet_flag = mhs_reiir
+		}
+		
+		add_district = district_nexus
+		add_district = district_nexus
+		add_district = district_nexus
+				
+		add_district = district_generator_uncapped
+		add_district = district_generator_uncapped
+		add_district = district_generator_uncapped
+		add_district = district_generator_uncapped
+				
+		#Assimilators
+		IF = {
+			limit = { owner = { has_civic = civic_machine_assimilator } }
+			remove_district = district_generator_uncapped
+			add_district = district_farming_uncapped
+		}
+
+		#Servitors
+		IF = {
+			limit = { owner = { has_civic = civic_machine_servitor } }
+			add_district = district_farming_uncapped	
+			add_district = district_generator_uncapped
+			remove_district = district_nexus
+			remove_district = district_nexus
+			add_building = building_organic_sanctuary
+		}
+	}
+}
 
 
 

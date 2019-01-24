@@ -96,7 +96,7 @@ mhs_reetii_system = {
 		orbit_angle = 30
 		orbit_distance = 0
 		home_planet = yes
-		size = 25
+		size = 50
 		deposit_blockers = none
 		modifiers = none		
 		

@@ -104,9 +104,6 @@ ship_event = {
 	}
 	
 	immediate = {
-		owner = {
-			remove_country_flag = mhs_durins_hall_found
-		}
 		FROM = { # system
 			random_system_planet = {
 				limit = { has_planet_flag = mhs_durins_hall_khazad_dum }
@@ -281,12 +278,14 @@ planet_event = {
 	}
 	immediate = {
 		set_planet_flag = mhs_durins_hall_khazad_dum_mines
+		owner = {
+			remove_point_of_interest = durins_hall.4
+		}
 	}
 	option = {
 		name = mhs_durin.8.a
 		add_deposit = d_mhs_durins_mines
 		owner = {
-			remove_point_of_interest = durins_hall.4
 			enable_special_project = {
 				name = "KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT"
 				owner = root.owner
@@ -1064,7 +1063,7 @@ planet_event = {
 				}
 				create_ambient_object = {
 					type = "mhs_durin_intact_ring_01_object"
-					location = PREV
+					location = THIS
 				}
 				last_created_ambient_object = {
 					set_location = {
