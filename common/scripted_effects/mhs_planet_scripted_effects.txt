@@ -559,41 +559,41 @@ generate_start_deposits_and_blockers = {
 		limit = {
 			has_planet_flag = mhs_reiir
 		}
-		add_deposit = d_decrepit_dwellings
-		add_deposit = d_decrepit_dwellings
-		add_deposit = d_failing_infrastructure
-		add_deposit = d_failing_infrastructure
-		add_deposit = d_failing_infrastructure
-		add_deposit = d_failing_infrastructure
+		# add_deposit = d_decrepit_dwellings
+		# add_deposit = d_decrepit_dwellings
+		# add_deposit = d_failing_infrastructure
+		# add_deposit = d_failing_infrastructure
+		# add_deposit = d_failing_infrastructure
+		# add_deposit = d_failing_infrastructure
 		
 		# 3 + 3 energy		
-		add_deposit = d_hot_springs			
-		add_deposit = d_rushing_waterfalls
-		add_deposit = d_tempestous_mountain	
-		if = {
-			limit = { owner = { is_machine_empire = yes } }
-			add_deposit = d_rushing_waterfalls		
-		}
-		if = {
-			limit = { owner = { has_valid_civic = civic_machine_servitor } }
-			add_deposit = d_hot_springs
-		}
+		# add_deposit = d_hot_springs			
+		# add_deposit = d_rushing_waterfalls
+		# add_deposit = d_tempestous_mountain	
+		# if = {
+			# limit = { owner = { is_machine_empire = yes } }
+			# add_deposit = d_rushing_waterfalls		
+		# }
+		# if = {
+			# limit = { owner = { has_valid_civic = civic_machine_servitor } }
+			# add_deposit = d_hot_springs
+		# }
 		
 		# 3 + 3 mining
-		add_deposit = d_veiny_cliffs 		
-		add_deposit = d_prosperous_mesa
-		add_deposit = d_rich_mountain
-		add_deposit = d_prosperous_mesa
+		# add_deposit = d_veiny_cliffs 		
+		# add_deposit = d_prosperous_mesa
+		# add_deposit = d_rich_mountain
+		# add_deposit = d_prosperous_mesa
 		
 		# 4 + 3 farming
-		add_deposit = d_rugged_woods	
-		add_deposit = d_fertile_lands
-		add_deposit = d_fertile_lands
-		if = {
-			limit = { owner = { is_machine_empire = no } }
-			add_deposit = d_rugged_woods
-			add_deposit = d_black_soil	
-		}	
+		# add_deposit = d_rugged_woods	
+		# add_deposit = d_fertile_lands
+		# add_deposit = d_fertile_lands
+		# if = {
+			# limit = { owner = { is_machine_empire = no } }
+			# add_deposit = d_rugged_woods
+			# add_deposit = d_black_soil	
+		# }	
 	}
 	
 	if = {
@@ -631,8 +631,6 @@ generate_home_planet_final_pass = {
 			has_planet_flag = mhs_reiir
 		}
 		remove_all_districts = yes
-		add_district = district_generator_uncapped
-		add_district = district_generator_uncapped
 		add_building = building_dimensional_fabricator
 	}
 	IF = {
@@ -643,32 +641,13 @@ generate_home_planet_final_pass = {
 			has_planet_flag = mhs_reiir
 		}
 		
-		add_district = district_city
+		add_district = district_rw_city
+		add_district = district_rw_farming
+		add_district = district_rw_commercial
 		
-		IF = {
-			limit = {
-				owner = { NOT = { has_valid_civic = civic_agrarian_idyll } }
-			}
-			add_district = district_city
-			add_district = district_city			
-		}	
-		ELSE = {
-			add_district = district_farming_uncapped
-		}
-				
-		add_district = district_farming_uncapped
-		add_district = district_farming_uncapped
-				
-		add_district = district_generator_uncapped
-		
-		IF = {
-			limit = { owner = { is_megacorp = no } }
-			add_district = district_generator_uncapped	
-		}		
 		
 		IF = {
 			limit = { owner = { is_megacorp = yes } }
-			add_district = district_city
 			add_building = building_commercial_zone	
 		}
 	}
@@ -680,15 +659,9 @@ generate_home_planet_final_pass = {
 			has_planet_flag = mhs_reiir
 		}
 		
-		add_district = district_hive
-		add_district = district_hive
-		add_district = district_hive
-		
-		add_district = district_farming_uncapped
-		add_district = district_farming_uncapped
-				
-		add_district = district_generator_uncapped
-		add_district = district_generator_uncapped		
+		add_district = district_rw_hive
+		add_district = district_rw_farming	
+		add_district = district_rw_generator
 	}
 	
 	# Replace capital building for machine empires
@@ -700,29 +673,19 @@ generate_home_planet_final_pass = {
 			has_planet_flag = mhs_reiir
 		}
 		
-		add_district = district_nexus
-		add_district = district_nexus
-		add_district = district_nexus
-				
-		add_district = district_generator_uncapped
-		add_district = district_generator_uncapped
-		add_district = district_generator_uncapped
-		add_district = district_generator_uncapped
+		add_district = district_rw_nexus
+		add_district = district_rw_generator
 				
 		#Assimilators
 		IF = {
 			limit = { owner = { has_civic = civic_machine_assimilator } }
-			remove_district = district_generator_uncapped
-			add_district = district_farming_uncapped
+			add_district = district_rw_farming
 		}
 
 		#Servitors
 		IF = {
 			limit = { owner = { has_civic = civic_machine_servitor } }
-			add_district = district_farming_uncapped	
-			add_district = district_generator_uncapped
-			remove_district = district_nexus
-			remove_district = district_nexus
+			add_district = district_rw_farming	
 			add_building = building_organic_sanctuary
 		}
 	}
