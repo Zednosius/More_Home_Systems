@@ -220,7 +220,7 @@ country_event = {
 		IF = {
 			limit = {
 				any_system = {
-					any_planet = {
+					any_system_planet = {
 						has_planet_flag = planetary_ring_nuked
 					}
 				}
@@ -235,7 +235,7 @@ country_event = {
 		IF = {
 			limit = {
 				any_system = {
-					any_planet = {
+					any_system_planet = {
 						has_planet_flag = pc_mhs_nuked_by_asteroids
 					}
 				}

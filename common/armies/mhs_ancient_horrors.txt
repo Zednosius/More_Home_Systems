@@ -1,4 +1,4 @@
-mhs_ancient_horros = {
+mhs_ancient_horrors = {
 	defensive = yes
 	damage = 1.70
  	health = 1.60

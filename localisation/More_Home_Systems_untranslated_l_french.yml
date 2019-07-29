@@ -1,0 +1,234 @@
+﻿l_french:
+ #################################################################################
+ # PASTE HERE - Here starts the purely english part of the Loc File - PASTE HERE #
+ #################################################################################
+ mhs_qastliani_system_NAME:0 "Qastliani System"
+ mhs_qastliani_system_DESC:0 "The Qastliani System, once home to an ancient long forgotten civilisation is now again cradle to a young species reaching for the stars.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Destroyed World, 2 Molten Worlds, 8 Asteroids, 1 Gas Giant and 2 Frozen Worlds\n\n$system_initializer_DESC$"
+ mhs_daedalus_system_NAME:0 "Daedalus System"
+ mhs_daedalus_system_DESC:0 "§RDon't use this System, if you plan to do a synth ascension or use syncretic evolution.§!\n\nThe Daedalus System features a very special world. Your Ancestor's legends tell of a great cataclysm destroying your world and dooming your people to extinction. But then the gods climbed down from the heavens to lead your people to their new home in the sky.\n\nHomeworld - Size 16-20\n\n1 Sun, 2 Molten Worls, 2 Gas Giants, 1 Barren World, 4 Frozen Worlds\n\n$system_initializer_DESC$"
+ mhs_ikor_system_NAME:0 "Ikor System"
+ mhs_ikor_system_DESC:0 "Ikor - a binary star system - may be scarce in orbital ressources but it is teaming with life. Your civilisation is the first to reach for the stars. How will your presence influence the other species sharing this system with you?\n\nHomeworld - Size 16-20\n\n2 Suns, 2 Inhabited Planets, 1 Gas Giant and multiple Moons and Asteroids\n\n$system_initializer_DESC$"
+ mhs_reetii_system_NAME:0 "Re'etii System"
+ mhs_reetii_system_DESC:0 "§RDon't use this System, if you plan to do a synth ascension or use syncretic evolution.§!\n\nThe Re'etii system, once center of an ancient empire lies in ruins. Their worlds have been burned and their biggest achievement - a giant ringworld - has been destroyed. Your species was once nothing more than pets in one of their zoos. You were lucky enough to outlive your former masters and now rule over the last habitable parts of your ringworld segment.\n\nHomeworld - Size 25\n\n$system_initializer_DESC$"
+ mhs_reshtar_system_NAME:0 "Resh'Tar System"
+ mhs_reshtar_system_DESC:0 "The Resh'Tar system with three habitable planets orbiting their sun on the same orbit though now long abandoned seems to have once been subject of an experiment of stellar scale.\n\nHomeworld - Size 16-20\n\n1 Sun, 2 Habitable Planets, 12 Asteroids\n\n$system_initializer_DESC$"
+ mhs_kholdan_system_NAME:0 "Kholdan System"
+ mhs_kholdan_system_DESC:0 "§RDon't use this System, if you plan to do a synth ascension or use syncretic evolution.§!\n\nThe Kholdan system is a trinary star system consisting of a small binary star system orbiting a red giant and his planets.\n\nHomeworld - Size 16-20\n\n3 Suns, 3 Molten Worlds, 1 Gas Giant, 2 Barren Worlds, 2 Toxic Worlds and  various Asteroids\n\n$system_initializer_DESC$"
+ mhs_durinsforge_system_NAME:0 "Durin's Forge (+)"
+ mhs_durinsforge_system_DESC:0 "The Durin's Forge system is a trinary star system with a few planets and many asteroids.\n\nHomeworld - Size 16-20\n\n3 Suns, 1 Molten Worlds, 1 Gas Giant, 1 Frozen World, 12 Asteroids\n\nThis version has a quest.\n\n$system_initializer_DESC$"
+ mhs_durinsforge_no_quest_system_NAME:0 "Durin's Forge (-)"
+ mhs_durinsforge_no_quest_system_DESC:0 "The Durin's Forge system is a trinary star system with a few planets and many asteroids.\n\nHomeworld - Size 16-20\n\n3 Suns, 1 Molten Worlds, 1 Gas Giant, 1 Frozen World, 12 Asteroids\n\nThis version has no quest.\n\n$system_initializer_DESC$"
+ mhs_me_tikkun_system_NAME:0 "Tikkun System"
+ mhs_me_tikkun_system_DESC:0 "Homesystem of the Quarians of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Toxic World, 1 Gas Giant, 1 Barren World, 7 Asteroids\n\n$system_initializer_DESC$"
+ mhs_me_parnitha_system_NAME:0 "Parnitha System"
+ mhs_me_parnitha_system_DESC:0 "Homesystem of the Asari of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Toxic World, 3 Gas Giants, 1 Molten World, 4 Asteroids\n\n$system_initializer_DESC$"
+ mhs_me_aralakh_system_NAME:0 "Aralakh System"
+ mhs_me_aralakh_system_DESC:0 "§RDon't use this System, if you plan to do a synth ascension or use syncretic evolution.§!\n\nHomesystem of the Krogans of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 3 Molten World, 2 Gas Giants, 5 Asteroids\n\n$system_initializer_DESC$"
+ mhs_me_trebia_system_NAME:0 "Trebia System"
+ mhs_me_trebia_system_DESC:0 "Homesystem of the Turians of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 3 Molten World, 1 Gas Giant, 1 Barren Planet, 7 Asteroids\n\n$system_initializer_DESC$"
+ mhs_me_pranas_system_NAME:0 "Pranas System"
+ mhs_me_pranas_system_DESC:0 "Homesystem of the Salarians of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Molten World, 1 Barren Planet, 1 Gas Giant, 8 Asteroids\n\n$system_initializer_DESC$"
+ mhs_me_harsa_system_NAME:0 "Harsa System"
+ mhs_me_harsa_system_DESC:0 "Homesystem of the Batarians of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Molten World, 4 Barren Planets, 1 Gas Giant, 4 Asteroids\n\n$system_initializer_DESC$"
+ mhs_me_phontes_system_NAME:0 "Phontes System"
+ mhs_me_phontes_system_DESC:0 "Homesystem of the Elcor of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Molten World, 1 Barren Planet, 1 Toxic World, 1 Gas Giant, 5 Asteroids\n\n$system_initializer_DESC$"
+ mhs_me_aru_system_NAME:0 "Aru System"
+ mhs_me_aru_system_DESC:0 "Homesystem of the Volus of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Toxic World, 3 Gas Giants, 6 Asteroids\n\n$system_initializer_DESC$"
+ mhs_me_maskimxul_system_NAME:0 "Maskim Xul System"
+ mhs_me_maskimxul_system_DESC:0 "Homesystem of the Rachni of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Barren Planet, 1 Gas Giant, 8 Asteroids\n\n$system_initializer_DESC$"
+ mhs_me_kyzil_system_NAME:0 "Kyzil System"
+ mhs_me_kyzil_system_DESC:0 "Homesystem of the Vorcha of the Mass Effect universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 2 Barren Planets, 1 Gas Giant, 7 Asteroids\n\n$system_initializer_DESC$"
+ mhs_wc_kilrah_system_NAME:0 "Kilrah System"
+ mhs_wc_kilrah_system_DESC:0 "Homesystem of the Kilrathi of the Wing Commander universe.\n\nHomeworld - Size 16-20\n\n1 Sun, 1 Toxic World, 3 Barren Planets, 2 Gas Giant, 8 Frozen Worlds\n\n$system_initializer_DESC$"
+ 
+ #New Planet Classes
+ planetary_ring_nuked:0 "Tomb World with Ring"
+ planetary_ring_nuked_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation and large cracks in the planetary crust spitting our fire and toxic gases that make life impossible. It is orbited by an ancient but highly advanced Ring World."
+ pc_mhs_nuked_by_asteroids:0 "Tomb World"
+ pc_mhs_nuked_by_asteroids_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing an impact winter, with dense layers of sooty aerosols in the atmosphere."
+ pc_mhs_durin_nuked_nocolonize:0 "Tomb World with destroyed Ring"
+ pc_mhs_durin_nuked_nocolonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation make life impossible. It is orbited by an ancient destroyed Ring World."
+ pc_mhs_durin_nuked_colonize:0 "Tomb World with destroyed Ring"
+ pc_mhs_durin_nuked_colonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation make life impossible. It is orbited by an ancient destroyed Ring World."
+
+ #New Blocker
+ d_mhs_asteroid_crater:0 "£blocker  Asteroid Crater"
+ d_mhs_asteroid_crater_desc:0 "This reminder of a large scale impact event marks the surrounding landscape."
+ 
+ d_mhs_city_ruins:0 "$d_city_ruins$"
+ d_mhs_city_ruins_desc:0 "$d_city_ruins_desc$"
+ 
+ #########################
+ # Durins Forge Questline#
+ #########################
+ 
+ #Upon completing home system survey, starts event chain
+ mhs_durin.2.name:0 "Durin's Legacy"
+ mhs_durin.2.desc:0 "Since ancient times our legends tell the story of Durin, our progenitor and King beneath the Stars. There are even stars in the sky that bear that name in his honor. One of them is Durin's Forge - the biggest of our three suns. Another one is Durin's Hall. Though it is neither the brightest star in the sky nor part of any important constellation. But it is a place of legends and a worthy exploration target for our starting journey to the stars."
+ mhs_durin.2.a:0 "Indeed a fitting start."
+
+ #Durins Hall Event Chain
+ mhs_durins_hall_title:0 "A Journey to the Stars"
+ mhs_durins_hall_desc:0 "For a long time have the stars been a central part of our legends and what would be a more fitting start of our journey into the unknown than Durin's Folk visiting the most important star of our legends, the "Hall of Durin"."
+ 
+ # Point of interest Durins Hall System
+ durins_hall.1.name:0 "Visit Durin's Hall"
+ durins_hall.1.desc:0 "Visit the legendary star "Durin's Hall"."
+ 
+ #Durin's halls system is visited, starts survey khazad dum
+ mhs_durin.3.name:0 "The Hall of Durin"
+ mhs_durin.3.desc:0 "We have reached the legendary "Hall of Durin". Our Scientists did not expect to find anything special there. But when first system scans reached them they were struck speechless. There is one planet orbiting its sun inside the habitable zone.\n\nAnd there is more! It seems to be orbited by some kind of mega structure. We should investigate it as soon as possible."
+ mhs_durin.3.a:0 "Make it so."
+ 
+ #Khazad Dum Mystery
+ mhs_khazad_dum_title:0 "A Mysterious Place"
+ mhs_khazad_dum_desc:0 "We have found a place more mysterious than we would have ever expected to find out there in space. We should invetigate it further."
+ 
+ # Point of interest Khazad Dum
+ durins_hall.2.name:0 "Survey Khazad Dum"
+ durins_hall.2.desc:0 "What is this Place?"
+ 
+ #Khazad Dum has been surveyed, starts surface expedition research project.
+ mhs_durin.4.name:0 "[root.owner.species.GetAdj] Origins"
+ mhs_durin.4.desc:0 "A heavily damaged gigantic ring orbits a planet covered in dense clouds. High radiation values are measured by our probes. Our scientists already supected what became a certainty when our scienceship found a small object orbiting the planet. It turned out to be an ancient lifepod - in it the remains of its unfortunate passenger - apparently [root.owner.species.GetAdj].\n\n In ancient times Durin lead our people away from their home when a great disaster struck it. It was a long exodus beneath the stars until they found their new home. Though we always believed this ancient home to be somewhere on Erebor, lost to the ages, this must be Khazad Dum our ancient home."
+ mhs_durin.4.a:0 "We need to find out more."
+
+ #Khazad Dum Surface Expedition Research
+ KHAZAD_DUM_EXPEDITION_PROJECT:0 "Heritage of the Ancients"
+ KHAZAD_DUM_EXPEDITION_PROJECT_DESC:0 "In order to find out more about our distant past we have to find a way to establish a stable outpost on Khazad Dum. We will have to remove many obstacles to make this possible. The harsh environment and possibly deadly radiation are just two of them."
+
+ #Expedition Research is completed now colonize this planet
+ mhs_durin.5.name:0 "Reclaim what is Ours"
+ mhs_durin.5.desc:0 "Our scientists came up with plans how to counter the threats our expedition will be faced with. Though it will not be very pleasant our personnel will have to wear heavy protective gear at all time when beeing outside their shielded habitat modules. All these protection measures will also increase production times and costs for any building constructed. A suitable landing place where Radiation levels are within acceptable limits has been found as well.\n\nIt is time to establish an expeditionary outpost on Khazad Dum. We still do not know what happened to our ancestors. What might have destroyed their world, laid their cities to ruins and brought their civilisation to collapse?"
+ mhs_durin.5.a:0 "Prepare a long-term expedition."
+
+ #Point of interest for colonizing Khazad Dum
+ durins_hall.3.name:0 "Colonize Khazad Dum"
+ durins_hall.3.desc:0 "Build an outpost on Khazad Dum to find out more about our ancestors."
+ 
+ #Clear the planet of all tile blockers (ruins)
+ mhs_durin.7.name:0 "Outpost Established"
+ mhs_durin.7.desc:0 "With our outpost established, it is time to begin the planned expeditions into the old ruins. We´ll also have to clear any obstacles that prevent our teams' movement along the way."
+ mhs_durin.7.a:0 "Proceed with the expedition."
+ 
+ #Point of interest on Khazad Dum for clearing tile blockers
+ durins_hall.4.name:0 "Clear Ruins on Khazad Dum"
+ durins_hall.4.desc:0 "We have to clear any obstacles that prevent our teams' movement."
+ 
+ #All blockers have been cleared.
+ mhs_durin.8.name:0 "The Great Gateway"
+ mhs_durin.8.desc:0 "The last excavation area held an extraordinary secret. Our team has found a giant gateway to an underground network. At the moment we can only guess how far it stretches."
+ mhs_durin.8.a:0 "Prepare an expedition into the deeps."
+
+ #Modifiers
+ mhs_expedition_preparation:0 "Expedition Preparations"
+ mhs_expedition_preparation_desc:0 "In order to protect our personel from the hostile environment protective gear is mandatory at all times when leaving the shielded habitat modules."
+ mhs_ringworld_restored:0 "Planetary Ring"
+ mhs_ringworld_restored_desc:0 "A restored relic of a long forgotten time orbits the planet providing living space."
+ mhs_underground_secured:0 "Secured Underground Network"
+ mhs_underground_secured_desc:0 "The reclamation of the extensive underground network provides much space for further expansion."
+ 
+ #Mines of Durin Planetary Feature
+ d_mhs_durins_mines:0 "Mines of Durin"
+ d_mhs_durins_mines_desc:0 "A vast and ancient network of underground mines, vaults and production facilities stretching over the whole planet."
+ 
+ #Starts Khazad Dum's Depths expedition
+ KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT:0 "The Mines of Durin"
+ KHAZAD_DUM_DEEPS_EXPEDITION_PROJECT_DESC:0 "In our efforts we have discovered what appears to be an ancient mine, we should see what lies inside."
+
+ #Discovers underground horrors who attack
+ mhs_durin.9.name:0 "The Horrors Below"
+ mhs_durin.9.desc:0 "Our expedition of the mine has gone horribly awry, a horde of undescribable horrors seem to have awakened and slaughtered our expedition team. They have now begun pouring out of the gateway and are preparing to launch a full scale assault on our outpost."
+ mhs_durin.9.a:0 "Send our forces to save them!"
+ 
+ #Ancient Robot Armies
+ mhs_ancient_horrors:0 "Ancient Robotic Warmachines"
+
+ #We lost the battle agains the horrors
+ mhs_durin.10.name:0 "Tragedy"
+ mhs_durin.10.desc:0 "Our numbers were too few to withstand the onslaught, our forces are scattered and in full retreat."
+ mhs_durin.10.a:0 "We have to retake the planet!"
+
+ #The horrors have begun rampaging throughout the planet killing off our population there.
+ mhs_durin.11.name:0 "Rampaging"
+ mhs_durin.11.desc:0 "With the loss of control we are unable to defend our citizens, they are helpless against the hordes."
+ mhs_durin.11.a:0 "We have to send reinforcements immediatly!"
+
+ #We succesfully defended the planet against the horrors initial attack.
+ mhs_durin.12.name:0 "Victory"
+ mhs_durin.12.desc:0 "These abominations did not foresee our might, the ones who are still alive have scurried back to the depths from which they came."
+ mhs_durin.12.a:0 "For [root.Capital.GetName]!"
+
+ # We have successfully reconquered the planet.
+ mhs_durin.13.name:0 "Reconquest"
+ mhs_durin.13.desc:0 "We have successfully reclaimed our rightful heritage from these abominations, the surviving colonists are back under our protection once again."
+ mhs_durin.13.a:0 "For [root.Capital.GetName]!"
+
+ #A small group of citizens have barricaded themselves.
+ mhs_durin.15.name:0 "Isolated"
+ mhs_durin.15.desc:0 "The siege has claimed many lives. Only a small group of citizens were able to barricade themselves in an area where they are save for the time being."
+ mhs_durin.15.a:0 "We have to save them!"
+ 
+ KHAZAD_DUM_DEEPS_RETALIATION_PROJECT:0 "Reconquest of the Dephts"
+ KHAZAD_DUM_DEEPS_RETALIATION_PROJECT_DESC:0 "We have to ensure the threat of these ancient machines is dealed with once and for all. A grand scale campaign into the underground system will require us to throw in every ground force we have. We should only attempt this with a full army at our diposal."
+ 
+ # The Attack on the underground starts
+ mhs_durin.16.name:0 "The Hour has Come"
+ mhs_durin.16.desc:0 "Our preparations are complete, our troops are in place. The time has come to fully retake our world has come."
+ mhs_durin.16.a:0 "We will retake our world!"
+ 
+ # We have successfully conquered the underground.
+ mhs_durin.17.name:0 "Reconquest"
+ mhs_durin.17.desc:0 "We have successfully reclaimed our rightful heritage from these abominations.\n\nPeace has finally come to this war torn world -- our world. Our Scientists are eager to explore what lies beneath the ruined surface of [FromFrom.GetName]."
+ mhs_durin.17.a:0 "For [root.Capital.GetName]!"
+ 
+ #Restoration part starts
+ mhs_durin.181.name:0 "Deep Underground"
+ mhs_durin.181.desc:0 "In the vast underground network of [mhs_khazad_dum_planet.GetName] our scientists found a technological complex that they deem to be an atmospheric cleaning system. With this facility repaired we might be able to restore this planet's atmosphere end return it to its native state. They have already layed out a plan to get it into working order again."
+ mhs_durin.181.a:0 "Good work."
+ 
+ #Khazad Dum restoration
+ mhs_khazad_dum_rebuilding_title:0 "Restoration of our Homeworld"
+ mhs_khazad_dum_rebuilding_desc:0 "With our original home world being under our control again we should begin to restore it to its ancient glory."
+ 
+ # Planetary Restoration Project
+ KHAZAD_DUM_RESTORATION_PROJECT:0 "Planetary Restoration"
+ KHAZAD_DUM_RESTORATION_PROJECT_DESC:0 "Our scientists and engineers are optimistic they will be able to repair and maintain this advanced machinery complex given enough time to study it first."
+ 
+ # Restoration Project complete Machinery begins to work
+ mhs_durin.19.name:0 "Atmospheric Renewer Repaired"
+ mhs_durin.19.desc:0 "The atmospheric renewer has finally been activated. Our experts estimate a stabilization of Khazad Dum's atmosphere in approximately five years."
+ mhs_durin.19.a:0 "Congratulations to the team."
+ 
+ # Restoration of Atmosphere complete
+ mhs_durin.20.name:0 "Restoration Complete"
+ mhs_durin.20.desc:0 "[root.GetName] is once again a habitable world and worthy home to our people."
+ mhs_durin.20.a:0 "A worthy home for the [root.owner.species.GetAdj] people, indeed."
+ 
+ # Plans for Planetary Ring Reconstruction Found
+ mhs_durin.21.name:0 "A Strange Finding"
+ mhs_durin.21.desc:0 "In the Depts of the underground network of [root.GetName] we have found a storage of extraordinary material. At first it seemed to be some sort of metal alloy but it possess properties none of our scientists can explain. It somehow repairs damage to its structure by itself.\n\n Having access to such a material may open up possibilities we did not dare to think about before. With it we might even be able to reconstruct the destroyed planetary ring structure that orbits [root.GetName]. In fact it must have been a prerequisite for its construction in the first place."
+ mhs_durin.21.a:0 "A strange material."
+ 
+ # Ring Reconstruction Project
+ KHAZAD_DUM_RING_RECONSTRUCTION_PROJECT:0 "Ring Reconstruction"
+ KHAZAD_DUM_RING_RECONSTRUCTION_PROJECT_DESC:0 "With this "living metal" at our disposal and an enormous amount of minerals and energy the reconstruction of Khazad Dum's orbital ring should be possible.\n\nThough it will take several years and reduce [root.GetName]'s production output by 50% while the reconstruction is underway. Our experts estimate this process to take about 10 years."
+ 
+ # Project for Planetary Ring Reconstruction complete work starts
+ mhs_durin.22.name:0 "Preparations Complete"
+ mhs_durin.22.desc:0 "Our scientists have finished their study on the remains of the ringworld and the "Living metal" as they call it. Work on its restoration can now start."
+ mhs_durin.22.a:0 "We all eagerly await its finish."
+ 
+ #Ringworld restored
+ mhs_durin.23.name:0 "Ringworld Restored"
+ mhs_durin.23.desc:0 "The work is completed and [root.GetName] is now fully restored to its former Glory. It is a great they for the [root.owner.GetName]. Citizens are celebrating all over the empire. May we never loose [root.GetName] again."
+ mhs_durin.23.a:0 "It is ours now and forever!"
+ 
+ #modifiers
+ mhs_scared_population:0 "Panic among the Population"
+ mhs_scared_population_desc:0 "Our people live in fear of the horrible Automatons that came from the underground."
+ 
+ mhs_ringworld_reconstruction:0 "Ringworld Restoration in Progress"
+ mhs_ringworld_reconstruction_desc:0 "The whole populace is determined in restoring the ancient planetary ring world leading to a doubled unity output. On the other hand most ressources go into this project leading to a lowered overall output of the planet."
+ 
+ mhs_ringworld_reconstructed:0 "Restored our Ancestor's Homeworld"

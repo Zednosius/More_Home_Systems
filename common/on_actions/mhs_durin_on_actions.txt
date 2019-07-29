@@ -32,13 +32,6 @@ on_colonized = {
 	}
 }
 
-# This = Planet
-on_blocker_cleared = {
-    events = {
-        mhs_durin.8
-    }
-}
-
 # Triggers country_event for the defender upon victory
 # This = country, planet owner
 # From = country, attack leader

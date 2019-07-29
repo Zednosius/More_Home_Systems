@@ -1109,7 +1109,7 @@ mhs_switch_homeworld_back = {
 	IF = {
 		limit = {
 			any_system = {
-				any_planet = {
+				any_system_planet = {
 					has_planet_flag = planetary_ring_nuked
 				}
 			}
@@ -1125,7 +1125,7 @@ mhs_switch_homeworld_back = {
 	IF = {
 		limit = {
 			any_system = {
-				any_planet = {
+				any_system_planet = {
 					has_planet_flag = pc_mhs_nuked_by_asteroids
 				}
 			}
@@ -1141,7 +1141,7 @@ mhs_switch_homeworld_back = {
 	IF = {
 		limit = {
 			any_system = {
-				any_planet = {
+				any_system_planet = {
 					has_planet_flag = pc_ringworld_habitable
 				}
 			}
@@ -1157,7 +1157,7 @@ mhs_switch_homeworld_back = {
 	IF = {
 		limit = {
 			any_system = {
-				any_planet = {
+				any_system_planet = {
 					has_planet_flag = pc_gaia
 				}
 			}

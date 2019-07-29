@@ -1,6 +1,6 @@
 namespace = mhs_durin
 
-# Sets country flag for empire starting in DurinÂ´s Forge System
+# Sets country flag for empire starting in Durin´s Forge System
 event = {
 	id = mhs_durin.1
 	hide_window = yes
@@ -228,9 +228,12 @@ planet_event = {
 
 	fire_only_once = yes
 	
+	pre_triggers = {
+		has_owner = yes
+	}
 	trigger = {
 		has_planet_flag = mhs_durins_hall_khazad_dum
-		has_owner = yes
+		
 		owner = {
 			has_country_flag = mhs_durinsforge
 			has_event_chain = mhs_khazad_dum
@@ -256,6 +259,33 @@ planet_event = {
 
 #Last Tileblocker removed. Entrance to the Depth found
 planet_event = {
+	id = mhs_durin.8001
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		planet_event = { id = mhs_durin.8002 days = 1 }
+	}
+}
+
+planet_event = {
+	id = mhs_durin.8002
+	hide_window = yes
+	is_triggered_only = yes
+
+	immediate = {
+		if = {
+			limit = {
+				NOT = {
+					has_deposit = d_mhs_city_ruins
+				}
+			}
+			planet_event = { id = mhs_durin.8 }
+		}
+	}
+}
+
+planet_event = {
 	id = mhs_durin.8
 	title = "mhs_durin.8.name"
 	desc = "mhs_durin.8.desc"
@@ -264,18 +294,6 @@ planet_event = {
 	picture = GFX_evt_alien_ruins
 	is_triggered_only = yes
 
-	trigger = {
-		owner = { # Country
-			has_event_chain = mhs_khazad_dum
-		}
-		has_planet_flag = mhs_durins_hall_khazad_dum
-		NOT = {
-			has_planet_flag = mhs_durins_hall_khazad_dum_mines
-		}
-		NOT = {
-			has_deposit = d_city_ruins
-		}
-	}
 	immediate = {
 		set_planet_flag = mhs_durins_hall_khazad_dum_mines
 		owner = {
@@ -340,17 +358,17 @@ planet_event = {
 		create_army = {
 			name = "Ancient Horrors"
 			owner = last_created
-			type = "mhs_ancient_horros"
+			type = "mhs_ancient_horrors"
 		}
 		create_army = {
 			name = "Ancient Horrors"
 			owner = last_created
-			type = "mhs_ancient_horros"
+			type = "mhs_ancient_horrors"
 		}
 		create_army = {
 			name = "Ancient Horrors"
 			owner = last_created
-			type = "mhs_ancient_horros"
+			type = "mhs_ancient_horrors"
 		}
 		last_created_country = {
 			save_global_event_target_as = underground_horrors
@@ -380,14 +398,18 @@ planet_event = {
 	picture = GFX_evt_ground_combat
 	fire_only_once = yes
 
-	trigger = {
+	pre_triggers = {
 		has_owner = yes
+		is_occupied_flag = yes
+	}
+	trigger = {
+		
 		has_planet_flag = mhs_durins_hall_khazad_dum
 		#Owner of the planet has event chain
 		owner = { # Country
 			has_event_chain = mhs_khazad_dum
 		}
-		is_occupied_flag = yes
+		
 		#Attackers are horrors
 		controller = {
 			is_same_value = event_target:underground_horrors
@@ -483,11 +505,16 @@ planet_event = {
 	picture = GFX_evt_ground_combat
 	fire_only_once = yes
 
-	trigger = {
+	pre_triggers = {
 		has_owner = yes
-		has_planet_flag = mhs_durins_hall_khazad_dum
-		is_occupied_flag = no
 		has_ground_combat = no
+		is_occupied_flag = no
+	}
+	trigger = {
+		
+		has_planet_flag = mhs_durins_hall_khazad_dum
+		
+		
 		owner = {
 			has_event_chain = mhs_khazad_dum
 			has_country_flag = mhs_durins_hall_khazad_dum_fight_1
@@ -517,9 +544,12 @@ planet_event = {
 	id = mhs_durin.14
 	hide_window = yes
 	is_triggered_only = yes
+	pre_triggers = {
+		is_occupied_flag = yes
+	}
 	trigger = {
 		has_planet_flag = mhs_durins_hall_khazad_dum
-		is_occupied_flag = yes
+		
 		owner = {
 			OR = {
 				has_country_flag = mhs_durins_hall_khazad_dum_fight_1
@@ -612,32 +642,32 @@ planet_event = {
 		create_army = {
 			name = "Ancient Horrors"
 			owner = last_created
-			type = "mhs_ancient_horros"
+			type = "mhs_ancient_horrors"
 		}
 		create_army = {
 			name = "Ancient Horrors"
 			owner = last_created
-			type = "mhs_ancient_horros"
+			type = "mhs_ancient_horrors"
 		}
 		create_army = {
 			name = "Ancient Horrors"
 			owner = last_created
-			type = "mhs_ancient_horros"
+			type = "mhs_ancient_horrors"
 		}
 		create_army = {
 			name = "Ancient Horrors"
 			owner = last_created
-			type = "mhs_ancient_horros"
+			type = "mhs_ancient_horrors"
 		}
 		create_army = {
 			name = "Ancient Horrors"
 			owner = last_created
-			type = "mhs_ancient_horros"
+			type = "mhs_ancient_horrors"
 		}
 		create_army = {
 			name = "Ancient Horrors"
 			owner = last_created
-			type = "mhs_ancient_horros"
+			type = "mhs_ancient_horrors"
 		}
 		last_created_country = {
 			save_global_event_target_as = underground_horrors
@@ -704,11 +734,16 @@ planet_event = {
 	picture = GFX_evt_ground_combat
 	fire_only_once = yes
 	
-	trigger = {
+	pre_triggers = {
 		has_owner = yes
-		has_planet_flag = mhs_durins_hall_khazad_dum
-		is_occupied_flag = no
 		has_ground_combat = no
+		is_occupied_flag = no
+	}
+	trigger = {
+		
+		has_planet_flag = mhs_durins_hall_khazad_dum
+		
+		
 		owner = {
 			has_event_chain = mhs_khazad_dum
 			has_country_flag = mhs_durins_hall_khazad_dum_retaliation
