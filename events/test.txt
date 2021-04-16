@@ -14,7 +14,7 @@ country_event = {
 					has_planet_class = planetary_ring_nuked
 				}
 			}
-			every_planet = {
+			every_galaxy_planet = {
 				limit = {
 					is_planet_class = planetary_ring_nuked
 				}
@@ -27,7 +27,7 @@ country_event = {
 					has_planet_class = pc_mhs_nuked_by_asteroids
 				}
 			}
-			every_planet = {
+			every_galaxy_planet = {
 				limit = {
 					is_planet_class = pc_mhs_nuked_by_asteroids
 				}
@@ -188,7 +188,7 @@ country_event = {
 					has_planet_class = planetary_ring_nuked
 				}
 			}
-			every_planet = {
+			every_galaxy_planet = {
 				limit = {
 					is_planet_class = planetary_ring_nuked
 				}
@@ -201,7 +201,7 @@ country_event = {
 					has_planet_class = pc_mhs_nuked_by_asteroids
 				}
 			}
-			every_planet = {
+			every_galaxy_planet = {
 				limit = {
 					is_planet_class = pc_mhs_nuked_by_asteroids
 				}
@@ -225,7 +225,7 @@ country_event = {
 					}
 				}
 			}
-			every_planet = {
+			every_galaxy_planet = {
 				limit = {
 					has_planet_flag = planetary_ring_nuked
 				}
@@ -240,7 +240,7 @@ country_event = {
 					}
 				}
 			}
-			every_planet = {
+			every_galaxy_planet = {
 				limit = {
 					has_planet_flag = pc_mhs_nuked_by_asteroids
 				}
@@ -305,7 +305,7 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		every_planet = {
+		every_galaxy_planet = {
 			limit = {
 				is_planet_class = pc_savannah
 			}

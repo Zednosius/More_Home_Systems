@@ -95,7 +95,7 @@ mhs_reetii_system = {
 		class = pc_ringworld_habitable
 		orbit_angle = 30
 		orbit_distance = 0
-		size = 5
+		size = 10
 		home_planet = yes
 		deposit_blockers = none
 		modifiers = none		
@@ -140,19 +140,19 @@ mhs_reetii_system = {
 			type = "ring_world_ruined"
 			orbit_angle = 90
 			orbit_distance = 45
-			location = planet
+			#location = planet
 		}
 		spawn_megastructure = {
 			type = "ring_world_ruined"
 			orbit_angle = 180
 			orbit_distance = 45
-			location = planet
+			#location = planet
 		}
 		spawn_megastructure = {
 			type = "ring_world_ruined"
 			orbit_angle = 270
 			orbit_distance = 45
-			location = planet
+			#location = planet
 		}
 	}	
 	

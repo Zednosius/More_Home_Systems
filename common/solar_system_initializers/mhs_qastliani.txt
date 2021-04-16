@@ -187,7 +187,7 @@ mhs_qastliani_system = {
 	init_effect = {
 		spawn_megastructure = { 
 			type = "think_tank_ruined" 
-			location = event_target:nexus_planet
+			planet = event_target:nexus_planet
 
 			init_effect = {
 				create_ambient_object = {

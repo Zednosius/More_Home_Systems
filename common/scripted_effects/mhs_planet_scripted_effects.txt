@@ -661,6 +661,7 @@ generate_start_deposits_and_blockers = {
 		}
 	}
 
+
 	# CHANGES FROM HERE
 
 	if = {
@@ -774,7 +775,7 @@ generate_home_planet_final_pass = {
 				remove_all_buildings = yes
 				destroy_colony = yes
 			}
-			change_dominant_species = { species = last_created change_all = yes }
+			change_dominant_species = { species = last_created_species change_all = yes }
 		}
 	}
 	if = {
@@ -843,7 +844,7 @@ generate_home_planet_final_pass = {
 		}
 		owner = {
 			capital_scope = {
-				add_modifier = { modifier = prosp_uni_mod }
+				add_modifier = { modifier = prosp_uni_mod days = 3600 }
 			}
 		}
 	}
@@ -886,8 +887,19 @@ generate_home_planet_final_pass = {
 							is_planet_class = pc_gas_giant
 						}
 						change_pc = pc_molten
-						change_planet_size = -25
 						add_modifier = { modifier = chthonian_planet }
+						every_moon = {
+							limit = {
+								colonizeable_planet = no
+							}
+							remove_planet = yes
+						}
+						while = {
+							limit = {
+								planet_size >= 20
+							}
+							change_planet_size = -6
+						}
 					}
 				}
 			}
@@ -901,63 +913,158 @@ generate_home_planet_final_pass = {
 		}
 		remove_all_districts = yes
 		add_building = building_dimensional_fabricator
-		IF = {
-			limit = { 
-				owner = { 
-					is_regular_empire = yes
-				}
-				has_planet_flag = mhs_reiir
-			}
-			
-			add_district = district_rw_city
-			add_district = district_rw_farming
-			add_district = district_rw_commercial
-			
-			
-			IF = {
-				limit = { owner = { is_megacorp = yes } }
-				add_building = building_commercial_zone	
-			}
+		add_district_and_planet_size_if_needed_effect = {
+			district = district_rw_farming
 		}
-		IF = {
+		add_district_and_planet_size_if_needed_effect = {
+			district = district_rw_generator
+		}
+		add_deposit = d_arcane_generator
+		add_deposit = d_decrepit_tunnels_1
+		add_deposit = d_decrepit_tunnels_2
+		add_deposit = d_decrepit_tunnels_3
+
+		if = {
 			limit = {
 				owner = {
+					is_lithoid_empire = yes
+					NOT = { has_civic = civic_hive_devouring_swarm }
+				}
+			}
+			while = {
+				count = 4
+				add_deposit = d_hibernating_lithoids
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					is_lithoid_empire = yes
+					has_civic = civic_hive_devouring_swarm
+				}
+			}
+			while = {
+				count = 2
+				add_deposit = d_hibernating_lithoids
+			}
+		}
+
+		if = {
+			limit = {
+				owner = {
+					is_lithoid_empire = yes
 					is_hive_empire = yes
 				}
-				has_planet_flag = mhs_reiir
 			}
-			
-			add_district = district_rw_hive
-			add_district = district_rw_farming	
-			add_district = district_rw_generator
+			remove_district = district_rw_farming
+
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_rw_generator
+			}
 		}
-		
+
+		if = {
+			limit = { owner = { is_regular_empire = yes } }
+
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_rw_city
+			}
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_rw_industrial
+			}
+
+			# 3 jobs
+			#add_building = building_capital
+
+			# 2 jobs
+			#add_building = building_bureaucratic_1
+
+			# 2 jobs
+			#add_building = building_research_lab_1
+
+			# 5 jobs
+			#if = {
+			#	limit = { owner = { is_megacorp = yes } }
+			#	add_building = building_commercial_zone
+			#}
+		}
+
+		if = {
+			limit = { owner = { is_hive_empire = yes } }
+
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_rw_hive
+			}
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_rw_industrial
+			}
+
+			# 5 jobs
+			#add_building = building_hive_capital
+
+			# 2 jobs
+			#add_building = building_hive_node
+
+			# 2 jobs
+			#add_building = building_research_lab_1
+
+			# 1 job
+			#add_building = building_spawning_pool
+
+			# 1 job
+			#add_building = building_hive_warren
+		}
+
 		# Replace capital building for machine empires
-		IF = {
-			limit = {
-				owner = {
-					is_machine_empire = yes
-				}
-				has_planet_flag = mhs_reiir
+		if = {
+			limit = { owner = { is_machine_empire = yes } }
+			remove_district = district_rw_farming
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_rw_generator
 			}
-			
-			add_district = district_rw_nexus
-			add_district = district_rw_generator
-					
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_rw_nexus
+			}
+			add_district_and_planet_size_if_needed_effect = {
+				district = district_rw_industrial
+			}
+
+			# 6 jobs
+			#add_building = building_machine_capital
+
+			# 2 job
+			#add_building = building_uplink_node
+
+			# 2 jobs
+			#add_building = building_research_lab_1
+
 			#Assimilators
-			IF = {
+			if = {
 				limit = { owner = { has_civic = civic_machine_assimilator } }
-				add_district = district_rw_farming
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_rw_farming
+				}
+				add_deposit = d_segment_rubble_1
+				add_deposit = d_segment_rubble_2
 			}
-	
+
 			#Servitors
-			IF = {
+			if = {
 				limit = { owner = { has_civic = civic_machine_servitor } }
-				add_district = district_rw_farming	
 				add_building = building_organic_sanctuary
+				add_district_and_planet_size_if_needed_effect = {
+					district = district_rw_farming
+				}
+				add_deposit = d_segment_rubble_1
+				add_deposit = d_segment_rubble_2
 			}
 		}
-	}	
+
+		# blockers to reduce effectiveness of the city and industrial segments
+		add_deposit = d_segment_rubble_3
+		add_deposit = d_segment_rubble_4
+	}
 }
 
 

@@ -564,7 +564,7 @@ planet_event = {
 					count > 10
 				} 
 			}
-			random_pop = {
+			random_owned_pop = {
 				kill_pop = yes
 			}
 			planet_event = {

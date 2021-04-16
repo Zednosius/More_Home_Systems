@@ -38,7 +38,7 @@ event = {
 			}
 		}
 
-        every_planet = {
+        every_galaxy_planet = {
             limit = {
                 has_planet_flag = not_ideal_planet
             }
