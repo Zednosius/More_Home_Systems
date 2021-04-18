@@ -560,7 +560,7 @@ planet_event = {
 	immediate = {
 		IF = {
 			limit = { 
-				count_pops = {
+				count_owned_pop = {
 					count > 10
 				} 
 			}
