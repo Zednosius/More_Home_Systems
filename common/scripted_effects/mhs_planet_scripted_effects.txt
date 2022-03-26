@@ -661,7 +661,53 @@ generate_start_deposits_and_blockers = {
 		}
 	}
 
+	# Ocean Paradise Origin
+	if = {
+		limit = {
+			owner = {
+				has_origin = origin_ocean_paradise
+			}
+		}
+		if = {
+			limit = {
+				owner = { is_hive_empire = yes }
+			}
+			add_modifier = { modifier = ocean_paradise_hive }
+		}
+		else = {
+			add_modifier = { modifier = ocean_paradise }
+		}
+		clear_deposits = yes
+		clear_blockers = yes
 
+		# Food
+		add_deposit = d_teeming_reef
+		add_deposit = d_teeming_reef
+		add_deposit = d_teeming_reef
+		add_deposit = d_teeming_reef
+		add_deposit = d_teeming_reef
+		add_deposit = d_teeming_reef
+		add_deposit = d_teeming_reef
+		add_deposit = d_teeming_reef
+
+		# Minerals
+		add_deposit = d_submerged_ore_veins
+		add_deposit = d_submerged_ore_veins
+		add_deposit = d_submerged_ore_veins
+
+		# Energy
+		add_deposit = d_underwater_vent
+		add_deposit = d_underwater_vent
+		add_deposit = d_underwater_vent
+
+		# Bonus
+		add_deposit = d_crystal_reef
+		random_list = {
+			50 = { add_deposit = d_submerged_ore_veins }
+			50 = { add_deposit = d_underwater_vent }
+		}
+	}
+	
 	# CHANGES FROM HERE
 
 	if = {
