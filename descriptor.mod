@@ -4,4 +4,4 @@ tags={
 }
 name="More Home Systems"
 supported_version="3.3.*"
-remote_file_id="711413459"
+remote_file_id="2784729291"

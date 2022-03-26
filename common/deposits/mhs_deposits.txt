@@ -2,7 +2,7 @@ d_mhs_asteroid_crater = {
 	icon = d_crater
 	time = 270
 	
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_blockers	
 	
 	all_blocker_swap_types = yes
@@ -28,7 +28,7 @@ d_mhs_asteroid_crater = {
 }
 
 d_mhs_durins_mines = {
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_rare
 	
 	icon = d_crystalline_caverns
@@ -77,7 +77,7 @@ d_mhs_durins_mines = {
 d_mhs_city_ruins = {
 	time = 360
 	
-	is_for_colonizeable = yes
+	is_for_colonizable = yes
 	category = deposit_cat_blockers	
 	
 	potential = {
