@@ -860,7 +860,7 @@ generate_home_planet_final_pass = {
 				solar_system = {
 					every_system_planet = {
 						limit = {
-							colonizeable_planet = no
+							colonizable_planet = no
 							is_star = no
 						}
 						clear_deposits = yes
@@ -873,7 +873,7 @@ generate_home_planet_final_pass = {
 					}
 					every_system_planet = {
 						limit = {
-							colonizeable_planet = no
+							colonizable_planet = no
 							is_star = no
 							is_asteroid = no
 							NOT = { is_planet_class = pc_gas_giant }
@@ -882,7 +882,7 @@ generate_home_planet_final_pass = {
 					}
 					every_system_planet = {
 						limit = {
-							colonizeable_planet = no
+							colonizable_planet = no
 							is_star = no
 							is_planet_class = pc_gas_giant
 						}
@@ -890,7 +890,7 @@ generate_home_planet_final_pass = {
 						add_modifier = { modifier = chthonian_planet }
 						every_moon = {
 							limit = {
-								colonizeable_planet = no
+								colonizable_planet = no
 							}
 							remove_planet = yes
 						}
@@ -1207,7 +1207,7 @@ mhs_switch_homeworld_to_standard = {
 				has_planet_class = planetary_ring_nuked
 			}
 		}
-		every_planet = {
+		every_system_planet = {
 			limit = {
 				is_planet_class = planetary_ring_nuked
 				is_homeworld = yes
@@ -1221,7 +1221,7 @@ mhs_switch_homeworld_to_standard = {
 				has_planet_class = pc_mhs_nuked_by_asteroids
 			}
 		}
-		every_planet = {
+		every_system_planet = {
 			limit = {
 				is_planet_class = pc_mhs_nuked_by_asteroids
 				is_homeworld = yes
@@ -1235,7 +1235,7 @@ mhs_switch_homeworld_to_standard = {
 				has_planet_class = pc_ringworld_habitable
 			}
 		}
-		every_planet = {
+		every_system_planet = {
 			limit = {
 				is_planet_class = pc_ringworld_habitable
 				is_homeworld = yes
@@ -1249,7 +1249,7 @@ mhs_switch_homeworld_to_standard = {
 				has_planet_class = pc_gaia
 			}
 		}
-		every_planet = {
+		every_system_planet = {
 			limit = {
 				is_planet_class = pc_gaia
 				is_homeworld = yes
@@ -1429,7 +1429,7 @@ mhs_switch_homeworld_to_standard = {
 				has_planet_class = planetary_ring_nuked
 			}
 		}
-		every_planet = {
+		every_galaxy_planet = {
 			limit = {
 				is_planet_class = planetary_ring_nuked
 				is_homeworld = yes
@@ -1443,7 +1443,7 @@ mhs_switch_homeworld_to_standard = {
 				has_planet_class = pc_mhs_nuked_by_asteroids
 			}
 		}
-		every_planet = {
+		every_galaxy_planet = {
 			limit = {
 				is_planet_class = pc_mhs_nuked_by_asteroids
 				is_homeworld = yes
@@ -1457,7 +1457,7 @@ mhs_switch_homeworld_to_standard = {
 				has_planet_class = pc_ringworld_habitable
 			}
 		}
-		every_planet = {
+		every_galaxy_planet = {
 			limit = {
 				is_planet_class = pc_ringworld_habitable
 				is_homeworld = yes
@@ -1471,7 +1471,7 @@ mhs_switch_homeworld_to_standard = {
 				has_planet_class = pc_gaia
 			}
 		}
-		every_planet = {
+		every_galaxy_planet = {
 			limit = {
 				is_planet_class = pc_gaia
 				is_homeworld = yes
@@ -1490,7 +1490,7 @@ mhs_switch_homeworld_back = {
 				}
 			}
 		}
-		every_planet = {
+		every_galaxy_planet = {
 			limit = {
 				has_planet_flag = planetary_ring_nuked
 			}
@@ -1506,7 +1506,7 @@ mhs_switch_homeworld_back = {
 				}
 			}
 		}
-		every_planet = {
+		every_galaxy_planet = {
 			limit = {
 				has_planet_flag = pc_mhs_nuked_by_asteroids
 			}
@@ -1522,7 +1522,7 @@ mhs_switch_homeworld_back = {
 				}
 			}
 		}
-		every_planet = {
+		every_galaxy_planet = {
 			limit = {
 				has_planet_flag = pc_ringworld_habitable
 			}
@@ -1538,7 +1538,7 @@ mhs_switch_homeworld_back = {
 				}
 			}
 		}
-		every_planet = {
+		every_galaxy_planet = {
 			limit = {
 				has_planet_flag = pc_gaia
 			}
