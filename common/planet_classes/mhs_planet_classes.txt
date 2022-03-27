@@ -35,6 +35,7 @@ pc_mhs_nuked_by_asteroids = {
 	
 	starting_planet = no
 	colonizable = yes
+	district_set = standard
 	ideal = yes
 }
 

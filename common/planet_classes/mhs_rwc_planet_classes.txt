@@ -106,6 +106,7 @@ planetary_ring_nuked = {
 	
 	star = no 									# dont want to spawn a star here
 	colonizable = yes							# gains surface with tiles of tile_set
+	district_set = standard
 	ideal = yes									# gaia world status
 	starting_planet = no						# can be a starting planet 
 	orbit_lines = yes							# gives orbit lines
