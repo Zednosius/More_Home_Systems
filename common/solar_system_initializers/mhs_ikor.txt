@@ -68,7 +68,7 @@ mhs_ikor_system = {
 					change_pc = "pc_arid"
 				}
 			}
-			generate_late_primitives_on_planet = yes
+			generate_late_pre_ftls_on_planet = yes
 			set_name = "Katarius"
 		}
 		moon = {
@@ -132,7 +132,7 @@ mhs_ikor_system = {
 					}
 				}
 				prevent_anomaly = yes
-				generate_early_primitives_on_planet = yes
+				generate_early_pre_ftls_on_planet = yes
 				set_name = "Inarius"
 			}
 		}

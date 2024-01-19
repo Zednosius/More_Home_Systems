@@ -1,4 +1,4 @@
-﻿l_braz_por:
+﻿l_russian:
  #################################################################################
  # PASTE HERE - Here starts the purely english part of the Loc File - PASTE HERE #
  #################################################################################
@@ -44,8 +44,10 @@
  #New Planet Classes
  planetary_ring_nuked:0 "Tomb World with Ring"
  planetary_ring_nuked_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation and large cracks in the planetary crust spitting our fire and toxic gases that make life impossible. It is orbited by an ancient but highly advanced Ring World."
- pc_mhs_nuked_by_asteroids:0 "Tomb World"
- pc_mhs_nuked_by_asteroids_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing an impact winter, with dense layers of sooty aerosols in the atmosphere."
+ planetary_ring_nuked_tile:0 "$pc_ringworld_habitable_tile$"
+ planetary_ring_nuked_tile_desc:0 "$pc_ringworld_habitable_tile_desc$"
+ mhs_sc_trinary_1:0 "$sc_trinary_1$"
+ mhs_sc_binary_1:0 "$sc_binary_1$"
  pc_mhs_durin_nuked_nocolonize:0 "Tomb World with destroyed Ring"
  pc_mhs_durin_nuked_nocolonize_desc:0 "A rocky world with a nitrogen-oxygen atmosphere. It is currently experiencing something similar to a nuclear winter, with dense layers of sooty aerosols in the atmosphere. High levels of surface radiation make life impossible. It is orbited by an ancient destroyed Ring World."
  pc_mhs_durin_nuked_colonize:0 "Tomb World with destroyed Ring"

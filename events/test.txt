@@ -7,33 +7,6 @@ country_event = {
 	is_triggered_only = yes
 	
 	immediate = {
-		# set flags for all the potential problematic planets
-		IF = {
-			limit = {
-				any_system = {
-					has_planet_class = planetary_ring_nuked
-				}
-			}
-			every_galaxy_planet = {
-				limit = {
-					is_planet_class = planetary_ring_nuked
-				}
-				set_planet_flag = planetary_ring_nuked
-			}
-		}
-		IF = {
-			limit = {
-				any_system = {
-					has_planet_class = pc_mhs_nuked_by_asteroids
-				}
-			}
-			every_galaxy_planet = {
-				limit = {
-					is_planet_class = pc_mhs_nuked_by_asteroids
-				}
-				set_planet_flag = pc_mhs_nuked_by_asteroids
-			}
-		}
 		# set problematic planets to native type of country species
 		every_country = {
 			IF = {
@@ -45,7 +18,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
 						change_pc = pc_desert
@@ -61,7 +33,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
 						change_pc = pc_arid
@@ -77,7 +48,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
 						change_pc = pc_savannah
@@ -93,7 +63,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
 						change_pc = pc_tropical
@@ -109,7 +78,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
 						change_pc = pc_continental
@@ -125,7 +93,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
 						change_pc = pc_ocean
@@ -141,7 +108,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
 						change_pc = pc_arctic
@@ -157,7 +123,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
 						change_pc = pc_tundra
@@ -173,7 +138,6 @@ country_event = {
 						limit = {
 							OR = {
 								is_planet_class = planetary_ring_nuked
-								is_planet_class = pc_mhs_nuked_by_asteroids
 							}
 						}
 						change_pc = pc_alpine
@@ -191,19 +155,6 @@ country_event = {
 			every_galaxy_planet = {
 				limit = {
 					is_planet_class = planetary_ring_nuked
-				}
-				change_pc = pc_continental
-			}
-		}
-		IF = {
-			limit = {
-				any_system = {
-					has_planet_class = pc_mhs_nuked_by_asteroids
-				}
-			}
-			every_galaxy_planet = {
-				limit = {
-					is_planet_class = pc_mhs_nuked_by_asteroids
 				}
 				change_pc = pc_continental
 			}
@@ -230,21 +181,6 @@ country_event = {
 					has_planet_flag = planetary_ring_nuked
 				}
 				change_pc = planetary_ring_nuked
-			}
-		}
-		IF = {
-			limit = {
-				any_system = {
-					any_system_planet = {
-						has_planet_flag = pc_mhs_nuked_by_asteroids
-					}
-				}
-			}
-			every_galaxy_planet = {
-				limit = {
-					has_planet_flag = pc_mhs_nuked_by_asteroids
-				}
-				change_pc = pc_mhs_nuked_by_asteroids
 			}
 		}
 	}
