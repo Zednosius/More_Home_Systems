@@ -136,27 +136,29 @@ ship_event = {
 }
 
 #Fired when khazad dum is surveyed
-ship_event = {
+# A country has gained a surveyed status on a planet. Happens after "on_survey_planet" if a science ship surveyed a planet. (Can also happen without a ship through changes in intel levels)
+# Root = Planet
+# From = Country
+# FromFrom = Fleet of the science ship that surveyed it, if any
+planet_event = {
 	id = mhs_durin.4
 	title = "mhs_durin.4.name"
 	desc = "mhs_durin.4.desc"
 	picture = GFX_evt_city_ruins
 	is_triggered_only = yes
-	location = from
+	location = root
 	show_sound = event_ghost_town
 
 	fire_only_once = yes
 	
 	trigger = {
-		FROM = { #planet
-			has_planet_flag = mhs_durins_hall_khazad_dum
-		}
-		owner = { # Country
+		has_planet_flag = mhs_durins_hall_khazad_dum
+		From = { # Country
 			has_event_chain = mhs_khazad_dum
 		}
 	}
 	immediate = {
-		owner = {
+		From = {
 			remove_point_of_interest = durins_hall.2
 		}
 	}
@@ -164,8 +166,8 @@ ship_event = {
 		name = mhs_durin.4.a
 		enable_special_project = {
 			name = "KHAZAD_DUM_EXPEDITION_PROJECT"
-			owner = root.owner
-			location = from
+			owner = From
+			location = root
 		}
 	}
 }

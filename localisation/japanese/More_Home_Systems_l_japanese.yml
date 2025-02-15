@@ -91,8 +91,8 @@
  durins_hall.2.desc:0 "What is this Place?"
  
  #Khazad Dum has been surveyed, starts surface expedition research project.
- mhs_durin.4.name:0 "[root.owner.species.GetAdj] Origins"
- mhs_durin.4.desc:0 "A heavily damaged gigantic ring orbits a planet covered in dense clouds. High radiation values are measured by our probes. Our scientists already supected what became a certainty when our scienceship found a small object orbiting the planet. It turned out to be an ancient lifepod - in it the remains of its unfortunate passenger - apparently [root.owner.species.GetAdj].\n\n In ancient times Durin lead our people away from their home when a great disaster struck it. It was a long exodus beneath the stars until they found their new home. Though we always believed this ancient home to be somewhere on Erebor, lost to the ages, this must be Khazad Dum our ancient home."
+ mhs_durin.4.name:0 "[From.species.GetAdj] Origins"
+ mhs_durin.4.desc:0 "A heavily damaged gigantic ring orbits a planet covered in dense clouds. High radiation values are measured by our probes. Our scientists already supected what became a certainty when our scienceship found a small object orbiting the planet. It turned out to be an ancient lifepod - in it the remains of its unfortunate passenger - apparently [From.species.GetAdj].\n\n In ancient times Durin lead our people away from their home when a great disaster struck it. It was a long exodus beneath the stars until they found their new home. Though we always believed this ancient home to be somewhere on Erebor, lost to the ages, this must be Khazad Dum our ancient home."
  mhs_durin.4.a:0 "We need to find out more."
 
  #Khazad Dum Surface Expedition Research
